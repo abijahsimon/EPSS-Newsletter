@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  :focus-visible { outline: 3px solid #9a4a26; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+  body { margin: 0; background: #fbfaf7; color: #1f2933; font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  img { display: block; max-width: 100%; }
+  a { color: #2774ae; }
+  a:hover { color: #9a4a26; }
+  h1, h2, h3, p, ul, ol, figure { margin-top: 0; }
+  ::selection { background: #ffd100; color: #101820; }
+</style>
+</helmet>
+
+<a href="#top" style="position:absolute;left:-9999px;top:0;z-index:100;padding:12px 18px;background:#101820;color:#fbfaf7;font-weight:600;text-decoration:none" style-focus="left:0">Skip to the article</a>
+<header style="position:sticky;top:0;z-index:40;background:rgba(251,250,247,0.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(16,24,32,0.14)">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;padding:14px clamp(20px,4vw,40px)">
+    <a href="EPSS Annual Newsletter 2026.dc.html" aria-label="Back to the issue" style="display:flex;align-items:center">
+      <img src="assets/brand/newsletter-logo-black.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:min(280px,44vw);height:auto" />
+    </a>
+    <div style="display:flex;align-items:center;gap:20px;font-size:0.82rem;font-weight:600;color:#54626d">
+      <a href="EPSS Annual Newsletter 2026.dc.html#memoriam" style="text-decoration:none;color:inherit" style-hover="color:#9a4a26">← Back to the 2026 issue</a>
+      <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="display:inline-flex;align-items:center;height:36px;padding:0 16px;background:#101820;color:#fbfaf7;text-decoration:none" style-hover="background:#9a4a26;color:#fff">Give</a>
+    </div>
+  </div>
+  <div style="height:3px;background:rgba(16,24,32,0.1)">
+    <div style="height:100%;background:#9a4a26;transition:width 120ms linear;width:{{progress}}"></div>
+  </div>
+</header>
+
+<main id="top">
+  <article>
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px) 40px">
+      <p style="margin:0 0 20px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">Retirement · Researcher</p>
+      <h1 style="max-width:22ch;margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2.4rem,5.6vw,5rem);line-height:1;letter-spacing:-0.025em;text-wrap:balance">From Galileo to Europa Clipper</h1>
+      <p style="max-width:58ch;margin:0 0 36px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.18rem,2vw,1.7rem);line-height:1.42;color:#54626d;text-wrap:pretty">Steve Joy retired in February 2026, came back a month later, and plans to stay until Europa Clipper finishes in 2034.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;border-top:1px solid rgba(16,24,32,0.14);border-bottom:1px solid rgba(16,24,32,0.14)">
+        <p style="margin:0;font-weight:600">2026 Issue · Farewells</p>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d">
+          <span>4 min read</span>
+          <button type="button" onClick="{{share}}" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0;text-transform:none;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,40px) 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(32px,5vw,64px);align-items:start">
+      <div style="max-width:68ch;min-width:0">
+        <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;font-weight:400;line-height:1.6;color:#101820">Steven Joy arrived at UCLA in the autumn of 1984 to pursue an MS in the long-defunct Applied Geophysics program, working with Paul Davis and Dave Jackson.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">When his thesis project — a gravity model of the Long Valley Caldera — devolved into an error-analysis exercise, he left the program and took a position with Ray Walker working on the newly formed NASA Planetary Data System. Ray introduced him to Margaret Kivelson, who employed him part-time on the Galileo Magnetometer team, with Ray covering the other half of his effort.</p>
+
+        <h2 style="margin:44px 0 16px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">“That sounds like a Master’s thesis”</h2>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Following a couple of asteroid flybys where the magnetometer picked up small magnetic signatures, Margy came to Steve and asked him to compute the probability that those signatures were random solar-wind fluctuations. Steve replied, “that sounds like a Master’s thesis.” Margy agreed.</p>
+
+        <blockquote style="margin:38px 0;padding:0 0 0 28px;border-left:4px solid #ffd100">
+          <p style="margin:0;font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:1.7rem;line-height:1.32;color:#101820">Several years later, Margy asked him to compute the most probable location of the Jupiter magnetopause. That became his most-cited paper.</p>
+        </blockquote>
+
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">The boundary between the solar and Jovian magnetic fields turned into <em>Probabilistic models of the Jovian magnetopause and bow shock locations</em> (<a href="https://doi.org/10.1029/2001JA009146">JGR, 2002</a>). After its success, Margy suggested he continue to the PhD — which he completed in March 2010, at the age of 49.</p>
+
+        <h2 style="margin:44px 0 16px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">Keeping the instruments running</h2>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Steve is known above all as an expert in historical NASA planetary missions — through his work with Ray Walker and the PDS — and in spacecraft and instrument operations. He led the Dawn Science Operations Center for the multi-asteroid orbiter mission, led the InSight Magnetometer Instrument Operations Center for the Mars lander, and currently leads the Europa Clipper Magnetometer Instrument Operations Center.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">He retired in February 2026 and returned to work under the Academic Recall program in March, planning to continue part-time at least through the conclusion of Europa Clipper in 2034.</p>
+        <p style="margin:0;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">The reduction in effort allows Steve to spend more time fishing.</p>
+      </div>
+
+      <aside style="display:grid;gap:26px;min-width:0">
+        <div>
+          <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Missions</p>
+          <ul style="display:grid;gap:12px;margin:0;padding:0;list-style:none;font-size:0.92rem;color:#54626d">
+            <li><strong style="display:block;color:#1f2933">Galileo</strong>Magnetometer team, with Margaret Kivelson</li>
+            <li><strong style="display:block;color:#1f2933">Dawn</strong>Lead, Science Operations Center</li>
+            <li><strong style="display:block;color:#1f2933">InSight</strong>Lead, Magnetometer Instrument Operations Center</li>
+            <li><strong style="display:block;color:#1f2933">Europa Clipper</strong>Lead, Magnetometer Instrument Operations Center — through 2034</li>
+          </ul>
+        </div>
+        <div style="padding-top:22px;border-top:1px solid rgba(16,24,32,0.14)">
+          <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">At UCLA</p>
+          <p style="margin:0;font-size:0.92rem;color:#54626d">Arrived 1984 · MS · PhD March 2010 · Retired February 2026 · Academic Recall March 2026</p>
+        </div>
+        <div style="padding-top:22px;border-top:1px solid rgba(16,24,32,0.14)">
+          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Photograph</p>
+          <div aria-hidden="true" style="width:100%;aspect-ratio:4/5;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.09) 0 10px,rgba(16,24,32,0.03) 10px 20px);border:1px solid rgba(16,24,32,0.12);display:flex;align-items:end;padding:14px"><span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.45;letter-spacing:0.1em;text-transform:uppercase;color:#54626d">Portrait<br />to be added</span></div>
+        </div>
+      </aside>
+    </div>
+  </article>
+
+  <section aria-labelledby="more-title" style="padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px);background:#101820;color:#fbfaf7">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid rgba(251,250,247,0.2)">
+        <h2 id="more-title" style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.7rem,3vw,2.6rem);letter-spacing:-0.02em">More farewells in this issue</h2>
+        <a href="EPSS Annual Newsletter 2026.dc.html#memoriam" style="font-size:0.92rem;font-weight:600;color:#ffd100;text-decoration:none" style-hover="color:#fbfaf7">All farewells →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:rgba(251,250,247,0.2);border:1px solid rgba(251,250,247,0.2)">
+        <a href="Article - Gilles Peltzer.dc.html" style="display:block;padding:24px 22px;background:#101820;text-decoration:none;color:#fbfaf7" style-hover="background:#ffd100;color:#101820">
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;margin-bottom:10px">Retirement</span>
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-size:1.44rem;line-height:1.18;margin-bottom:6px">Gilles Peltzer</span>
+          <span style="display:block;font-size:0.82rem;opacity:0.7">Understanding Earth’s deforming continents</span>
+        </a>
+        <a href="EPSS Annual Newsletter 2026.dc.html#memoriam" style="display:block;padding:24px 22px;background:#101820;text-decoration:none;color:#fbfaf7" style-hover="background:#ffd100;color:#101820">
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;margin-bottom:10px">Retirement</span>
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-size:1.44rem;line-height:1.18;margin-bottom:6px">Peter Chi</span>
+          <span style="display:block;font-size:0.82rem;opacity:0.7">On leaving, and on Generation Alpha</span>
+        </a>
+        <a href="EPSS Annual Newsletter 2026.dc.html#memoriam" style="display:block;padding:24px 22px;background:#101820;text-decoration:none;color:#fbfaf7" style-hover="background:#ffd100;color:#101820">
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;margin-bottom:10px">In Memoriam</span>
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-size:1.44rem;line-height:1.18;margin-bottom:6px">Gerald Schubert</span>
+          <span style="display:block;font-size:0.82rem;opacity:0.7">Special memorial</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;padding:52px clamp(20px,4vw,40px);background:#1f2933;color:rgba(251,250,247,0.66)">
+  <div>
+    <img src="assets/brand/newsletter-logo-2x.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:280px;height:auto;margin-bottom:18px;filter:brightness(0) invert(1);opacity:0.9" />
+    <p style="margin:0;max-width:46ch;font-size:0.92rem">UCLA Earth, Planetary, and Space Sciences · 595 Charles E. Young Drive East, Los Angeles, CA 90095</p>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:start;gap:12px;font-size:0.92rem">
+    <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="color:#ffd100;font-weight:600;text-decoration:none" style-hover="color:#fbfaf7">Support UCLA EPSS</a>
+    <a href="EPSS Annual Newsletter 2026.dc.html" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to the issue</a>
+    <a href="#top" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to top ↑</a>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440}}">
+class Component extends DCLogic {
+  state = { progress: 0 };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      this.setState({ progress: max > 0 ? Math.min(1, h.scrollTop / max) : 0 });
+    };
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+    this.onScroll();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
+  }
+
+  renderVals() {
+    return {
+      progress: `${(this.state.progress * 100).toFixed(1)}%`,
+      share: (e) => {
+        if (navigator.clipboard) navigator.clipboard.writeText(location.href);
+        const el = e.currentTarget;
+        const original = el.textContent;
+        el.textContent = "Link copied";
+        setTimeout(() => { el.textContent = original; }, 1600);
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

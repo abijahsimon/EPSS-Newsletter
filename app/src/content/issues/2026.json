@@ -1,90 +1,60 @@
 {
   "year": 2026,
-  "dateLabel": "2025–2026",
+  "dateLabel": "2025-2026",
   "status": "published",
   "title": "EPSS Newsletter 2026",
-  "seoDescription": "A digital-first annual newsletter template for UCLA Earth, Planetary, and Space Sciences.",
+  "seoDescription": "The 2026 UCLA Earth, Planetary, and Space Sciences annual newsletter.",
   "brand": {
     "image": "/assets/brand/epss-department-logo.svg",
     "alt": "UCLA Earth, Planetary & Space Sciences"
   },
   "navigation": [
     { "label": "Contents", "href": "#contents" },
-    { "label": "Story Plan", "href": "#story-plan" },
     { "label": "Features", "href": "#features" },
-    { "label": "Briefs", "href": "#briefs" },
+    { "label": "Research", "href": "#research-updates" },
     { "label": "Community", "href": "#community" },
+    { "label": "Awards", "href": "#awards" },
     { "label": "Giving", "href": "#giving" }
   ],
   "hero": {
     "image": "/assets/images/p01_01.jpg",
-    "imageAlt": "Mountain valley landscape from the EPSS 2025 newsletter.",
-    "kicker": "Welcome to the New",
+    "imageAlt": "Mountain valley landscape from the EPSS newsletter image archive.",
+    "kicker": "2025-2026",
     "title": "EPSS Annual Newsletter",
-    "dek": "2025–2026 from Earth and beyond: A year of discovery, fieldwork, mentorship, remembrance, and Bruin science.",
+    "dek": "A year of discovery, fieldwork, mentorship, remembrance, and Bruin science.",
     "actions": [
-      { "label": "Explore this Issue", "href": "#contents" },
-      { "label": "Featured Stories", "href": "#features" }
+      { "label": "Explore This Issue", "href": "#contents" },
+      { "label": "Ready Stories", "href": "#features" }
     ],
     "supportCta": {
       "label": "Give to EPSS",
-      "href": "https://epss.ucla.edu/become-a-donor/"
+      "href": "https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O"
     },
     "meta": {
-      "eyebrow": "Digital Era",
-      "title": "Our annual newsletter, rebuilt as a digital issue.",
-      "body": "Same annual roundup, easier to browse and share."
+      "eyebrow": "Digital Issue",
+      "title": "Source-backed stories are moving into the site.",
+      "body": "Final media selection, captions, and a few source confirmations are still in progress."
     }
   },
   "sections": [
     {
-      "type": "planning",
-      "id": "story-plan",
-      "kicker": "Live Outline",
-      "title": "Current Story Plan",
-      "intro": "These cards are editorial placeholders, not final article titles. They organize the updated contents into production-ready lanes.",
-      "lanes": [
-        {
-          "title": "Lead Features",
-          "items": [
-            { "title": "Chair's note", "detail": "1 page, not started" },
-            { "title": "Student feature", "detail": "Lizzy Su or Megan Li / EYU" },
-            { "title": "Faculty feature", "detail": "Edwin Schauble, isotope analysis" },
-            { "title": "Science, art, and interview feature", "detail": "David Jewitt and Hilke Schlichting" },
-            { "title": "Alumni profile", "detail": "Allen F. Glazner" }
-          ]
-        },
-        {
-          "title": "Research & Field",
-          "items": [
-            { "title": "RIMFAX", "detail": "Paige and Emily, 2-page feature" },
-            { "title": "BALBOA aurora balloon update", "detail": "Xiaoyan Zhou" },
-            { "title": "Jonathan Mitchell Eos features", "detail": "Research findings summary" },
-            { "title": "David Southwood lecture", "detail": "A tale of two agencies, NASA and ESA" },
-            { "title": "Geophysics 136C", "detail": "Article or photo essay" },
-            { "title": "Suburban retrospective", "detail": "Field vehicle farewell" }
-          ]
-        },
-        {
-          "title": "People & Community",
-          "items": [
-            { "title": "Retirements", "detail": "Craig Manning, Gilles Peltzer" },
-            { "title": "Researcher farewells", "detail": "Steve Joy, Peter Chi" },
-            { "title": "Memorials and obituaries", "detail": "Art Montana, Ronald Shreve, Candace Hansen, Gerald Schubert" },
-            { "title": "EPSSSO highlight", "detail": "Student organization recruitment piece" }
-          ]
-        },
-        {
-          "title": "Recognition & Back Matter",
-          "items": [
-            { "title": "Awards", "detail": "Chancellor Postdocs, 51 Pegasi B, NASA FINESST, faculty honors" },
-            { "title": "Undergrad summer fellowships", "detail": "Recognition module" },
-            { "title": "Journal covers", "detail": "Visual roundup if enough examples are collected" },
-            { "title": "Donors and endowments", "detail": "1.5-page equivalent" },
-            { "title": "Commencement photos", "detail": "2-page equivalent" },
-            { "title": "Cover imagery", "detail": "Artwork, theme image, or collage" }
-          ]
-        }
+      "type": "contents",
+      "id": "contents",
+      "kicker": "Table of Contents",
+      "title": "Explore the issue.",
+      "links": [
+        { "label": "BALBOA: Photographing the Aurora in Daylight", "href": "/stories/balboa/" },
+        { "label": "Art & Science: Two Scientists Who Paint", "href": "/stories/art-science/" },
+        { "label": "Honors, Fellowships, and Recognition", "href": "/stories/awards-2026/" },
+        { "label": "Celebrating the Class of 2026", "href": "/stories/commencement-2026/" },
+        { "label": "Donors and Endowments", "href": "/stories/donors-endowments/" },
+        { "label": "Gilles Peltzer Retirement", "href": "/stories/gilles-peltzer/" },
+        { "label": "Steve Joy Farewell", "href": "/stories/steve-joy/" },
+        { "label": "Peter Chi Farewell", "href": "/stories/peter-chi/" },
+        { "label": "Gerald Schubert Memorial", "href": "/stories/gerald-schubert/" },
+        { "label": "RIMFAX", "href": "#rimfax" },
+        { "label": "Field / Geophysics 136C", "href": "#field-trips" },
+        { "label": "Chair's Note", "href": "#chairs-note" }
       ]
     },
     {
@@ -93,14 +63,24 @@
       "ariaLabel": "Featured stories",
       "stories": [
         {
-          "id": "chairs-note",
+          "id": "balboa-feature",
+          "variant": "research-story",
+          "image": "/assets/images/p15_02.jpg",
+          "imageAlt": "Space research graphic from the newsletter image archive.",
+          "category": "Lab & Research",
+          "title": "Photographing the Aurora in Daylight",
+          "summary": "BALBOA is a balloon-borne attempt to see the half of the aurora that sunlight has always hidden.",
+          "link": { "label": "Read BALBOA", "href": "/stories/balboa/" }
+        },
+        {
+          "id": "art-science",
           "variant": "lead-story",
           "image": "/assets/images/p02_04.jpg",
-          "imageAlt": "EPSS faculty portrait placeholder.",
-          "category": "Chair's Note",
-          "title": "Opening Letter from the Department Chair",
-          "summary": "Use this lead story for the annual welcome, department-wide reflection, priorities for the year ahead, and links into the rest of the issue.",
-          "link": { "label": "View in plan", "href": "#story-plan" }
+          "imageAlt": "EPSS portrait placeholder for the art and science feature.",
+          "category": "Art & Science",
+          "title": "Two Scientists Who Paint",
+          "summary": "David Jewitt and Hilke Schlichting describe how painting and research meet in material, intuition, and curiosity.",
+          "link": { "label": "Read Art & Science", "href": "/stories/art-science/" }
         },
         {
           "id": "rimfax",
@@ -109,47 +89,82 @@
           "imageAlt": "Space research graphic from the newsletter image archive.",
           "category": "Research Feature",
           "title": "RIMFAX: Seeing Beneath the Martian Surface",
-          "summary": "A long-form feature slot for the RIMFAX story, with room for David Paige and Emily Cardarelli context, mission visuals, pull quotes, figures, and related links.",
-          "link": { "label": "Read story", "href": "#rimfax-full" }
+          "summary": "This story is still awaiting source copy from the Paige/Cardarelli/RIMFAX thread. Keep the slot, but do not publish invented body copy.",
+          "link": { "label": "Forthcoming", "href": "#rimfax" }
+        },
+        {
+          "id": "chairs-note",
+          "variant": "lead-story",
+          "image": "/assets/images/p02_04.jpg",
+          "imageAlt": "EPSS faculty portrait placeholder.",
+          "category": "Chair's Note",
+          "title": "Opening Letter from the Department Chair",
+          "summary": "The planning sheet and meeting notes conflict on whether final chair copy exists. This remains a confirmation item.",
+          "link": { "label": "Awaiting final copy", "href": "#contents" }
         }
       ]
     },
     {
       "type": "briefs",
       "id": "briefs",
-      "kicker": "Issue Briefs",
-      "title": "Short stories about events, students, and EPSS research.",
-      "intro": "Use this module for planned pieces that are bigger than a planning-board line but smaller than a lead feature.",
+      "kicker": "Ready and Near-Ready",
+      "title": "Stories with source material in hand.",
+      "intro": "These sections have enough verified source material to draft now. Media still needs final selection or extraction for several of them.",
       "cards": [
         {
-          "id": "art-science",
-          "category": "Art & Science",
-          "title": "David Jewitt and Hilke Schlichting",
-          "summary": "Interview or visual Q&A slot for the science, art, and creative-process feature."
+          "id": "awards-card",
+          "category": "Awards",
+          "title": "Honors, Fellowships, and Recognition",
+          "summary": "Faculty awards and several student award blurbs are now drafted from source. Undergraduate fellowship details remain open.",
+          "link": { "label": "Read awards", "href": "/stories/awards-2026/" }
+        },
+        {
+          "id": "commencement-card",
+          "category": "Commencement",
+          "title": "Celebrating the Class of 2026",
+          "summary": "Program and candidate lists are available. Final photo selection, caption, and degree-count confirmation still need review.",
+          "link": { "label": "Read commencement", "href": "/stories/commencement-2026/" }
+        },
+        {
+          "id": "giving-card",
+          "category": "Giving",
+          "title": "Donors and Endowments",
+          "summary": "The donor/endowment material from Emily's packet is staged. Field matching dates and cap still need confirmation.",
+          "link": { "label": "Read donors", "href": "/stories/donors-endowments/" }
+        },
+        {
+          "id": "schubert-card",
+          "category": "In Memoriam",
+          "title": "Gerald Schubert",
+          "summary": "The Schubert Drive folder is accessible and the obituary source has been ported into an article page.",
+          "link": { "label": "Read memorial", "href": "/stories/gerald-schubert/" }
         },
         {
           "id": "geophysics-136c",
           "category": "Course Photo Essay",
           "title": "Geophysics 136C in the Field",
-          "summary": "Short field-course story that can stand alone or feed into the Suburban retrospective."
+          "summary": "Field media is available in Box, but John He's article is still behind an iCloud access barrier.",
+          "variant": "decision-card"
         },
         {
           "id": "undergrad-fellowships",
           "category": "Student Recognition",
           "title": "Undergraduate Summer Fellowships",
-          "summary": "Recognition module for fellowship recipients, projects, mentors, and short student research notes."
+          "summary": "The recipient list, project blurbs, mentors, and photos still need confirmation.",
+          "variant": "decision-card"
         },
         {
           "id": "journal-covers",
           "category": "Research Gallery",
           "title": "Journal Covers",
-          "summary": "Visual roundup for published cover art, figures, captions, and links to the associated papers."
+          "summary": "No source set has been confirmed. Keep this as a future gallery only if stakeholders want it.",
+          "variant": "decision-card"
         },
         {
-          "id": "welcome-new",
-          "category": "Annual Standing Slot",
-          "title": "Welcome New Faculty and Staff",
-          "summary": "Keep as a reusable template slot; publish it only if the final 2026 issue confirms names and photos.",
+          "id": "student-feature",
+          "category": "Student Feature",
+          "title": "Lizzy Su",
+          "summary": "Proposed only. Keep forthcoming until source copy is provided.",
           "variant": "decision-card"
         }
       ]
@@ -158,47 +173,34 @@
       "type": "community",
       "id": "community",
       "kicker": "Community",
-      "title": "The People and Places of EPSS",
+      "title": "People and farewells.",
       "cards": [
         {
-          "id": "faculty-feature",
-          "image": "/assets/people/edwin-schauble.jpg",
-          "imageAlt": "Edwin Schauble portrait.",
-          "category": "Faculty Feature",
-          "title": "Edwin Schauble: Isotope Analysis",
-          "summary": "Feature slot for a faculty profile with research overview, accessible science framing, and quotes."
-        },
-        {
-          "id": "alumni-profile",
-          "image": "/assets/people/allen-glazner.webp",
-          "imageAlt": "Allen F. Glazner in the field.",
-          "category": "Alumni Profile",
-          "title": "Allen F. Glazner",
-          "summary": "Alumni profile slot for career path, EPSS connection, scientific impact, and archival imagery."
-        },
-        {
-          "id": "student-profile",
-          "image": "/assets/people/megan-li.jpg",
-          "imageAlt": "Megan Li portrait.",
-          "category": "Student Voice",
-          "title": "Lizzy Su or Megan Li",
-          "summary": "Student feature slot for future plans, final-year perspective, EYU, or another recent graduate angle."
-        },
-        {
-          "id": "epssso",
-          "image": "/assets/images/p14_08.jpg",
-          "imageAlt": "EPSS student community gathering placeholder.",
-          "category": "Student Organization",
-          "title": "EPSSSO Highlight",
-          "summary": "Recruitment and community story for student leadership, events, mentoring, and ways to get involved."
-        },
-        {
-          "id": "field-trips",
+          "id": "gilles-peltzer",
           "image": "/assets/images/p12_02.jpg",
-          "imageAlt": "Desert field trip landscape.",
-          "category": "Field Trips",
-          "title": "Suburban Retrospective",
-          "summary": "Photo-rich field-program story about the department field vehicle's life, classes, trips, and farewell."
+          "imageAlt": "Desert field trip landscape from the newsletter image archive.",
+          "category": "Retirement",
+          "title": "Gilles Peltzer",
+          "summary": "Article copy is available. The Peltzer photo ZIP still needs extraction and final selection.",
+          "link": { "label": "Read Peltzer", "href": "/stories/gilles-peltzer/" }
+        },
+        {
+          "id": "steve-joy",
+          "image": "/assets/images/p09_02.jpg",
+          "imageAlt": "Community gathering placeholder for retiree farewell.",
+          "category": "Farewell",
+          "title": "Steve Joy",
+          "summary": "Copy is available despite the older sheet status. Portrait source remains unconfirmed.",
+          "link": { "label": "Read Steve Joy", "href": "/stories/steve-joy/" }
+        },
+        {
+          "id": "peter-chi",
+          "image": "/assets/images/p09_02.jpg",
+          "imageAlt": "Community gathering placeholder for retiree farewell.",
+          "category": "Farewell",
+          "title": "Peter Chi",
+          "summary": "Copy is available. Portrait source remains unconfirmed, so the page is no-portrait safe.",
+          "link": { "label": "Read Peter Chi", "href": "/stories/peter-chi/" }
         },
         {
           "id": "memorials",
@@ -206,15 +208,24 @@
           "imageAlt": "Flowers used as a memorial placeholder.",
           "category": "In Memoriam",
           "title": "Memorials and Obituaries",
-          "summary": "Respectful remembrance slots for Art Montana, Ronald Shreve, Candace Hansen, and Gerald Schubert."
+          "summary": "Gerald Schubert is now drafted from source. Art Montana, Ronald Shreve, and Candice Hansen-Koharcheck remain linked-source candidates.",
+          "link": { "label": "Read Schubert", "href": "/stories/gerald-schubert/" }
         },
         {
-          "id": "retirees",
-          "image": "/assets/images/p09_02.jpg",
-          "imageAlt": "Community gathering placeholder for retiree farewell.",
-          "category": "Farewells",
-          "title": "Retirements and Signoffs",
-          "summary": "Career milestone format for Craig Manning, Gilles Peltzer, Steve Joy, and Peter Chi."
+          "id": "faculty-feature",
+          "image": "/assets/people/edwin-schauble.jpg",
+          "imageAlt": "Edwin Schauble portrait.",
+          "category": "Faculty Feature",
+          "title": "Edwin Schauble",
+          "summary": "Proposed only. Local portrait exists, but source body copy is not confirmed."
+        },
+        {
+          "id": "alumni-profile",
+          "image": "/assets/people/allen-glazner.webp",
+          "imageAlt": "Allen F. Glazner in the field.",
+          "category": "Alumni Profile",
+          "title": "Allen F. Glazner",
+          "summary": "Box has lecture media, but final copy and recording/embed link are still unconfirmed."
         }
       ]
     },
@@ -222,21 +233,26 @@
       "type": "research",
       "id": "research-updates",
       "kicker": "Lab & Research Updates",
-      "title": "Signals from the field, lab, and sky.",
-      "intro": "Short dispatches from BALBOA, Eos research highlights, journal covers, and the hands-on work that keeps science moving.",
+      "title": "Signals from the labs, field, and sky.",
+      "intro": "The BALBOA article is source-backed. Other research features remain proposed or blocked by missing copy.",
       "items": [
         {
           "title": "Xiaoyan Zhou: BALBOA aurora balloon project update",
-          "body": "One-page research update slot with mission context, current status, images, and what readers should watch for next.",
-          "open": true
+          "body": "A source-backed article is now available. The two scientific figures still need to be extracted from the DOCX and staged as site assets.",
+          "open": true,
+          "link": { "label": "Read BALBOA", "href": "/stories/balboa/" }
         },
         {
           "title": "Jonathan Mitchell: Eos features and research findings",
-          "body": "Short synthesis format for recent research coverage, key findings, and links to the original pieces."
+          "body": "No confirmed source copy was found in the checked Drive/Gmail material. Confirm scope before drafting."
         },
         {
-          "title": "AI-proof faculty work",
-          "body": "Multi-faculty roundup format for hands-on, field-based, instrument-based, or creative scholarly work."
+          "title": "Peng Group: PTRX and Sapphire",
+          "body": "Proposed only in the planning sheet. Confirm whether this remains in the 2026 issue."
+        },
+        {
+          "title": "Field / Geophysics 136C",
+          "body": "Box has field media, but the article text is still locked behind an iCloud Pages link. Use media only after contact-sheet selection and caption review."
         }
       ]
     },
@@ -248,16 +264,24 @@
           "id": "awards",
           "category": "Awards",
           "title": "Honors and Recognition",
-          "summary": "Annual list module for Chancellor Postdoctoral Fellows, 51 Pegasi B Fellows, NASA FINESST, Jean-Luc Margot's Royal Academy of Belgium honor, Hao Cao's Sloan Fellowship, undergraduate summer fellowships, undergraduate awards, and PhD fellowships."
+          "summary": "Faculty awards, graduate fellowships, dissertation fellowships, and known postdoctoral fellowships are drafted from source, with a few award details still flagged for confirmation.",
+          "link": {
+            "label": "Read Awards",
+            "href": "/stories/awards-2026/"
+          }
         },
         {
           "id": "commencement",
           "variant": "image-panel",
           "image": "/assets/images/p14_07.jpg",
-          "imageAlt": "EPSS commencement group photograph.",
+          "imageAlt": "EPSS commencement group photograph placeholder.",
           "category": "Commencement",
           "title": "Celebrating the Class",
-          "summary": "Photo-forward recap for graduates, speakers, degree lists, ceremony highlights, and awardees."
+          "summary": "Program details and candidate lists are staged. Available Drive/Box photo pools still need contact-sheet selection, caption, and credit confirmation.",
+          "link": {
+            "label": "Read Commencement",
+            "href": "/stories/commencement-2026/"
+          }
         },
         {
           "id": "giving",
@@ -265,60 +289,29 @@
           "variant": "donor-panel",
           "category": "Giving",
           "title": "Donors and Endowments",
-          "summary": "Donor recognition can live here as a searchable annual honor roll, grouped by fund, endowment, or giving level if desired.",
+          "summary": "Donor and endowed-fund lists are staged from Emily's materials. Exact field matching dates and cap remain open.",
           "link": {
-            "label": "Support EPSS",
-            "href": "https://epss.ucla.edu/become-a-donor/"
+            "label": "Read Donors",
+            "href": "/stories/donors-endowments/"
           }
         }
       ]
     },
     {
-      "type": "articles",
-      "ariaLabel": "Long-form article placeholders",
-      "articleIds": ["rimfax-full", "suburban-full"]
-    },
-    {
       "type": "notes",
-      "id": "template-notes",
-      "kicker": "Template Notes",
-      "title": "Designed for future issues.",
+      "id": "editorial-status",
+      "kicker": "Editorial Status",
+      "title": "Still to resolve before launch.",
       "items": [
-        "Each confirmed story type has a stable anchor, making annual content swaps straightforward.",
-        "The layout supports short cards, Q&A updates, image-led features, and long-form article pages/sections.",
-        "Images currently use locally extracted 2025 newsletter assets as placeholders and can be replaced with final 2026 media."
-      ]
-    },
-    {
-      "type": "contents",
-      "id": "contents",
-      "kicker": "Table of Contents",
-      "title": "Explore the issue.",
-      "links": [
-        { "label": "Chair's Note", "href": "#chairs-note" },
-        { "label": "Student Feature", "href": "#student-profile" },
-        { "label": "Faculty Feature", "href": "#faculty-feature" },
-        { "label": "Alumni Profile", "href": "#alumni-profile" },
-        { "label": "RIMFAX", "href": "#rimfax" },
-        { "label": "Art & Science", "href": "#art-science" },
-        { "label": "Research Updates", "href": "#research-updates" },
-        { "label": "Field Program", "href": "#field-trips" },
-        { "label": "Geophysics 136C", "href": "#geophysics-136c" },
-        { "label": "Memorials", "href": "#memorials" },
-        { "label": "Retirements", "href": "#retirees" },
-        { "label": "EPSSSO", "href": "#epssso" },
-        { "label": "Awards", "href": "#awards" },
-        { "label": "Summer Fellowships", "href": "#undergrad-fellowships" },
-        { "label": "Journal Covers", "href": "#journal-covers" },
-        { "label": "Donors", "href": "#donors" },
-        { "label": "Commencement", "href": "#commencement" }
+        "Media pass: generate contact sheets for commencement, field photos, Peltzer, Jewitt/Hilke artwork, and BALBOA figures.",
+        "True source blockers: John He/iCloud, RIMFAX, Craig Manning, Suburban full copy, undergraduate summer fellowships, award host details, and Chair note location.",
+        "Review pass: remove or approve any preview-only deks, unsourced pull quotes, and public-facing status language before final launch."
       ]
     }
   ],
   "footer": {
     "organization": "UCLA Earth, Planetary, and Space Sciences",
-    "description": "Digital newsletter template prototype",
+    "description": "EPSS Newsletter 2026 draft site",
     "backToTopLabel": "Back to top"
   }
 }
-

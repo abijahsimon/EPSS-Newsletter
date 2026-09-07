@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  :focus-visible { outline: 3px solid #9a4a26; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+  body { margin: 0; background: #fbfaf7; color: #1f2933; font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  img { display: block; max-width: 100%; }
+  a { color: #2774ae; }
+  a:hover { color: #9a4a26; }
+  h1, h2, h3, p, ul, ol, figure { margin-top: 0; }
+  ::selection { background: #ffd100; color: #101820; }
+</style>
+</helmet>
+
+<a href="#top" style="position:absolute;left:-9999px;top:0;z-index:100;padding:12px 18px;background:#101820;color:#fbfaf7;font-weight:600;text-decoration:none" style-focus="left:0">Skip to the article</a>
+<header style="position:sticky;top:0;z-index:40;background:rgba(251,250,247,0.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(16,24,32,0.14)">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;padding:14px clamp(20px,4vw,40px)">
+    <a href="EPSS Annual Newsletter 2026.dc.html" aria-label="Back to the issue" style="display:flex;align-items:center">
+      <img src="assets/brand/newsletter-logo-black.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:min(280px,44vw);height:auto" />
+    </a>
+    <div style="display:flex;align-items:center;gap:20px;font-size:0.82rem;font-weight:600;color:#54626d">
+      <a href="EPSS Annual Newsletter 2026.dc.html#short-stories" style="text-decoration:none;color:inherit" style-hover="color:#9a4a26">← Back to the 2026 issue</a>
+      <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="display:inline-flex;align-items:center;height:36px;padding:0 16px;background:#101820;color:#fbfaf7;text-decoration:none" style-hover="background:#9a4a26;color:#fff">Give</a>
+    </div>
+  </div>
+  <div style="height:3px;background:rgba(16,24,32,0.1)">
+    <div style="height:100%;background:#9a4a26;transition:width 120ms linear;width:{{progress}}"></div>
+  </div>
+</header>
+
+<main id="top">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px) 36px">
+    <p style="margin:0 0 20px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">Art &amp; Science · Q&amp;A</p>
+    <h1 style="max-width:20ch;margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2.4rem,5.6vw,5rem);line-height:1;letter-spacing:-0.025em;text-wrap:balance">Two scientists who paint</h1>
+    <p style="max-width:58ch;margin:0 0 32px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.18rem,2vw,1.7rem);line-height:1.42;color:#54626d;text-wrap:pretty">One has painted since childhood and never stopped. The other picked up a brush twenty years ago on a whim. Both find the same thing in it that they find in research.</p>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;border-top:1px solid rgba(16,24,32,0.14);border-bottom:1px solid rgba(16,24,32,0.14)">
+      <p style="margin:0;font-size:0.92rem;color:#54626d">In their own words — written answers from <strong style="color:#1f2933;font-weight:600">David Jewitt</strong> and <strong style="color:#1f2933;font-weight:600">Hilke Schlichting</strong></p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d">
+        <span>9 min read</span>
+        <button type="button" onClick="{{share}}" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0;text-transform:none;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
+      </div>
+    </div>
+  </div>
+
+  <article aria-labelledby="jewitt-h" style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,40px)">
+    <div style="display:flex;align-items:center;gap:16px;padding:26px 0 30px">
+      <img src="assets/people/dave-jewitt.jpg" alt="David Jewitt." style="width:64px;height:64px;object-fit:cover;border-radius:999px" />
+      <div>
+        <h2 id="jewitt-h" style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:2rem;line-height:1.1;letter-spacing:-0.02em">David Jewitt</h2>
+        <p style="margin:2px 0 0;font-size:0.82rem;color:#54626d">Professor, Earth, Planetary, and Space Sciences</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(32px,5vw,64px);align-items:start">
+      <div style="max-width:68ch;min-width:0">
+        <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#9a4a26">How did you start painting?</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">I have no background and no real knowledge of art. I just started painting one day about 20 years ago when I thought “why not give it a try?” and I liked the results. On the one hand, being a total novice is an advantage, because I’m not bogged down by any rules or preconceptions. I don’t know what the rules are. I’ve heard of “color theory” but I don’t know what it is. On the other hand, that makes me an art ignoramus.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Classical paintings, like classical music, hold little interest for me because they are so predictable — another king, another bowl of fruit, another Jesus, another farm scene. I like the wild stuff a lot more. By trial and error, I discovered that my main interest is in the materiality of the paint, in texture and color and abstraction. I just want to make something that interests me even though I can’t specify why.</p>
+
+        <blockquote style="margin:38px 0;padding:0 0 0 28px;border-left:4px solid #ffd100">
+          <p style="margin:0;font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:1.7rem;line-height:1.32;color:#101820">When I have made a painting that I like I can hardly believe that I did it. But I don’t take myself too seriously; art is subjective and I’m not trying to do anything profound. I just paint for fun.</p>
+        </blockquote>
+
+        <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#9a4a26">What do you work with?</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">I use a wide range of materials, from house paint, the thick glue used in sticking bathroom tiles to the wall, seeds, cement, shells, sticks, string, bits of metal, stones, sand, epoxy, plastic foam, even meat skewers, to you name it. The different materials are part of the fun. Mostly I use acrylic paints — acrylic is basically made from plastic micro-flakes in solution — because they’re easy to clean, but I’ve used oil paints a few times.</p>
+
+        <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#9a4a26">What’s the connection between painting and science?</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">I don’t think there is a direct connection, but I do see a weird indirect similarity between the way I paint and the way I do science. I usually start a painting with, at best, a raw idea of what I want. I have a simple idea and I feel a burst of energy and enthusiasm. Then I begin. As time goes on and the painting starts to look hopeless, I kick into high gear and then I struggle to figure a way to salvage my lost effort. Sometimes that fails and I paint over it and start again. Sometimes the finished painting bears no relation to the one I had planned.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">It usually ends when I’m so sick of a painting that I can’t bear to look at it any more. Weeks and months later, though, I can come back and, if I like what I’ve done, I wonder if it happened by accident and ask myself “how did I do that?”.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">My way of doing science is like that, too. I’ll start a project based on a simple idea and a wave of enthusiasm that sweeps through my mind, without having a clear idea about the details of the project or a proper understanding of the background. Then I hit a brick wall, and I have to think more carefully. This chaotic, start-stop style is slow and inefficient, but by not planning too carefully I do gain the advantage that I am relatively open to making discoveries and doing new things.</p>
+        <p style="margin:0;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">It’s easier to see or do something new when you have no preconceptions, or have only a faint — and maybe incorrect — idea about what is already known. In fact, many of the best things I’ve done in science come from working impulsively like this. I feel like I stumble into my paintings and my research projects, but also that working in this way is what keeps me fresh.</p>
+      </div>
+
+      <aside style="min-width:0">
+        <p style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Works · David Jewitt</p>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px">
+          <figure style="margin:0">
+            <div aria-hidden="true" style="width:100%;aspect-ratio:4/5;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.09) 0 10px,rgba(16,24,32,0.03) 10px 20px);border:1px solid rgba(16,24,32,0.12)"></div>
+            <figcaption style="margin-top:8px;font-size:0.82rem;line-height:1.45;color:#54626d"><em>Untitled</em> · 16″ × 20″ · acrylic paints</figcaption>
+          </figure>
+          <figure style="margin:0">
+            <div aria-hidden="true" style="width:100%;aspect-ratio:4/5;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.09) 0 10px,rgba(16,24,32,0.03) 10px 20px);border:1px solid rgba(16,24,32,0.12)"></div>
+            <figcaption style="margin-top:8px;font-size:0.82rem;line-height:1.45;color:#54626d"><em>Untitled</em> · 48″ × 60″ · tile glue, acrylic, glow-in-the-dark, squeeze tube</figcaption>
+          </figure>
+          <figure style="margin:0">
+            <div aria-hidden="true" style="width:100%;aspect-ratio:4/5;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.09) 0 10px,rgba(16,24,32,0.03) 10px 20px);border:1px solid rgba(16,24,32,0.12)"></div>
+            <figcaption style="margin-top:8px;font-size:0.82rem;line-height:1.45;color:#54626d"><em>Swarm</em> · 16″ × 20″ · acrylic, pistachios, epoxy</figcaption>
+          </figure>
+          <figure style="margin:0">
+            <div aria-hidden="true" style="width:100%;aspect-ratio:4/5;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.09) 0 10px,rgba(16,24,32,0.03) 10px 20px);border:1px solid rgba(16,24,32,0.12)"></div>
+            <figcaption style="margin-top:8px;font-size:0.82rem;line-height:1.45;color:#54626d"><em>Forest</em> · 16″ × 20″ · acrylic dripped from a stick</figcaption>
+          </figure>
+          <figure style="margin:0">
+            <div aria-hidden="true" style="width:100%;aspect-ratio:4/5;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.09) 0 10px,rgba(16,24,32,0.03) 10px 20px);border:1px solid rgba(16,24,32,0.12)"></div>
+            <figcaption style="margin-top:8px;font-size:0.82rem;line-height:1.45;color:#54626d"><em>Swarm</em> · 16″ × 20″ wooden board · sun-baked tile glue, dowel, seeds</figcaption>
+          </figure>
+        </div>
+      </aside>
+    </div>
+  </article>
+
+  <article aria-labelledby="hilke-h" style="max-width:1200px;margin:clamp(44px,6vw,72px) auto 0;padding:0 clamp(20px,4vw,40px)">
+    <div style="display:flex;align-items:center;gap:16px;padding:30px 0;border-top:3px solid #101820">
+      <img src="assets/people/hilke-schlichting.jpg" alt="Hilke Schlichting." style="width:64px;height:64px;object-fit:cover;border-radius:999px" />
+      <div>
+        <h2 id="hilke-h" style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:2rem;line-height:1.1;letter-spacing:-0.02em">Hilke Schlichting</h2>
+        <p style="margin:2px 0 0;font-size:0.82rem;color:#54626d">Professor, Earth, Planetary, and Space Sciences</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(32px,5vw,64px);align-items:start">
+      <div style="max-width:68ch;min-width:0">
+        <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#9a4a26">How did you start painting?</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">I have been painting for as long as I can remember. Or perhaps, more precisely, I have never stopped. I feel like all children draw and paint, but then, someday, as they grow older, they stop. I see similarities to science here, as I think children, in general, are curious about the world around them and ask all the fundamental questions. But as they grow older, many of them stop. And just like with painting, I feel I never stopped asking these basic, fundamental questions about the world and universe around us. In my research, I deal with questions related to understanding where we come from. So one might say I just “never really grew up.”</p>
+
+        <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#9a4a26">What’s the connection between painting and science?</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">I think I am an inherently creative person, and art and science are both highly creative activities, except that in my art creativity is expressed visually, whereas in science it is more conceptual and mathematical, often in the form of equations. Both, to me, can be incredibly beautiful. If you go back a few hundred years, you will find many artists who were also great scientists, and vice versa — think of Leonardo da Vinci, for example. I think it is only in relatively recent times that these two disciplines have diverged so much.</p>
+
+        <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#9a4a26">What do you paint, and with what?</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">The subject matter of my art is not directly influenced by my research on exoplanets and planet formation. Instead, my art is mostly inspired by travels and experiences I have had. I paint to process these experiences and emotions and to capture some of these fleeting moments so that I can share them with others. Through my paintings, I hope to make the viewer curious about the world around them. My paintings are mostly representational and often depict places I have visited, including historic sites, many of them in Asia — a continent that continues to fascinate me. I am really drawn to color and light. I mostly paint with acrylics on canvas, because they are easy to use and dry quickly, but I also experiment with pastels and gouache from time to time.</p>
+
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Although my research is not the subject matter of my paintings, I do see many similarities between my scientific and artistic practice. For example, both start with an idea or vision that exists only in my head and is gradually transformed into something real and tangible. I find this creative process incredibly satisfying. Both painting and research also involve a great deal of problem-solving; only the tools are different. Finally, both require a certain degree of instinct and intuition, as well as deep focus and attention, which I find exhilarating.</p>
+
+        <blockquote style="margin:38px 0 0;padding:0 0 0 28px;border-left:4px solid #ffd100">
+          <p style="margin:0;font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:1.7rem;line-height:1.32;color:#101820">I paint for the same reason that I do research: I simply enjoy doing it.</p>
+        </blockquote>
+      </div>
+
+      <aside style="min-width:0">
+        <p style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Works · Hilke Schlichting</p>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px">
+          <figure style="margin:0">
+            <div aria-hidden="true" style="width:100%;aspect-ratio:35/23.5;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.09) 0 10px,rgba(16,24,32,0.03) 10px 20px);border:1px solid rgba(16,24,32,0.12)"></div>
+            <figcaption style="margin-top:8px;font-size:0.82rem;line-height:1.45;color:#54626d"><em>Indonesia</em> · Acrylics on canvas, 2025 · 35″ × 23.5″</figcaption>
+          </figure>
+          <figure style="margin:0">
+            <div aria-hidden="true" style="width:100%;aspect-ratio:16/12;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.09) 0 10px,rgba(16,24,32,0.03) 10px 20px);border:1px solid rgba(16,24,32,0.12)"></div>
+            <figcaption style="margin-top:8px;font-size:0.82rem;line-height:1.45;color:#54626d"><em>High above Inle</em> (Myanmar) · Acrylics on canvas, 2024 · 16″ × 12″</figcaption>
+          </figure>
+          <figure style="margin:0">
+            <div aria-hidden="true" style="width:100%;aspect-ratio:1/1;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.09) 0 10px,rgba(16,24,32,0.03) 10px 20px);border:1px solid rgba(16,24,32,0.12)"></div>
+            <figcaption style="margin-top:8px;font-size:0.82rem;line-height:1.45;color:#54626d"><em>Morni</em> · Acrylics on canvas, 2007 · 30″ × 30″</figcaption>
+          </figure>
+        </div>
+      </aside>
+    </div>
+  </article>
+
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(40px,5vw,60px) clamp(20px,4vw,40px) clamp(44px,6vw,72px)">
+    <div style="max-width:76ch;padding-top:20px;border-top:1px solid rgba(16,24,32,0.14)">
+      <p style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Sources</p>
+      <p style="margin:0;font-size:0.82rem;line-height:1.6;color:#54626d">Answers supplied in writing by both artists. Artwork titles, media, dates and dimensions are as given by the artists. Images to be added.</p>
+    </div>
+  </div>
+</main>
+
+<footer style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;padding:52px clamp(20px,4vw,40px);background:#1f2933;color:rgba(251,250,247,0.66)">
+  <div>
+    <img src="assets/brand/newsletter-logo-2x.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:280px;height:auto;margin-bottom:18px;filter:brightness(0) invert(1);opacity:0.9" />
+    <p style="margin:0;max-width:46ch;font-size:0.92rem">UCLA Earth, Planetary, and Space Sciences · 595 Charles E. Young Drive East, Los Angeles, CA 90095</p>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:start;gap:12px;font-size:0.92rem">
+    <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="color:#ffd100;font-weight:600;text-decoration:none" style-hover="color:#fbfaf7">Support UCLA EPSS</a>
+    <a href="EPSS Annual Newsletter 2026.dc.html" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to the issue</a>
+    <a href="#top" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to top ↑</a>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440}}">
+class Component extends DCLogic {
+  state = { progress: 0 };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      this.setState({ progress: max > 0 ? Math.min(1, h.scrollTop / max) : 0 });
+    };
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+    this.onScroll();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
+  }
+
+  renderVals() {
+    return {
+      progress: `${(this.state.progress * 100).toFixed(1)}%`,
+      share: (e) => {
+        if (navigator.clipboard) navigator.clipboard.writeText(location.href);
+        const el = e.currentTarget;
+        const original = el.textContent;
+        el.textContent = "Link copied";
+        setTimeout(() => { el.textContent = original; }, 1600);
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

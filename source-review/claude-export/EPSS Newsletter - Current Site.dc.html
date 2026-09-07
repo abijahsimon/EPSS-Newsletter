@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; color: #1f2933; background: #fbfaf7; line-height: 1.5; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  * { box-sizing: border-box; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  a:hover { color: #2774ae; }
+  h1, h2, h3, p { margin-top: 0; }
+  summary { cursor: pointer; font-weight: 900; }
+  @keyframes slideUpFade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;min-height:82px;padding:0 32px;background:rgba(251,250,247,0.9);backdrop-filter:blur(18px);border-bottom:1px solid rgba(16,24,32,0.14)">
+  <a href="#top" aria-label="EPSS Newsletter home" style="display:flex;align-items:center;flex:0 1 440px;text-decoration:none">
+    <img src="assets/brand/epss-department-logo.svg" alt="UCLA Earth, Planetary &amp; Space Sciences" style="width:min(390px,52vw);height:auto" />
+  </a>
+  <nav aria-label="Primary" style="display:flex;gap:24px;color:#5f6f7c;font-size:0.92rem;font-weight:700">
+    <a href="#contents" style="text-decoration:none">Contents</a>
+    <a href="#story-plan" style="text-decoration:none">Story Plan</a>
+    <a href="#features" style="text-decoration:none">Features</a>
+    <a href="#briefs" style="text-decoration:none">Briefs</a>
+    <a href="#community" style="text-decoration:none">Community</a>
+    <a href="#giving" style="text-decoration:none">Giving</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section aria-labelledby="issue-title" style="position:relative;min-height:calc(100svh - 72px);display:grid;align-items:end;overflow:hidden;color:white">
+    <img src="assets/images/p01_01.jpg" alt="Mountain valley landscape from the EPSS 2025 newsletter." style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+    <div style="position:absolute;inset:0;width:100%;height:100%;background:linear-gradient(90deg, rgba(16,24,32,0.88) 0%, rgba(16,24,32,0.58) 45%, rgba(16,24,32,0.18) 100%), linear-gradient(0deg, rgba(16,24,32,0.78) 0%, rgba(16,24,32,0.04) 48%)"></div>
+    <div style="position:relative;width:min(760px,calc(100% - 48px));padding:0 0 76px 48px">
+      <p style="margin:0 0 12px;color:#ffd100;font-size:1rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Welcome to the New</p>
+      <h1 id="issue-title" style="margin-bottom:18px;font-size:clamp(4rem,11vw,9.5rem);line-height:0.86;letter-spacing:0">EPSS Annual Newsletter</h1>
+      <p style="max-width:620px;font-size:clamp(1.08rem,2vw,1.45rem)">2025–2026 from Earth and beyond: A year of discovery, fieldwork, mentorship, remembrance, and Bruin science.</p>
+      <div aria-label="Issue actions" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+        <a href="#contents" style="display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;font-weight:800;text-decoration:none;color:#101820;background:#ffd100;border:1px solid #ffd100">Explore this Issue</a>
+        <a href="#features" style="display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;font-weight:800;text-decoration:none;color:white;border:1px solid currentColor">Featured Stories</a>
+      </div>
+    </div>
+    <a href="https://epss.ucla.edu/become-a-donor/" aria-label="Give to EPSS" style="position:absolute;top:24px;right:24px;z-index:1;width:156px;height:156px;display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;filter:drop-shadow(0 18px 34px rgba(16,24,32,0.28))">
+      <svg viewBox="0 0 512 512" aria-hidden="true" focusable="false" style="display:block;width:100%;height:100%;overflow:visible">
+        <defs>
+          <radialGradient id="supportBadgeNavy" cx="36%" cy="28%" r="76%">
+            <stop offset="0" stop-color="#0a4f8b"></stop>
+            <stop offset="0.52" stop-color="#003b70"></stop>
+            <stop offset="1" stop-color="#002b56"></stop>
+          </radialGradient>
+          <linearGradient id="supportBadgeGold" x1="100" y1="54" x2="405" y2="462" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ffe469"></stop>
+            <stop offset="0.42" stop-color="#ffd100"></stop>
+            <stop offset="1" stop-color="#f2b600"></stop>
+          </linearGradient>
+          <filter id="supportBadgeTextShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="3" stdDeviation="2.2" flood-color="#00172e" flood-opacity="0.35"></feDropShadow>
+          </filter>
+        </defs>
+        <circle cx="256" cy="256" r="246" fill="url(#supportBadgeGold)"></circle>
+        <circle cx="256" cy="256" r="226" fill="url(#supportBadgeNavy)"></circle>
+        <circle cx="256" cy="256" r="205" fill="none" stroke="url(#supportBadgeGold)" stroke-width="4"></circle>
+        <g fill="none" stroke="url(#supportBadgeGold)" stroke-linecap="round" stroke-width="10">
+          <path d="M256 78v24"></path>
+          <path d="M207 93l12 22"></path>
+          <path d="M305 93l-12 22"></path>
+          <path d="M167 128l23 15"></path>
+          <path d="M345 143l23-15"></path>
+        </g>
+        <path d="M256 135c-27-34-77-10-70 35 5 30 39 54 70 82 31-28 65-52 70-82 7-45-43-69-70-35Z" fill="url(#supportBadgeGold)" transform="translate(0 -26)"></path>
+        <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="11" transform="translate(0 -26)">
+          <path d="M181 211v-61c0-8-7-15-15-15s-15 7-15 15v44c0 24 9 44 26 61l28 29v28h81v-62c0-18-7-35-20-48l-47-45c-8-8-20-7-28 1-7 8-7 20 1 28l42 40"></path>
+          <path d="M151 194v-36c0-8-6-14-14-14s-14 6-14 14v38c0 29 12 55 32 75l27 26"></path>
+          <path d="M331 211v-61c0-8 7-15 15-15s15 7 15 15v44c0 24-9 44-26 61l-28 29v28h-81v-62c0-18-7-35-20-48l47-45c8-8 20-7 28 1 7 8 7 20-1 28l-42 40"></path>
+          <path d="M361 194v-36c0-8 6-14 14-14s14 6 14 14v38c0 29-12 55-32 75l-27 26"></path>
+        </g>
+        <text x="256" y="323" fill="#fff" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="70" font-weight="900" letter-spacing="4" text-anchor="middle" filter="url(#supportBadgeTextShadow)">GIVE TO</text>
+        <text x="256" y="407" fill="url(#supportBadgeGold)" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="104" font-weight="900" letter-spacing="3" text-anchor="middle">EPSS</text>
+        <g fill="url(#supportBadgeGold)">
+          <path d="m256 419 13 27 27 13-27 13-13 27-13-27-27-13 27-13Z"></path>
+          <path d="M158 459h68" stroke="url(#supportBadgeGold)" stroke-linecap="round" stroke-width="5"></path>
+          <path d="M286 459h68" stroke="url(#supportBadgeGold)" stroke-linecap="round" stroke-width="5"></path>
+        </g>
+      </svg>
+    </a>
+    <aside aria-label="Issue summary" style="position:absolute;right:32px;bottom:32px;width:min(300px,calc(100% - 64px));padding:24px;border-left:4px solid #ffd100;background:rgba(255,255,255,0.94);color:#101820;backdrop-filter:blur(20px);box-shadow:0 28px 60px rgba(16,24,32,0.28);animation:slideUpFade 0.9s ease-out 0.15s both">
+      <span style="display:block;color:#1f2933;font-size:0.92rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px">Digital Era</span>
+      <strong style="display:block;margin:10px 0;font-size:1.45rem;line-height:1.1;color:#101820">Our annual newsletter, rebuilt as a digital issue.</strong>
+      <span style="display:block;color:#1f2933;font-size:0.92rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px">Same annual roundup, easier to browse and share.</span>
+    </aside>
+  </section>
+
+  <section id="story-plan" aria-labelledby="story-plan-title" style="padding:76px 48px;background:#eef4f7">
+    <div style="max-width:820px;margin-bottom:32px">
+      <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Live Outline</p>
+      <h2 id="story-plan-title" style="margin-bottom:0;font-size:clamp(2rem,4vw,4.2rem);line-height:0.98">Current Story Plan</h2>
+      <p style="color:#5f6f7c;font-size:1.05rem">These cards are editorial placeholders, not final article titles. They organize the updated contents into production-ready lanes.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px">
+      <article style="padding:22px;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <h3 style="margin-bottom:18px;color:#101820;font-size:1.35rem;line-height:1.15">Lead Features</h3>
+        <ul style="display:grid;gap:14px;margin:0;padding:0;list-style:none">
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Chair's note</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">1 page, not started</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Student feature</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Lizzy Su or Megan Li / EYU</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Faculty feature</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Edwin Schauble, isotope analysis</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Science, art, and interview feature</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">David Jewitt and Hilke Schlichting</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Alumni profile</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Allen F. Glazner</span></li>
+        </ul>
+      </article>
+      <article style="padding:22px;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <h3 style="margin-bottom:18px;color:#101820;font-size:1.35rem;line-height:1.15">Research &amp; Field</h3>
+        <ul style="display:grid;gap:14px;margin:0;padding:0;list-style:none">
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">RIMFAX</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Paige and Emily, 2-page feature</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">BALBOA aurora balloon update</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Xiaoyan Zhou</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Jonathan Mitchell Eos features</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Research findings summary</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">David Southwood lecture</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">A tale of two agencies, NASA and ESA</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Geophysics 136C</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Article or photo essay</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Suburban retrospective</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Field vehicle farewell</span></li>
+        </ul>
+      </article>
+      <article style="padding:22px;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <h3 style="margin-bottom:18px;color:#101820;font-size:1.35rem;line-height:1.15">People &amp; Community</h3>
+        <ul style="display:grid;gap:14px;margin:0;padding:0;list-style:none">
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Retirements</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Craig Manning, Gilles Peltzer</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Researcher farewells</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Steve Joy, Peter Chi</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Memorials and obituaries</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Art Montana, Ronald Shreve, Candace Hansen, Gerald Schubert</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">EPSSSO highlight</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Student organization recruitment piece</span></li>
+        </ul>
+      </article>
+      <article style="padding:22px;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <h3 style="margin-bottom:18px;color:#101820;font-size:1.35rem;line-height:1.15">Recognition &amp; Back Matter</h3>
+        <ul style="display:grid;gap:14px;margin:0;padding:0;list-style:none">
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Awards</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Chancellor Postdocs, 51 Pegasi B, NASA FINESST, faculty honors</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Undergrad summer fellowships</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Recognition module</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Journal covers</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Visual roundup if enough examples are collected</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Donors and endowments</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">1.5-page equivalent</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Commencement photos</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">2-page equivalent</span></li>
+          <li style="padding-top:14px;border-top:1px solid rgba(16,24,32,0.14)"><strong style="display:block;line-height:1.2">Cover imagery</strong><span style="display:block;margin-top:5px;color:#5f6f7c;font-size:0.9rem">Artwork, theme image, or collage</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="features" aria-label="Featured stories" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch">
+    <article id="chairs-note" style="min-height:620px;display:grid;grid-template-rows:420px 1fr;background:white">
+      <div style="min-height:0;background:#eef4f7">
+        <img src="assets/images/p02_04.jpg" alt="EPSS faculty portrait placeholder." style="width:100%;height:100%;object-fit:cover" />
+      </div>
+      <div style="padding:36px">
+        <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Chair's Note</p>
+        <h2 style="margin-bottom:16px;font-size:clamp(2rem,3vw,3.6rem);line-height:0.98">Opening Letter from the Department Chair</h2>
+        <p>Use this lead story for the annual welcome, department-wide reflection, priorities for the year ahead, and links into the rest of the issue.</p>
+        <a href="#story-plan" style="display:inline-flex;margin-top:12px;color:#2774ae;font-weight:900;text-decoration-thickness:2px;text-underline-offset:5px">View in plan</a>
+      </div>
+    </article>
+    <article id="rimfax" style="min-height:620px;display:grid;grid-template-rows:420px 1fr;background:#d9edf4">
+      <div style="min-height:0;background:#eef4f7">
+        <img src="assets/images/p15_02.jpg" alt="Space research graphic from the newsletter image archive." style="width:100%;height:100%;object-fit:cover" />
+      </div>
+      <div style="padding:36px">
+        <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Research Feature</p>
+        <h2 style="margin-bottom:16px;font-size:clamp(2rem,3vw,3.6rem);line-height:0.98">RIMFAX: Seeing Beneath the Martian Surface</h2>
+        <p>A long-form feature slot for the RIMFAX story, with room for David Paige and Emily Cardarelli context, mission visuals, pull quotes, figures, and related links.</p>
+        <a href="#rimfax-full" style="display:inline-flex;margin-top:12px;color:#2774ae;font-weight:900;text-decoration-thickness:2px;text-underline-offset:5px">Read story</a>
+      </div>
+    </article>
+  </section>
+
+  <section id="briefs" aria-labelledby="briefs-title" style="padding:76px 48px;background:#fbfaf7">
+    <div style="max-width:820px;margin-bottom:32px">
+      <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Issue Briefs</p>
+      <h2 id="briefs-title" style="margin-bottom:0;font-size:clamp(2rem,4vw,4.2rem);line-height:0.98">Short stories about events, students, and EPSS research.</h2>
+      <p style="color:#5f6f7c;font-size:1.05rem">Use this module for planned pieces that are bigger than a planning-board line but smaller than a lead feature.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px">
+      <article id="art-science" style="min-height:260px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Art &amp; Science</p>
+        <h3 style="margin-bottom:14px;font-size:1.35rem;line-height:1.15">David Jewitt and Hilke Schlichting</h3>
+        <p style="margin-bottom:0;color:#5f6f7c">Interview or visual Q&amp;A slot for the science, art, and creative-process feature.</p>
+      </article>
+      <article id="geophysics-136c" style="min-height:260px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Course Photo Essay</p>
+        <h3 style="margin-bottom:14px;font-size:1.35rem;line-height:1.15">Geophysics 136C in the Field</h3>
+        <p style="margin-bottom:0;color:#5f6f7c">Short field-course story that can stand alone or feed into the Suburban retrospective.</p>
+      </article>
+      <article id="undergrad-fellowships" style="min-height:260px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Student Recognition</p>
+        <h3 style="margin-bottom:14px;font-size:1.35rem;line-height:1.15">Undergraduate Summer Fellowships</h3>
+        <p style="margin-bottom:0;color:#5f6f7c">Recognition module for fellowship recipients, projects, mentors, and short student research notes.</p>
+      </article>
+      <article id="journal-covers" style="min-height:260px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Research Gallery</p>
+        <h3 style="margin-bottom:14px;font-size:1.35rem;line-height:1.15">Journal Covers</h3>
+        <p style="margin-bottom:0;color:#5f6f7c">Visual roundup for published cover art, figures, captions, and links to the associated papers.</p>
+      </article>
+      <article id="welcome-new" style="min-height:260px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;background:#eef4f7;border:1px solid rgba(16,24,32,0.14)">
+        <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Annual Standing Slot</p>
+        <h3 style="margin-bottom:14px;font-size:1.35rem;line-height:1.15">Welcome New Faculty and Staff</h3>
+        <p style="margin-bottom:0;color:#5f6f7c">Keep as a reusable template slot; publish it only if the final 2026 issue confirms names and photos.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="community" aria-labelledby="community-title" style="padding:76px 48px">
+    <div style="max-width:820px;margin-bottom:32px">
+      <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Community</p>
+      <h2 id="community-title" style="margin-bottom:0;font-size:clamp(2rem,4vw,4.2rem);line-height:0.98">The People and Places of EPSS</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px">
+      <article id="faculty-feature" style="display:flex;flex-direction:column;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <img src="assets/people/edwin-schauble.jpg" alt="Edwin Schauble portrait." style="width:100%;height:auto;aspect-ratio:4/3;object-fit:cover" />
+        <p style="margin:20px 20px 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Faculty Feature</p>
+        <h3 style="margin:0 20px 14px;font-size:1.35rem;line-height:1.15">Edwin Schauble: Isotope Analysis</h3>
+        <p style="margin:0 20px 24px;color:#5f6f7c">Feature slot for a faculty profile with research overview, accessible science framing, and quotes.</p>
+      </article>
+      <article id="alumni-profile" style="display:flex;flex-direction:column;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <img src="assets/people/allen-glazner.webp" alt="Allen F. Glazner in the field." style="width:100%;height:auto;aspect-ratio:4/3;object-fit:cover" />
+        <p style="margin:20px 20px 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Alumni Profile</p>
+        <h3 style="margin:0 20px 14px;font-size:1.35rem;line-height:1.15">Allen F. Glazner</h3>
+        <p style="margin:0 20px 24px;color:#5f6f7c">Alumni profile slot for career path, EPSS connection, scientific impact, and archival imagery.</p>
+      </article>
+      <article id="student-profile" style="display:flex;flex-direction:column;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <img src="assets/people/megan-li.jpg" alt="Megan Li portrait." style="width:100%;height:auto;aspect-ratio:4/3;object-fit:cover" />
+        <p style="margin:20px 20px 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Student Voice</p>
+        <h3 style="margin:0 20px 14px;font-size:1.35rem;line-height:1.15">Lizzy Su or Megan Li</h3>
+        <p style="margin:0 20px 24px;color:#5f6f7c">Student feature slot for future plans, final-year perspective, EYU, or another recent graduate angle.</p>
+      </article>
+      <article id="epssso" style="display:flex;flex-direction:column;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <img src="assets/images/p14_08.jpg" alt="EPSS student community gathering placeholder." style="width:100%;height:auto;aspect-ratio:4/3;object-fit:cover" />
+        <p style="margin:20px 20px 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Student Organization</p>
+        <h3 style="margin:0 20px 14px;font-size:1.35rem;line-height:1.15">EPSSSO Highlight</h3>
+        <p style="margin:0 20px 24px;color:#5f6f7c">Recruitment and community story for student leadership, events, mentoring, and ways to get involved.</p>
+      </article>
+      <article id="field-trips" style="display:flex;flex-direction:column;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <img src="assets/images/p12_02.jpg" alt="Desert field trip landscape." style="width:100%;height:auto;aspect-ratio:4/3;object-fit:cover" />
+        <p style="margin:20px 20px 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Field Trips</p>
+        <h3 style="margin:0 20px 14px;font-size:1.35rem;line-height:1.15">Suburban Retrospective</h3>
+        <p style="margin:0 20px 24px;color:#5f6f7c">Photo-rich field-program story about the department field vehicle's life, classes, trips, and farewell.</p>
+      </article>
+      <article id="memorials" style="display:flex;flex-direction:column;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <img src="assets/images/p08_08.jpg" alt="Flowers used as a memorial placeholder." style="width:100%;height:auto;aspect-ratio:4/3;object-fit:cover" />
+        <p style="margin:20px 20px 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">In Memoriam</p>
+        <h3 style="margin:0 20px 14px;font-size:1.35rem;line-height:1.15">Memorials and Obituaries</h3>
+        <p style="margin:0 20px 24px;color:#5f6f7c">Respectful remembrance slots for Art Montana, Ronald Shreve, Candace Hansen, and Gerald Schubert.</p>
+      </article>
+      <article id="retirees" style="display:flex;flex-direction:column;background:white;border:1px solid rgba(16,24,32,0.14)">
+        <img src="assets/images/p09_02.jpg" alt="Community gathering placeholder for retiree farewell." style="width:100%;height:auto;aspect-ratio:4/3;object-fit:cover" />
+        <p style="margin:20px 20px 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Farewells</p>
+        <h3 style="margin:0 20px 14px;font-size:1.35rem;line-height:1.15">Retirements and Signoffs</h3>
+        <p style="margin:0 20px 24px;color:#5f6f7c">Career milestone format for Craig Manning, Gilles Peltzer, Steve Joy, and Peter Chi.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="research-updates" aria-labelledby="research-updates-title" style="display:grid;grid-template-columns:0.8fr 1.2fr;gap:48px;padding:72px 48px;background:#516a44;color:white">
+    <div>
+      <p style="margin:0 0 12px;color:#ffd100;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Lab &amp; Research Updates</p>
+      <h2 id="research-updates-title" style="font-size:clamp(2rem,4vw,4.2rem);line-height:0.98">Signals from the field, lab, and sky.</h2>
+      <p>Short dispatches from BALBOA, Eos research highlights, journal covers, and the hands-on work that keeps science moving.</p>
+    </div>
+    <div style="display:grid;gap:12px">
+      <details open="" style="padding:20px 22px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25)">
+        <summary>Xiaoyan Zhou: BALBOA aurora balloon project update</summary>
+        <p style="margin:14px 0 0;color:rgba(255,255,255,0.82)">One-page research update slot with mission context, current status, images, and what readers should watch for next.</p>
+      </details>
+      <details style="padding:20px 22px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25)">
+        <summary>Jonathan Mitchell: Eos features and research findings</summary>
+        <p style="margin:14px 0 0;color:rgba(255,255,255,0.82)">Short synthesis format for recent research coverage, key findings, and links to the original pieces.</p>
+      </details>
+      <details style="padding:20px 22px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25)">
+        <summary>AI-proof faculty work</summary>
+        <p style="margin:14px 0 0;color:rgba(255,255,255,0.82)">Multi-faculty roundup format for hands-on, field-based, instrument-based, or creative scholarly work.</p>
+      </details>
+    </div>
+  </section>
+
+  <section aria-label="Awards, donors, and commencement" style="display:grid;grid-template-columns:0.8fr 1.4fr 0.8fr;background:white">
+    <article id="awards" style="min-height:360px;padding:36px;border-right:1px solid rgba(16,24,32,0.14)">
+      <div>
+        <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Awards</p>
+        <h2 style="font-size:clamp(1.8rem,3vw,3rem);line-height:0.98">Honors and Recognition</h2>
+        <p>Annual list module for Chancellor Postdoctoral Fellows, 51 Pegasi B Fellows, NASA FINESST, Jean-Luc Margot's Royal Academy of Belgium honor, Hao Cao's Sloan Fellowship, undergraduate summer fellowships, undergraduate awards, and PhD fellowships.</p>
+      </div>
+    </article>
+    <article id="commencement" style="min-height:360px;padding:36px;border-right:1px solid rgba(16,24,32,0.14);display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center">
+      <img src="assets/images/p14_07.jpg" alt="EPSS commencement group photograph." style="width:100%;height:100%;min-height:270px;object-fit:cover" />
+      <div>
+        <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Commencement</p>
+        <h2 style="font-size:clamp(1.8rem,3vw,3rem);line-height:0.98">Celebrating the Class</h2>
+        <p>Photo-forward recap for graduates, speakers, degree lists, ceremony highlights, and awardees.</p>
+      </div>
+    </article>
+    <article id="giving" style="min-height:360px;padding:36px;border-right:1px solid rgba(16,24,32,0.14);background:#101820;color:white">
+      <div>
+        <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Giving</p>
+        <h2 id="donors" style="font-size:clamp(1.8rem,3vw,3rem);line-height:0.98">Donors and Endowments</h2>
+        <p>Donor recognition can live here as a searchable annual honor roll, grouped by fund, endowment, or giving level if desired.</p>
+        <a href="https://epss.ucla.edu/become-a-donor/" style="display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;font-weight:800;text-decoration:none;color:#101820;background:#ffd100;border:1px solid #ffd100">Support EPSS</a>
+      </div>
+    </article>
+  </section>
+
+  <section aria-label="Long-form article placeholders" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:rgba(16,24,32,0.14)">
+    <article id="rimfax-full" style="padding:56px 48px;background:#101820;color:white">
+      <p style="margin:0 0 12px;color:#ffd100;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Long-form Template</p>
+      <h2 style="font-size:clamp(2rem,3vw,3.4rem);line-height:0.98">RIMFAX Feature Full Article</h2>
+      <p style="color:rgba(255,255,255,0.8)">Replace this block with the RIMFAX feature. Suggested fields: mission overview, EPSS connection, research visuals, David Paige and Emily Cardarelli context, glossary, related links.</p>
+    </article>
+    <article id="suburban-full" style="padding:56px 48px;background:#fbfaf7">
+      <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Long-form Template</p>
+      <h2 style="font-size:clamp(2rem,3vw,3.4rem);line-height:0.98">Suburban Retrospective Full Article</h2>
+      <p>Replace this block with the Suburban retrospective. Suggested fields: vehicle history, field-course memories, alumni quotes, photo gallery, and a farewell note.</p>
+    </article>
+  </section>
+
+  <section id="template-notes" aria-labelledby="template-notes-title" style="padding:72px 48px;background:#eef4f7">
+    <div style="max-width:820px;margin-bottom:32px">
+      <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Template Notes</p>
+      <h2 id="template-notes-title" style="margin-bottom:0;font-size:clamp(2rem,4vw,4.2rem);line-height:0.98">Designed for future issues.</h2>
+    </div>
+    <ul style="max-width:880px;margin:0;padding-left:22px;color:#5f6f7c;font-size:1.05rem">
+      <li>Each confirmed story type has a stable anchor, making annual content swaps straightforward.</li>
+      <li style="margin-top:10px">The layout supports short cards, Q&amp;A updates, image-led features, and long-form article pages/sections.</li>
+      <li style="margin-top:10px">Images currently use locally extracted 2025 newsletter assets as placeholders and can be replaced with final 2026 media.</li>
+    </ul>
+  </section>
+
+  <section id="contents" aria-labelledby="contents-title" style="display:grid;grid-template-columns:minmax(240px,0.7fr) 1.3fr;gap:48px;padding:72px 48px;background:#101820;color:white">
+    <div>
+      <p style="margin:0 0 12px;color:#b85c38;font-size:0.86rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase">Table of Contents</p>
+      <h2 id="contents-title" style="margin-bottom:0;font-size:clamp(2rem,4vw,4.2rem);line-height:0.98">Explore the issue.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:rgba(255,255,255,0.22)">
+      <a href="#chairs-note" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Chair's Note</a>
+      <a href="#student-profile" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Student Feature</a>
+      <a href="#faculty-feature" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Faculty Feature</a>
+      <a href="#alumni-profile" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Alumni Profile</a>
+      <a href="#rimfax" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">RIMFAX</a>
+      <a href="#art-science" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Art &amp; Science</a>
+      <a href="#research-updates" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Research Updates</a>
+      <a href="#field-trips" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Field Program</a>
+      <a href="#geophysics-136c" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Geophysics 136C</a>
+      <a href="#memorials" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Memorials</a>
+      <a href="#retirees" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Retirements</a>
+      <a href="#epssso" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">EPSSSO</a>
+      <a href="#awards" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Awards</a>
+      <a href="#undergrad-fellowships" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Summer Fellowships</a>
+      <a href="#journal-covers" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Journal Covers</a>
+      <a href="#donors" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Donors</a>
+      <a href="#commencement" style="min-height:88px;display:flex;align-items:end;padding:18px;background:#101820;color:white;font-weight:800;text-decoration:none" style-hover="background:#2774ae;color:white">Commencement</a>
+    </div>
+  </section>
+</main>
+
+<footer style="display:flex;justify-content:space-between;gap:24px;padding:32px 48px;background:#101820;color:white">
+  <div>
+    <strong>UCLA Earth, Planetary, and Space Sciences</strong>
+    <p style="margin-bottom:0;color:rgba(255,255,255,0.72)">Digital newsletter template prototype</p>
+  </div>
+  <a href="#top" style="color:#ffd100;font-weight:900">Back to top</a>
+</footer>
+
+</x-dc>
+</body>
+</html>

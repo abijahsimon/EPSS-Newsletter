@@ -56,6 +56,12 @@ const articles = defineCollection({
     category: z.string(),
     title: z.string(),
     variant: z.enum(["feature", "standard"]),
+    dek: z.string().optional(),
+    byline: z.string().optional(),
+    readTime: z.string().optional(),
+    sourceNote: z.string().optional(),
+    heroImage: z.string().optional(),
+    heroImageAlt: z.string().optional(),
   }),
 });
 

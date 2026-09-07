@@ -1,0 +1,74 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const articles = (await getCollection("articles"))
+    .filter((entry) => entry.data.status === "published")
+    .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+  return articles.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const article = entry.data;
+---
+
+<BaseLayout title={`${article.title} | EPSS Newsletter 2026`} description={article.dek ?? article.title}>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="EPSS Newsletter home">
+      <img src="/assets/brand/epss-department-logo.svg" alt="UCLA Earth, Planetary & Space Sciences" class="brand-logo" />
+    </a>
+    <nav class="desktop-nav" aria-label="Article">
+      <a href="/">Issue Home</a>
+      <a href="/#contents">Contents</a>
+      <a href="/#giving">Give</a>
+    </nav>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile">
+    <a href="/">Issue Home</a>
+    <a href="/#contents">Contents</a>
+    <a href="/#giving">Give</a>
+  </nav>
+
+  <main id="top" class="story-page">
+    <section class:list={["story-hero-page", article.variant === "feature" && "dark"]} aria-labelledby="story-title">
+      <div>
+        <a class="back-link" href="/">Back to the 2026 issue</a>
+        <p class="category">{article.category}</p>
+        <h1 id="story-title">{article.title}</h1>
+        {article.dek && <p class="story-dek">{article.dek}</p>}
+        <div class="story-meta">
+          {article.byline && <span>{article.byline}</span>}
+          {article.readTime && <span>{article.readTime}</span>}
+        </div>
+      </div>
+      {article.heroImage && (
+        <figure>
+          <img src={article.heroImage} alt={article.heroImageAlt ?? ""} />
+        </figure>
+      )}
+    </section>
+
+    <article class="story-body">
+      <Content />
+      {article.sourceNote && <p class="source-note">{article.sourceNote}</p>}
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>UCLA Earth, Planetary, and Space Sciences</strong>
+      <p>EPSS Newsletter 2026</p>
+    </div>
+    <a href="#top">Back to top</a>
+  </footer>
+</BaseLayout>

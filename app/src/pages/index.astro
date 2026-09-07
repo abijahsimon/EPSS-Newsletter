@@ -104,7 +104,7 @@ const articles = new Map(renderedArticles);
                   <p class="category">{story.category}</p>
                   <h2>{story.title}</h2>
                   <p>{story.summary}</p>
-                  <a href={story.link.href} class="text-link">{story.link.label}</a>
+                  {story.link && <a href={story.link.href} class="text-link">{story.link.label}</a>}
                 </div>
               </article>
             ))}
@@ -124,6 +124,7 @@ const articles = new Map(renderedArticles);
                   <p class="category">{card.category}</p>
                   <h3>{card.title}</h3>
                   <p>{card.summary}</p>
+                  {card.link && <a href={card.link.href} class="text-link">{card.link.label}</a>}
                 </article>
               ))}
             </div>
@@ -143,6 +144,7 @@ const articles = new Map(renderedArticles);
                   <p class="category">{card.category}</p>
                   <h3>{card.title}</h3>
                   <p>{card.summary}</p>
+                  {card.link && <a href={card.link.href} class="text-link">{card.link.label}</a>}
                 </article>
               ))}
             </div>
@@ -161,6 +163,7 @@ const articles = new Map(renderedArticles);
                 <details open={item.open}>
                   <summary>{item.title}</summary>
                   <p>{item.body}</p>
+                  {item.link && <a href={item.link.href} class="text-link">{item.link.label}</a>}
                 </details>
               ))}
             </div>
@@ -176,7 +179,7 @@ const articles = new Map(renderedArticles);
                   <p class="category">{panel.category}</p>
                   <h2 id={panel.headingId}>{panel.title}</h2>
                   <p>{panel.summary}</p>
-                  {panel.link && <a class="button primary" href={panel.link.href}>{panel.link.label}</a>}
+                  {panel.link && <a class:list={["button", panel.variant === "donor-panel" ? "secondary" : "primary"]} href={panel.link.href}>{panel.link.label}</a>}
                 </div>
               </article>
             ))}
@@ -235,4 +238,3 @@ const articles = new Map(renderedArticles);
     <a href="#top">{issue.footer.backToTopLabel}</a>
   </footer>
 </BaseLayout>
-

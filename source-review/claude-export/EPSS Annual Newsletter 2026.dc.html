@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  :focus-visible { outline: 3px solid #9a4a26; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+  @keyframes drawIn { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes mastheadSettle { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+  body { margin: 0; background: #fbfaf7; color: #1f2933; font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  img { display: block; max-width: 100%; }
+  a { color: #2774ae; }
+  a:hover { color: #9a4a26; }
+  h1, h2, h3, h4, p, ul, ol { margin-top: 0; }
+  summary::-webkit-details-marker { display: none; }
+  summary { list-style: none; }
+  input, button { font: inherit; }
+  ::selection { background: #ffd100; color: #101820; }
+</style>
+</helmet>
+
+<a href="#guide" style="position:absolute;left:-9999px;top:0;z-index:100;padding:12px 18px;background:#101820;color:#fbfaf7;font-weight:600;text-decoration:none" style-focus="left:0">Skip to contents</a>
+<header style="position:sticky;top:0;z-index:40;background:rgba(251,250,247,0.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(16,24,32,0.14)">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;padding:14px 40px">
+    <a href="#top" aria-label="EPSS Newsletter home" style="display: flex; align-items: center; flex: 0 1 340px">
+      <div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 12px"><img src="assets/brand/epss-lockup.png" alt="UCLA Earth, Planetary &amp; Space Sciences" style="flex-grow: 12; object-fit: cover"></div>
+    </a>
+    <nav aria-label="Sections" style="display:flex;flex-wrap:wrap;justify-content:end;align-items:center;gap:14px 20px;font-size:0.82rem;font-weight:600;letter-spacing:0.02em;color:#54626d">
+      <a href="#guide" style="text-decoration:none;color:inherit;padding-bottom:2px;border-bottom:2px solid transparent" style-hover="color:#101820;border-bottom-color:#9a4a26">Contents</a>
+      <a href="#rimfax" style="text-decoration:none;color:inherit;padding-bottom:2px;border-bottom:2px solid transparent" style-hover="color:#101820;border-bottom-color:#9a4a26">Feature</a>
+      <a href="#research" style="text-decoration:none;color:inherit;padding-bottom:2px;border-bottom:2px solid transparent" style-hover="color:#101820;border-bottom-color:#9a4a26">Research</a>
+      <a href="#endowed-chairs" style="text-decoration:none;color:inherit;padding-bottom:2px;border-bottom:2px solid transparent" style-hover="color:#101820;border-bottom-color:#9a4a26">Endowed Chairs</a>
+      <a href="#community" style="text-decoration:none;color:inherit;padding-bottom:2px;border-bottom:2px solid transparent" style-hover="color:#101820;border-bottom-color:#9a4a26">Community</a>
+      <a href="#field" style="text-decoration:none;color:inherit;padding-bottom:2px;border-bottom:2px solid transparent" style-hover="color:#101820;border-bottom-color:#9a4a26">Field</a>
+      <a href="#awards" style="text-decoration:none;color:inherit;padding-bottom:2px;border-bottom:2px solid transparent" style-hover="color:#101820;border-bottom-color:#9a4a26">Awards</a>
+      <a href="#memoriam" style="text-decoration:none;color:inherit;padding-bottom:2px;border-bottom:2px solid transparent" style-hover="color:#101820;border-bottom-color:#9a4a26">Farewells</a>
+      <a href="#giving" style="display:inline-flex;align-items:center;height:46px;padding:0 16px;background:#101820;color:#fbfaf7;text-decoration:none;font-weight:600;letter-spacing:0.01em" style-hover="background:#9a4a26;color:#fff">Give</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section aria-label="Issue cover" style="position:relative;background:#101820;color:#fbfaf7;overflow:hidden">
+    <div role="group" aria-roledescription="carousel" aria-label="Issue cover images" style="position:absolute;inset:0;overflow:hidden">
+      <div style="display:flex;width:300%;height:100%;transition:transform 900ms cubic-bezier(0.4,0,0.2,1);transform:translateX({{slideOffset}})">
+        <div style="width:33.3333%;height:100%"><img src="assets/images/p10_03.jpg" alt="Joshua trees silhouetted against a pink and orange sunset in the Mojave Desert." style="width:100%;height:100%;object-fit:cover;object-position:50% 42%"></div>
+        <div style="width:33.3333%;height:100%"><img src="assets/images/p01_01.jpg" alt="Icebergs beyond moss-covered granite outcrops on the Greenland coast." style="width:100%;height:100%;object-fit:cover;object-position:50% 38%"></div>
+        <div style="width:33.3333%;height:100%"><img src="assets/images/p12_02.jpg" alt="A line of students walking toward red sandstone formations under a wide desert sky." style="width:100%;height:100%;object-fit:cover;object-position:50% 78%"></div>
+      </div>
+    </div>
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(16,24,32,0.82) 0%, rgba(16,24,32,0.5) 46%, rgba(16,24,32,0.12) 100%), linear-gradient(0deg, rgba(16,24,32,0.72) 0%, rgba(16,24,32,0) 58%)"></div>
+
+    <div style="position:relative;display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,80px);align-items:end;min-height:clamp(620px,86svh,880px);padding:120px clamp(20px,4vw,40px) 44px">
+      <div style="flex:1 1 420px;min-width:0;max-width:820px">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:26px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#ffd100">
+          
+          <span style="width:26px;height:1px;background:rgba(255,209,0,0.6)"></span>
+          <span>2025–2026</span>
+          <span style="width:26px;height:1px;background:rgba(255,209,0,0.6)"></span>
+          <span>Published September 2026</span>
+          <span style="width:26px;height:1px;background:rgba(255,209,0,0.6)"></span>
+          
+        </div>
+        
+        <h1 style="margin: 0 0 22px; font-family: Newsreader,Georgia,serif; font-weight: 400; font-size: clamp(2.6rem,8.4vw,7.6rem); line-height: 0.94; letter-spacing: -0.022em; text-wrap: balance; overflow-wrap: break-word">EPSS Annual Newsletter</h1>
+        <h2 style="margin: 0px 0px 14px; color: #FFD100; font-weight: 400; font-size:1.7rem; line-height: 1.18; letter-spacing: -0.01em; font-family: Newsreader, Georgia, serif">Welcome to our new annual newsletter, rebuilt digitally.</h2><p style="max-width:560px;margin:0 0 32px;font-family:Newsreader,Georgia,serif;font-size:clamp(1.15rem,1.6vw,1.5rem);font-weight:300;line-height:1.5;color:rgba(251,250,247,0.86)">2025-2026 from Earth and beyond: A year of discovery, fieldwork, mentorship, remembrance, and Bruin science.</p><div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a href="#guide" style="display:inline-flex;align-items:center;height:50px;padding:0 26px;background:#ffd100;color:#101820;font-weight:600;text-decoration:none;letter-spacing:0.01em" style-hover="background:#fbfaf7">Explore this Issue</a>
+          <a href="#rimfax" style="display:inline-flex;align-items:center;height:50px;padding:0 26px;border:1px solid rgba(251,250,247,0.5);color:#fbfaf7;font-weight:600;text-decoration:none" style-hover="border-color:#fbfaf7;background:rgba(251,250,247,0.1)">Featured Stories</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:40px">
+          <button type="button" onClick="{{togglePlay}}" aria-label="{{playLabel}}" style="width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;cursor:pointer;font-size:0.7rem" style-hover="border-color:#ffd100;color:#ffd100">{{playIcon}}</button>
+          <button type="button" onClick="{{goPrev}}" aria-label="Previous cover image" style="width:38px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;cursor:pointer" style-hover="border-color:#ffd100;color:#ffd100">‹</button>
+          <button type="button" onClick="{{goNext}}" aria-label="Next cover image" style="width:38px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;cursor:pointer" style-hover="border-color:#ffd100;color:#ffd100">›</button>
+          <span aria-live="polite" style="margin-left:8px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(251,250,247,0.66)">{{slideCaption}}</span>
+        </div>
+      </div><aside aria-label="Note from the Chair" style="background:#fbfaf7;color:#1f2933;border-top:5px solid #ffd100;box-shadow:0 30px 70px rgba(16,24,32,0.4);flex:0 1 360px;max-width:360px;margin-left:auto">
+        <figure style="margin:0;position:relative;background:#101820">
+          <img src="assets/people/jon-aurnou.jpg" alt="Jon Aurnou, Professor and Chair of Earth, Planetary, and Space Sciences." style="width:100%;aspect-ratio:16/10;object-fit:cover;object-position:10% 30%;display:block">
+          <figcaption style="position:absolute;left:0;right:0;bottom:0;padding:34px 20px 14px;background:linear-gradient(0deg,rgba(16,24,32,0.95) 0%,rgba(16,24,32,0.9) 42%,rgba(16,24,32,0.74) 68%,rgba(16,24,32,0) 100%)">
+            <p style="margin:0 0 4px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#ffd100">Note from the Chair</p>
+            <p style="margin:0 0 6px;font-family:Newsreader,Georgia,serif;font-size:1.7rem;line-height:1.08;letter-spacing:-0.015em;color:#fbfaf7">Jon Aurnou</p>
+            <p style="margin:0;font-size:0.82rem;color:rgba(251,250,247,0.66)">Professor &amp; Department Chair</p>
+          </figcaption>
+        </figure>
+        <div style="padding:24px 28px 26px">
+          <h2 style="margin:0 0 14px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.18rem;line-height:1.22;letter-spacing:-0.01em;color:#101820">Opening letter from the Department Chair</h2>
+          <p style="margin:0 0 14px;font-family:Newsreader,Georgia,serif;font-size:1rem;line-height:1.6;color:#3d4a55;text-wrap:pretty"><span style="font-family:Newsreader,Georgia,serif;font-size:1.44rem;line-height:0;color:#9a4a26;vertical-align:-0.08em">“</span>This is the first year the newsletter lives entirely online, and it suits us — the work we do has never fit neatly on a page. What follows is a year of fieldwork, instruments coming online, students finishing, and colleagues we lost. I hope you read all of it.<span style="font-family:Newsreader,Georgia,serif;font-size:1.44rem;line-height:0;color:#9a4a26;vertical-align:-0.08em">”</span></p>
+          <p style="margin:0 0 18px;display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.14em;text-transform:uppercase;color:#54626d"><span style="width:22px;height:1px;background:#9a4a26"></span>Jon Aurnou</p>
+          <p style="display:flex;align-items:center;gap:12px;margin:0;padding-top:16px;border-top:1px solid rgba(16,24,32,0.14);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#54626d">Letter forthcoming</p>
+        </div>
+      </aside>
+
+      
+    </div>
+  </section>
+
+  <section id="guide" aria-labelledby="guide-title" style="padding:clamp(44px,5.5vw,72px) clamp(20px,4vw,40px);background:#efe7d6;color:#1f2933;border-bottom:1px solid rgba(16,24,32,0.1)">
+    <div style="max-width:1180px;margin:0 auto">
+      <div aria-hidden="true" style="height:2px;background:#101820;transform-origin:left center;animation:drawIn 800ms cubic-bezier(0.4,0,0.2,1) both;animation-timeline:view();animation-range:entry 0% entry 55%"></div>
+      <div style="text-align:center;padding:26px 0 24px">
+        <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:#9a4a26;animation:mastheadSettle 700ms ease-out both;animation-timeline:view();animation-range:entry 10% entry 70%">In this issue</p>
+        <h2 id="guide-title" style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(2rem,3.4vw,3rem);line-height:1.04;letter-spacing:-0.02em">Table of Contents</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:0 clamp(32px,5vw,56px)">
+        <div>
+      <div style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);color:#1f2933;cursor:default">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">01</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">Opening letter from the Chair</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Forthcoming</span>
+      </div>
+      <div style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);color:#1f2933;cursor:default">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">02</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">Beneath the Red Dust: Mars' lost rivers</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Forthcoming</span>
+      </div>
+      <a href="Article - BALBOA.dc.html" style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#1f2933;transition:background 140ms ease,color 140ms ease" style-hover="background:#101820;color:#fbfaf7">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">03</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">BALBOA: aurora in broad daylight</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Lab</span>
+      </a>
+      <a href="#research" style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#1f2933;transition:background 140ms ease,color 140ms ease" style-hover="background:#101820;color:#fbfaf7">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">04</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">Eos features and research findings</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Lab</span>
+      </a>
+      <a href="#research" style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#1f2933;transition:background 140ms ease,color 140ms ease" style-hover="background:#101820;color:#fbfaf7">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">05</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">PTRX and Sapphire: a new lab</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Lab</span>
+      </a>
+      <a href="#endowed-chairs" style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#1f2933;transition:background 140ms ease,color 140ms ease" style-hover="background:#101820;color:#fbfaf7">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">06</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">Three endowed chairs installed</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Chairs</span>
+      </a>
+      <div style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);color:#1f2933;cursor:default">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">07</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">Lizzy Su</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Forthcoming</span>
+      </div>
+      <div style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);color:#1f2933;cursor:default">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">08</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">The Alumni Lecture: Allen F. Glazner</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Forthcoming</span>
+      </div>
+        </div>
+        <div>
+      <div style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);color:#1f2933;cursor:default">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">09</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">Isotopic fingerprints: Edwin Schauble</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Forthcoming</span>
+      </div>
+      <a href="Article - Art and Science.dc.html" style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#1f2933;transition:background 140ms ease,color 140ms ease" style-hover="background:#101820;color:#fbfaf7">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">10</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">Art &amp; science: Jewitt and Schlichting</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Q&amp;A</span>
+      </a>
+      <div style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);color:#1f2933;cursor:default">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">11</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">Geophysics 136C photo essay</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Forthcoming</span>
+      </div>
+      <a href="#field" style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#1f2933;transition:background 140ms ease,color 140ms ease" style-hover="background:#101820;color:#fbfaf7">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">12</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">Dispatches from the field</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Gallery</span>
+      </a>
+      <a href="#awards" style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#1f2933;transition:background 140ms ease,color 140ms ease" style-hover="background:#101820;color:#fbfaf7">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">13</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">Honors and fellowships</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Awards</span>
+      </a>
+      <a href="Article - Commencement 2026.dc.html" style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#1f2933;transition:background 140ms ease,color 140ms ease" style-hover="background:#101820;color:#fbfaf7">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">14</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">The Class of 2026</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Commencement</span>
+      </a>
+      <a href="#memoriam" style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#1f2933;transition:background 140ms ease,color 140ms ease" style-hover="background:#101820;color:#fbfaf7">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">15</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">Peltzer, Joy, Chi, Manning — and memorials</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Farewells</span>
+      </a>
+      <a href="#giving" style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#1f2933;transition:background 140ms ease,color 140ms ease" style-hover="background:#101820;color:#fbfaf7">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">16</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">The impact of giving</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Giving</span>
+      </a>
+        </div>
+      </div>
+      <div aria-hidden="true" style="height:2px;margin-top:20px;background:#101820;transform-origin:right center;animation:drawIn 800ms cubic-bezier(0.4,0,0.2,1) both;animation-timeline:view();animation-range:entry 0% entry 55%"></div>
+    </div>
+  </section>
+
+  <section id="rimfax" aria-labelledby="rimfax-title" style="background:#101820;color:#fbfaf7">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));align-items:stretch">
+      <div style="min-height:760px"><img src="assets/images/mars-rover-perseverance.png" alt="NASA’s Perseverance rover on the Martian surface; RIMFAX is mounted on its underside." style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="padding:clamp(44px,6vw,80px) clamp(20px,4vw,56px)">
+        <p style="margin:0 0 18px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#ffd100">FEATURED RESEARCH</p>
+        <h2 id="rimfax-title" style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(2.8rem,5vw,5.2rem);line-height:0.96;letter-spacing:-0.025em;text-wrap:balance">Beneath the Red Dust: radar reveals Mars' lost rivers</h2>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;font-weight:300;line-height:1.5;color:rgba(251,250,247,0.86)">RIMFAX, the ground-penetrating radar riding on Perseverance, and the EPSS team reading the layers it returns from Jezero Crater.</p>
+        <p style="margin:0 0 28px;color:rgba(251,250,247,0.66)">Jezero Crater held a lake once, and a river ran into it. Working with David Paige and Emily Cardarelli, the RIMFAX team spent this year turning radar returns into a cross-section of what that water left behind — layer by layer, metres beneath the rover’s wheels.</p>
+        <blockquote style="margin:0 0 28px;padding:0 0 0 24px;border-left:4px solid #ffd100">
+          <p style="margin:0;font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:1.7rem;line-height:1.3;color:#fbfaf7">A lake sat here once, and a river ran into it. The radar can still see where the water went.</p>
+        </blockquote>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;padding-top:24px;border-top:1px solid rgba(251,250,247,0.2)">
+          <span style="display:inline-flex;align-items:center;height:50px;padding:0 26px;border:1px dashed rgba(251,250,247,0.45);color:rgba(251,250,247,0.66);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase">Story forthcoming</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(251,250,247,0.66)">8 min read · Video</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" aria-labelledby="research-title" style="padding:clamp(48px,7vw,88px) clamp(20px,4vw,40px);background:#efe7d6">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px;align-items:start">
+      <div>
+        <p style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">Lab &amp; Research Updates</p>
+        <h2 id="research-title" style="margin:0 0 16px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2.2rem,3.4vw,3.4rem);line-height:1.04;letter-spacing:-0.02em">Signals from the labs</h2>
+        <p style="margin:0;max-width:34ch;color:#54626d">Three dispatches from this year’s instruments and campaigns. Open any of them for the full account.</p>
+      </div>
+      <div style="display:grid;gap:1px;background:rgba(16,24,32,0.14);border:1px solid rgba(16,24,32,0.14)">
+        <details open="" style="background:#fbfaf7;padding:26px 28px">
+          <summary style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;cursor:pointer">
+            <span><span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26;margin-bottom:8px">Xiaoyan Zhou</span><span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.44rem;line-height:1.2">BALBOA: photographing the aurora in broad daylight</span></span>
+            <span style="color:#9a4a26;font-size:1.18rem">+</span>
+          </summary>
+          <div style="margin-top:16px;max-width:70ch;display:grid;gap:14px;color:#54626d">
+            <p style="margin:0">Since Martin Brendel took the first auroral photograph in January 1892, auroras have only ever been imaged in darkness — the sunlit atmosphere is simply too bright, from the ground or from orbit. BALLoon-Based Observations for Sunlit Aurora, funded by NASA's LCAS program in 2018, is the pathfinder that gets around the problem by flying at about 40 km, above 99.7% of the atmosphere.</p>
+            <p style="margin:0">The team's auroral experiments with an InGaAs near-infrared camera recorded the first Meinel (0–0) band aurora during twilight, when the sky is about as bright as it is at float altitude — confirming the approach works. Four test flights out of Fort Sumner, New Mexico followed, along with fourteen field validations, three ground campaigns at Poker Flat, and a 2023 piggyback flight that caught gravity waves riding the O₂ dayglow.</p>
+            <p style="margin:0">The primary auroral flight is planned for 2027. Five UCLA students across Computer Science, Physics &amp; Astronomy, and Mechanical &amp; Aerospace Engineering, plus a postdoc from Arizona, built and tested the payload.</p>
+            <a href="Article - BALBOA.dc.html" style="display:inline-flex;align-items:center;gap:8px;font-size:0.92rem;font-weight:600;color:#2774ae;text-decoration:none" style-hover="color:#9a4a26">Read the full update <span>→</span></a>
+          </div>
+        </details>
+        <details style="background:#fbfaf7;padding:26px 28px">
+          <summary style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;cursor:pointer">
+            <span><span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26;margin-bottom:8px">Jonathan Mitchell</span><span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.44rem;line-height:1.2">Eos features and research findings</span></span>
+            <span style="color:#9a4a26;font-size:1.18rem">+</span>
+          </summary>
+          <p style="margin:16px 0 0;max-width:66ch;color:#54626d">Jonathan Mitchell's work on planetary atmospheres drew coverage in Eos this year. A short synthesis of the findings behind those pieces, with links out to the originals.</p>
+        </details>
+        <details style="background:#fbfaf7;padding:26px 28px">
+          <summary style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;cursor:pointer">
+            <span><span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26;margin-bottom:8px">Lab Feature — Peng Group</span><span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.44rem;line-height:1.2">PTRX and Sapphire: a new lab comes online</span></span>
+            <span style="color:#9a4a26;font-size:1.18rem">+</span>
+          </summary>
+          <div style="margin-top:16px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start">
+            <p style="margin:0;color:#54626d">Two new instruments, PTRX and Sapphire, came online in Peng's lab this spring. What they measure, what became possible the day they switched on, and the people who spent a year getting them there.</p>
+            <div style="aspect-ratio:16/9;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.07) 0 10px,rgba(16,24,32,0.02) 10px 20px);border:1px solid rgba(16,24,32,0.14);display:flex;align-items:center;justify-content:center">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#54626d">Spring field video</span>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="endowed-chairs" aria-labelledby="chairs-title" style="padding:clamp(32px,3.6vw,44px) clamp(20px,4vw,40px);background:#101820;color:#fbfaf7">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(24px,3vw,40px);align-items:center">
+      <figure style="margin:0">
+        <img src="https://epss.ucla.edu/wp-content/uploads/2026/07/chairs-installation-2026.jpg" alt="The Knopoff family with Professor Lars Stixrude, EPSS Chair Jonathan Aurnou and Dean Miguel Garcia-Garibay at the installation ceremony." style="width:100%;aspect-ratio:2/1;object-fit:cover;display:block" />
+        <figcaption style="margin-top:8px;font-size:0.82rem;line-height:1.4;color:rgba(251,250,247,0.66)">The Knopoff family with Professor Lars Stixrude, EPSS Chair Jonathan Aurnou and Dean Miguel Garcia-Garibay at the installation ceremony. <span style="color:rgba(251,250,247,0.86)">Photo: Penny Jennings, UCLA Division of Physical Sciences.</span></figcaption>
+      </figure>
+      <div>
+        <p style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#ffd100">Endowed Chairs</p>
+        <h2 id="chairs-title" style="margin:0 0 10px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.44rem,2.4vw,2rem);line-height:1.06;letter-spacing:-0.02em">Building the future of Earth sciences</h2>
+        <p style="margin:0 0 14px;max-width:50ch;font-size:0.92rem;line-height:1.55;color:rgba(251,250,247,0.66)">This spring the department celebrated the installation of three endowed chairs honoring the legacies of Leon and Joanne V.C. Knopoff, Louis and Martha Slichter, and An Yin — established through the generosity of alumni, faculty, and their families.</p>
+        <a href="https://epss.ucla.edu/building-the-future-of-earth-sciences-epss-celebrates-the-installation-of-three-endowed-chairs/" style="display:inline-flex;align-items:center;gap:8px;font-size:0.82rem;font-weight:600;color:#ffd100;text-decoration:none" style-hover="color:#fbfaf7">Read the full story <span>→</span></a>
+      </div>
+      <ol style="margin:0;padding:0;list-style:none">
+        <li style="padding:11px 0;border-top:1px solid rgba(251,250,247,0.2)">
+          <p style="margin:0 0 2px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.15;color:#fbfaf7">Lars Stixrude</p>
+          <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#ffd100">Knopoff Chair in Geophysics &amp; Physics</p>
+          <p style="margin:2px 0 0;font-size:0.82rem;color:rgba(251,250,247,0.66)">Professor</p>
+        </li>
+        <li style="padding:11px 0;border-top:1px solid rgba(251,250,247,0.2)">
+          <p style="margin:0 0 2px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.15;color:#fbfaf7">Carolina Lithgow-Bertelloni</p>
+          <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#ffd100">Slichter Endowed Chair in Geosciences</p>
+          <p style="margin:2px 0 0;font-size:0.82rem;color:rgba(251,250,247,0.66)">Professor</p>
+        </li>
+        <li style="padding:11px 0;border-top:1px solid rgba(251,250,247,0.2)">
+          <p style="margin:0 0 2px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.15;color:#fbfaf7">John He</p>
+          <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#ffd100">An Yin Endowed Chair in Geology</p>
+          <p style="margin:2px 0 0;font-size:0.82rem;color:rgba(251,250,247,0.66)">Assistant Professor · inaugural holder</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="community" aria-labelledby="community-title" style="padding: 88px 40px; background: #efe7d6; padding-top: 77px; padding-bottom: 77px">
+    <div style="display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:40px;padding-bottom:22px;border-bottom:1px solid rgba(16,24,32,0.14)">
+      <div>
+        <p style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">Community</p>
+        <h2 id="community-title" style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2.2rem,3.4vw,3.4rem);line-height:1.04;letter-spacing:-0.02em">Featured People of EPSS</h2>
+      </div>
+      <p style="margin: 0; max-width: 38ch; color: #54626d">A student finishing, an alumnus returning to lecture, and a faculty member deep in the isotope record.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px">
+      <article id="student-feature" style="display:flex;flex-direction:column">
+        <img src="assets/people/lizzy-su.jpeg" alt="Lizzy Su, EPSS student." style="width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%;margin-bottom:20px">
+        <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Student Feature</p>
+        <h3 style="margin:0 0 12px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.7rem;line-height:1.16">Lizzy Su</h3>
+        <p style="margin:0 0 16px;color:#54626d">A last year of coursework, a thesis in progress, and a clear-eyed account of what pulled her into Earth science to begin with.</p>
+        <p style="display:flex;align-items:center;gap:12px;margin:auto 0 0;padding-top:14px;border-top:1px solid rgba(16,24,32,0.14);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#54626d">Story forthcoming</p>
+      </article>
+      <article id="alumni-feature" style="display:flex;flex-direction:column">
+        <img src="assets/people/allen-glazner.webp" alt="Allen F. Glazner in the field." style="width: 100%; aspect-ratio: 4/5; object-fit: cover; margin-bottom: 20px">
+        <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Alumni Feature</p>
+        <h3 style="margin:0 0 12px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.7rem;line-height:1.16">The Alumni Lecture: Allen F. Glazner</h3>
+        <p style="margin:0 0 16px;color:#54626d">From an EPSS degree to a career spent reading granite. Glazner returned this spring to give the Alumni Lecture — the recording runs with the story.</p>
+        <p style="display:flex;align-items:center;gap:12px;margin:auto 0 0;padding-top:14px;border-top:1px solid rgba(16,24,32,0.14);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#54626d">Story forthcoming</p>
+      </article>
+      <article id="faculty-feature" style="display:flex;flex-direction:column">
+        <img src="assets/people/edwin-schauble.jpg" alt="Edwin Schauble portrait." style="width: 100%; aspect-ratio: 4/5; object-fit: cover; margin-bottom: 20px">
+        <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Faculty Feature</p>
+        <h3 style="margin:0 0 12px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.7rem;line-height:1.16">Investigating Earth's history with isotopic fingerprints</h3>
+        <p style="margin:0 0 16px;color:#54626d">Schauble reads Earth's history in the ratios between atoms. Here he explains how, without assuming you already know.</p>
+        <p style="display:flex;align-items:center;gap:12px;margin:auto 0 0;padding-top:14px;border-top:1px solid rgba(16,24,32,0.14);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#54626d">Story forthcoming</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="short-stories" aria-labelledby="short-title" style="padding:clamp(48px,7vw,88px) clamp(20px,4vw,40px);background:#fbfaf7">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center">
+      <div>
+        <p style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">Short Stories</p>
+        <h2 id="short-title" style="margin:0 0 20px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2.2rem,3.4vw,3.4rem);line-height:1.04;letter-spacing:-0.02em">Art &amp; science: David Jewitt and Hilke Schlichting</h2>
+        <p style="margin:0 0 20px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;font-weight:300;line-height:1.55;color:#1f2933">One has painted since childhood and never stopped. The other picked up a brush twenty years ago on a whim. Both find the same thing in it that they find in research.</p>
+        <p style="margin:0 0 24px;color:#54626d">A paired Q&amp;A in their own words — on materials, on what keeps them curious, and on the resemblance each of them sees between making a painting and doing science.</p>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-bottom:20px">
+          <a href="Article - Art and Science.dc.html" style="display:inline-flex;align-items:center;height:46px;padding:0 22px;background:#101820;color:#fbfaf7;font-weight:600;text-decoration:none" style-hover="background:#9a4a26">Read the Story →</a>
+        </div>
+        
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px">
+        <img src="assets/people/hilke-schlichting.jpg" alt="Hilke Schlichting at a chalkboard of equations." style="width:100%;aspect-ratio:3/4;object-fit:cover">
+        <img src="assets/people/dave-jewitt.jpg" alt="David Jewitt in front of one of his dot paintings." style="width:100%;aspect-ratio:3/4;object-fit:cover;margin-top:32px">
+      </div>
+    </div>
+  </section>
+
+  <section id="field" aria-labelledby="field-title" style="background:#101820;color:#fbfaf7">
+    <div style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:32px;padding:clamp(48px,7vw,88px) clamp(20px,4vw,40px) 34px">
+      <div>
+        <p style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#ffd100">PHOTO JOURNAL</p>
+        <h2 id="field-title" style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(2.6rem,5.4vw,5rem);line-height:0.96;letter-spacing:-0.025em">From the field</h2>
+      </div>
+      <div style="max-width:42ch">
+        <p style="margin:0 0 14px;color:rgba(251,250,247,0.66)">A year of EPSS 61, 103B, 112, 133, and Geophysics 136C — mapped, measured, and photographed by the students who were there.</p>
+        <a href="https://ucla.app.box.com/folder/8772060833" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:0.92rem;color:#ffd100;text-decoration:none" style-hover="color:#fbfaf7">Open the full field archive <span>→</span></a>
+        <p style="margin:12px 0 0;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(251,250,247,0.5)">Placeholder imagery from the 2025 archive — final selects and captions pending</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(clamp(150px,20vw,230px),1fr));grid-auto-rows:clamp(130px,15vw,165px);grid-auto-flow:dense;gap:3px;padding:0 3px">
+      <figure style="margin:0;overflow:hidden;grid-column:span 2;grid-row:span 2"><img src="assets/images/p12_02.jpg" alt="Desert landscape from the EPSS newsletter photo archive." style="width:100%;height:100%;object-fit:cover;display:block"></figure>
+      <div aria-hidden="true" style="grid-column:span 1;grid-row:span 2;background:repeating-linear-gradient(135deg,rgba(251,250,247,0.1) 0 10px,rgba(251,250,247,0.035) 10px 20px);border:1px solid rgba(251,250,247,0.16);display:flex;align-items:end;padding:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:rgba(251,250,247,0.66)">Field photo<br>to be selected</span></div>
+      <div style="grid-column:span 2;grid-row:span 2;background:#ffd100;color:#101820;display:flex;flex-direction:column;justify-content:center;padding:20px 22px">
+        <p style="margin:0;font-family:Newsreader,Georgia,serif;font-style:italic;font-size:0.92rem;line-height:1.45">“I spent my last field trip as an undergrad blasting music behind the wheel of the Silver Suburban, driving through the Valley of Fire, Zion, and the Grand Canyon. Cheers to a hundred thousand miles, memories, and moments. Goodbye, Silver Speedster.”</p>
+        <p style="margin:7px 0 0;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase">Shanya Dinata</p>
+      </div>
+      <figure style="margin:0;overflow:hidden;grid-column:span 1;grid-row:span 1"><img src="assets/images/p13_02.jpg" alt="Palm oasis from the EPSS newsletter photo archive." style="width:100%;height:100%;object-fit:cover;display:block"></figure>
+      <figure style="margin:0;overflow:hidden;grid-column:span 2;grid-row:span 1"><img src="assets/images/p10_03.jpg" alt="Joshua trees at sunset, from the EPSS newsletter photo archive." style="width:100%;height:100%;object-fit:cover;display:block"></figure>
+      <div aria-hidden="true" style="grid-column:span 1;grid-row:span 1;background:repeating-linear-gradient(135deg,rgba(251,250,247,0.1) 0 10px,rgba(251,250,247,0.035) 10px 20px);border:1px solid rgba(251,250,247,0.16);display:flex;align-items:end;padding:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:rgba(251,250,247,0.66)">Field photo<br>to be selected</span></div>
+      <a href="https://ucla.app.box.com/folder/8772060833" style="grid-column:span 1;grid-row:span 1;background:rgba(251,250,247,0.08);border:1px solid rgba(251,250,247,0.2);display:flex;align-items:center;justify-content:center;padding:14px;text-decoration:none;color:#fbfaf7" style-hover="background:#ffd100;color:#101820">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.5;letter-spacing:0.12em;text-transform:uppercase;text-align:center">Open the<br>archive →</span>
+      </a>
+      <div aria-hidden="true" style="grid-column:span 2;grid-row:span 1;background:repeating-linear-gradient(135deg,rgba(251,250,247,0.1) 0 10px,rgba(251,250,247,0.035) 10px 20px);border:1px solid rgba(251,250,247,0.16);display:flex;align-items:end;padding:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:rgba(251,250,247,0.66)">Field photo<br>to be selected</span></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;padding:56px clamp(20px,4vw,40px) 88px">
+      <div style="max-width:62ch">
+        <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#ffd100">Geophysics 136C · Spring 2026</p>
+        <h3 style="margin:0 0 14px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:2rem;line-height:1.14">The last long drive of the Silver Suburban</h3>
+        <p style="margin:0 0 16px;color:rgba(251,250,247,0.66)">John He's dispatch from 136C: instruments hauled out at dawn, a seismic line shot across alluvium, and the slow satisfaction of watching raw traces resolve into structure. Folded into it is the retirement of the department's field vehicle, which carried a hundred thousand miles of students to the desert and back.</p>
+        <p style="margin:0 0 22px;color:rgba(251,250,247,0.66);font-size:0.92rem">Photographs by Juan Alvarado and McKenna Keiser, with contributions from Allie Quan, Michele Chan, Peter Glass, Kaia McArthur Jessum, and Mason Stone.</p>
+        <span style="display:inline-flex;align-items:center;height:46px;padding:0 24px;border:1px dashed rgba(251,250,247,0.45);color:rgba(251,250,247,0.66);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase">Story forthcoming</span>
+      </div>
+      <aside style="border-top:4px solid #ffd100;background:rgba(251,250,247,0.06);padding:26px 28px;align-self:start">
+        <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#ffd100">Bruin Geological Society</p>
+        <h4 style="margin:0 0 10px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.44rem;line-height:1.18">The student field program, revived</h4>
+        <p style="margin:0 0 18px;font-size:0.92rem;color:rgba(251,250,247,0.66)">Co-presidents Nicole Rudenky and Shanya Dinata brought the society back this year and ran a full season of trips — Valley of Fire, Zion, the Grand Canyon.</p>
+        <p style="margin:0;padding-top:16px;border-top:1px solid rgba(251,250,247,0.2);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100">Field photo contest — open to all students</p>
+      </aside>
+    </div>
+  </section>
+
+  
+
+  
+
+  <section id="awards" aria-labelledby="awards-title" style="padding:clamp(40px,5vw,60px) clamp(20px,4vw,40px);background:#fbfaf7;color:#1f2933">
+    <div style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid rgba(16,24,32,0.14)">
+      <div>
+        <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">Awards</p>
+        <h2 id="awards-title" style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(1.9rem,2.8vw,2.7rem);line-height:1.04;letter-spacing:-0.02em">Honors, fellowships, and recognition</h2>
+      </div>
+      <a href="Article - Awards 2026.dc.html" style="display:inline-flex;align-items:center;gap:8px;font-size:0.92rem;font-weight:600;color:#2774ae;text-decoration:none" style-hover="color:#9a4a26">Read the full citations <span>→</span></a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px 30px;align-items:start">
+      <div style="display:grid;gap:22px;align-content:start;min-width:0">
+<div style="min-width:0">
+        <h3 style="margin:0 0 12px;font-size:0.82rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#101820">Faculty</h3>
+        <ul style="display:grid;gap:10px;margin:0;padding:0;list-style:none;min-width:0;overflow-wrap:break-word">
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Jean-Luc Margot</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">Fulbright-Tocqueville &amp; Francqui Chairs · 2026–27</span></li>
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Craig Manning</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">National Academy of Sciences · Apr 2026</span></li>
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Amy Mainzer</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">Robert Holland Jr. Award · 2026</span></li>
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Hao Cao</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">Sloan Research Fellowship · Feb 2025</span></li>
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Ming-Chang Liu</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">2026 Fellow, Meteoritical Society</span></li>
+        </ul>
+      </div>
+      </div>
+      <div style="display:grid;gap:22px;align-content:start;min-width:0">
+<div style="min-width:0">
+        <h3 style="margin:0 0 12px;font-size:0.82rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#101820">Postdoctoral</h3>
+        <ul style="display:grid;gap:10px;margin:0;padding:0;list-style:none;min-width:0;overflow-wrap:break-word">
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Danica Adams</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">Chancellor’s Postdoctoral Fellow</span></li>
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Madeleine Kerr</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">Chancellor’s Postdoctoral Fellow</span></li>
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Samuel Yee</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">51 Pegasi b Fellow · Host: Bjorn Benneke</span></li>
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Undergraduate Summer Fellows</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">Departmental award · recipients pending</span></li>
+        </ul>
+      </div>
+<div style="min-width:0">
+        <h3 style="margin:0 0 12px;font-size:0.82rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#101820">Graduate Fellowships</h3>
+        <ul style="display:grid;gap:10px;margin:0;padding:0;list-style:none;min-width:0;overflow-wrap:break-word">
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Miranda Chang</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">NSF GRFP 2025 · Advisor: Hao Cao</span></li>
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Eva Zlimen</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">NDSEG / NSF GRF</span></li>
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Sophie Ye</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">NASA FINESST</span></li>
+        </ul>
+      </div>
+      </div>
+      <div style="display:grid;gap:22px;align-content:start;min-width:0">
+<div style="min-width:0">
+        <h3 style="margin:0 0 12px;font-size:0.82rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#101820">Dissertation Year Fellows</h3>
+        <ul style="display:grid;gap:10px;margin:0;padding:0;list-style:none;min-width:0;overflow-wrap:break-word">
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Cy David</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">SpinLab · Aurnou · Milton van Dyke Award</span></li>
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Runyi Liu</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">Experimental Space Physics · Angelopoulos</span></li>
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Megan Li</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">UCLA SETI · Margot</span></li>
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Alana Archbold</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">GALE Lab · Day</span></li>
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Jaahnavee Venkatraman</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">Paige Group · Paige</span></li>
+        </ul>
+      </div>
+      </div>
+    </section>
+
+  <section aria-label="Award highlights" style="padding: 0 40px 88px; background: #efe7d6; color: #1f2933; padding-top: 36px; padding-bottom: 48px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1px;background:rgba(16,24,32,0.14);border:1px solid rgba(16,24,32,0.14)">
+      <article style="background: #fbfaf7; padding: 32px 34px; padding-top: 47px; padding-bottom: 47px">
+        <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Award Highlight</p>
+        <h3 style="margin:0 0 14px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.7rem;line-height:1.18">Amy Mainzer wins the Robert Holland Jr. Award</h3>
+        <p style="margin:0 0 14px;color:#54626d">The Research Corporation for Science Advancement created the Holland Award to honor senior scientists for research, teaching, mentorship, and their impact on helping students reach their full potential. Mainzer is one of three recipients in 2026, recognized for her asteroid and comet research and for her public engagement with science.</p>
+        <p style="margin:0;color:#54626d">She leads NASA's Near-Earth Object Surveyor mission, a space telescope under construction to find the majority of potentially hazardous asteroids and comets, and hosts the podcast <em>Unobtanium</em>.</p>
+      </article><article style="background: #fbfaf7; padding: 32px 34px; padding-top: 47px; padding-bottom: 47px">
+        <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Award Highlight</p>
+        <h3 style="margin:0 0 14px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.7rem;line-height:1.18">Jean-Luc Margot elected to the Royal Academy of Belgium</h3>
+        <p style="margin:0 0 14px;color:#54626d">The Academy traces its roots to the Imperial and Royal Academy of Science and Letters of Brussels, established in 1772. Membership in the Classe des Sciences is limited to 60 members and 50 associate members — foreign members or Belgians residing abroad.</p>
+        <p style="margin:0;color:#54626d">Past members include André-Marie Ampère, Charles Darwin, Georges Lemaître, Harold Urey, and Nobel laureates Christian de Duve, Ilya Prigogine, and François Englert.</p>
+      </article>
+      
+    </div>
+  </section>
+
+  <section id="commencement" aria-labelledby="commencement-title" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));align-items:stretch;background:#101820;color:#fbfaf7">
+    <div style="min-height:520px"><img src="assets/images/p14_07.jpg" alt="EPSS commencement group photograph." style="width:100%;height:100%;object-fit:cover"></div>
+    <div style="padding:clamp(44px,6vw,80px) clamp(20px,4vw,56px);display:flex;flex-direction:column;justify-content:center">
+      <p style="margin:0 0 16px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#ffd100">Commencement</p>
+      <h2 id="commencement-title" style="margin:0 0 20px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2.2rem,3.4vw,3.6rem);line-height:1.02;letter-spacing:-0.02em">Celebrating the Class of 2026</h2>
+      <p style="margin:0 0 26px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;font-weight:300;line-height:1.55;color:rgba(251,250,247,0.66)">Degrees conferred, families crowding the courtyard, and the speeches worth rereading. Photographs by Val and Zach.</p>
+      <details style="border-top:1px solid rgba(251,250,247,0.22);padding-top:18px;margin-bottom:20px">
+        <summary style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-weight:600;color:#fbfaf7">Degree lists and ceremony highlights<span style="color:#ffd100">+</span></summary>
+        <p style="margin:16px 0 0;color:rgba(251,250,247,0.66)">Every PhD, MS, and BS recipient, the departmental award winners, and the speaker’s remarks.</p>
+      </details>
+      <a href="Article - Commencement 2026.dc.html" style="display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 24px;margin:24px 0 28px;background:#ffd100;color:#101820;font-weight:600;text-decoration:none" style-hover="background:#fbfaf7">See the full programme &amp; degree list →</a>
+      <p style="margin:0;font-size:0.92rem"><a href="https://ucla.box.com/s/r6ahi1vyf8ecnftdpboen1p2mq2gwlq6" style="font-weight:600;text-decoration:none;color:#ffd100" style-hover="color:#fbfaf7">Ceremony photographs →</a></p>
+    </div>
+  </section>
+
+  <section id="memoriam" aria-labelledby="memoriam-title" style="padding:clamp(48px,7vw,88px) clamp(20px,4vw,40px);background:#fbfaf7">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px">
+      <div>
+        <p style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">Retirements</p>
+        <h2 id="memoriam-title" style="margin:0 0 28px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2rem,3vw,3rem);line-height:1.04;letter-spacing:-0.02em">Careers closing</h2>
+        <ul style="display:grid;gap:0;margin:0;padding:0;list-style:none">
+          <li style="padding:18px 0;border-top:1px solid rgba(16,24,32,0.14)">
+            <a href="Article - Gilles Peltzer.dc.html" style="display:block;text-decoration:none;color:inherit" style-hover="color:#9a4a26">
+              <span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2rem;line-height:1.08;letter-spacing:-0.015em;margin-bottom:5px">Gilles Peltzer</span>
+              <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#9a4a26;margin-bottom:7px">Understanding Earth’s deforming continents</span>
+              <span style="display:block;font-size:0.92rem;line-height:1.5;color:#54626d">Thirty years spent working out how continents deform — the Plasticine experiment behind Extrusion Tectonics, the first image of an earthquake’s displacement field from space, and campfire conversations in the California desert. By Paul Mistral →</span>
+            </a>
+          </li>
+          <li style="padding:18px 0;border-top:1px solid rgba(16,24,32,0.14)">
+            <a href="Article - Steve Joy.dc.html" style="display:block;text-decoration:none;color:inherit" style-hover="color:#9a4a26">
+              <span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2rem;line-height:1.08;letter-spacing:-0.015em;margin-bottom:5px">Steve Joy</span>
+              <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#9a4a26;margin-bottom:7px">From Galileo to Europa Clipper</span>
+              <span style="display:block;font-size:0.92rem;line-height:1.5;color:#54626d">Retired February 2026, back under Academic Recall a month later — and staying through Clipper’s 2034 finish →</span>
+            </a>
+          </li>
+          <li style="padding:18px 0;border-top:1px solid rgba(16,24,32,0.14)">
+            <a href="Article - Peter Chi.dc.html" style="display:block;text-decoration:none;color:inherit" style-hover="color:#9a4a26">
+              <span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2rem;line-height:1.08;letter-spacing:-0.015em;margin-bottom:5px">Peter Chi</span>
+              <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#9a4a26;margin-bottom:7px">On leaving, and on Generation Alpha</span>
+              <span style="display:block;font-size:0.92rem;line-height:1.5;color:#54626d">In his own words: UCLA as a spiritual home, the two-body problem, and the administrative staff who saved his proposals before midnight →</span>
+            </a>
+          </li>
+          <li style="padding:18px 0;border-top:1px solid rgba(16,24,32,0.14);border-bottom:1px solid rgba(16,24,32,0.14)">
+            <span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2rem;line-height:1.08;letter-spacing:-0.015em;margin-bottom:5px">Craig Manning</span>
+              <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#9a4a26;margin-bottom:7px">Faculty retirement</span>
+              <span style="display:block;font-size:0.92rem;line-height:1.5;color:#54626d">Material pending</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">In Memoriam</p>
+        <h2 style="margin:0 0 28px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2rem,3vw,3rem);line-height:1.04;letter-spacing:-0.02em">Colleagues remembered</h2>
+        <ul style="display:grid;gap:0;margin:0;padding:0;list-style:none">
+          <li style="padding:18px 0;border-top:1px solid rgba(16,24,32,0.14)"><a href="https://epss.ucla.edu/in-memoriam-arthur-j-montana-1935-2025/" style="text-decoration:none;color:inherit" style-hover="color:#9a4a26"><strong style="display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.44rem">Arthur J. Montana, 1935–2025</strong><span style="color:#54626d;font-size:0.92rem">In memoriam →</span></a></li>
+          <li style="padding:18px 0;border-top:1px solid rgba(16,24,32,0.14)"><a href="https://epss.ucla.edu/in-memoriam-professor-ronald-l-shreve-1930-2025/" style="text-decoration:none;color:inherit" style-hover="color:#9a4a26"><strong style="display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.44rem">Ronald L. Shreve, 1930–2025</strong><span style="color:#54626d;font-size:0.92rem">In memoriam →</span></a></li>
+          <li style="padding:18px 0;border-top:1px solid rgba(16,24,32,0.14)"><a href="https://www.psi.edu/blog/remembering-candice-hansen-koharcheck/" style="text-decoration:none;color:inherit" style-hover="color:#9a4a26"><strong style="display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.44rem">Candice Hansen-Koharcheck</strong><span style="color:#54626d;font-size:0.92rem">Remembrance, Planetary Science Institute →</span></a></li>
+          <li style="padding:18px 0;border-top:1px solid rgba(16,24,32,0.14);border-bottom:1px solid rgba(16,24,32,0.14)"><a href="Article - Gerald Schubert.dc.html" style="text-decoration:none;color:inherit" style-hover="color:#9a4a26"><strong style="display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.44rem">Gerald Schubert</strong><span style="color:#54626d;font-size:0.92rem">Died 31 August 2025 · A founder of modern geodynamics, remembered by Dave Bercovici →</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="giving" aria-labelledby="giving-title" style="padding:clamp(56px,7vw,92px) clamp(20px,4vw,40px);color:#fbfaf7;background-color:#101820">
+    <div style="max-width:1180px;margin:0 auto">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,5vw,56px);align-items:start">
+        <div>
+          <p style="margin:0 0 16px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#ffd100">Giving</p>
+          <h2 id="giving-title" style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(2.4rem,4.4vw,4.2rem);line-height:1;letter-spacing:-0.025em">The impact of giving</h2>
+          <p style="margin:0 0 20px;max-width:56ch;font-family:Newsreader,Georgia,serif;font-size:1.18rem;font-weight:300;line-height:1.6;color:rgba(251,250,247,0.86)">The department is grateful for your incredible generosity over the last few years. Thanks to you, we have funded undergraduate and graduate research, sent students to the field, developed new space technology, and continued to strive for excellence in research, teaching, and outreach.</p>
+          <p style="margin:0 0 30px;max-width:56ch;font-family:Newsreader,Georgia,serif;font-size:1.18rem;font-weight:300;line-height:1.6;color:rgba(251,250,247,0.86)">Budgetary situations are such that we continue to need your help. Please consider supporting UCLA EPSS this year. No amount is too small, and every cent is deeply appreciated.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px">
+            <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="display:inline-flex;align-items:center;height:52px;padding:0 28px;background:#ffd100;color:#101820;font-weight:600;text-decoration:none" style-hover="background:#fbfaf7">Support UCLA EPSS</a>
+            <a href="Article - Donors and Endowments.dc.html" style="display:inline-flex;align-items:center;height:52px;padding:0 28px;border:1px solid rgba(251,250,247,0.55);color:#fbfaf7;font-weight:600;text-decoration:none" style-hover="background:rgba(251,250,247,0.12);border-color:#fbfaf7">2025–26 Donors &amp; endowments</a>
+          </div>
+          <p style="margin:0;max-width:56ch;font-size:0.92rem;line-height:1.6;color:rgba(251,250,247,0.66)">If you would like to discuss giving or other ways to get involved, please reach out to Emily Bisno at <a href="mailto:ebisno@support.ucla.edu" style="color:#ffd100;text-decoration:none">ebisno@support.ucla.edu</a> or <a href="tel:+13109638319" style="color:#ffd100;text-decoration:none">(310) 963-8319</a>.</p>
+        </div>
+
+        <div id="donors" style="display:grid;gap:24px">
+          <a href="Article - Donors and Endowments.dc.html" style="display:block;padding:26px 28px;background:rgba(251,250,247,0.07);border-top:3px solid #ffd100;text-decoration:none;color:#fbfaf7" style-hover="background:rgba(251,250,247,0.13)">
+            <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.14em;text-transform:uppercase;color:#ffd100">2025–26 Donors</p>
+            <p style="margin:0 0 8px;font-family:Newsreader,Georgia,serif;font-size:1.7rem;line-height:1.15">116 households, foundations, and companies</p>
+            <p style="margin:0;font-size:0.92rem;line-height:1.5;color:rgba(251,250,247,0.66)">Alongside 20 endowed funds supporting fellowships, field scholarships, and undergraduate research. See the full honour roll →</p>
+          </a>
+          <sc-if value="{{showSignup}}" hint-placeholder-val="{{ true }}">
+          <div style="background:rgba(251,250,247,0.07);padding:26px 28px">
+            <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#ffd100">Stay in the loop</p>
+            <h3 style="margin:0 0 10px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.7rem;line-height:1.2">Get next year’s issue in your inbox</h3>
+            <p style="margin:0 0 20px;font-size:0.92rem;color:rgba(251,250,247,0.66)">One email a year, the day the issue goes live. Nothing else, ever.</p>
+            <sc-if value="{{subscribed}}" hint-placeholder-val="{{ false }}">
+              <p style="margin:0;padding:16px 18px;background:rgba(255,209,0,0.14);border:1px solid #ffd100;color:#ffd100;font-weight:600">You’re on the list. See you next issue.</p>
+            </sc-if>
+            <sc-if value="{{notSubscribed}}" hint-placeholder-val="{{ true }}">
+              <form onSubmit="{{subscribe}}" style="display:flex;flex-direction:column;gap:10px">
+                <input type="email" required="" placeholder="you@example.edu" aria-label="Email address" style="height:50px;padding:0 16px;background:transparent;border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;outline:none" style-focus="border-color:#ffd100" />
+                <button type="submit" style="height:50px;background:#ffd100;color:#101820;border:0;font-weight:600;cursor:pointer" style-hover="background:#fbfaf7">Subscribe</button>
+              </form>
+            </sc-if>
+          </div>
+          </sc-if>
+          <div style="padding-top:20px;border-top:1px solid rgba(251,250,247,0.22)">
+            <p style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(251,250,247,0.55)">Alumni, we’d like to hear from you</p>
+            <p style="margin:0;font-size:0.92rem;color:rgba(251,250,247,0.66)">Send news, a change of address, or a memory of a field trip to <a href="https://epss.ucla.edu/alumni-information-form/" style="color:#ffd100;text-decoration:none">the alumni information form</a> — we read all of it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{showArchive}}" hint-placeholder-val="{{ true }}">
+  <section aria-labelledby="archive-title" style="padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px);background:#fbfaf7">
+    <div style="display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:28px">
+      <h2 id="archive-title" style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:2rem;letter-spacing:-0.01em">Past issues</h2>
+      <a href="https://epss.ucla.edu/department-newsletters/" style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26;text-decoration:none" style-hover="color:#101820">Full archive, 1967–2025 →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:28px 24px;padding-bottom:16px">
+      <a href="https://epss.ucla.edu/wp-content/uploads/2026/02/epss_2025_newsletter_web.pdf" style="position:relative;display:block;aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#fbfaf7;box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.16),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.12);transition:transform 260ms cubic-bezier(0.34,1.3,0.64,1),box-shadow 260ms ease" style-hover="transform:translateY(-10px) rotate(-0.6deg);box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.18),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.14),0 22px 36px rgba(16,24,32,0.3)">
+        <img src="assets/covers/2025-cover.png" alt="Cover of the 2025 EPSS newsletter." style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+        <span style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,24,32,0.9) 0%,rgba(16,24,32,0.25) 42%,rgba(16,24,32,0) 68%)"></span>
+        <span style="position:absolute;left:0;right:0;bottom:0;padding:16px 14px">
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.7rem;line-height:1;letter-spacing:-0.02em;margin-bottom:4px">2025</span>
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;white-space:nowrap">PDF →</span>
+        </span>
+      </a>
+      <a href="https://epss.ucla.edu/wp-content/uploads/2025/07/EPSS_Newsletter_2024_1nkzBrQ.pdf" style="position:relative;display:block;aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#fbfaf7;box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.16),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.12);transition:transform 260ms cubic-bezier(0.34,1.3,0.64,1),box-shadow 260ms ease" style-hover="transform:translateY(-10px) rotate(-0.6deg);box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.18),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.14),0 22px 36px rgba(16,24,32,0.3)">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.14) 0 10px,rgba(16,24,32,0.05) 10px 20px)"></div>
+        <span style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,24,32,0.9) 0%,rgba(16,24,32,0.25) 42%,rgba(16,24,32,0) 68%)"></span>
+        <span style="position:absolute;left:0;right:0;bottom:0;padding:16px 14px">
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.7rem;line-height:1;letter-spacing:-0.02em;margin-bottom:4px">2024</span>
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;white-space:nowrap">PDF →</span>
+        </span>
+      </a>
+      <a href="https://epss.ucla.edu/wp-content/uploads/2025/07/UCLA_EPSS_2023_Newsletter_FINAL.pdf" style="position:relative;display:block;aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#fbfaf7;box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.16),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.12);transition:transform 260ms cubic-bezier(0.34,1.3,0.64,1),box-shadow 260ms ease" style-hover="transform:translateY(-10px) rotate(-0.6deg);box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.18),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.14),0 22px 36px rgba(16,24,32,0.3)">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.14) 0 10px,rgba(16,24,32,0.05) 10px 20px)"></div>
+        <span style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,24,32,0.9) 0%,rgba(16,24,32,0.25) 42%,rgba(16,24,32,0) 68%)"></span>
+        <span style="position:absolute;left:0;right:0;bottom:0;padding:16px 14px">
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.7rem;line-height:1;letter-spacing:-0.02em;margin-bottom:4px">2023</span>
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;white-space:nowrap">PDF →</span>
+        </span>
+      </a>
+      <a href="https://epss.ucla.edu/wp-content/uploads/2025/07/2022_Newsletter_Web.pdf" style="position:relative;display:block;aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#fbfaf7;box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.16),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.12);transition:transform 260ms cubic-bezier(0.34,1.3,0.64,1),box-shadow 260ms ease" style-hover="transform:translateY(-10px) rotate(-0.6deg);box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.18),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.14),0 22px 36px rgba(16,24,32,0.3)">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.14) 0 10px,rgba(16,24,32,0.05) 10px 20px)"></div>
+        <span style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,24,32,0.9) 0%,rgba(16,24,32,0.25) 42%,rgba(16,24,32,0) 68%)"></span>
+        <span style="position:absolute;left:0;right:0;bottom:0;padding:16px 14px">
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.7rem;line-height:1;letter-spacing:-0.02em;margin-bottom:4px">2022</span>
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;white-space:nowrap">PDF →</span>
+        </span>
+      </a>
+      <a href="https://epss.ucla.edu/wp-content/uploads/2025/07/UCLA_EPSS_2020-2021-Newsletter_v12r.pdf" style="position:relative;display:block;aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#fbfaf7;box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.16),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.12);transition:transform 260ms cubic-bezier(0.34,1.3,0.64,1),box-shadow 260ms ease" style-hover="transform:translateY(-10px) rotate(-0.6deg);box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.18),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.14),0 22px 36px rgba(16,24,32,0.3)">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.14) 0 10px,rgba(16,24,32,0.05) 10px 20px)"></div>
+        <span style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,24,32,0.9) 0%,rgba(16,24,32,0.25) 42%,rgba(16,24,32,0) 68%)"></span>
+        <span style="position:absolute;left:0;right:0;bottom:0;padding:16px 14px">
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.7rem;line-height:1;letter-spacing:-0.02em;margin-bottom:4px">2020–21</span>
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;white-space:nowrap">PDF →</span>
+        </span>
+      </a>
+      <a href="https://epss.ucla.edu/media/documents/newsletters/2019_newsletter_web.pdf" style="position:relative;display:block;aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#fbfaf7;box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.16),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.12);transition:transform 260ms cubic-bezier(0.34,1.3,0.64,1),box-shadow 260ms ease" style-hover="transform:translateY(-10px) rotate(-0.6deg);box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.18),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.14),0 22px 36px rgba(16,24,32,0.3)">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.14) 0 10px,rgba(16,24,32,0.05) 10px 20px)"></div>
+        <span style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,24,32,0.9) 0%,rgba(16,24,32,0.25) 42%,rgba(16,24,32,0) 68%)"></span>
+        <span style="position:absolute;left:0;right:0;bottom:0;padding:16px 14px">
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.7rem;line-height:1;letter-spacing:-0.02em;margin-bottom:4px">2019</span>
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;white-space:nowrap">PDF →</span>
+        </span>
+      </a>
+      <a href="https://epss.ucla.edu/wp-content/uploads/2025/07/2018_newsletter_web.pdf" style="position:relative;display:block;aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#fbfaf7;box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.16),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.12);transition:transform 260ms cubic-bezier(0.34,1.3,0.64,1),box-shadow 260ms ease" style-hover="transform:translateY(-10px) rotate(-0.6deg);box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.18),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.14),0 22px 36px rgba(16,24,32,0.3)">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.14) 0 10px,rgba(16,24,32,0.05) 10px 20px)"></div>
+        <span style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,24,32,0.9) 0%,rgba(16,24,32,0.25) 42%,rgba(16,24,32,0) 68%)"></span>
+        <span style="position:absolute;left:0;right:0;bottom:0;padding:16px 14px">
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.7rem;line-height:1;letter-spacing:-0.02em;margin-bottom:4px">2018</span>
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;white-space:nowrap">PDF →</span>
+        </span>
+      </a>
+      <a href="https://epss.ucla.edu/wp-content/uploads/2025/07/2017_newsletter_web.pdf" style="position:relative;display:block;aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#fbfaf7;box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.16),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.12);transition:transform 260ms cubic-bezier(0.34,1.3,0.64,1),box-shadow 260ms ease" style-hover="transform:translateY(-10px) rotate(-0.6deg);box-shadow:3px 3px 0 -1px #fbfaf7,4px 4px 0 -1px rgba(16,24,32,0.18),7px 7px 0 -2px #fbfaf7,8px 8px 0 -2px rgba(16,24,32,0.14),0 22px 36px rgba(16,24,32,0.3)">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.14) 0 10px,rgba(16,24,32,0.05) 10px 20px)"></div>
+        <span style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,24,32,0.9) 0%,rgba(16,24,32,0.25) 42%,rgba(16,24,32,0) 68%)"></span>
+        <span style="position:absolute;left:0;right:0;bottom:0;padding:16px 14px">
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.7rem;line-height:1;letter-spacing:-0.02em;margin-bottom:4px">2017</span>
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;white-space:nowrap">PDF →</span>
+        </span>
+      </a>
+    </div>
+  </section>
+  </sc-if>
+</main>
+
+<div aria-hidden="true" style="position:fixed;left:0;bottom:0;z-index:30;display:flex;align-items:center;gap:10px;padding:9px 16px 9px 14px;background:#101820;color:#fbfaf7;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.14em;text-transform:uppercase;opacity:{{folioOpacity}};transform:translateY({{folioShift}});transition:opacity 300ms ease,transform 300ms ease;pointer-events:none">
+  <span style="color:#ffd100">{{folioNum}}</span>
+  <span style="width:14px;height:1px;background:rgba(251,250,247,0.4)"></span>
+  <span>{{folioName}}</span>
+</div>
+
+<footer style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;padding:52px 40px;background:#101820;color:rgba(251,250,247,0.66)">
+  <div>
+    <img src="assets/brand/epss-lockup.svg" alt="UCLA Earth, Planetary &amp; Space Sciences" style="width:300px;height:auto;margin-bottom:18px;filter:brightness(0) invert(1);opacity:0.9">
+    <p style="margin:0;max-width:46ch;font-size:0.92rem">UCLA Earth, Planetary, and Space Sciences · 595 Charles E. Young Drive East, Los Angeles, CA 90095</p>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:start;gap:12px;justify-self:end;font-size:0.92rem">
+    <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="color:#ffd100;font-weight:600;text-decoration:none" style-hover="color:#fbfaf7">Give to EPSS</a>
+    <a href="#guide" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Issue guide</a>
+    <a href="#top" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to top ↑</a>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;heroAutoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;showArchive&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;showSignup&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;}}">
+class Component extends DCLogic {
+  state = { slide: 0, subscribed: false, folio: null, playing: true };
+
+  prefersReducedMotion() {
+    return typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  startAutoplay() {
+    clearInterval(this.timer);
+    this.timer = setInterval(() => {
+      this.setState((s) => ({ slide: (s.slide + 1) % 3 }));
+    }, 7000);
+  }
+
+  // Numbers mirror the Contents list so the folio reads as a page number.
+  folios = [
+    ["guide", "—", "Contents"],
+    ["rimfax", "02", "Main Feature"],
+    ["research", "03", "Lab & Research"],
+    ["endowed-chairs", "06", "Endowed Chairs"],
+    ["community", "07", "Community"],
+    ["short-stories", "10", "Art & Science"],
+    ["field", "11", "Dispatches"],
+    ["awards", "13", "Awards"],
+    ["commencement", "14", "Commencement"],
+    ["memoriam", "15", "Farewells"],
+    ["giving", "16", "Giving"],
+  ];
+
+  setupFolios() {
+    this.folioTargets = this.folios
+      .map(([id, num, name]) => {
+        const el = document.getElementById(id);
+        return el ? { el, num, name } : null;
+      })
+      .filter(Boolean);
+    if (!this.folioTargets.length) return;
+
+    this.onFolioScroll = () => {
+      if (this.folioRaf) return;
+      this.folioRaf = requestAnimationFrame(() => {
+        this.folioRaf = null;
+        const line = window.innerHeight / 2;
+        let active = null;
+        // last section whose top has passed the reference line
+        for (const t of this.folioTargets) {
+          const r = t.el.getBoundingClientRect();
+          if (r.top <= line && r.bottom > 0) active = t;
+        }
+        const cur = this.state.folio;
+        if ((cur && cur.el) !== (active && active.el)) this.setState({ folio: active });
+      });
+    };
+
+    window.addEventListener("scroll", this.onFolioScroll, { passive: true });
+    window.addEventListener("resize", this.onFolioScroll);
+    this.onFolioScroll();
+  }
+
+  // Must stay in step with the three hero <img> alt texts.
+  captions = [
+    "Joshua trees at sunset, Mojave Desert",
+    "Icebergs off the Greenland coast",
+    "Valley of Fire, Nevada",
+  ];
+
+  componentDidMount() {
+    const wantsPlay = (this.props.heroAutoplay ?? true) && !this.prefersReducedMotion();
+    if (wantsPlay) this.startAutoplay();
+    else this.setState({ playing: false });
+    this.setupFolios();
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    if (this.onFolioScroll) {
+      window.removeEventListener("scroll", this.onFolioScroll);
+      window.removeEventListener("resize", this.onFolioScroll);
+    }
+    if (this.folioRaf) cancelAnimationFrame(this.folioRaf);
+  }
+
+  step(dir) {
+    clearInterval(this.timer);
+    this.setState((s) => ({ slide: (s.slide + dir + 3) % 3, playing: false }));
+  }
+
+  togglePlay() {
+    if (this.state.playing) {
+      clearInterval(this.timer);
+      this.setState({ playing: false });
+    } else {
+      this.startAutoplay();
+      this.setState({ playing: true });
+    }
+  }
+
+  renderVals() {
+    const i = this.state.slide;
+    return {
+      slideOffset: `-${i * 33.3333}%`,
+      folioNum: this.state.folio ? this.state.folio.num : "",
+      folioName: this.state.folio ? this.state.folio.name : "",
+      folioOpacity: this.state.folio ? 1 : 0,
+      folioShift: this.state.folio ? "0px" : "100%",
+      showArchive: this.props.showArchive ?? true,
+      showSignup: this.props.showSignup ?? true,
+      slideCaption: `${String(i + 1).padStart(2, "0")} / 03 · ${this.captions[i]}`,
+      togglePlay: () => this.togglePlay(),
+      playIcon: this.state.playing ? "❙❙" : "▶",
+      playLabel: this.state.playing ? "Pause cover images" : "Play cover images",
+      goPrev: () => this.step(-1),
+      goNext: () => this.step(1),
+      subscribed: this.state.subscribed,
+      notSubscribed: !this.state.subscribed,
+      subscribe: (e) => {
+        e.preventDefault();
+        this.setState({ subscribed: true });
+      },
+      share: (e) => {
+        const id = e.currentTarget.dataset.anchor;
+        const url = `${location.origin}${location.pathname}#${id}`;
+        if (navigator.clipboard) navigator.clipboard.writeText(url);
+        const el = e.currentTarget;
+        const original = el.textContent;
+        el.textContent = "Link copied";
+        setTimeout(() => { el.textContent = original; }, 1600);
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>
