@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<link rel="icon" href="./assets/brand/epss-department-logo.svg" type="image/svg+xml">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  :focus-visible { outline: 3px solid #9a4a26; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+  body { margin: 0; background: #fbfaf7; color: #1f2933; font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  img { display: block; max-width: 100%; }
+  a { color: #2774ae; }
+  a:hover { color: #9a4a26; }
+  h1, h2, h3, h4, p, ul, ol, figure { margin-top: 0; }
+  ::selection { background: #ffd100; color: #101820; }
+</style>
+<link rel="icon" href="assets/brand/epss-department-logo.svg" type="image/svg+xml" />
+</helmet>
+
+<a href="#top" style="position:absolute;left:-9999px;top:0;z-index:100;padding:12px 18px;background:#101820;color:#fbfaf7;font-weight:600;text-decoration:none" style-focus="left:0">Skip to the article</a>
+<header style="position:sticky;top:0;z-index:40;background:rgba(251,250,247,0.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(16,24,32,0.14)">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;padding:14px clamp(20px,4vw,40px)">
+    <a href="index.html" aria-label="Back to the issue" style="display:flex;align-items:center">
+      <img src="assets/brand/newsletter-logo-black.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:min(280px,44vw);height:auto" />
+    </a>
+    <div style="display:flex;align-items:center;gap:20px;font-size:0.82rem;font-weight:600;color:#54626d">
+      <a href="index.html" style="text-decoration:none;color:inherit" style-hover="color:#9a4a26">← Back to the 2026 issue</a>
+      <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="display:inline-flex;align-items:center;height:36px;padding:0 16px;background:#101820;color:#fbfaf7;text-decoration:none" style-hover="background:#9a4a26;color:#fff">Give</a>
+    </div>
+  </div>
+  <div style="height:3px;background:rgba(16,24,32,0.1)">
+    <div style="height:100%;background:#9a4a26;transition:width 120ms linear;width:{{progress}}"></div>
+  </div>
+</header>
+
+<main id="top">
+  <article>
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px) 40px">
+      <p style="margin:0 0 20px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">Retirement · Faculty</p>
+      <h1 style="max-width:22ch;margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2.4rem,5.6vw,5rem);line-height:1;letter-spacing:-0.025em;text-wrap:balance">Understanding Earth’s deforming continents</h1>
+      <p style="max-width:58ch;margin:0 0 36px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.18rem,2vw,1.7rem);line-height:1.42;color:#54626d;text-wrap:pretty">After more than thirty years at UCLA, Gilles Peltzer retires having reshaped how we understand the way continents bend, break, and slide.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;border-top:1px solid rgba(16,24,32,0.14);border-bottom:1px solid rgba(16,24,32,0.14)">
+        <div>
+          <p style="margin:0;font-weight:600">By Paul Mistral</p>
+          <p style="margin:0;font-size:0.82rem;color:#54626d">Photographs from the EPSS-262 field archive</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d">
+          <span>2026 Issue</span>
+          <span style="width:1px;height:14px;background:rgba(16,24,32,0.2)"></span>
+          <span>6 min read</span>
+          <button type="button" onClick="{{share}}" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0;text-transform:none;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <figure style="max-width:1200px;margin:0 auto 56px;padding:0 clamp(20px,4vw,40px)">
+      <img src="assets/images/2026/peltzer/spectrometer-playa.jpg" alt="On the white salt playa of Death Valley, a student holds a field spectrometer over a white reference panel mounted on a tripod while classmates look on, notebook open, mountains behind." style="display:block;max-height:min(60svh,620px);width:auto;max-width:100%;margin:0 auto;border:1px solid rgba(16,24,32,0.12)" />
+      <figcaption style="margin-top:14px;font-size:0.82rem;color:#54626d">Ben Greenhagen taking a white reference with a field spectrometer over the Death Valley playa. <span style="color:#101820;font-weight:600">From the EPSS-262 field archive; photographer to confirm.</span></figcaption>
+    </figure>
+
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,40px) 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(32px,5vw,64px);align-items:start">
+      <div style="max-width:68ch;min-width:0">
+        <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;font-weight:400;line-height:1.6;color:#101820">Professor Peltzer has dedicated his career to uncovering how Earth’s continents move and change shape. Scientists have long understood the basics of plate tectonics, but the deformation of continents — especially in complex, long-evolving regions like Asia — has remained a puzzle.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">For over thirty years Peltzer has been at the forefront of solving it, employing everything from hands-on experiments and field observations to cutting-edge satellite technology.</p>
+
+        <h2 style="margin:44px 0 16px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">A block of Plasticine, and a new model of Asia</h2>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">His journey began in the 1980s, when he set out to explore the geometry of subduction zones — areas where one tectonic plate slides beneath another. By analysing the forces acting on these slabs, he demonstrated that the arcuate shape of subduction zones could evolve into a simple helical form on the sphere.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">His most famous contribution came during his PhD. Using a simple experiment with Plasticine, he and his advisor showed how the collision of India with Asia caused large blocks of Earth’s crust to be squeezed out sideways between major transform faults. Though debated, this <em>Extrusion Tectonics</em> model revolutionised scientific understanding of continental deformation and inspired generations of researchers.</p>
+
+        <blockquote style="margin:38px 0;padding:0 0 0 28px;border-left:4px solid #ffd100">
+          <p style="margin:0 0 12px;font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:1.7rem;line-height:1.32;color:#101820">A simple experiment with modelling clay changed how a generation of scientists pictured the collision of India with Asia.</p>
+        </blockquote>
+
+        <h2 style="margin:44px 0 16px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">Watching the ground move from space</h2>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Peltzer was among the first to use high-resolution satellite images to track fault movements in Asia, measuring how landforms such as river channels and glacial moraines had been displaced by earthquakes over millennia. His work with radar interferometry (InSAR) proved that the technique could sense the subtle, often invisible ways the crust shifts between, during, and after earthquakes.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">In collaboration with CNES researchers, he produced the first-ever image of an earthquake’s static displacement field from space — the 1992 Landers earthquake in California. He also discovered how crustal fluids, trapped in and around fault zones, play a key role in stress relaxation in the shallow crust after an earthquake, influencing aftershocks and even triggering new quakes on nearby faults.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">His research has also revealed surprising behaviours in Earth’s crust. Observations of asymmetric displacement across a surface rupture produced by a large earthquake in Tibet showed that the crust can act like a non-linear elastic material — its stiffness changing depending on whether it is being stretched or squeezed.</p>
+
+        <h2 style="margin:44px 0 16px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">Tibet, and an unexpected signal</h2>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">With colleagues at JPL, Peltzer investigated the present-day displacement field of the Tibetan Plateau using the archive of InSAR data from ESA’s Sentinel-1 mission and the recently launched NASA-ISRO NISAR mission. Early results highlight the concentration of strain along major faults, confirming the primary role of transform faults in accommodating the shortening between India and Asia — as proposed in the early Extrusion Tectonics model, a theory still debated today.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">An unexpected finding from this research is the vertical velocity field of the Tibetan Plateau, which reveals broad-scale subsidence linked to the degradation of permafrost in a warming climate.</p>
+
+        <h2 style="margin:44px 0 16px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">Campfires in the Mojave</h2>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Beyond research, Peltzer is a dedicated teacher. He developed and taught courses on tectonics, earthquakes, remote sensing, and radar interferometry, always emphasising hands-on learning. In the geologic playground of Southern California’s deserts, his classes often included field trips where students could see firsthand how the landscape tells the story of Earth’s restless surface.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">His most cherished memories are the endless conversations with students around a campfire after a long day of studying earthquake faults, volcanoes, sand dunes, and the many wonders of geology in the hot California desert.</p>
+
+        <div style="margin-top:48px;padding:26px 28px;background:#eef4f7;border-top:4px solid #9a4a26">
+          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Support the field program</p>
+          <p style="margin:0 0 16px;color:#3d4a55">The desert field trips Peltzer describes are funded in part by gifts to the department. Contributions to the field program are matched through <strong>[dates to confirm]</strong>.</p>
+          <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="display:inline-flex;align-items:center;height:46px;padding:0 22px;background:#101820;color:#fbfaf7;font-weight:600;text-decoration:none" style-hover="background:#9a4a26">Give to EPSS →</a>
+        </div>
+      </div>
+
+      <aside style="display:grid;gap:26px;min-width:0">
+        <div>
+          <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">In this story</p>
+          <ul style="display:grid;gap:10px;margin:0;padding:0;list-style:none;font-size:0.92rem">
+            <li><a href="#top" style="text-decoration:none;color:#54626d" style-hover="color:#101820">A block of Plasticine</a></li>
+            <li><a href="#top" style="text-decoration:none;color:#54626d" style-hover="color:#101820">Watching the ground move from space</a></li>
+            <li><a href="#top" style="text-decoration:none;color:#54626d" style-hover="color:#101820">Tibet, and an unexpected signal</a></li>
+            <li><a href="#top" style="text-decoration:none;color:#54626d" style-hover="color:#101820">Campfires in the Mojave</a></li>
+          </ul>
+        </div>
+        <div style="padding-top:22px;border-top:1px solid rgba(16,24,32,0.14)">
+          <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Field archive</p>
+          <p style="margin:0 0 14px;font-size:0.92rem;color:#54626d">EPSS-262 Advanced Remote Sensing ran field trips through 2007, 2009, 2013, and 2024. Captioned photographs are ready to drop in:</p>
+          <ul style="display:grid;gap:12px;margin:0;padding:0;list-style:none;font-size:0.82rem;color:#54626d">
+            <li>Quartz-rich fan surfaces in Death Valley, using TIR data from JPL’s MASTER instrument</li>
+            <li>Zabriskie Point, Death Valley, 2009</li>
+            <li>Resting on top of Kelso Dunes</li>
+            <li>Looking at the Cima volcanoes in 3D with Jennifer Scully and Diya Chowdhury</li>
+            <li>Ventifacts in Death Valley, 2024</li>
+            <li>With Charles Elachi, former director of JPL, at EPSS commencement, June 2018</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </article>
+
+  <section aria-labelledby="more-title" style="padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px);background:#101820;color:#fbfaf7">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid rgba(251,250,247,0.2)">
+        <h2 id="more-title" style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.7rem,3vw,2.6rem);letter-spacing:-0.02em">More farewells in this issue</h2>
+        <a href="index.html#memoriam" style="font-size:0.92rem;font-weight:600;color:#ffd100;text-decoration:none" style-hover="color:#fbfaf7">All farewells →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:rgba(251,250,247,0.2);border:1px solid rgba(251,250,247,0.2)">
+        <a href="index.html#memoriam" style="display:block;padding:24px 22px;background:#101820;text-decoration:none;color:#fbfaf7" style-hover="background:#ffd100;color:#101820">
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;margin-bottom:10px">Retirement</span>
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-size:1.44rem;line-height:1.18;margin-bottom:6px">Steve Joy</span>
+          <span style="display:block;font-size:0.82rem;opacity:0.7">From Galileo to Europa Clipper</span>
+        </a>
+        <a href="index.html#memoriam" style="display:block;padding:24px 22px;background:#101820;text-decoration:none;color:#fbfaf7" style-hover="background:#ffd100;color:#101820">
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;margin-bottom:10px">Retirement</span>
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-size:1.44rem;line-height:1.18;margin-bottom:6px">Peter Chi</span>
+          <span style="display:block;font-size:0.82rem;opacity:0.7">On leaving, and on Generation Alpha</span>
+        </a>
+        <a href="index.html#memoriam" style="display:block;padding:24px 22px;background:#101820;text-decoration:none;color:#fbfaf7" style-hover="background:#ffd100;color:#101820">
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;margin-bottom:10px">In Memoriam</span>
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-size:1.44rem;line-height:1.18;margin-bottom:6px">Gerald Schubert</span>
+          <span style="display:block;font-size:0.82rem;opacity:0.7">Special memorial</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;padding:52px clamp(20px,4vw,40px);background:#1f2933;color:rgba(251,250,247,0.66)">
+  <div>
+    <img src="assets/brand/newsletter-logo-2x.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:280px;height:auto;margin-bottom:18px;filter:brightness(0) invert(1);opacity:0.9" />
+    <p style="margin:0;max-width:46ch;font-size:0.92rem">UCLA Earth, Planetary, and Space Sciences · 595 Charles E. Young Drive East, Los Angeles, CA 90095</p>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:start;gap:12px;font-size:0.92rem">
+    <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="color:#ffd100;font-weight:600;text-decoration:none" style-hover="color:#fbfaf7">Give to EPSS</a>
+    <a href="index.html" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to the issue</a>
+    <a href="#top" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to top ↑</a>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440}}">
+class Component extends DCLogic {
+  state = { progress: 0 };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      this.setState({ progress: max > 0 ? Math.min(1, h.scrollTop / max) : 0 });
+    };
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+    this.onScroll();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
+  }
+
+  renderVals() {
+    return {
+      progress: `${(this.state.progress * 100).toFixed(1)}%`,
+      share: (e) => {
+        if (navigator.clipboard) navigator.clipboard.writeText(location.href);
+        const el = e.currentTarget;
+        const original = el.textContent;
+        el.textContent = "Link copied";
+        setTimeout(() => { el.textContent = original; }, 1600);
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

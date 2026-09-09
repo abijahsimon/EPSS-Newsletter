@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<link rel="icon" href="./assets/brand/epss-department-logo.svg" type="image/svg+xml">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  :focus-visible { outline: 3px solid #9a4a26; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+  body { margin: 0; background: #fbfaf7; color: #1f2933; font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  img { display: block; max-width: 100%; }
+  a { color: #2774ae; }
+  a:hover { color: #9a4a26; }
+  h1, h2, h3, p, ul, ol, figure { margin-top: 0; }
+  ::selection { background: #ffd100; color: #101820; }
+</style>
+<link rel="icon" href="assets/brand/epss-department-logo.svg" type="image/svg+xml" />
+</helmet>
+
+<a href="#top" style="position:absolute;left:-9999px;top:0;z-index:100;padding:12px 18px;background:#101820;color:#fbfaf7;font-weight:600;text-decoration:none" style-focus="left:0">Skip to the article</a>
+<header style="position:sticky;top:0;z-index:40;background:rgba(251,250,247,0.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(16,24,32,0.14)">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;padding:14px clamp(20px,4vw,40px)">
+    <a href="index.html" aria-label="Back to the issue" style="display:flex;align-items:center">
+      <img src="assets/brand/newsletter-logo-black.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:min(280px,44vw);height:auto" />
+    </a>
+    <div style="display:flex;align-items:center;gap:20px;font-size:0.82rem;font-weight:600;color:#54626d">
+      <a href="index.html#research" style="text-decoration:none;color:inherit" style-hover="color:#9a4a26">← Back to the 2026 issue</a>
+      <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="display:inline-flex;align-items:center;height:36px;padding:0 16px;background:#101820;color:#fbfaf7;text-decoration:none" style-hover="background:#9a4a26;color:#fff">Give</a>
+    </div>
+  </div>
+  <div style="height:3px;background:rgba(16,24,32,0.1)">
+    <div style="height:100%;background:#9a4a26;transition:width 120ms linear;width:{{progress}}"></div>
+  </div>
+</header>
+
+<main id="top">
+  <article>
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px) 40px">
+      <p style="margin:0 0 20px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">Lab &amp; Research · Space Physics</p>
+      <h1 style="max-width:22ch;margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2.4rem,5.6vw,5rem);line-height:1;letter-spacing:-0.025em;text-wrap:balance">Photographing the aurora in daylight</h1>
+      <p style="max-width:60ch;margin:0 0 36px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.18rem,2vw,1.7rem);line-height:1.42;color:#54626d;text-wrap:pretty">For 130 years the aurora has only been photographed in darkness. BALBOA is a balloon-borne attempt to see the half of it that sunlight has always hidden.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;border-top:1px solid rgba(16,24,32,0.14);border-bottom:1px solid rgba(16,24,32,0.14)">
+        <div>
+          <p style="margin:0;font-weight:600">Xiaoyan Zhou</p>
+          <p style="margin:0;font-size:0.82rem;color:#54626d">Principal Investigator · NASA/LCAS</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d">
+          <span>7 min read</span>
+          <button type="button" onClick="{{share}}" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0;text-transform:none;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <figure style="margin:0 0 48px">
+      <img src="assets/images/2026/balboa/launch-vehicle.jpg" alt="A NASA balloon launch vehicle holds the BALBOA gondola aloft on a New Mexico airfield, with the inflated balloon lying on the ground in the distance." style="width:100%;height:auto;border-top:1px solid rgba(16,24,32,0.12);border-bottom:1px solid rgba(16,24,32,0.12)" />
+      <figcaption style="max-width:1200px;margin:0 auto;padding:14px clamp(20px,4vw,40px) 0;font-size:0.82rem;color:#54626d">Launch preparations at Fort Sumner, New Mexico: the NASA launch vehicle carries the payload while the balloon is laid out and inflated. <span style="color:#101820;font-weight:600">Credit to confirm.</span></figcaption>
+    </figure>
+
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,40px) 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(32px,5vw,64px);align-items:start">
+      <div style="max-width:68ch;min-width:0">
+        <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;font-weight:400;line-height:1.6;color:#101820">BALloon-Based Observations for Sunlit Aurora — BALBOA — was funded by the NASA/LCAS program in 2018. It is a pathfinder mission that aims to image the dayside aurora under the Sun.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Solar wind energy and momentum enter geospace from the dayside, where the magnetopause boundary and magnetic fields have a different configuration to the nightside — as do the plasma and current environment. Dayside auroral features therefore carry crucial information about the solar wind–magnetosphere interaction, including space weather events.</p>
+
+        <div style="margin:32px 0;padding:22px 24px;background:#eef4f7;border-top:4px solid #9a4a26">
+          <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">The three science questions</p>
+          <ol style="display:grid;gap:10px;margin:0;padding-left:20px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.6;color:#3d4a55">
+            <li>How do dayside auroral features relate to dayside solar wind–magnetosphere–ionosphere coupling?</li>
+            <li>How do dayside auroral features relate to nightside auroral features?</li>
+            <li>What are the hemispherical asymmetries in the aurora when one hemisphere is in sunlight and the other in darkness?</li>
+          </ol>
+        </div>
+
+        <h2 style="margin:44px 0 16px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">A problem 130 years old</h2>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Since the German physicist and astronomer Martin Brendel took the first auroral image on 5 January 1892, auroras have been imaged only in darkness — leaving a limited understanding of dayside auroras, which hold secrets obscured by sunlight.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Aurora occurs 100 to 300 km above the atmosphere. The challenge of seeing it in sunlight is that the illuminated atmosphere is overwhelmingly bright, whether viewed from the ground or from space. The only chance is either not to look up at the illuminated atmosphere, or not to look down at it — while still keeping auroras in the field of view.</p>
+
+        <blockquote style="margin:38px 0;padding:0 0 0 28px;border-left:4px solid #ffd100">
+          <p style="margin:0;font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:1.7rem;line-height:1.32;color:#101820">That leaves one platform: a NASA high-altitude balloon at roughly 40 km — above 99.7% of the atmosphere.</p>
+        </blockquote>
+
+        <h2 style="margin:44px 0 16px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">Making the signal detectable</h2>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">The feasibility study addressed whether the auroral signal-to-noise ratio is sufficient, and how to increase it. At float altitude the noise is dominated by sky background, balloon reflection, and Earth albedo. The strategy combined theoretical modelling with observational experiments.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">MODTRAN modelling showed that sky brightness decreases with increasing wavelength and altitude — reducing by about 25% for every 5 km gained above 30 km. So the first attempt was to select a bright infrared aurora and the highest feasible flight altitude. At 40 km, the signal-to-noise ratio of a bright N2+ Meinel (0-0) auroral band at roughly 1100 nm reached a detectable level.</p>
+
+        <figure style="margin:32px 0">
+          <img src="assets/images/2026/balboa/meinel-aurora.png" alt="Ten near-infrared frames in two rows, each showing faint vertical Meinel auroral structure against a bright twilight sky background." style="width:100%;background:#101820;border:1px solid rgba(16,24,32,0.12)" />
+          <figcaption style="margin-top:12px;font-size:0.82rem;line-height:1.5;color:#54626d">First Meinel auroral images, taken in evening twilight when the solar zenith angle was about 96° and sky background brightness was similar to that at ~40 km altitude. Ten consecutive one-second frames, 2005 day 103, 6:16:23–6:16:33 UT, SZA 95.8–95.9°. <span style="color:#101820;font-weight:600">Zhou et al., 2007.</span></figcaption>
+        </figure>
+
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Those twilight experiments, using an InGaAs near-infrared camera, recorded the first Meinel (0-0) aurora and confirmed the feasibility of imaging dayside aurora from a high-altitude balloon.</p>
+
+        <h2 style="margin:44px 0 16px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">Four test flights, and a delay</h2>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">The BALBOA science payload includes four InGaAs camera systems sealed in pressure vessels and one vacuum-compatible UV camera. COVID-19 caused a backlog of balloon flights, delaying many projects, BALBOA among them. But the team kept experimenting, learning, and improving by maximising available resources.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Four balloon test flights were conducted from Fort Sumner, New Mexico, using dayglow as a proxy object to test the payload system, the sunshade, and telemetry communication. On 19 August 2023, during a piggyback test flight, the team recorded gravity waves carried by O2 dayglow at 1270 nm — during twilight, and again with the Sun about 60° above the horizon.</p>
+
+        <figure style="margin:32px 0">
+          <img src="assets/images/2026/balboa/dayglow-gravity-waves.png" alt="Four camera frames of O2 1270 nm dayglow, two from astronomical twilight and two from daytime float, each showing banded gravity-wave structure." style="width:100%;background:#101820;border:1px solid rgba(16,24,32,0.12)" />
+          <figcaption style="margin-top:12px;font-size:0.82rem;line-height:1.5;color:#54626d">The first gravity waves in dayglow O<sub>2</sub> 1270 nm recorded from balloon altitude, 19 August 2023. <em>Top:</em> ground observations from the runway at astronomical twilight, 1124–30 UT, waves moving right. <em>Bottom:</em> float observations at ~37 km altitude, 1737–46 UT, solar elevation 57–60°, waves moving up and left. <span style="color:#101820;font-weight:600">Zhou et al., 2023.</span></figcaption>
+        </figure>
+
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Fourteen field tests and validations followed — including three ground-based auroral campaigns at Poker Flat, Alaska — along with two thermal vacuum chamber tests to validate the thermal model and test the vacuum-compatible camera, papers in GRL and JGR, eighteen conference and workshop presentations, and five invited seminar talks. The planned primary auroral flight is in 2027.</p>
+
+        <h2 style="margin:44px 0 16px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">Students on the gondola</h2>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Five students from three UCLA departments — Computer Science, Physics and Astronomy, and Mechanical and Aerospace Engineering — plus a postdoctoral researcher from the University of Arizona helped with payload development: programming and testing scripts for instrument operation, integrating the payload system, analysing the gondola’s mechanical structure, and modifying the flight telemetry software package.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">It was a chance to apply their knowledge to flight instruments, collaborate across disciplines, and experience the implementation of a NASA project firsthand.</p>
+
+        <h2 style="margin:44px 0 16px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">BALBOA II, III, and beyond</h2>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Lessons gained along the way have opened up future auroral ballooning — including imaging from the balloon apex, where a camera can point to the magnetic zenith. From there, precipitating electron energy and energy flux can be derived from observations without atmospheric interference. The imaging could extend from the Meinel band across the entire auroral spectrum, from aurora to airglow and dayglow, and into gravity waves in the full spectrum above the atmosphere.</p>
+        <p style="margin:0;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">The practice and implementation of these ideas will guide future BALBOA missions. Young scientists are encouraged to join in and take the lead.</p>
+      </div>
+
+      <aside style="display:grid;gap:26px;min-width:0">
+        <div>
+          <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Mission at a glance</p>
+          <ul style="display:grid;gap:12px;margin:0;padding:0;list-style:none;font-size:0.92rem;color:#54626d">
+            <li><strong style="display:block;color:#1f2933">Funded</strong>NASA/LCAS, 2018</li>
+            <li><strong style="display:block;color:#1f2933">Float altitude</strong>~40 km — above 99.7% of the atmosphere</li>
+            <li><strong style="display:block;color:#1f2933">Target</strong>N2+ Meinel (0-0) band, ~1100 nm</li>
+            <li><strong style="display:block;color:#1f2933">Payload</strong>Four InGaAs cameras in pressure vessels, one vacuum-compatible UV camera</li>
+            <li><strong style="display:block;color:#1f2933">Primary auroral flight</strong>Planned 2027</li>
+          </ul>
+        </div>
+        <div style="padding-top:22px;border-top:1px solid rgba(16,24,32,0.14)">
+          <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Photographs available</p>
+          <ul style="display:grid;gap:10px;margin:0;padding:0;list-style:none;font-size:0.82rem;color:#54626d">
+            <li>NASA 40 MCF balloon — polyethylene film 0.02 mm thick, about the thickness of a sandwich wrap, assembled from “banana peel” gores</li>
+            <li>The NASA hangar at Fort Sumner, New Mexico, for payload and gondola integration</li>
+            <li>BALBOA long-duration balloon flight test, 7 September 2022</li>
+            <li>The launch crew of the LDB test flight</li>
+            <li>BALBOA instrument development</li>
+            <li>Field test at the Rose Bowl parking lot</li>
+            <li>Auroral campaign at Poker Flat, Alaska</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </article>
+</main>
+
+<footer style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;padding:52px clamp(20px,4vw,40px);background:#1f2933;color:rgba(251,250,247,0.66)">
+  <div>
+    <img src="assets/brand/newsletter-logo-2x.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:280px;height:auto;margin-bottom:18px;filter:brightness(0) invert(1);opacity:0.9" />
+    <p style="margin:0;max-width:46ch;font-size:0.92rem">UCLA Earth, Planetary, and Space Sciences · 595 Charles E. Young Drive East, Los Angeles, CA 90095</p>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:start;gap:12px;font-size:0.92rem">
+    <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="color:#ffd100;font-weight:600;text-decoration:none" style-hover="color:#fbfaf7">Support UCLA EPSS</a>
+    <a href="index.html" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to the issue</a>
+    <a href="#top" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to top ↑</a>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440}}">
+class Component extends DCLogic {
+  state = { progress: 0 };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      this.setState({ progress: max > 0 ? Math.min(1, h.scrollTop / max) : 0 });
+    };
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+    this.onScroll();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
+  }
+
+  renderVals() {
+    return {
+      progress: `${(this.state.progress * 100).toFixed(1)}%`,
+      share: (e) => {
+        if (navigator.clipboard) navigator.clipboard.writeText(location.href);
+        const el = e.currentTarget;
+        const original = el.textContent;
+        el.textContent = "Link copied";
+        setTimeout(() => { el.textContent = original; }, 1600);
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>
