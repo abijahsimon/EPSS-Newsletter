@@ -23,7 +23,7 @@ This list is intentionally narrower than the old Claude checklist. It excludes i
 
 ## For commencement owner
 
-1. The images are available in Drive and Box. Please confirm the selected hero/group image, caption, photo credit, and whether `DSC08208.jpg` should be used.
+1. The images are available in Drive and Box. Please confirm the selected hero/group image, caption details, and whether `DSC08208.jpg` should be used. Photo credit is confirmed as Valeria Jaramillo Hernandez and Zachary Lacson.
 2. Confirm any commencement degree-count/name-spelling issues before final publication.
 
 ## Probably do not ask Emmanuel unless these remain in scope
@@ -32,4 +32,3 @@ This list is intentionally narrower than the old Claude checklist. It excludes i
 - Journal covers, unless the team confirms a visual roundup module.
 - QR postcards for mailing.
 - David Southwood lecture and Welcome New Faculty/Staff: meeting notes suggest these may not belong in the 2026 issue.
-

@@ -91,7 +91,7 @@ image is the only gap.
 |---|---|---|---|---|
 | 1 | **Issue page — hero carousel** (3 slots) | **Landscape, ~2400px wide.** Current files are 854×1103 portrait upscaled 1.7×, which is why they look soft | Box `field-2026` (folder 400260548483) and `epss-103a-2026` (folder 400388889455) | Alt text written for the 3 current images; **new picks need new alt text and captions** — the JS caption array must stay in step with the `<img>` alt attributes |
 | 2 | **Issue page — Dispatches mosaic** (4 empty tiles) | Landscape field photography | Same two Box folders | **Captions needed.** Photographers named in the essay: Juan Alvarado, McKenna Keiser, plus Allie Quan, Michele Chan, Peter Glass, Kaia McArthur Jessum, Mason Stone — attribution per image not yet mapped |
-| 3 | **Commencement** — full-bleed ceremony photo | Landscape group shot | Drive `15KbbG_9rNxQXLHRMQUglVbLehN4lD2FR` (12 named files) or Box Val's/Zach's sets | **Credit written: "Photographs by Val and Zach."** Caption needed. Write-up suggests `DSC08208.jpg` — needs confirming |
+| 3 | **Commencement** — full-bleed ceremony photo | Landscape group shot | Drive `15KbbG_9rNxQXLHRMQUglVbLehN4lD2FR` (12 named files) or Box Valeria/Zachary sets | Credit confirmed by Nanette: commencement-day photographs by Valeria Jaramillo Hernandez and Zachary Lacson. Caption/details still worth confirming if the selected frame changes. |
 | 4 | **Endowed Chairs** — installation photo | 1600×900 available | `epss.ucla.edu/wp-content/uploads/2026/07/chairs-installation-2026.jpg` | **Caption and credit already written** (Penny Jennings, UCLA Division of Physical Sciences). Currently **hotlinked** — must be saved locally or it will be blank in PDF export |
 | 5 | **Art & Science** — 8 artworks | Artwork reproductions; placeholders already match each stated aspect ratio | Inside the two Drive PDFs | **All 8 captions complete and verbatim** — titles, media, dates, dimensions |
 | 6 | **BALBOA** — 2 figures | Scientific figures | Embedded in DOCX `1jOeujjNVAWcLzsDALcquJUaF4w0s-IhH` | **Captions and citations complete** (Zhou et al. 2007; Zhou et al. 2023) |
@@ -141,7 +141,7 @@ git commit -m "Content pass: Hilke art & science pair, sourced faculty awards, d
 git push -u origin claude/content-pass-2026-09-07
 ```
 
-`github.md` records the repo as `abijahsimon/Newsletter-Site`, branch `main`, last
+`github.md` records the repo as `abijahsimon/EPSS-Newsletter`, branch `main`, last
 read at commit `727edd8`. Note that the repo is still in its pre-redesign state —
 none of this design work exists there yet, so the branch will be a large first
 addition rather than a diff.

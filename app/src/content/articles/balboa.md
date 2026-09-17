@@ -9,7 +9,9 @@ variant: feature
 dek: "For 130 years the aurora has only been photographed in darkness. BALBOA is a balloon-borne attempt to see the half of it that sunlight has always hidden."
 byline: "Xiaoyan Zhou"
 readTime: "7 min read"
-sourceNote: "Source packet marks the BALBOA DOCX as available. The two figures still need to be extracted from the DOCX and verified."
+heroImage: "/assets/images/2026/balboa/launch-vehicle.jpg"
+heroImageAlt: "NASA balloon launch vehicle and BALBOA payload preparations at Fort Sumner, New Mexico."
+sourceNote: "Eleven BALBOA frames from the source DOCX are placed. Photographer credits and a browser-compatible export of the 40 MCF balloon illustration remain pending."
 ---
 
 BALloon-Based Observations for Sunlit Aurora, or BALBOA, was funded by the NASA LCAS program in 2018. It is a pathfinder mission that aims to image the dayside aurora under the Sun.
@@ -36,7 +38,9 @@ The feasibility study addressed whether the auroral signal-to-noise ratio is suf
 
 MODTRAN modeling showed that sky brightness decreases with increasing wavelength and altitude, reducing by about 25% for every 5 km gained above 30 km. So the first attempt was to select a bright infrared aurora and the highest feasible flight altitude. At 40 km, the signal-to-noise ratio of a bright N2+ Meinel (0-0) auroral band at roughly 1100 nm reached a detectable level.
 
-Figure pending: first Meinel auroral images, taken in evening twilight when the solar zenith angle was about 96 degrees and sky background brightness was similar to that at about 40 km altitude. Zhou et al., 2007.
+![First Meinel auroral image sequence from the BALBOA source document.](/assets/images/2026/balboa/meinel-aurora.png)
+
+<p class="figure-caption">First Meinel auroral images taken in evening twilight when the solar zenith angle was about 96 degrees, and the sky background brightness was similar to that at about 40 km altitude. Zhou et al., 2007.</p>
 
 Those twilight experiments, using an InGaAs near-infrared camera, recorded the first Meinel (0-0) aurora and confirmed the feasibility of imaging dayside aurora from a high-altitude balloon.
 
@@ -46,7 +50,9 @@ The BALBOA science payload includes four InGaAs camera systems sealed in pressur
 
 Four balloon test flights were conducted from Fort Sumner, New Mexico, using dayglow as a proxy object to test the payload system, the sunshade, and telemetry communication. On August 19, 2023, during a piggyback test flight, the team recorded gravity waves carried by O2 dayglow at 1270 nm during twilight, and again with the Sun about 60 degrees above the horizon.
 
-Figure pending: the first gravity waves in dayglow O2 1270 nm recorded from balloon altitude. Zhou et al., 2023.
+![Gravity waves in dayglow recorded from balloon altitude.](/assets/images/2026/balboa/dayglow-gravity-waves.png)
+
+<p class="figure-caption">The first gravity waves in dayglow O2 1270 nm recorded from balloon altitude. Zhou et al., 2023.</p>
 
 Fourteen field tests and validations followed, including three ground-based auroral campaigns at Poker Flat, Alaska, along with two thermal vacuum chamber tests to validate the thermal model and test the vacuum-compatible camera, papers in GRL and JGR, eighteen conference and workshop presentations, and five invited seminar talks. The planned primary auroral flight is in 2027.
 

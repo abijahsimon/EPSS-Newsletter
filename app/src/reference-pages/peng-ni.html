@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  :focus-visible { outline: 3px solid #9a4a26; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+  body { margin: 0; background: #fbfaf7; color: #1f2933; font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  img { display: block; max-width: 100%; }
+  a { color: #2774ae; }
+  a:hover { color: #9a4a26; }
+  h1, h2, h3, p, ul, ol, figure { margin-top: 0; }
+  ::selection { background: #ffd100; color: #101820; }
+</style>
+</helmet>
+
+<a href="#top" style="position:absolute;left:-9999px;top:0;z-index:100;padding:12px 18px;background:#101820;color:#fbfaf7;font-weight:600;text-decoration:none" style-focus="left:0">Skip to the article</a>
+<header style="position:sticky;top:0;z-index:40;background:rgba(251,250,247,0.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(16,24,32,0.14)">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;padding:14px clamp(20px,4vw,40px)">
+    <a href="/" aria-label="Back to the issue" style="display:flex;align-items:center">
+      <img src="/assets/brand/newsletter-logo-black.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:min(280px,44vw);height:auto" />
+    </a>
+    <div style="display:flex;align-items:center;gap:20px;font-size:0.82rem;font-weight:600;color:#54626d">
+      <a href="EPSS Annual Newsletter 2026.dc.html#research" style="text-decoration:none;color:inherit" style-hover="color:#9a4a26">← Back to the 2026 issue</a>
+      <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="display:inline-flex;align-items:center;height:36px;padding:0 16px;background:#101820;color:#fbfaf7;text-decoration:none" style-hover="background:#9a4a26;color:#fff">Give</a>
+    </div>
+  </div>
+  <div style="height:3px;background:rgba(16,24,32,0.1)">
+    <div style="height:100%;background:#9a4a26;transition:width 120ms linear;width:{{progress}}"></div>
+  </div>
+</header>
+
+<main id="top">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(40px,5vw,64px) clamp(20px,4vw,40px) 0">
+    <p style="margin:0 0 20px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">Faculty Feature · 2025–2026</p>
+    <h1 style="max-width:26ch;margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2.2rem,5.2vw,4.4rem);line-height:1.01;letter-spacing:-0.025em;text-wrap:balance">Exploring planetary history with Peng Ni</h1>
+    <p style="max-width:58ch;margin:0 0 30px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.18rem,2vw,1.7rem);line-height:1.42;color:#54626d;text-wrap:pretty">The UCLA planetary scientist combines laboratory experiments, isotope measurements, and fieldwork to study Earth, the Moon, and beyond.</p>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px;padding:20px 0;margin-bottom:44px;border-top:2px solid #101820;border-bottom:1px solid rgba(16,24,32,0.2)">
+      <div style="flex:1 1 240px;min-width:0">
+        <p style="margin:0;font-weight:600">By Benjamin Paul</p>
+        <p style="margin:0;font-size:0.82rem;color:#54626d">UCLA Division of Physical Sciences · 7 min read</p>
+      </div>
+      <button type="button" onClick="{{share}}" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-size:0.82rem;font-weight:600;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
+    </div>
+  </div>
+
+  <figure style="margin:0 0 56px">
+    <img src="/assets/images/2026/peng-ni/meteorite-field-team.jpg" alt="Peng Ni, Amy Mainzer, students, faculty, and volunteers on a meteorite-hunting field expedition near Pahrump, Nevada." style="width:100%;height:clamp(320px,46svh,540px);object-fit:cover;object-position:50% 60%;border-top:1px solid rgba(16,24,32,0.12);border-bottom:1px solid rgba(16,24,32,0.12)" />
+    <figcaption style="max-width:1200px;margin:0 auto;padding:14px clamp(20px,4vw,40px) 0;font-size:0.82rem;color:#54626d">Students, faculty, and volunteers on dry lakebeds near Pahrump, Nevada. <span style="color:#101820;font-weight:600">Photographer to confirm.</span></figcaption>
+  </figure>
+
+  <article style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(40px,5vw,60px);display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(32px,5vw,64px)">
+    <div style="max-width:70ch;min-width:0">
+      <p style="margin:0 0 26px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.65;color:#101820">The first time Peng Ni had an opportunity to work with samples brought back from the Moon by the Apollo missions, he was not planning on making lunar science a major part of his career.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">The samples changed that. Ni had encountered something unlike the terrestrial materials he was accustomed to studying. The opportunity came somewhat unexpectedly during graduate school, but working with material from another world became a special moment in his early career, and the beginning of a research interest that has followed him ever since.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Today, much of Ni’s research moves between the Moon, meteorites, and diamonds formed far beneath Earth’s surface. The objects can be remarkably small. The questions are not. How did the Moon form and evolve? How did asteroids develop their distinct cores and mantles? What can material preserved deep inside Earth tell us about processes that took place billions of years ago?</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Ni approaches those questions in part by recreating conditions that scientists cannot directly observe. His laboratory at UCLA uses high-pressure, high-temperature experiments to simulate environments inside Earth and other rocky bodies. Its furnaces and piston-cylinder apparatus can reach temperatures as high as 1,700 degrees Celsius and pressures found deep inside planets, allowing Ni and his students to essentially manufacture planetary materials in the laboratory.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">The Sapphire Lab gives them another way to investigate the past. Its centerpiece is the Nu Sapphire, a specialized mass spectrometer installed at UCLA in 2023. The instrument can detect minute differences in the isotopic makeup of elements including potassium, iron, copper, and magnesium, chemical fingerprints that can reveal where a material came from and what happened to it. When UCLA’s instrument arrived, Ni said, it was only the 20th Sapphire produced worldwide.</p>
+
+      <figure style="margin:38px 0">
+        <button type="button" onClick="{{openSapphire}}" aria-label="Enlarge photograph" style="display:block;width:100%;padding:0;border:1px solid rgba(16,24,32,0.14);background:#dfe8ee;cursor:zoom-in;overflow:hidden" style-hover="border-color:#9a4a26">
+          <img src="/assets/images/2026/peng-ni/sapphire-lab-team.jpg" alt="Members of the Sapphire Lab standing beside the Nu Sapphire mass spectrometer." loading="lazy" style="display:block;width:100%;transition:transform 320ms cubic-bezier(0.34,1.1,0.64,1)" style-hover="transform:scale(1.02)" />
+        </button>
+        <figcaption style="margin-top:12px;font-size:0.82rem;line-height:1.5;color:#54626d">The Sapphire Lab at UCLA, with the Nu Sapphire mass spectrometer. <span style="color:#101820;font-weight:600">Names and photographer to confirm.</span></figcaption>
+      </figure>
+
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Ni has compared this kind of work to another interest that began long before his scientific career: detective fiction. An avid reader since high school, he credits it with helping shape the logical way he approaches problems.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">He approaches geochemistry much like a detective approaches a case: identify the mystery, consider possible explanations, and follow the evidence. The satisfaction comes when the clues finally add up and a difficult scientific problem begins to make sense.</p>
+
+      <h2 style="margin:44px 0 16px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">Lunar glass and diamond time capsules</h2>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">The Apollo samples have provided some particularly intriguing evidence.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Ni’s earlier work helped change scientists’ understanding of the Moon’s interior. Once thought to have lost most of its volatile elements during its formation, the Moon appears to have held onto more of them than expected, raising new questions about its earliest history.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">His group is now looking at tiny green and orange glass beads created by volcanic eruptions on the Moon billions of years ago. Working with postdoc Susana Hoyos and collaborators, the team recreated lunar glass in the laboratory and used it to reexamine samples returned by Apollo 15 and Apollo 17. Their results challenge previous interpretations of how sulfur escaped from magma during ancient lunar eruptions.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Some of Ni’s smallest samples carry evidence from much closer to home, and deep underground. In another recent study, Ni and collaborators examined microscopic pockets of fluid trapped inside diamonds from Sierra Leone.</p>
+
+      <blockquote style="margin:40px 0;padding:0 0 0 28px;border-left:4px solid #ffd100">
+        <p style="margin:0;font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:1.7rem;line-height:1.32;color:#101820">Diamonds can act as tiny geological time capsules. They preserve material from deep within Earth that would otherwise be altered or destroyed.</p>
+        <p style="margin:14px 0 0;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#54626d">Peng Ni</p>
+      </blockquote>
+
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Using UCLA’s Sapphire, the researchers found evidence that the fluids inside these diamonds had an extraordinary history. Their chemical signature points to material from ancient oceanic crust that was carried deep into Earth and eventually contributed to the fluids from which the diamonds grew.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Material that once existed near Earth’s surface can disappear into the planet and leave a record of its journey inside a diamond hundreds of millions or even billions of years later.</p>
+
+      <h2 style="margin:44px 0 16px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">Fieldwork and mentoring</h2>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Ni is especially passionate about educating the next generation of geoscientists.</p>
+
+      <div style="margin:36px 0;padding:24px 26px;background:#eef4f7;border-top:4px solid #9a4a26">
+        <p style="margin:0 0 10px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.6;color:#101820">“One of the things that makes this department special is how dedicated it is to bringing students into the field. There is no better classroom than the natural world and I hope we can continue to grow in this area.”</p>
+        <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#54626d">Peng Ni</p>
+      </div>
+
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">In October, he and EPSS Professor Amy Mainzer led a 17-person group of graduate students, faculty, and volunteers onto dry lakebeds near Pahrump, Nevada, in search of meteorites. The expedition was part of a course on the origin and evolution of the solar system that combines Mainzer’s background in astronomy with Ni’s in geology. Students found about three meteorites apiece.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">“Thanks to California’s unique geology, UCLA is perfectly positioned to offer a strong, thriving field-based teaching and research program,” Ni said. “I have colleagues at East Coast universities who fly their students here for that very reason.”</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Hugo Abe, Ni’s first graduate mentee, found meteorites, watched the Orionid meteor shower, and celebrated his birthday during the expedition. The group surprised him with a cake on a dry lakebed in the Mojave. Experiences like these provide context that simply cannot be gained from textbooks or learned in the laboratory.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Ni’s own path into planetary science took time, something he has encouraged younger scientists to embrace. Nearly four years of his Ph.D. passed before he felt he had found the scientific questions that truly interested him. His advice to graduate students is not to limit themselves to projects handed to them by their advisors, but to develop questions of their own.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">“Finding our true passion in the area is critical for the scientific career in the long run,” he said.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Outside the lab, Ni has pursued photography for nearly a decade, particularly landscapes and the places he encounters while traveling. He is drawn to the way photographers can capture their own view of a landscape. He plans to begin sharing some of his work on his lab website.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Back at UCLA, there is no shortage of questions competing for his attention. His research now stretches from the early history of the Moon to the movement of material deep inside Earth, while his students are beginning to pursue questions of their own. That breadth is something Ni encourages. The advice he gives young scientists is simple: explore widely, find the problems that genuinely interest you, and give yourself the freedom to follow them.</p>
+
+      <div style="margin-top:40px;padding-top:24px;border-top:1px solid rgba(16,24,32,0.2)">
+        <p style="margin:0 0 6px;display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#54626d"><span style="width:26px;height:1px;background:#9a4a26"></span>Benjamin Paul</p>
+        <p style="margin:0;font-size:0.82rem;color:#54626d">UCLA Division of Physical Sciences · Source draft supplied 8 September 2026.</p>
+      </div>
+    </div>
+  </article>
+
+  <div style="max-width:1200px;margin:0 auto;padding:8px clamp(20px,4vw,40px) 72px">
+    <h2 style="margin:0 0 6px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">Field and lab</h2>
+    <p style="max-width:60ch;margin:0 0 24px;font-size:0.92rem;color:#54626d">Click any photograph to enlarge it.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px">
+      <sc-for list="{{ photos }}" as="photo" hint-placeholder-count="4">
+        <figure style="margin:0;min-width:0">
+          <button type="button" onClick="{{ photo.open }}" aria-label="Enlarge photograph" style="display:block;width:100%;padding:0;border:1px solid rgba(16,24,32,0.14);background:#dfe8ee;cursor:zoom-in;overflow:hidden" style-hover="border-color:#9a4a26">
+            <img src="{{ photo.src }}" alt="{{ photo.alt }}" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 320ms cubic-bezier(0.34,1.1,0.64,1)" style-hover="transform:scale(1.045)" />
+          </button>
+          <figcaption style="margin-top:8px;font-size:0.74rem;line-height:1.45;color:#54626d">{{ photo.caption }}</figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </div>
+
+  <section aria-labelledby="more-title" style="padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px);background:#101820;color:#fbfaf7">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid rgba(251,250,247,0.2)">
+        <h2 id="more-title" style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.7rem,3vw,2.6rem);letter-spacing:-0.02em">More from the department</h2>
+        <a href="/" style="font-size:0.92rem;font-weight:600;color:#ffd100;text-decoration:none" style-hover="color:#fbfaf7">The full issue →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:rgba(251,250,247,0.2);border:1px solid rgba(251,250,247,0.2)">
+        <a href="/john-he.html" style="display:block;padding:24px 22px;background:#101820;text-decoration:none;color:#fbfaf7" style-hover="background:#ffd100;color:#101820">
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;margin-bottom:10px">Field Program</span>
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-size:1.44rem;line-height:1.18;margin-bottom:6px">Dispatches from the Field</span>
+          <span style="display:block;font-size:0.82rem;opacity:0.7">Spring 2026, in photographs</span>
+        </a>
+        <a href="/edwin-schauble.html" style="display:block;padding:24px 22px;background:#101820;text-decoration:none;color:#fbfaf7" style-hover="background:#ffd100;color:#101820">
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;margin-bottom:10px">Faculty Feature</span>
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-size:1.44rem;line-height:1.18;margin-bottom:6px">A map of an undiscovered territory</span>
+          <span style="display:block;font-size:0.82rem;opacity:0.7">Edwin Schauble on isotopes</span>
+        </a>
+        <a href="/balboa.html" style="display:block;padding:24px 22px;background:#101820;text-decoration:none;color:#fbfaf7" style-hover="background:#ffd100;color:#101820">
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;margin-bottom:10px">Instruments</span>
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-size:1.44rem;line-height:1.18;margin-bottom:6px">BALBOA</span>
+          <span style="display:block;font-size:0.82rem;opacity:0.7">A balloon at the edge of the sky</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;padding:52px clamp(20px,4vw,40px);background:#1f2933;color:rgba(251,250,247,0.66)">
+  <div>
+    <img src="/assets/brand/newsletter-logo-2x.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:280px;height:auto;margin-bottom:18px;filter:brightness(0) invert(1);opacity:0.9" />
+    <p style="margin:0;max-width:46ch;font-size:0.92rem">UCLA Earth, Planetary, and Space Sciences · 595 Charles E. Young Drive East, Los Angeles, CA 90095</p>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:start;gap:12px;font-size:0.92rem">
+    <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="color:#ffd100;font-weight:600;text-decoration:none" style-hover="color:#fbfaf7">Support UCLA EPSS</a>
+    <a href="/" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to the issue</a>
+    <a href="#top" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to top ↑</a>
+  </div>
+</footer>
+
+<sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="true" aria-label="Photograph" style="position:fixed;inset:0;z-index:90;background:rgba(16,24,32,0.94)">
+    <div style="position:absolute;inset:0;cursor:zoom-out" onClick="{{ closeLightbox }}"></div>
+    <div style="position:absolute;left:0;right:0;top:0;bottom:132px;display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,48px) clamp(76px,9vw,120px) 0;pointer-events:none">
+      <img src="{{ lightboxSrc }}" alt="{{ lightboxAlt }}" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border:1px solid rgba(251,250,247,0.25)" />
+    </div>
+    <button type="button" onClick="{{ prevPhoto }}" aria-label="Previous photograph" style="position:absolute;left:clamp(12px,2.5vw,32px);top:calc(50% - 66px);display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;background:rgba(16,24,32,0.55);border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;font-size:1.15rem;cursor:pointer" style-hover="background:#ffd100;border-color:#ffd100;color:#101820">←</button>
+    <button type="button" onClick="{{ nextPhoto }}" aria-label="Next photograph" style="position:absolute;right:clamp(12px,2.5vw,32px);top:calc(50% - 66px);display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;background:rgba(16,24,32,0.55);border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;font-size:1.15rem;cursor:pointer" style-hover="background:#ffd100;border-color:#ffd100;color:#101820">→</button>
+    <button type="button" onClick="{{ closeLightbox }}" style="position:absolute;top:clamp(12px,2.5vw,32px);right:clamp(12px,2.5vw,32px);display:inline-flex;align-items:center;height:44px;padding:0 18px;background:rgba(16,24,32,0.55);border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer" style-hover="background:#fbfaf7;color:#101820">Close</button>
+    <div style="position:absolute;left:0;right:0;bottom:0;height:132px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:0 clamp(16px,4vw,48px);pointer-events:none">
+      <p style="margin:0;max-width:74ch;font-size:0.88rem;line-height:1.5;text-align:center;color:rgba(251,250,247,0.86);overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical">{{ lightboxCaption }}</p>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;color:rgba(251,250,247,0.66)">{{ lightboxCounter }}</span>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1100}}">
+class Component extends DCLogic {
+  state = { progress: 0, lightbox: null };
+
+  photoData = [
+    { src: "assets/images/2026/peng-ni/meteorite-closeup-peng-ni.jpg", alt: "Peng Ni holding a small meteorite in front of a desert playa.", caption: "Peng Ni holds a meteorite during a field expedition near Pahrump, Nevada." },
+    { src: "assets/images/2026/peng-ni/meteorite-closeup.jpg", alt: "A close view of a meteorite held up during a field expedition.", caption: "A meteorite found during the October field expedition." },
+    { src: "assets/images/2026/peng-ni/meteorite-field-team.jpg", alt: "A 17-person field team standing on a dry lakebed at sunset.", caption: "Students, faculty, and volunteers on dry lakebeds near Pahrump, Nevada." },
+    { src: "assets/images/2026/peng-ni/sapphire-lab-team.jpg", alt: "Members of the Sapphire Lab standing beside the Nu Sapphire mass spectrometer.", caption: "The Sapphire Lab at UCLA, with the Nu Sapphire mass spectrometer." },
+  ];
+
+  openAt = (i) => this.setState({ lightbox: i });
+  closeLightbox = () => this.setState({ lightbox: null });
+  step = (d) => this.setState((s) => ({
+    lightbox: s.lightbox === null ? null : (s.lightbox + d + this.photoData.length) % this.photoData.length,
+  }));
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      this.setState({ progress: max > 0 ? Math.min(1, h.scrollTop / max) : 0 });
+    };
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+    this.onScroll();
+
+    this.onKey = (e) => {
+      if (this.state.lightbox === null) return;
+      if (e.key === "Escape") this.closeLightbox();
+      else if (e.key === "ArrowRight") this.step(1);
+      else if (e.key === "ArrowLeft") this.step(-1);
+    };
+    window.addEventListener("keydown", this.onKey);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
+    window.removeEventListener("keydown", this.onKey);
+  }
+
+  renderVals() {
+    const i = this.state.lightbox;
+    const current = i === null ? null : this.photoData[i];
+    const BLANK = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+    return {
+      photos: this.photoData.map((p, n) => ({ ...p, open: () => this.openAt(n) })),
+      openSapphire: () => this.openAt(3),
+      lightboxOpen: current !== null,
+      lightboxSrc: current ? current.src : BLANK,
+      lightboxAlt: current ? current.alt : "",
+      lightboxCaption: current ? current.caption : "",
+      lightboxCounter: current ? `${i + 1} / ${this.photoData.length}` : "",
+      closeLightbox: this.closeLightbox,
+      prevPhoto: () => this.step(-1),
+      nextPhoto: () => this.step(1),
+      progress: `${(this.state.progress * 100).toFixed(1)}%`,
+      share: (e) => {
+        if (navigator.clipboard) navigator.clipboard.writeText(location.href);
+        const el = e.currentTarget;
+        const original = el.textContent;
+        el.textContent = "Link copied";
+        setTimeout(() => { el.textContent = original; }, 1600);
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

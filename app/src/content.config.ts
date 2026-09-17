@@ -23,9 +23,16 @@ const issues = defineCollection({
     hero: z.object({
       image: z.string(),
       imageAlt: z.string(),
+      slides: z.array(z.object({
+        image: z.string(),
+        imageAlt: z.string(),
+        label: z.string(),
+        objectPosition: z.string().optional(),
+      })).optional(),
       kicker: z.string(),
       title: z.string(),
       dek: z.string(),
+      summary: z.string().optional(),
       actions: z.array(linkSchema),
       supportCta: z.object({
         label: z.string(),
@@ -35,6 +42,9 @@ const issues = defineCollection({
         eyebrow: z.string(),
         title: z.string(),
         body: z.string(),
+        status: z.string().optional(),
+        image: z.string().optional(),
+        imageAlt: z.string().optional(),
       }),
     }),
     sections: z.array(z.record(z.string(), z.unknown())),
@@ -62,6 +72,12 @@ const articles = defineCollection({
     sourceNote: z.string().optional(),
     heroImage: z.string().optional(),
     heroImageAlt: z.string().optional(),
+    galleryTitle: z.string().optional(),
+    gallery: z.array(z.object({
+      src: z.string(),
+      alt: z.string(),
+      caption: z.string().optional(),
+    })).optional(),
   }),
 });
 

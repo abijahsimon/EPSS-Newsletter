@@ -1,4 +1,4 @@
-repo: abijahsimon/Newsletter-Site
+repo: abijahsimon/EPSS-Newsletter
 branch: main
 path: (whole repo; design work lives in this project's .dc.html files)
 

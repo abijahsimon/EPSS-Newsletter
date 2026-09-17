@@ -12,9 +12,9 @@ readTime: "7 min read"
 sourceNote: "Source packet marks Emily Bisno's donor/endowment materials as available. Field matching dates and cap still need confirmation."
 ---
 
-The list below recognizes those who donated to UCLA EPSS between July 1, 2025 and June 30, 2026. Thank you for your support.
-
 ## 2025-26 Donors
+
+The list below recognizes those who donated to UCLA EPSS between July 1, 2025 and June 30, 2026. Thank you for your support.
 
 - Alessandra and David Whitney '78
 - Alice and William Newman

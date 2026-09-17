@@ -1,0 +1,9 @@
+Please sync your understanding to the current Codex implementation on the GitHub branch codex-claude-redesign-import-20260907.
+
+Read the attached CODEX-SYNC-2026-09-15.md before proposing any further changes. Treat the Astro app in app/ as the production source of truth. The standalone Vite/DC files remain design references and source records; do not replace the Astro implementation with them.
+
+Important new behavior: /archive-poster/ now opens the generated 24-by-36-inch PDF at /downloads/epss-newsletter-archive-poster.pdf in the browser's native PDF viewer, which provides Download and Print controls.
+
+Preserve every editorial and media decision in the sync note, especially the Peltzer lead, commencement lead, RIMFAX image, field highlights, corrected BALBOA caption, renamed thermal-print.jpg asset, and deliberate lightbox behavior. Do not invent missing copy, captions, credits, names, counts, quotes, or approvals.
+
+For your next response, provide a concise reconciliation report with three headings: Matches current branch, Differences still in your workspace, and Proposed next changes. Do not create a branch or claim to have pushed changes; your GitHub access is read-only.

@@ -9,7 +9,35 @@ variant: standard
 dek: "One has painted since childhood and never stopped. The other picked up a brush twenty years ago on a whim. Both find the same thing in it that they find in research."
 byline: "Written answers from David Jewitt and Hilke Schlichting"
 readTime: "9 min read"
-sourceNote: "Source packet says both Jewitt and Schlichting PDFs are available. Artwork images still need extraction from the PDFs before final launch."
+heroImage: "/assets/images/2026/art-science/art-science-hero-collage.jpg"
+heroImageAlt: "Selected artwork by David Jewitt and Hilke Schlichting arranged side by side."
+galleryTitle: "Works by David Jewitt and Hilke Schlichting"
+gallery:
+  - src: "/assets/images/2026/art-science/jewitt-untitled-mosaic.jpg"
+    alt: "Untitled by David Jewitt, with small white and gray painted tiles banded across a dark ground."
+    caption: "David Jewitt, Untitled, acrylic and mixed media."
+  - src: "/assets/images/2026/art-science/jewitt-untitled-orange.jpg"
+    alt: "Untitled by David Jewitt, with pale spatter and dripped lines over orange and yellow bands."
+    caption: "David Jewitt, Untitled, acrylic."
+  - src: "/assets/images/2026/art-science/jewitt-swarm-pistachios.jpg"
+    alt: "Swarm by David Jewitt, a circular cluster of silver pistachio shells on a dark ground."
+    caption: "David Jewitt, Swarm, acrylic, pistachios, and epoxy."
+  - src: "/assets/images/2026/art-science/jewitt-forest.jpg"
+    alt: "Forest by David Jewitt, with dense dark lines dripped over green and yellow."
+    caption: "David Jewitt, Forest, acrylic dripped from a stick."
+  - src: "/assets/images/2026/art-science/jewitt-swarm-seeds.jpg"
+    alt: "Swarm by David Jewitt, a textured surface with dowels and a central disc of painted seeds."
+    caption: "David Jewitt, Swarm, tile glue, dowel, and seeds."
+  - src: "/assets/images/2026/art-science/hilke-indonesia.jpg"
+    alt: "Indonesia by Hilke Schlichting, showing a temple courtyard beneath a warm sky."
+    caption: "Hilke Schlichting, Indonesia, acrylic on canvas, 2025."
+  - src: "/assets/images/2026/art-science/hilke-high-above-inle.jpg"
+    alt: "High above Inle by Hilke Schlichting, showing brick stupas among vines and foliage."
+    caption: "Hilke Schlichting, High above Inle, acrylic on canvas, 2024."
+  - src: "/assets/images/2026/art-science/hilke-morni.jpg"
+    alt: "Morni by Hilke Schlichting, showing a blue-green peacock against yellow blocks."
+    caption: "Hilke Schlichting, Morni, acrylic on canvas, 2007."
+sourceNote: "All eight source artworks are now staged. Final crop, caption, and artist signoff remain pending."
 ---
 
 ## David Jewitt
@@ -71,7 +99,3 @@ Although my research is not the subject matter of my paintings, I do see many si
 - Indonesia, acrylics on canvas, 2025, 35 x 23.5 inches
 - High above Inle, Myanmar, acrylics on canvas, 2024, 16 x 12 inches
 - Morni, acrylics on canvas, 2007, 30 x 30 inches
-
-## Media Status
-
-Images are available inside the Jewitt and Hilke PDFs. They still need to be extracted, named, captioned, and staged as optimized site assets.

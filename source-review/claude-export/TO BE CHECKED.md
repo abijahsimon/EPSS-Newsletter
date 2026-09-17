@@ -18,7 +18,7 @@ or Gmail access. Per `claude-output-crosswalk.md`, do **not** email anyone about
 |---|---|---|
 | **Hilke Schlichting's art & science answers** | Present all along in Drive PDF `1M-IC_733TQPk8YkWup4yOBlr372ywpC0`. **Now read and published** — the Art & Science page is a complete two-voice pair | Artwork images still need extracting from the PDF |
 | **Gerald Schubert memorial** | ✅ **Built 2026-09-07** from Dave Bercovici's obituary. My earlier "folder returns nothing" report was a *listing* failure, not an access failure — the packet supplies direct file IDs and those read fine | Review the page; confirm Ben's version is final and who approves it |
-| **Commencement photographs** | Not missing — large pools in Drive (12+ named files) and Box (Val's + Zach's sets) | Build contact sheet, select 4–8, confirm caption/credit |
+| **Commencement photographs** | Not missing — large pools in Drive (12+ named files) and Box (Valeria/Zachary sets) | `DSC08208.jpg` is selected; credit confirmed as Valeria Jaramillo Hernandez and Zachary Lacson. Confirm caption/details only if the selected frame changes |
 | **Field mosaic photographs** | Not missing — Box `field-2026` and `epss-103a-2026` hold 26+ named JPGs plus trip ZIPs | Select **landscape** candidates, confirm captions |
 | **Endowed chairs installation photo** | Public EPSS image exists at 1600×900; credit Penny Jennings, UCLA Division of Physical Sciences | Save locally rather than hotlinking (needed for PDF export) |
 | **Peltzer field photographs** | Not missing — `peltzer_pics.zip` (~26.6 MB) in Drive | Extract and select; captions already transcribed into the article |
@@ -79,7 +79,7 @@ Per `open-questions.md`, this is the correct escalation list.
 **Commencement owner**
 | # | Item |
 |---|---|
-| 19 | Confirm the selected hero/group image, its caption, the photo credit, and whether `DSC08208.jpg` is the intended pick |
+| 19 | Confirm the selected hero/group image and its caption/details if needed. The commencement-day photo credit is confirmed as Valeria Jaramillo Hernandez and Zachary Lacson |
 
 ## 3. Media: selection and extraction work (not requests)
 
@@ -88,7 +88,7 @@ These need internal work, not an email.
 | # | Item | Work needed |
 |---|---|---|
 | 20 | **Hero carousel is soft** | Real implementation issue. The three images are 854×1103 **portrait** upscaled 1.7× into a wide crop. Fix by selecting landscape candidates from Box field folders — not by asking for files |
-| 21 | Commencement ceremony photo | Contact sheet → selection → caption + credit (Val and Zach) |
+| 21 | Commencement ceremony photo | `DSC08208.jpg` selected; public credit should read "Commencement-day photographs by Valeria Jaramillo Hernandez and Zachary Lacson." |
 | 22 | Field mosaic — 4 empty tiles | Landscape selection from `field-2026` / `epss-103a-2026` |
 | 23 | Chairs installation photo | Save locally; caption and Penny Jennings credit already written |
 | 24 | Jewitt (5) + Hilke (3) artworks | Extract from PDFs; all 8 captions already in place with exact titles, media, dates, dimensions |

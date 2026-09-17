@@ -1,14 +1,28 @@
 # Contact Sheets
 
-This folder is for generated visual review sheets. No contact sheets have been generated yet.
+This folder is for generated visual review sheets. Generated sheets are local-only by default and ignored by git because they contain source media.
 
-Recommended first sheets:
+Run this after placing raw downloads in `source-review/raw-media/`:
 
-1. `commencement-candidates.html` or `.pdf`
-2. `field-candidates.html` or `.pdf`
-3. `peltzer-candidates.html` or `.pdf`
-4. `art-science-candidates.html` or `.pdf`
-5. `balboa-figures.html` or `.pdf`
+```bash
+python3 source-review/scripts/build_contact_sheets.py
+```
+
+Expected generated files:
+
+- `<group>-sheet.jpg`
+- `media-index.csv`
+
+Contact sheets are review artifacts. Final selected images should be copied separately into `app/public/assets/images/2026/<section>/` with metadata.
+
+Current generated sheets:
+
+1. `art-science-sheet.jpg`
+2. `balboa-sheet.jpg`
+3. `commencement-sheet.jpg`
+4. `field-sheet.jpg`
+5. `peltzer-sheet.jpg`
+6. `media-index.csv`
 
 Each sheet should show:
 
@@ -18,4 +32,3 @@ Each sheet should show:
 - pixel dimensions
 - recommended use
 - caption/credit status
-

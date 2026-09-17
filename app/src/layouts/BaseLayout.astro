@@ -16,6 +16,7 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="icon" href="/assets/brand/epss-department-logo.svg" type="image/svg+xml" />
   </head>
   <body>
     <slot />
@@ -34,6 +35,71 @@ const { title, description } = Astro.props;
           menuButton?.setAttribute("aria-expanded", "false");
         }
       });
+
+      const progress = document.querySelector<HTMLElement>(".reading-progress span");
+      const updateProgress = () => {
+        if (!progress) return;
+        const root = document.documentElement;
+        const max = root.scrollHeight - root.clientHeight;
+        progress.style.width = `${max > 0 ? Math.min(100, (root.scrollTop / max) * 100) : 0}%`;
+      };
+
+      if (progress) {
+        updateProgress();
+        window.addEventListener("scroll", updateProgress, { passive: true });
+      }
+
+      document.querySelectorAll<HTMLButtonElement>("[data-share-button]").forEach((button) => {
+        button.addEventListener("click", async () => {
+          const label = button.textContent;
+          try {
+            await navigator.clipboard.writeText(window.location.href);
+            button.textContent = "Link copied";
+            window.setTimeout(() => { button.textContent = label; }, 1600);
+          } catch {
+            button.textContent = "Copy unavailable";
+            window.setTimeout(() => { button.textContent = label; }, 1600);
+          }
+        });
+      });
+
+      const carousel = document.querySelector<HTMLElement>("[data-hero-carousel]");
+      if (carousel) {
+        const slides = Array.from(carousel.querySelectorAll<HTMLElement>("[data-hero-slide]"));
+        const count = document.querySelector<HTMLElement>("[data-hero-count]");
+        const label = document.querySelector<HTMLElement>("[data-hero-label]");
+        const toggle = document.querySelector<HTMLButtonElement>("[data-hero-toggle]");
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        let current = 0;
+        let playing = !prefersReducedMotion;
+        let timer: number | undefined;
+
+        const showSlide = (next: number) => {
+          current = (next + slides.length) % slides.length;
+          slides.forEach((slide, index) => {
+            const active = index === current;
+            slide.classList.toggle("is-active", active);
+            slide.setAttribute("aria-hidden", String(!active));
+          });
+          if (count) count.textContent = `${String(current + 1).padStart(2, "0")} / ${String(slides.length).padStart(2, "0")}`;
+          if (label) label.textContent = slides[current]?.dataset.label ?? slides[current]?.querySelector("img")?.alt ?? "";
+        };
+
+        const schedule = () => {
+          window.clearInterval(timer);
+          if (playing && slides.length > 1) timer = window.setInterval(() => showSlide(current + 1), 6500);
+        };
+
+        document.querySelector("[data-hero-prev]")?.addEventListener("click", () => { showSlide(current - 1); schedule(); });
+        document.querySelector("[data-hero-next]")?.addEventListener("click", () => { showSlide(current + 1); schedule(); });
+        toggle?.addEventListener("click", () => {
+          playing = !playing;
+          toggle.textContent = playing ? "‖" : "▶";
+          toggle.setAttribute("aria-label", playing ? "Pause slideshow" : "Play slideshow");
+          schedule();
+        });
+        schedule();
+      }
     </script>
   </body>
 </html>

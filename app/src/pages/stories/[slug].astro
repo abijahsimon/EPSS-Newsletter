@@ -1,5 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
+import ReferencePage from "../../components/ReferencePage.astro";
+import { articleReferencePages } from "../../lib/reference-pages";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
@@ -16,59 +18,99 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const article = entry.data;
+const referenceHtml = articleReferencePages[article.slug];
+const isMemorial = article.slug === "gerald-schubert";
+const showStoryMeta = !isMemorial && !["awards-2026", "commencement-2026", "donors-endowments"].includes(article.slug);
+const showHeroImage = Boolean(article.heroImage && article.slug !== "art-science");
 ---
 
+{referenceHtml ? (
+  <ReferencePage
+    html={referenceHtml}
+    title={`${article.title} | EPSS Newsletter 2026`}
+    description={article.dek ?? article.title}
+  />
+) : (
 <BaseLayout title={`${article.title} | EPSS Newsletter 2026`} description={article.dek ?? article.title}>
-  <header class="site-header">
-    <a class="brand" href="/" aria-label="EPSS Newsletter home">
-      <img src="/assets/brand/epss-department-logo.svg" alt="UCLA Earth, Planetary & Space Sciences" class="brand-logo" />
+  <a class="skip-link" href="#story-content">Skip to the article</a>
+  <header class="site-header article-header">
+    <a class="article-brand" href="/" aria-label="Back to the EPSS Newsletter 2026 issue">
+      <img src="/assets/brand/epss-newsletter-lockup.png" alt="UCLA Earth, Planetary & Space Sciences Newsletter" />
     </a>
-    <nav class="desktop-nav" aria-label="Article">
-      <a href="/">Issue Home</a>
-      <a href="/#contents">Contents</a>
-      <a href="/#giving">Give</a>
+    <nav class="article-header-actions" aria-label="Article">
+      <a href="/">Back to the 2026 issue</a>
+      <a class="article-give" href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O">Give</a>
     </nav>
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
   </header>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
 
-  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile">
-    <a href="/">Issue Home</a>
-    <a href="/#contents">Contents</a>
-    <a href="/#giving">Give</a>
-  </nav>
-
-  <main id="top" class="story-page">
-    <section class:list={["story-hero-page", article.variant === "feature" && "dark"]} aria-labelledby="story-title">
-      <div>
-        <a class="back-link" href="/">Back to the 2026 issue</a>
+  <main id="top" class:list={["story-page", `article-${article.slug}`]}>
+    <section class:list={["story-hero-page", isMemorial && "memorial"]} aria-labelledby="story-title">
+      <div class="story-hero-inner">
         <p class="category">{article.category}</p>
         <h1 id="story-title">{article.title}</h1>
-        {article.dek && <p class="story-dek">{article.dek}</p>}
-        <div class="story-meta">
-          {article.byline && <span>{article.byline}</span>}
-          {article.readTime && <span>{article.readTime}</span>}
-        </div>
+        {article.dek && article.slug !== "peter-chi" && <p class="story-dek">{article.dek}</p>}
+        {article.slug === "donors-endowments" && (
+          <a class="story-support-button" href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O">Support UCLA EPSS</a>
+        )}
+        {showStoryMeta && (
+          <div class="story-meta">
+            <span class="story-byline">{article.byline ?? "EPSS Newsletter 2026"}</span>
+            <span class="story-meta-actions">
+              {article.readTime && <span>{article.readTime}</span>}
+              <button type="button" data-share-button aria-label="Share this story">Share</button>
+            </span>
+          </div>
+        )}
       </div>
-      {article.heroImage && (
-        <figure>
-          <img src={article.heroImage} alt={article.heroImageAlt ?? ""} />
-        </figure>
-      )}
     </section>
 
-    <article class="story-body">
-      <Content />
-      {article.sourceNote && <p class="source-note">{article.sourceNote}</p>}
+    {isMemorial && (
+      <div class="story-meta memorial-meta">
+        <span class="story-byline">{article.byline ?? "EPSS Newsletter 2026"}</span>
+        <span class="story-meta-actions">
+          {article.readTime && <span>{article.readTime}</span>}
+          <button type="button" data-share-button aria-label="Share this story">Share</button>
+        </span>
+      </div>
+    )}
+
+    {showHeroImage && (
+      <figure class="story-hero-media">
+        <img src={article.heroImage} alt={article.heroImageAlt ?? ""} />
+      </figure>
+    )}
+
+    <article id="story-content" class="story-body">
+      <div class="story-body-copy">
+        <Content />
+      </div>
+      {article.gallery && article.gallery.length > 0 && (
+        <section class="story-gallery" aria-labelledby="story-gallery-title">
+          <h2 id="story-gallery-title">{article.galleryTitle ?? "Photo Gallery"}</h2>
+          <div class="story-gallery-grid">
+            {article.gallery.map((image) => (
+              <figure>
+                <img src={image.src} alt={image.alt} loading="lazy" />
+                {image.caption && <figcaption>{image.caption}</figcaption>}
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
     </article>
   </main>
 
   <footer class="site-footer">
     <div>
-      <strong>UCLA Earth, Planetary, and Space Sciences</strong>
-      <p>EPSS Newsletter 2026</p>
+      <img class="footer-newsletter-lockup" src="/assets/brand/epss-newsletter-lockup-footer.png" alt="UCLA Earth, Planetary & Space Sciences Newsletter" />
+      <p>UCLA Earth, Planetary, and Space Sciences · 595 Charles E. Young Drive East, Los Angeles, CA 90095</p>
     </div>
-    <a href="#top">Back to top</a>
+    <nav class="footer-links" aria-label="Article footer">
+      <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O">Support UCLA EPSS</a>
+      <a href="/">Back to the issue</a>
+      <a href="#top">Back to top</a>
+    </nav>
   </footer>
 </BaseLayout>
+)}

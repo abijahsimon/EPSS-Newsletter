@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  :focus-visible { outline: 3px solid #9a4a26; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+  body { margin: 0; background: #fbfaf7; color: #1f2933; font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  img { display: block; max-width: 100%; }
+  a { color: #2774ae; }
+  a:hover { color: #9a4a26; }
+  h1, h2, h3, p, ul, ol, figure { margin-top: 0; }
+  ::selection { background: #ffd100; color: #101820; }
+</style>
+</helmet>
+
+<a href="#top" style="position:absolute;left:-9999px;top:0;z-index:100;padding:12px 18px;background:#101820;color:#fbfaf7;font-weight:600;text-decoration:none" style-focus="left:0">Skip to the article</a>
+<header style="position:sticky;top:0;z-index:40;background:rgba(251,250,247,0.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(16,24,32,0.14)">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;padding:14px clamp(20px,4vw,40px)">
+    <a href="/" aria-label="Back to the issue" style="display:flex;align-items:center">
+      <img src="/assets/brand/newsletter-logo-black.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:min(280px,44vw);height:auto" />
+    </a>
+    <div style="display:flex;align-items:center;gap:20px;font-size:0.82rem;font-weight:600;color:#54626d">
+      <a href="EPSS Annual Newsletter 2026.dc.html#field" style="text-decoration:none;color:inherit" style-hover="color:#9a4a26">← Back to the 2026 issue</a>
+      <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="display:inline-flex;align-items:center;height:36px;padding:0 16px;background:#101820;color:#fbfaf7;text-decoration:none" style-hover="background:#9a4a26;color:#fff">Give</a>
+    </div>
+  </div>
+  <div style="height:3px;background:rgba(16,24,32,0.1)">
+    <div style="height:100%;background:#9a4a26;transition:width 120ms linear;width:{{progress}}"></div>
+  </div>
+</header>
+
+<main id="top">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(40px,5vw,64px) clamp(20px,4vw,40px) 0">
+    <p style="margin:0 0 20px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">Field Program · Spring 2026</p>
+    <h1 style="max-width:22ch;margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2.2rem,5.6vw,4.6rem);line-height:1.01;letter-spacing:-0.025em;text-wrap:balance">Dispatches from the Field</h1>
+    <p style="max-width:58ch;margin:0 0 30px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.18rem,2vw,1.7rem);line-height:1.42;color:#54626d;text-wrap:pretty">Spring 2026 field dispatches from EPSS courses across California, Nevada, Utah, and the desert Southwest.</p>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px;padding:20px 0;margin-bottom:44px;border-top:2px solid #101820;border-bottom:1px solid rgba(16,24,32,0.2)">
+      <div style="flex:1 1 240px;min-width:0">
+        <p style="margin:0;font-weight:600">By John He</p>
+        <p style="margin:0;font-size:0.82rem;color:#54626d">On behalf of the EPSS field committee · Photo essay</p>
+      </div>
+      <button type="button" onClick="{{share}}" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-size:0.82rem;font-weight:600;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
+    </div>
+  </div>
+
+  <figure style="margin:0 0 56px">
+    <img src="/assets/images/2026/field-spring-2026/valley-of-fire-fleet.jpg" alt="EPSS field vehicles parked at Valley of Fire just after sunset, red sandstone ridges and a pink sky behind them." style="width:100%;height:clamp(320px,48svh,560px);object-fit:cover;object-position:50% 62%;border-top:1px solid rgba(16,24,32,0.12);border-bottom:1px solid rgba(16,24,32,0.12)" />
+    <figcaption style="max-width:1200px;margin:0 auto;padding:14px clamp(20px,4vw,40px) 0;font-size:0.82rem;color:#54626d">EPSS fleet arriving at Valley of Fire just after sunset for Historical and Regional Geology, EPS 133, led by Kevin Coffey. <span style="color:#101820;font-weight:600">Photographer to confirm.</span></figcaption>
+  </figure>
+
+  <article style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(40px,5vw,60px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(32px,5vw,64px);align-items:start">
+    <div style="min-width:0">
+      <p style="margin:0 0 26px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.65;color:#101820">Dear friends, colleagues, and the EPSS community,</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Welcome to “Dispatches from the Field.” As we make our way through Spring Quarter and yet another year of teaching, mentoring, and learning in the field, we want to celebrate the breadth of field experiences happening across EPSS. From local day trips to multi-day excursions across California, Nevada, Utah, and beyond, undergraduate and graduate students continue to encounter our planet directly: in landscapes, outcrops, field notes, conversations, and the shared problem-solving that happens best outside the classroom.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Field learning remains one of the most powerful things we do as a department. There is no substitute for standing in front of an exposure of solid Earth, tracing a geologic contact with your own eyes, working through an interpretation with classmates, and seeing how quickly a landscape can turn an abstract concept into something tangible.</p>
+
+      <blockquote style="margin:40px 0;padding:0 0 0 28px;border-left:4px solid #ffd100">
+        <p style="margin:0;font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:1.7rem;line-height:1.32;color:#101820">The scale of field learning in EPSS is special.</p>
+      </blockquote>
+
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">It reflects an extraordinary amount of planning, care, expertise, and commitment from faculty and staff, the support of alumni and friends of EPSS, and the curiosity of students willing to start early, stay dusty, ask careful questions, and learn from the ground beneath them.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">This spring’s field moments included Historical and Regional Geology at Valley of Fire and Zion, Structural Geology at Painted Canyon, Igneous Petrology at the Bishop Tuff and White Mountain Research Station, and Stratigraphic and Field Geology with Mackenzie Day.</p>
+      <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.78">Keeping this tradition strong is something we do together, and we hope to continue sharing these adventures with you in future dispatches.</p>
+
+      <div style="margin:36px 0;padding:24px 26px;background:#eef4f7;border-top:4px solid #9a4a26">
+        <p style="margin:0 0 12px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">The complete field photo archive is held in UCLA Box. Access may require a UCLA Box sign-in.</p>
+        <a href="https://ucla.app.box.com/folder/400260548483" style="display:inline-flex;align-items:center;height:44px;padding:0 20px;background:#101820;color:#fbfaf7;font-weight:600;font-size:0.92rem;text-decoration:none" style-hover="background:#9a4a26;color:#fff">Browse the field photo archive →</a>
+      </div>
+
+      <div style="margin-top:40px;padding-top:24px;border-top:1px solid rgba(16,24,32,0.2)">
+        <p style="margin:0 0 6px;display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#54626d"><span style="width:26px;height:1px;background:#9a4a26"></span>John He</p>
+        <p style="margin:0;font-size:0.82rem;color:#54626d">On behalf of the EPSS field committee</p>
+      </div>
+    </div>
+
+    <aside style="min-width:0">
+      <div style="padding:22px 24px;background:#eef4f7;border-top:4px solid #101820">
+        <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Spring 2026 gallery</p>
+        <p style="margin:0 0 14px;font-size:0.92rem;color:#54626d">Twelve photographs from this spring’s field courses. Click any frame to enlarge it.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px">
+          <sc-for list="{{ photos }}" as="photo" hint-placeholder-count="12">
+            <button type="button" onClick="{{ photo.open }}" aria-label="Enlarge photograph" title="{{ photo.caption }}" style="display:block;padding:0;border:1px solid rgba(16,24,32,0.14);background:none;cursor:zoom-in;overflow:hidden;transition:border-color 160ms ease,opacity 160ms ease" style-hover="border-color:#9a4a26;opacity:0.82">
+              <img src="{{ photo.src }}" alt="{{ photo.alt }}" loading="lazy" style="display:block;width:100%;aspect-ratio:1/1;object-fit:cover" />
+            </button>
+          </sc-for>
+        </div>
+      </div>
+      <p style="margin:18px 0 0;font-size:0.82rem;line-height:1.55;color:#54626d"><span style="color:#101820;font-weight:600">Editorial note.</span> This dispatch is the Spring 2026 field newsletter. It is a separate piece from the Geophysics 136C photo essay, which remains outstanding. Photographer credits for these twelve photographs still need confirmation before launch.</p>
+    </aside>
+  </article>
+
+  <div style="max-width:1200px;margin:0 auto;padding:8px clamp(20px,4vw,40px) 72px">
+    <h2 style="margin:0 0 6px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">The spring, in photographs</h2>
+    <p style="max-width:60ch;margin:0 0 24px;font-size:0.92rem;color:#54626d">Valley of Fire and Zion, Painted Canyon, the Bishop Tuff and the White Mountain Research Station. Click any photograph to enlarge it.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px">
+      <sc-for list="{{ photos }}" as="photo" hint-placeholder-count="12">
+        <figure style="margin:0;min-width:0">
+          <button type="button" onClick="{{ photo.open }}" aria-label="Enlarge photograph" style="display:block;width:100%;padding:0;border:1px solid rgba(16,24,32,0.14);background:#dfe8ee;cursor:zoom-in;overflow:hidden" style-hover="border-color:#9a4a26">
+            <img src="{{ photo.src }}" alt="{{ photo.alt }}" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 320ms cubic-bezier(0.34,1.1,0.64,1)" style-hover="transform:scale(1.045)" />
+          </button>
+          <figcaption style="margin-top:8px;font-size:0.74rem;line-height:1.45;color:#54626d">{{ photo.caption }}</figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </div>
+
+  <section aria-labelledby="more-title" style="padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px);background:#101820;color:#fbfaf7">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid rgba(251,250,247,0.2)">
+        <h2 id="more-title" style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.7rem,3vw,2.6rem);letter-spacing:-0.02em">More from the field</h2>
+        <a href="EPSS Annual Newsletter 2026.dc.html#field" style="font-size:0.92rem;font-weight:600;color:#ffd100;text-decoration:none" style-hover="color:#fbfaf7">The field program →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:rgba(251,250,247,0.2);border:1px solid rgba(251,250,247,0.2)">
+        <a href="/peng-ni.html" style="display:block;padding:24px 22px;background:#101820;text-decoration:none;color:#fbfaf7" style-hover="background:#ffd100;color:#101820">
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;margin-bottom:10px">Faculty Feature</span>
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-size:1.44rem;line-height:1.18;margin-bottom:6px">Peng Ni</span>
+          <span style="display:block;font-size:0.82rem;opacity:0.7">Meteorites, lunar glass, and diamonds</span>
+        </a>
+        <a href="/gilles-peltzer.html" style="display:block;padding:24px 22px;background:#101820;text-decoration:none;color:#fbfaf7" style-hover="background:#ffd100;color:#101820">
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;margin-bottom:10px">Retirement</span>
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-size:1.44rem;line-height:1.18;margin-bottom:6px">Gilles Peltzer</span>
+          <span style="display:block;font-size:0.82rem;opacity:0.7">Thirty years of field instruction</span>
+        </a>
+        <a href="/lizzie-su.html" style="display:block;padding:24px 22px;background:#101820;text-decoration:none;color:#fbfaf7" style-hover="background:#ffd100;color:#101820">
+          <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#ffd100;margin-bottom:10px">Student Feature</span>
+          <span style="display:block;font-family:Newsreader,Georgia,serif;font-size:1.44rem;line-height:1.18;margin-bottom:6px">Lizzie Su</span>
+          <span style="display:block;font-size:0.82rem;opacity:0.7">On life in EPSS</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;padding:52px clamp(20px,4vw,40px);background:#1f2933;color:rgba(251,250,247,0.66)">
+  <div>
+    <img src="/assets/brand/newsletter-logo-2x.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:280px;height:auto;margin-bottom:18px;filter:brightness(0) invert(1);opacity:0.9" />
+    <p style="margin:0;max-width:46ch;font-size:0.92rem">UCLA Earth, Planetary, and Space Sciences · 595 Charles E. Young Drive East, Los Angeles, CA 90095</p>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:start;gap:12px;font-size:0.92rem">
+    <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="color:#ffd100;font-weight:600;text-decoration:none" style-hover="color:#fbfaf7">Support UCLA EPSS</a>
+    <a href="/" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to the issue</a>
+    <a href="#top" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to top ↑</a>
+  </div>
+</footer>
+
+<sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="true" aria-label="Photograph" style="position:fixed;inset:0;z-index:90;background:rgba(16,24,32,0.94)">
+    <div style="position:absolute;inset:0;cursor:zoom-out" onClick="{{ closeLightbox }}"></div>
+    <div style="position:absolute;left:0;right:0;top:0;bottom:132px;display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,48px) clamp(76px,9vw,120px) 0;pointer-events:none">
+      <img src="{{ lightboxSrc }}" alt="{{ lightboxAlt }}" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border:1px solid rgba(251,250,247,0.25)" />
+    </div>
+    <button type="button" onClick="{{ prevPhoto }}" aria-label="Previous photograph" style="position:absolute;left:clamp(12px,2.5vw,32px);top:calc(50% - 66px);display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;background:rgba(16,24,32,0.55);border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;font-size:1.15rem;cursor:pointer" style-hover="background:#ffd100;border-color:#ffd100;color:#101820">←</button>
+    <button type="button" onClick="{{ nextPhoto }}" aria-label="Next photograph" style="position:absolute;right:clamp(12px,2.5vw,32px);top:calc(50% - 66px);display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;background:rgba(16,24,32,0.55);border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;font-size:1.15rem;cursor:pointer" style-hover="background:#ffd100;border-color:#ffd100;color:#101820">→</button>
+    <button type="button" onClick="{{ closeLightbox }}" style="position:absolute;top:clamp(12px,2.5vw,32px);right:clamp(12px,2.5vw,32px);display:inline-flex;align-items:center;height:44px;padding:0 18px;background:rgba(16,24,32,0.55);border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer" style-hover="background:#fbfaf7;color:#101820">Close</button>
+    <div style="position:absolute;left:0;right:0;bottom:0;height:132px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:0 clamp(16px,4vw,48px);pointer-events:none">
+      <p style="margin:0;max-width:74ch;font-size:0.88rem;line-height:1.5;text-align:center;color:rgba(251,250,247,0.86);overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical">{{ lightboxCaption }}</p>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;color:rgba(251,250,247,0.66)">{{ lightboxCounter }}</span>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1100}}">
+class Component extends DCLogic {
+  state = { progress: 0, lightbox: null };
+
+  photoData = [
+    { src: "assets/images/2026/field-spring-2026/valley-of-fire-fleet.jpg", alt: "EPSS field vehicles parked at Valley of Fire just after sunset.", caption: "EPSS fleet arriving at Valley of Fire just after sunset for Historical and Regional Geology, EPS 133, led by Kevin Coffey." },
+    { src: "assets/images/2026/field-spring-2026/zion-dawn.jpg", alt: "Students gathering at dawn near a lit field station with mountains behind them.", caption: "An early start at Zion National Park at dawn." },
+    { src: "assets/images/2026/field-spring-2026/valley-of-fire-class.jpg", alt: "EPSS students gathered around a Valley of Fire State Park sign.", caption: "The whole class at Valley of Fire, photographed by a kind stranger." },
+    { src: "assets/images/2026/field-spring-2026/painted-canyon-structural.jpg", alt: "Students looking across Painted Canyon outcrops during Structural Geology.", caption: "Structural Geology, EPS 112, led by John He at Painted Canyon." },
+    { src: "assets/images/2026/field-spring-2026/painted-canyon-whiteboard.jpg", alt: "A field vehicle used as a whiteboard while students work near Painted Canyon outcrops.", caption: "At Painted Canyon, outcrops replace PowerPoint presentations and the vehicle becomes a portable whiteboard." },
+    { src: "assets/images/2026/field-spring-2026/bishop-tuff-igneous-petrology.jpg", alt: "Igneous Petrology students standing in front of light-coloured Bishop Tuff outcrops.", caption: "Igneous Petrology, led by Peng Ni, in front of the Bishop Tuff." },
+    { src: "assets/images/2026/field-spring-2026/ucla-light-painting.jpg", alt: "Students spelling UCLA with colourful light painting at night.", caption: "UCLA light painting by students of Igneous Petrology at the White Mountain Research Station." },
+    { src: "assets/images/2026/field-spring-2026/field-class-outcrop.jpg", alt: "Students gathered around an outcrop during field instruction.", caption: "A Spring 2026 field class working at an outcrop." },
+    { src: "assets/images/2026/field-spring-2026/white-mountain-research-station-class.jpg", alt: "Igneous Petrology students standing near a basketball hoop with mountains behind them.", caption: "Igneous Petrology class at the White Mountain Research Station." },
+    { src: "assets/images/2026/field-spring-2026/field-notebook-lunch.jpg", alt: "Students sitting in the field with maps, notebooks, and food on a tarp.", caption: "Field notes, maps, and lunch in the landscape." },
+    { src: "assets/images/2026/field-spring-2026/field-sketching.jpg", alt: "Students sketching and writing in field notebooks on the ground.", caption: "Students recording observations in field notebooks." },
+    { src: "assets/images/2026/field-spring-2026/desert-ridge-class.jpg", alt: "Students gathered along a desert ridge beneath a blue sky.", caption: "Students working across a desert outcrop during a Spring 2026 field course." },
+  ];
+
+  openAt = (i) => this.setState({ lightbox: i });
+  closeLightbox = () => this.setState({ lightbox: null });
+  step = (d) => this.setState((s) => ({
+    lightbox: s.lightbox === null ? null : (s.lightbox + d + this.photoData.length) % this.photoData.length,
+  }));
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      this.setState({ progress: max > 0 ? Math.min(1, h.scrollTop / max) : 0 });
+    };
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+    this.onScroll();
+
+    this.onKey = (e) => {
+      if (this.state.lightbox === null) return;
+      if (e.key === "Escape") this.closeLightbox();
+      else if (e.key === "ArrowRight") this.step(1);
+      else if (e.key === "ArrowLeft") this.step(-1);
+    };
+    window.addEventListener("keydown", this.onKey);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
+    window.removeEventListener("keydown", this.onKey);
+  }
+
+  renderVals() {
+    const i = this.state.lightbox;
+    const current = i === null ? null : this.photoData[i];
+    const BLANK = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+    return {
+      photos: this.photoData.map((p, n) => ({ ...p, open: () => this.openAt(n) })),
+      lightboxOpen: current !== null,
+      lightboxSrc: current ? current.src : BLANK,
+      lightboxAlt: current ? current.alt : "",
+      lightboxCaption: current ? current.caption : "",
+      lightboxCounter: current ? `${i + 1} / ${this.photoData.length}` : "",
+      closeLightbox: this.closeLightbox,
+      prevPhoto: () => this.step(-1),
+      nextPhoto: () => this.step(1),
+      progress: `${(this.state.progress * 100).toFixed(1)}%`,
+      share: (e) => {
+        if (navigator.clipboard) navigator.clipboard.writeText(location.href);
+        const el = e.currentTarget;
+        const original = el.textContent;
+        el.textContent = "Link copied";
+        setTimeout(() => { el.textContent = original; }, 1600);
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -9,10 +9,10 @@ variant: standard
 dek: "Sixty-five degrees conferred, thirteen summer field scholarships, and a group photograph on the steps of the Geology building."
 byline: "Sunday, June 14, 2026"
 readTime: "8 min read"
-sourceNote: "Commencement copy and photos are available, but the degree count, selected photo caption, and one scholarship fund name conflict still need final confirmation before launch."
+heroImage: "/assets/images/2026/commencement/commencement-class-2026-geology-building.jpg"
+heroImageAlt: "EPSS Class of 2026 graduates and faculty tossing caps outside the Geology Building."
+sourceNote: "DSC08208.jpg is the approved lead image. Nanette confirmed the commencement-day photo credit: Valeria Jaramillo Hernandez and Zachary Lacson; Zachary Lacson is from the orders team. The degree count, selected caption details, and one scholarship fund name conflict still need final confirmation before launch. DSC08207.jpg and DSC08147.jpg are optional backups but are not present in the local media set."
 ---
-
-Media status: ceremony photograph to be added. The source packet says Drive and Box both contain available commencement photo pools. The write-up suggests `DSC08208.jpg`, but caption and credit still need confirmation.
 
 ## The Programme
 
@@ -162,6 +162,7 @@ Ten candidates:
 
 ## Source Links
 
+- Photo credit: commencement-day photographs by Valeria Jaramillo Hernandez and Zachary Lacson.
 - Box ceremony photographs: https://ucla.box.com/s/r6ahi1vyf8ecnftdpboen1p2mq2gwlq6
 - Drive additional photographs: https://drive.google.com/drive/folders/1AX2AdLKBZiX3gbkD9buHQ31DnH5_9P37
 - Printed program PDF: https://drive.google.com/file/d/1A4vRGV-_17-wjN_fMO0au790KYa_LZtb/view

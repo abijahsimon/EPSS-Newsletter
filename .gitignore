@@ -1,3 +1,31 @@
 .DS_Store
+.playwright-cli/
 content-audit.md
 sheet-imports/
+
+# Dependency caches and local build output
+node_modules/
+.pnpm-store/
+.astro/
+dist/
+app/node_modules/
+app/.astro/
+app/dist/
+
+# Local QA artifacts
+output/
+tmp/
+.newsletter-deck-build/
+
+# Private/raw intake and generated review material
+source-review/raw-media/
+source-review/media-working/
+source-review/Claude outputs/
+source-review/claude-transfer/*.zip
+
+# Local office/editor noise
+~$*
+*.tmp
+*.bak
+__pycache__/
+*.pyc

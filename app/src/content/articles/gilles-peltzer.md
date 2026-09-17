@@ -9,7 +9,44 @@ variant: standard
 dek: "After more than thirty years at UCLA, Gilles Peltzer retires having reshaped how we understand the way continents bend, break, and slide."
 byline: "By Paul Mistral"
 readTime: "6 min read"
-sourceNote: "Source packet marks the Peltzer article and photo ZIP as available. Photos still need extraction and selection."
+heroImage: "/assets/images/2026/peltzer/kelso-dunes.jpg"
+heroImageAlt: "Gilles Peltzer and companions resting on the crest of Kelso Dunes."
+galleryTitle: "Thirty Years of Desert Field Trips"
+gallery:
+  - src: "/assets/images/2026/peltzer/kelso-dunes.jpg"
+    alt: "Three people on the crest of a large sand dune at low sun."
+    caption: "Resting on top of Kelso Dunes."
+  - src: "/assets/images/2026/peltzer/spectrometer-playa.jpg"
+    alt: "A student holds a field spectrometer over a white reference panel on a playa."
+    caption: "Ben Greenhagen taking a white reference with a field spectrometer over the Death Valley playa."
+  - src: "/assets/images/2026/peltzer/thermal-print.jpg"
+    alt: "A man holds up a false-colour remote-sensing print at the edge of a desert playa."
+    caption: "A false-colour thermal-infrared print, read against the ground it came from."
+  - src: "/assets/images/2026/peltzer/group-large.jpg"
+    alt: "A field party seated along a low rock ledge in a desert wash."
+    caption: "The full field party, stopped along a desert wash."
+  - src: "/assets/images/2026/peltzer/anaglyph-glasses.jpg"
+    alt: "Three people study a stereo image using red-and-blue anaglyph glasses."
+    caption: "Looking at the Cima volcanoes in 3D with Jennifer Scully and Diya Chowdhury."
+  - src: "/assets/images/2026/peltzer/map-on-ground.jpg"
+    alt: "A field class gathers around a colour image map on desert pavement."
+    caption: "A colour image map spread on the desert pavement."
+  - src: "/assets/images/2026/peltzer/badwater-three.jpg"
+    alt: "Three people stand on a white salt flat with mountains behind them."
+    caption: "On the salt flats, clipboard in hand."
+  - src: "/assets/images/2026/peltzer/summit-five.jpg"
+    alt: "Five people stand on a rocky summit above a desert valley."
+    caption: "On a summit above the valley at the end of the day."
+  - src: "/assets/images/2026/peltzer/ridge-overlook.jpg"
+    alt: "Seven people pose on a rocky overlook above a desert valley."
+    caption: "A later group at the same kind of vantage."
+  - src: "/assets/images/2026/peltzer/lava-boulders-a.jpg"
+    alt: "A field group sits in a row on dark lava boulders."
+    caption: "The group on a lava flow, first frame."
+  - src: "/assets/images/2026/peltzer/lava-boulders-b.jpg"
+    alt: "The same field group sits on lava boulders a moment later."
+    caption: "The group on a lava flow, second frame."
+sourceNote: "The source photo set is confirmed to show Gilles Peltzer throughout, and captions come from the source document. Photographer credits still need confirmation."
 ---
 
 Professor Peltzer has dedicated his career to uncovering how Earth's continents move and change shape. Scientists have long understood the basics of plate tectonics, but the deformation of continents, especially in complex, long-evolving regions like Asia, has remained a puzzle.
@@ -43,10 +80,6 @@ An unexpected finding from this research is the vertical velocity field of the T
 Beyond research, Peltzer is a dedicated teacher. He developed and taught courses on tectonics, earthquakes, remote sensing, and radar interferometry, always emphasizing hands-on learning. In the geologic playground of Southern California's deserts, his classes often included field trips where students could see firsthand how the landscape tells the story of Earth's restless surface.
 
 His most cherished memories are the endless conversations with students around a campfire after a long day of studying earthquake faults, volcanoes, sand dunes, and the many wonders of geology in the hot California desert.
-
-## Media Status
-
-The source packet identifies `peltzer_pics.zip` as available in Drive. The article source also includes photo captions, including Aguereberry Point, Death Valley, with EPSS-262 students. The ZIP still needs to be extracted and matched to captions.
 
 ## Giving Note
 

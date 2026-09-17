@@ -1,0 +1,114 @@
+---
+interface Props {
+  html: string;
+  title: string;
+  description?: string;
+}
+
+const { html, title, description } = Astro.props;
+let body = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? html;
+
+const routeRewrites = [
+  ["/EPSS Annual Newsletter 2026.dc.html#", "/#"],
+  ["EPSS Annual Newsletter 2026.dc.html#", "/#"],
+  ["/EPSS Annual Newsletter 2026.dc.html", "/"],
+  ["EPSS Annual Newsletter 2026.dc.html", "/"],
+  ["index.html#", "/#"],
+  ["index.html", "/"],
+  ["/art-and-science.html", "/stories/art-science/"],
+  ["art-and-science.html", "/stories/art-science/"],
+  ["/awards-2026.html", "/stories/awards-2026/"],
+  ["awards-2026.html", "/stories/awards-2026/"],
+  ["/balboa.html", "/stories/balboa/"],
+  ["balboa.html", "/stories/balboa/"],
+  ["/commencement-2026.html", "/stories/commencement-2026/"],
+  ["commencement-2026.html", "/stories/commencement-2026/"],
+  ["/donors-and-endowments.html", "/stories/donors-endowments/"],
+  ["donors-and-endowments.html", "/stories/donors-endowments/"],
+  ["/gerald-schubert.html", "/stories/gerald-schubert/"],
+  ["gerald-schubert.html", "/stories/gerald-schubert/"],
+  ["/gilles-peltzer.html", "/stories/gilles-peltzer/"],
+  ["gilles-peltzer.html", "/stories/gilles-peltzer/"],
+  ["/peter-chi.html", "/stories/peter-chi/"],
+  ["peter-chi.html", "/stories/peter-chi/"],
+  ["/steve-joy.html", "/stories/steve-joy/"],
+  ["steve-joy.html", "/stories/steve-joy/"],
+  ["/john-he.html", "/stories/field-highlights/"],
+  ["john-he.html", "/stories/field-highlights/"],
+  ["/peng-ni.html", "/stories/peng-ni/"],
+  ["peng-ni.html", "/stories/peng-ni/"],
+  ["/lizzie-su.html", "/stories/lizzie-su/"],
+  ["lizzie-su.html", "/stories/lizzie-su/"],
+  ["/edwin-schauble.html", "/stories/edwin-schauble/"],
+  ["edwin-schauble.html", "/stories/edwin-schauble/"],
+  ["/allen-glazner.html", "/stories/allen-glazner/"],
+  ["allen-glazner.html", "/stories/allen-glazner/"],
+  ["/epss-through-deep-time.html", "/epss-through-deep-time/"],
+  ["epss-through-deep-time.html", "/epss-through-deep-time/"],
+  ["/archive-poster.html", "/archive-poster/"],
+  ["archive-poster.html", "/archive-poster/"],
+] as const;
+
+const mediaRewrites = [
+  [
+    "/assets/images/2026/rimfax/perseverance-ingenuity.jpg",
+    "/assets/images/2026/rimfax/perseverance-ingenuity-mars-nasa-jpl.jpg",
+  ],
+  [
+    "/assets/images/2026/commencement/class-2026-geology-building.jpg",
+    "/assets/images/2026/commencement/commencement-class-2026-geology-building.jpg",
+  ],
+  [
+    "/assets/people/lizzy-su.jpeg",
+    "/assets/people/lizzie-su.jpeg",
+  ],
+] as const;
+
+for (const [from, to] of [...routeRewrites, ...mediaRewrites]) {
+  body = body.replaceAll(from, to);
+}
+
+// Dynamic image paths were authored for HTML files served from the site root.
+body = body.replaceAll('src: "assets/', 'src: "/assets/');
+
+const transparentPixel =
+  "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+
+// Avoid a speculative request for the literal template token before DC hydrates.
+body = body.replaceAll(
+  'src="{{ lightboxSrc }}"',
+  `src="${transparentPixel}" data-lightbox-src="{{ lightboxSrc }}"`,
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="icon" href="/assets/brand/epss-department-logo.svg" type="image/svg+xml" />
+    <script is:inline src="/support.js"></script>
+  </head>
+  <body>
+    <Fragment set:html={body} />
+    <script is:inline define:vars={{ transparentPixel }}>
+      const syncLightboxImages = () => {
+        document.querySelectorAll("img[data-lightbox-src]").forEach((image) => {
+          const source = image.getAttribute("data-lightbox-src");
+          if (source && !source.includes("{{") && image.getAttribute("src") !== source) {
+            image.setAttribute("src", source || transparentPixel);
+          }
+        });
+      };
+
+      new MutationObserver(syncLightboxImages).observe(document.body, {
+        attributes: true,
+        childList: true,
+        subtree: true,
+      });
+      syncLightboxImages();
+    </script>
+  </body>
+</html>

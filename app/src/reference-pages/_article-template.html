@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  :focus-visible { outline: 3px solid #9a4a26; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+  body { margin: 0; background: #fbfaf7; color: #1f2933; font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  img { display: block; max-width: 100%; }
+  a { color: #2774ae; }
+  a:hover { color: #9a4a26; }
+  h1, h2, h3, p, ul, ol, figure { margin-top: 0; }
+  ::selection { background: #ffd100; color: #101820; }
+</style>
+</helmet>
+
+<a href="#top" style="position:absolute;left:-9999px;top:0;z-index:100;padding:12px 18px;background:#101820;color:#fbfaf7;font-weight:600;text-decoration:none" style-focus="left:0">Skip to the article</a>
+<header style="position:sticky;top:0;z-index:40;background:rgba(251,250,247,0.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(16,24,32,0.14)">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;padding:14px clamp(20px,4vw,40px)">
+    <a href="index.html" aria-label="Back to the issue" style="display:flex;align-items:center">
+      <img src="/assets/brand/newsletter-logo-black.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:min(280px,44vw);height:auto" />
+    </a>
+    <div style="display:flex;align-items:center;gap:20px;font-size:0.82rem;font-weight:600;color:#54626d">
+      <a href="index.html" style="text-decoration:none;color:inherit" style-hover="color:#9a4a26">← Back to the 2026 issue</a>
+      <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="display:inline-flex;align-items:center;height:36px;padding:0 16px;background:#101820;color:#fbfaf7;text-decoration:none" style-hover="background:#9a4a26;color:#fff">Give</a>
+    </div>
+  </div>
+  <div style="height:3px;background:rgba(16,24,32,0.1)">
+    <div style="height:100%;background:#9a4a26;transition:width 120ms linear;width:{{progress}}"></div>
+  </div>
+</header>
+
+<main id="top">
+  <div style="background:#ffd100;color:#101820;padding:12px clamp(20px,4vw,40px)">
+    <p style="margin:0;max-width:1200px;margin-left:auto;margin-right:auto;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;line-height:1.5;letter-spacing:0.1em;text-transform:uppercase">Template — duplicate this file per story, then replace every field below. Delete this banner before publishing.</p>
+  </div>
+
+  <article>
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px) 40px">
+      <p style="margin:0 0 20px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">Section · Category</p>
+      <h1 style="max-width:22ch;margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2.4rem,5.6vw,5rem);line-height:1;letter-spacing:-0.025em;text-wrap:balance">Headline goes here, about eight words at most</h1>
+      <p style="max-width:58ch;margin:0 0 36px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.18rem,2vw,1.7rem);line-height:1.42;color:#54626d;text-wrap:pretty">A standfirst of one or two sentences that says what the story is and why a reader should care. Keep it under about thirty words.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;border-top:1px solid rgba(16,24,32,0.14);border-bottom:1px solid rgba(16,24,32,0.14)">
+        <div style="display:flex;align-items:center;gap:16px">
+          <div aria-hidden="true" style="width:52px;height:52px;border-radius:999px;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.1) 0 6px,rgba(16,24,32,0.03) 6px 12px);border:1px solid rgba(16,24,32,0.16);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.06em;text-transform:uppercase;color:#54626d">Photo</div>
+          <div>
+            <p style="margin:0;font-weight:600">By Author Name</p>
+            <p style="margin:0;font-size:0.82rem;color:#54626d">Role or affiliation · Photographs by Photographer Name</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d">
+          <span>2026 Issue</span>
+          <span style="width:1px;height:14px;background:rgba(16,24,32,0.2)"></span>
+          <span>0 min read</span>
+          <button type="button" onClick="{{share}}" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0;text-transform:none;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <figure style="margin:0 0 56px">
+      <div aria-hidden="true" style="width:100%;height:clamp(300px,44svh,520px);background:repeating-linear-gradient(135deg,rgba(16,24,32,0.09) 0 12px,rgba(16,24,32,0.03) 12px 24px);border-top:1px solid rgba(16,24,32,0.12);border-bottom:1px solid rgba(16,24,32,0.12);display:flex;align-items:end;padding:24px clamp(20px,4vw,40px)">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;line-height:1.5;letter-spacing:0.12em;text-transform:uppercase;color:#54626d">Lead image — landscape orientation, 2400px wide minimum</span>
+      </div>
+      <figcaption style="max-width:1200px;margin:0 auto;padding:14px clamp(20px,4vw,40px) 0;font-size:0.82rem;color:#54626d">What the image shows, where, and when. <span style="color:#101820;font-weight:600">Credit: Photographer Name.</span></figcaption>
+    </figure>
+
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,40px) 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(32px,5vw,64px);align-items:start">
+      <div style="max-width:68ch;min-width:0">
+        <p style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;font-weight:400;line-height:1.6;color:#101820">Opening paragraph, set one step larger than the body so the reader has an obvious place to begin. Two or three sentences.</p>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Body paragraphs run at this size on a measure of about sixty-eight characters. Write in ordinary paragraphs — nothing here needs hand-layout. Add a subhead every four to six paragraphs so the piece can be skimmed as well as read.</p>
+
+        <h2 style="margin:44px 0 16px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">Subhead</h2>
+        <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Continue the story. Links inside the text, like <a href="#top">this one</a>, pick up the accent colour without breaking the reading rhythm.</p>
+
+        <blockquote style="margin:38px 0;padding:0 0 0 28px;border-left:4px solid #ffd100">
+          <p style="margin:0 0 12px;font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:1.7rem;line-height:1.32;color:#101820">A pull quote lifts one sentence out of the story and gives the page a second entry point.</p>
+          <cite style="font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#9a4a26">Speaker Name, Title</cite>
+        </blockquote>
+
+        <figure style="margin:38px 0">
+          <div aria-hidden="true" style="aspect-ratio:16/9;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.09) 0 12px,rgba(16,24,32,0.03) 12px 24px);border:1px solid rgba(16,24,32,0.12);display:flex;align-items:center;justify-content:center">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d">Figure, video, or audio embed</span>
+          </div>
+          <figcaption style="margin-top:12px;font-size:0.82rem;color:#54626d">Media caption. Always name the source.</figcaption>
+        </figure>
+
+        <figure style="margin:38px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px">
+          <div aria-hidden="true" style="aspect-ratio:4/3;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.09) 0 10px,rgba(16,24,32,0.03) 10px 20px);border:1px solid rgba(16,24,32,0.12)"></div>
+          <div aria-hidden="true" style="aspect-ratio:4/3;background:repeating-linear-gradient(135deg,rgba(16,24,32,0.09) 0 10px,rgba(16,24,32,0.03) 10px 20px);border:1px solid rgba(16,24,32,0.12)"></div>
+          <figcaption style="grid-column:1/-1;font-size:0.82rem;color:#54626d">A paired figure — two images, one caption.</figcaption>
+        </figure>
+
+        <p style="margin:0;font-family:Newsreader,Georgia,serif;font-size:1.0rem;line-height:1.72">Closing paragraphs: what it means, what comes next, and where a curious reader should go from here.</p>
+
+        <div style="margin-top:48px;padding:26px 28px;background:#eef4f7;border-top:4px solid #9a4a26">
+          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Tie the story to giving</p>
+          <p style="margin:0 0 16px;color:#3d4a55">One sentence connecting this story to what gifts fund — fellowships, field trips, instruments. Keep it specific to the story above.</p>
+          <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="display:inline-flex;align-items:center;height:46px;padding:0 22px;background:#101820;color:#fbfaf7;font-weight:600;text-decoration:none" style-hover="background:#9a4a26">Support UCLA EPSS →</a>
+        </div>
+      </div>
+
+      <aside style="display:grid;gap:26px;min-width:0">
+        <div>
+          <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">In this story</p>
+          <ul style="display:grid;gap:10px;margin:0;padding:0;list-style:none;font-size:0.92rem">
+            <li><a href="#top" style="text-decoration:none;color:#54626d" style-hover="color:#101820">Subhead one</a></li>
+            <li><a href="#top" style="text-decoration:none;color:#54626d" style-hover="color:#101820">Subhead two</a></li>
+          </ul>
+        </div>
+        <div style="padding-top:22px;border-top:1px solid rgba(16,24,32,0.14)">
+          <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Featuring</p>
+          <p style="margin:0;font-size:0.92rem;color:#54626d">Names of the people in the story, one per line.</p>
+        </div>
+        <div style="padding-top:22px;border-top:1px solid rgba(16,24,32,0.14)">
+          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Editor’s checklist</p>
+          <ul style="display:grid;gap:8px;margin:0;padding-left:18px;font-size:0.82rem;color:#54626d">
+            <li>Every photo has a caption and a credit</li>
+            <li>Names and dates verified against the source</li>
+            <li>Lead image is landscape, 2400px+</li>
+            <li>Read time updated</li>
+            <li>Template banner deleted</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </article>
+</main>
+
+<footer style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;padding:52px clamp(20px,4vw,40px);background:#1f2933;color:rgba(251,250,247,0.66)">
+  <div>
+    <img src="/assets/brand/newsletter-logo-2x.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:280px;height:auto;margin-bottom:18px;filter:brightness(0) invert(1);opacity:0.9" />
+    <p style="margin:0;max-width:46ch;font-size:0.92rem">UCLA Earth, Planetary, and Space Sciences · 595 Charles E. Young Drive East, Los Angeles, CA 90095</p>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:start;gap:12px;font-size:0.92rem">
+    <a href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" style="color:#ffd100;font-weight:600;text-decoration:none" style-hover="color:#fbfaf7">Support UCLA EPSS</a>
+    <a href="index.html" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to the issue</a>
+    <a href="#top" style="color:inherit;text-decoration:none" style-hover="color:#fbfaf7">Back to top ↑</a>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440}}">
+class Component extends DCLogic {
+  state = { progress: 0 };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      this.setState({ progress: max > 0 ? Math.min(1, h.scrollTop / max) : 0 });
+    };
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+    this.onScroll();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
+  }
+
+  renderVals() {
+    return {
+      progress: `${(this.state.progress * 100).toFixed(1)}%`,
+      share: (e) => {
+        if (navigator.clipboard) navigator.clipboard.writeText(location.href);
+        const el = e.currentTarget;
+        const original = el.textContent;
+        el.textContent = "Link copied";
+        setTimeout(() => { el.textContent = original; }, 1600);
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

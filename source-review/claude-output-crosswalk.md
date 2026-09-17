@@ -35,11 +35,11 @@ This file maps the old checklist to the live-source review. Use it to prevent re
 
 | Old # | Item | Current handling |
 | --- | --- | --- |
-| 20 | Commencement photographs | Not missing. Drive and Box both have 2026 photo pools. Need selection/caption/credit. |
+| 20 | Commencement photographs | Not missing. Drive and Box both have 2026 photo pools. `DSC08208.jpg` is the selected lead; commencement-day credit is confirmed as Valeria Jaramillo Hernandez and Zachary Lacson. Caption/details may still need review if the frame changes. |
 | 21 | Field mosaic | Not missing. Box has multiple field folders and images. Need landscape selection/captions. |
 | 22 | Hero carousel images soft | True implementation/media-selection issue. Solve from Box/Drive candidates, not by emailing "missing." |
-| 23 | Endowed chairs installation photo | Not missing. Public EPSS image exists and should be saved locally for the site/PDF workflow. |
-| 24 | Archive covers 2024-2017 | Partially local for 2022-2025 only; lower priority unless archive module is in scope. |
+| 23 | Endowed chairs installation photo | Not missing. Public EPSS image exists and has been saved locally in the app assets and Claude transfer `design-assets/` folder. |
+| 24 | Archive covers 2024-2017 | Not missing for design. Public EPSS archive covers have been rendered into `source-review/claude-transfer/newsletter-covers/` with a manifest. |
 | 25 | Peltzer field photographs | Not missing. ZIP exists; needs extraction/selection. |
 | 26 | Jewitt paintings | Not missing. Images/captions are in PDF; needs extraction. |
 | 27 | BALBOA figures | Likely available in DOCX; needs raw DOCX extraction to confirm. |
@@ -61,4 +61,3 @@ This file maps the old checklist to the live-source review. Use it to prevent re
 | 39 | EPSSSO highlight | Planning-only; ask only if deciding final contents. |
 | 40 | QR postcards | Out of scope for site media unless mailing workflow is active. |
 | 41 | Screen-reader/keyboard walkthrough | QA task for us, not a source request. |
-

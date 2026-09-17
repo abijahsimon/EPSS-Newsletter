@@ -10,30 +10,57 @@
   },
   "navigation": [
     { "label": "Contents", "href": "#contents" },
-    { "label": "Features", "href": "#features" },
+    { "label": "Feature", "href": "#rimfax" },
     { "label": "Research", "href": "#research-updates" },
+    { "label": "Endowed Chairs", "href": "#giving" },
     { "label": "Community", "href": "#community" },
+    { "label": "Field", "href": "#field-trips" },
     { "label": "Awards", "href": "#awards" },
-    { "label": "Giving", "href": "#giving" }
+    { "label": "Farewells", "href": "#community" },
+    { "label": "Give", "href": "#giving" }
   ],
   "hero": {
-    "image": "/assets/images/p01_01.jpg",
-    "imageAlt": "Mountain valley landscape from the EPSS newsletter image archive.",
-    "kicker": "2025-2026",
+    "image": "/assets/images/2026/hero/joshua-trees-sunset.jpg",
+    "imageAlt": "Joshua trees silhouetted against a pink and orange sunset in the Mojave Desert.",
+    "slides": [
+      {
+        "image": "/assets/images/2026/hero/joshua-trees-sunset.jpg",
+        "imageAlt": "Joshua trees silhouetted against a pink and orange sunset in the Mojave Desert.",
+        "label": "Joshua trees at sunset, Mojave Desert",
+        "objectPosition": "50% 42%"
+      },
+      {
+        "image": "/assets/images/2026/hero/greenland-icebergs.jpg",
+        "imageAlt": "Icebergs beyond moss-covered granite outcrops on the Greenland coast.",
+        "label": "Icebergs off the Greenland coast",
+        "objectPosition": "50% 38%"
+      },
+      {
+        "image": "/assets/images/2026/hero/valley-of-fire-students.jpg",
+        "imageAlt": "A line of students walking toward red sandstone formations under a wide desert sky.",
+        "label": "Valley of Fire, Nevada",
+        "objectPosition": "50% 78%"
+      }
+    ],
+    "kicker": "2025-2026 · Published September 2026",
     "title": "EPSS Annual Newsletter",
-    "dek": "A year of discovery, fieldwork, mentorship, remembrance, and Bruin science.",
+    "dek": "Welcome to our new annual newsletter, rebuilt digitally.",
+    "summary": "2025-2026 from Earth and Beyond: A year of discovery, fieldwork, mentorship, remembrance, and Bruin science.",
     "actions": [
       { "label": "Explore This Issue", "href": "#contents" },
-      { "label": "Ready Stories", "href": "#features" }
+      { "label": "Featured Stories", "href": "#features" }
     ],
     "supportCta": {
       "label": "Give to EPSS",
       "href": "https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O"
     },
     "meta": {
-      "eyebrow": "Digital Issue",
-      "title": "Source-backed stories are moving into the site.",
-      "body": "Final media selection, captions, and a few source confirmations are still in progress."
+      "eyebrow": "Note from the Chair",
+      "title": "Jon Aurnou",
+      "body": "Opening letter from the Department Chair",
+      "status": "Letter forthcoming",
+      "image": "/assets/images/2026/chair/jon-aurnou.jpg",
+      "imageAlt": "Jon Aurnou, Professor and Chair of Earth, Planetary, and Space Sciences."
     }
   },
   "sections": [
@@ -44,6 +71,10 @@
       "title": "Explore the issue.",
       "links": [
         { "label": "BALBOA: Photographing the Aurora in Daylight", "href": "/stories/balboa/" },
+        { "label": "Exploring Planetary History With Peng Ni", "href": "/stories/peng-ni/" },
+        { "label": "Lizzie Su on Life in EPSS", "href": "/stories/lizzie-su/" },
+        { "label": "Investigating Earth's History with Isotopic Fingerprints", "href": "/stories/edwin-schauble/" },
+        { "label": "When the Evidence Stops Fitting", "href": "/stories/allen-glazner/" },
         { "label": "Art & Science: Two Scientists Who Paint", "href": "/stories/art-science/" },
         { "label": "Honors, Fellowships, and Recognition", "href": "/stories/awards-2026/" },
         { "label": "Celebrating the Class of 2026", "href": "/stories/commencement-2026/" },
@@ -53,7 +84,8 @@
         { "label": "Peter Chi Farewell", "href": "/stories/peter-chi/" },
         { "label": "Gerald Schubert Memorial", "href": "/stories/gerald-schubert/" },
         { "label": "RIMFAX", "href": "#rimfax" },
-        { "label": "Field / Geophysics 136C", "href": "#field-trips" },
+        { "label": "Field Highlights", "href": "/stories/field-highlights/" },
+        { "label": "Past Newsletter Archive", "href": "#archive" },
         { "label": "Chair's Note", "href": "#chairs-note" }
       ]
     },
@@ -65,8 +97,8 @@
         {
           "id": "balboa-feature",
           "variant": "research-story",
-          "image": "/assets/images/p15_02.jpg",
-          "imageAlt": "Space research graphic from the newsletter image archive.",
+          "image": "/assets/images/2026/balboa/balboa-launch-vehicle.jpg",
+          "imageAlt": "NASA balloon launch vehicle and BALBOA payload preparations at Fort Sumner, New Mexico.",
           "category": "Lab & Research",
           "title": "Photographing the Aurora in Daylight",
           "summary": "BALBOA is a balloon-borne attempt to see the half of the aurora that sunlight has always hidden.",
@@ -75,8 +107,8 @@
         {
           "id": "art-science",
           "variant": "lead-story",
-          "image": "/assets/images/p02_04.jpg",
-          "imageAlt": "EPSS portrait placeholder for the art and science feature.",
+          "image": "/assets/images/2026/art-science/art-science-hero-collage.jpg",
+          "imageAlt": "Selected artwork by David Jewitt and Hilke Schlichting arranged side by side.",
           "category": "Art & Science",
           "title": "Two Scientists Who Paint",
           "summary": "David Jewitt and Hilke Schlichting describe how painting and research meet in material, intuition, and curiosity.",
@@ -85,11 +117,11 @@
         {
           "id": "rimfax",
           "variant": "research-story",
-          "image": "/assets/images/p15_02.jpg",
-          "imageAlt": "Space research graphic from the newsletter image archive.",
+          "image": "/assets/images/2026/rimfax/perseverance-ingenuity-mars-nasa-jpl.jpg",
+          "imageAlt": "Artist concept of NASA's Perseverance rover and Ingenuity helicopter on the Martian surface.",
           "category": "Research Feature",
           "title": "RIMFAX: Seeing Beneath the Martian Surface",
-          "summary": "This story is still awaiting source copy from the Paige/Cardarelli/RIMFAX thread. Keep the slot, but do not publish invented body copy.",
+          "summary": "A forthcoming feature on RIMFAX, the ground-penetrating radar carried by NASA's Perseverance rover.",
           "link": { "label": "Forthcoming", "href": "#rimfax" }
         },
         {
@@ -107,65 +139,91 @@
     {
       "type": "briefs",
       "id": "briefs",
-      "kicker": "Ready and Near-Ready",
-      "title": "Stories with source material in hand.",
-      "intro": "These sections have enough verified source material to draft now. Media still needs final selection or extraction for several of them.",
+      "kicker": "Across the Department",
+      "title": "More from the 2025-2026 year.",
+      "intro": "Awards, commencement, giving, remembrance, and field learning from across the EPSS community.",
       "cards": [
         {
           "id": "awards-card",
           "category": "Awards",
           "title": "Honors, Fellowships, and Recognition",
-          "summary": "Faculty awards and several student award blurbs are now drafted from source. Undergraduate fellowship details remain open.",
+          "summary": "Faculty honors, graduate fellowships, dissertation awards, and student recognition from the year.",
           "link": { "label": "Read awards", "href": "/stories/awards-2026/" }
         },
         {
           "id": "commencement-card",
           "category": "Commencement",
           "title": "Celebrating the Class of 2026",
-          "summary": "Program and candidate lists are available. Final photo selection, caption, and degree-count confirmation still need review.",
+          "summary": "Graduates, families, faculty, and the stories of the Class of 2026.",
           "link": { "label": "Read commencement", "href": "/stories/commencement-2026/" }
         },
         {
           "id": "giving-card",
           "category": "Giving",
           "title": "Donors and Endowments",
-          "summary": "The donor/endowment material from Emily's packet is staged. Field matching dates and cap still need confirmation.",
+          "summary": "Recognizing the households, foundations, and companies whose generosity supports EPSS.",
           "link": { "label": "Read donors", "href": "/stories/donors-endowments/" }
         },
         {
           "id": "schubert-card",
           "category": "In Memoriam",
           "title": "Gerald Schubert",
-          "summary": "The Schubert Drive folder is accessible and the obituary source has been ported into an article page.",
+          "summary": "Remembering a foundational figure in modern geodynamics and planetary physics.",
           "link": { "label": "Read memorial", "href": "/stories/gerald-schubert/" }
         },
         {
           "id": "geophysics-136c",
           "category": "Course Photo Essay",
-          "title": "Geophysics 136C in the Field",
-          "summary": "Field media is available in Box, but John He's article is still behind an iCloud access barrier.",
-          "variant": "decision-card"
+          "title": "Dispatches from the Field",
+          "summary": "Spring 2026 field dispatches from Valley of Fire, Zion, Painted Canyon, Bishop Tuff, White Mountain Research Station, and other field classrooms.",
+          "link": { "label": "Read the field dispatch", "href": "/stories/field-highlights/" }
         },
         {
           "id": "undergrad-fellowships",
           "category": "Student Recognition",
           "title": "Undergraduate Summer Fellowships",
-          "summary": "The recipient list, project blurbs, mentors, and photos still need confirmation.",
+          "summary": "Recipient profiles and summer research stories are forthcoming.",
           "variant": "decision-card"
         },
         {
           "id": "journal-covers",
           "category": "Research Gallery",
           "title": "Journal Covers",
-          "summary": "No source set has been confirmed. Keep this as a future gallery only if stakeholders want it.",
+          "summary": "A gallery of EPSS research on journal covers is forthcoming.",
           "variant": "decision-card"
         },
         {
           "id": "student-feature",
           "category": "Student Feature",
-          "title": "Lizzy Su",
-          "summary": "Proposed only. Keep forthcoming until source copy is provided.",
-          "variant": "decision-card"
+          "title": "Lizzie Su on Life in EPSS",
+          "summary": "A student profile on field learning, finding Earth science, and finishing an EPSS thesis.",
+          "link": { "label": "Read Lizzie Su", "href": "/stories/lizzie-su/" }
+        }
+      ]
+    },
+    {
+      "type": "field-gallery",
+      "id": "field-trips",
+      "kicker": "Dispatches from the Field",
+      "title": "Learning in the landscape.",
+      "intro": "A Spring 2026 photo essay from EPSS field trips through Valley of Fire, Zion, Painted Canyon, Bishop Tuff, White Mountain Research Station, dunes, folded strata, and rocky outcrops.",
+      "link": { "label": "Read the field dispatch", "href": "/stories/field-highlights/" },
+      "images": [
+        {
+          "src": "/assets/images/2026/field-spring-2026/valley-of-fire-fleet.jpg",
+          "alt": "EPSS field vehicles parked at Valley of Fire just after sunset."
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/zion-dawn.jpg",
+          "alt": "Students gathering at dawn near a lit field station with mountains behind them."
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/valley-of-fire-class.jpg",
+          "alt": "EPSS students gathered around a Valley of Fire State Park sign."
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/bishop-tuff-igneous-petrology.jpg",
+          "alt": "Igneous Petrology students standing in front of light-colored Bishop Tuff outcrops."
         }
       ]
     },
@@ -176,12 +234,21 @@
       "title": "People and farewells.",
       "cards": [
         {
+          "id": "lizzie-su",
+          "image": "/assets/people/lizzie-su.jpeg",
+          "imageAlt": "Lizzie Su, EPSS student.",
+          "category": "Student Feature",
+          "title": "Lizzie Su on Life in EPSS",
+          "summary": "A last year of coursework, a thesis in progress, and the path that pulled her into Earth science.",
+          "link": { "label": "Read Lizzie Su", "href": "/stories/lizzie-su/" }
+        },
+        {
           "id": "gilles-peltzer",
-          "image": "/assets/images/p12_02.jpg",
-          "imageAlt": "Desert field trip landscape from the newsletter image archive.",
+          "image": "/assets/images/2026/peltzer/kelso-dunes.jpg",
+          "imageAlt": "Gilles Peltzer and companions resting on the crest of Kelso Dunes.",
           "category": "Retirement",
           "title": "Gilles Peltzer",
-          "summary": "Article copy is available. The Peltzer photo ZIP still needs extraction and final selection.",
+          "summary": "After more than thirty years at UCLA, Gilles Peltzer reflects on research, teaching, and fieldwork.",
           "link": { "label": "Read Peltzer", "href": "/stories/gilles-peltzer/" }
         },
         {
@@ -190,7 +257,7 @@
           "imageAlt": "Community gathering placeholder for retiree farewell.",
           "category": "Farewell",
           "title": "Steve Joy",
-          "summary": "Copy is available despite the older sheet status. Portrait source remains unconfirmed.",
+          "summary": "From Galileo to Europa Clipper: four decades of planetary mission science at UCLA.",
           "link": { "label": "Read Steve Joy", "href": "/stories/steve-joy/" }
         },
         {
@@ -199,7 +266,7 @@
           "imageAlt": "Community gathering placeholder for retiree farewell.",
           "category": "Farewell",
           "title": "Peter Chi",
-          "summary": "Copy is available. Portrait source remains unconfirmed, so the page is no-portrait safe.",
+          "summary": "Peter Chi reflects on leaving UCLA, parenting, space science, and continued service.",
           "link": { "label": "Read Peter Chi", "href": "/stories/peter-chi/" }
         },
         {
@@ -208,7 +275,7 @@
           "imageAlt": "Flowers used as a memorial placeholder.",
           "category": "In Memoriam",
           "title": "Memorials and Obituaries",
-          "summary": "Gerald Schubert is now drafted from source. Art Montana, Ronald Shreve, and Candice Hansen-Koharcheck remain linked-source candidates.",
+          "summary": "Remembering Gerald Schubert and colleagues whose lives shaped the department.",
           "link": { "label": "Read Schubert", "href": "/stories/gerald-schubert/" }
         },
         {
@@ -216,16 +283,18 @@
           "image": "/assets/people/edwin-schauble.jpg",
           "imageAlt": "Edwin Schauble portrait.",
           "category": "Faculty Feature",
-          "title": "Edwin Schauble",
-          "summary": "Proposed only. Local portrait exists, but source body copy is not confirmed."
+          "title": "A Map of an Undiscovered Territory",
+          "summary": "Schauble explains how isotope ratios can become a map through Earth's history.",
+          "link": { "label": "Read Edwin Schauble", "href": "/stories/edwin-schauble/" }
         },
         {
           "id": "alumni-profile",
           "image": "/assets/people/allen-glazner.webp",
           "imageAlt": "Allen F. Glazner in the field.",
           "category": "Alumni Profile",
-          "title": "Allen F. Glazner",
-          "summary": "Box has lecture media, but final copy and recording/embed link are still unconfirmed."
+          "title": "When the Evidence Stops Fitting",
+          "summary": "Glazner reflects on granite, field evidence, and the discipline of changing your mind.",
+          "link": { "label": "Read Allen Glazner", "href": "/stories/allen-glazner/" }
         }
       ]
     },
@@ -234,25 +303,27 @@
       "id": "research-updates",
       "kicker": "Lab & Research Updates",
       "title": "Signals from the labs, field, and sky.",
-      "intro": "The BALBOA article is source-backed. Other research features remain proposed or blocked by missing copy.",
+      "intro": "Research updates from the lab, the field, and the sky.",
       "items": [
         {
           "title": "Xiaoyan Zhou: BALBOA aurora balloon project update",
-          "body": "A source-backed article is now available. The two scientific figures still need to be extracted from the DOCX and staged as site assets.",
+          "body": "BALBOA is a balloon-borne attempt to photograph the dayside aurora, the half sunlight has always hidden.",
           "open": true,
           "link": { "label": "Read BALBOA", "href": "/stories/balboa/" }
         },
         {
           "title": "Jonathan Mitchell: Eos features and research findings",
-          "body": "No confirmed source copy was found in the checked Drive/Gmail material. Confirm scope before drafting."
+          "body": "Research update forthcoming."
         },
         {
-          "title": "Peng Group: PTRX and Sapphire",
-          "body": "Proposed only in the planning sheet. Confirm whether this remains in the 2026 issue."
+          "title": "Peng Ni: Exploring Planetary History",
+          "body": "Peng Ni's profile moves between meteorites, lunar samples, diamonds, high-pressure experiments, and the isotope fingerprints measured by the Sapphire Lab.",
+          "link": { "label": "Read Peng Ni", "href": "/stories/peng-ni/" }
         },
         {
           "title": "Field / Geophysics 136C",
-          "body": "Box has field media, but the article text is still locked behind an iCloud Pages link. Use media only after contact-sheet selection and caption review."
+          "body": "A Spring 2026 photo essay from EPSS field courses across Valley of Fire, Zion, Painted Canyon, Bishop Tuff, White Mountain Research Station, and other field classrooms.",
+          "link": { "label": "Read the field dispatch", "href": "/stories/field-highlights/" }
         }
       ]
     },
@@ -264,7 +335,7 @@
           "id": "awards",
           "category": "Awards",
           "title": "Honors and Recognition",
-          "summary": "Faculty awards, graduate fellowships, dissertation fellowships, and known postdoctoral fellowships are drafted from source, with a few award details still flagged for confirmation.",
+          "summary": "Faculty honors, graduate fellowships, dissertation awards, and student recognition from the year.",
           "link": {
             "label": "Read Awards",
             "href": "/stories/awards-2026/"
@@ -273,11 +344,11 @@
         {
           "id": "commencement",
           "variant": "image-panel",
-          "image": "/assets/images/p14_07.jpg",
-          "imageAlt": "EPSS commencement group photograph placeholder.",
+          "image": "/assets/images/2026/commencement/commencement-class-2026-geology-building.jpg",
+          "imageAlt": "EPSS Class of 2026 graduates and faculty tossing caps outside the Geology Building.",
           "category": "Commencement",
           "title": "Celebrating the Class",
-          "summary": "Program details and candidate lists are staged. Available Drive/Box photo pools still need contact-sheet selection, caption, and credit confirmation.",
+          "summary": "Graduates, families, and faculty gather at the Geology Building to celebrate the Class of 2026.",
           "link": {
             "label": "Read Commencement",
             "href": "/stories/commencement-2026/"
@@ -289,7 +360,7 @@
           "variant": "donor-panel",
           "category": "Giving",
           "title": "Donors and Endowments",
-          "summary": "Donor and endowed-fund lists are staged from Emily's materials. Exact field matching dates and cap remain open.",
+          "summary": "Celebrating the donors and endowed funds that make research, teaching, and field learning possible.",
           "link": {
             "label": "Read Donors",
             "href": "/stories/donors-endowments/"
@@ -303,15 +374,24 @@
       "kicker": "Editorial Status",
       "title": "Still to resolve before launch.",
       "items": [
-        "Media pass: generate contact sheets for commencement, field photos, Peltzer, Jewitt/Hilke artwork, and BALBOA figures.",
+        "Media pass: Field, Peltzer, and Commencement lead selections are now confirmed. Commencement-day photo credit is confirmed; detailed Field and Peltzer credits still need review.",
         "True source blockers: John He/iCloud, RIMFAX, Craig Manning, Suburban full copy, undergraduate summer fellowships, award host details, and Chair note location.",
         "Review pass: remove or approve any preview-only deks, unsourced pull quotes, and public-facing status language before final launch."
       ]
+    },
+    {
+      "type": "archive",
+      "id": "archive",
+      "kicker": "Past Issues",
+      "title": "Explore the EPSS newsletter archive.",
+      "intro": "Browse 48 newsletter covers spanning 1967 through 2025. Each cover links to the corresponding EPSS PDF.",
+      "initialCount": 12,
+      "showAllLabel": "Show all 48 past issues"
     }
   ],
   "footer": {
     "organization": "UCLA Earth, Planetary, and Space Sciences",
-    "description": "EPSS Newsletter 2026 draft site",
+    "description": "EPSS Newsletter 2026",
     "backToTopLabel": "Back to top"
   }
 }

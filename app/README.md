@@ -1,192 +1,74 @@
 # EPSS Newsletter App
 
-This is the isolated, content-driven version of the EPSS annual newsletter.
+This Astro app is the public renderer for the 2026 EPSS newsletter. The supplied Claude/Vite source is preserved intact under:
 
-The original static site remains at the repository root as the working backup. This app does not require changes to the root `index.html`, `styles.css`, `script.js`, or `assets/`.
+```text
+../source-review/Claude outputs/epss-newsletter-source/
+../source-review/Claude outputs/epss-newsletter-addendum/
+../source-review/Claude outputs/ADDENDUM-2026-09-14/
+```
+
+The September 9 addendum is a byte-for-byte archive of Claude's two updated page variants and 22 supplied images. The September 14 addendum is preserved separately and contains Claude's complete 18-page Vite/DC set, archive runtime, manifests, and assets.
+
+Working copies of Claude's 18 designed pages live in `src/reference-pages/`. They intentionally use inline style attributes, a small global `<helmet>` block, and the supplied public runtime files; there is no missing page-level CSS file.
 
 ## Requirements
 
-- Node.js 22.12 or newer.
-- pnpm 11.7.
+- Node.js 22.12 or newer
+- pnpm 11.7
 
-Confirm the installed versions:
+## Run And Build
 
-```sh
-node --version
-pnpm --version
-```
-
-## Run the App
-
-From the repository root:
+From `app/`:
 
 ```sh
-cd app
 pnpm install
 pnpm dev
-```
-
-Astro will print the local preview address, normally `http://localhost:4321/`.
-
-Stop the development server with `Control-C`.
-
-## Validate and Build
-
-Run these commands from `app/`:
-
-```sh
 pnpm check
 pnpm build
 pnpm preview
 ```
 
-- `pnpm check` validates Astro, TypeScript, and content schemas.
-- `pnpm build` creates the production-ready static site in `app/dist/`.
-- `pnpm preview` serves the latest production build locally.
+`pnpm build` writes the static site to `dist/`.
 
-Run `pnpm check` and `pnpm build` before committing content or application changes.
+## Rendering Architecture
 
-## Where Content Lives
+- `src/pages/index.astro` renders Claude's issue page.
+- `src/pages/stories/[slug].astro` renders the 14 Claude-designed article pages.
+- `src/pages/epss-through-deep-time.astro` renders the archive. `src/pages/archive-poster.astro` redirects to the generated 24-by-36-inch PDF in `public/downloads/`, allowing the browser's native PDF viewer to provide viewing and download controls.
+- `src/components/ReferencePage.astro` extracts the supplied page body, adds document metadata, and rewrites routes plus root-relative dynamic media paths for nested Astro story URLs.
+- `src/lib/reference-pages.ts` maps Claude's filenames to Astro routes.
+- `src/reference-pages/*.html` contains the editable working copies of Claude's inline-style pages.
+- `public/support.js` runs Claude's carousel, accordions, signup state, archive expansion, folios, reading progress, and share controls.
+- `public/covers-data.js` hydrates all 48 historical covers with root-relative asset paths; `public/doc-page.js` supplies the fixed-format source canvas retained at `src/reference-pages/archive-poster.html` for future PDF regeneration.
 
-```text
-src/content/
-  issues/
-    2026.json
-  articles/
-    rimfax.md
-    suburban-retrospective.md
-```
+The original source ZIP and imported source-review copy should remain unchanged. Make newsletter edits in `app/`.
 
-### Issue and section content
+## Approved Media Exceptions
 
-Edit `src/content/issues/2026.json` for:
+- RIMFAX uses the NASA/JPL-Caltech Perseverance and Ingenuity image.
+- Commencement uses the derivative of `DSC08208.jpg`.
+- Gilles Peltzer uses `P3180036` as the `kelso-dunes.jpg` lead and displays all 11 addendum photographs in the field archive and lightbox.
+- BALBOA displays all 11 source-document frames in the mission album and lightbox; the hero caption uses the source document's September 7, 2022 wording.
+- The homepage field mosaic uses six approved 2026 highlights; the Field Highlights page contains all ten selected photographs.
+- The full Spring 2026 field dispatch page uses the 12-image source-document gallery supplied in the September 14 addendum.
 
-- Newsletter year, title, SEO description, and publication status.
-- Header navigation.
-- Hero image, hero copy, calls to action, and issue summary.
-- Section order.
-- Planning lanes.
-- Feature and brief cards.
-- Community/profile cards.
-- Research updates.
-- Awards, commencement, and giving panels.
-- Table-of-contents links.
-- Footer copy.
+Do not replace these with Claude's earlier source selections during a source refresh.
 
-The order of objects in the `sections` array controls the order of sections on the public page. The order of cards, stories, panels, links, or items inside a section controls their display order.
+The Peltzer and BALBOA lightboxes deliberately keep their controls pinned to the viewport and use a transparent data-URI fallback for a closed lightbox. Preserve both details when editing the inline page logic.
 
-Keep IDs unique. Anchor links such as `#features` must match the corresponding section or article `id`.
+## Editing Workflow
 
-### Long-form articles
+1. Edit the relevant file in `src/reference-pages/` for a Claude-designed page.
+2. Add new media under `public/assets/` using a descriptive filename; do not overwrite unrelated originals.
+3. Keep final captions, credits, quotations, and article copy marked pending until approved source material exists.
+4. Review desktop and mobile layouts in the browser.
+5. Run `pnpm check` and `pnpm build`.
 
-Edit files in `src/content/articles/` for long-form article text.
+## Fonts And External Runtime
 
-Each Markdown file starts with frontmatter:
+Claude's pages load Newsreader, IBM Plex Sans, and IBM Plex Mono from Google Fonts. `support.js` also loads its React runtime as supplied by Claude. If either external request is blocked, the page can fall back or fail to initialize, so verify these requests in the intended hosting environment before launch.
 
-```md
----
-articleId: rimfax-full
-issue: 2026
-slug: rimfax
-status: published
-category: Long-form Template
-title: RIMFAX Feature Full Article
-variant: feature
----
+## QA
 
-Article text begins here.
-```
-
-Important relationships:
-
-- `articleId` must be unique.
-- `issue` must match the issue year.
-- An issue’s `articles` section lists the desired `articleId` values in `articleIds`.
-- The Markdown body renders beneath the article title.
-- `variant: feature` uses the dark feature treatment.
-- `variant: standard` uses the light article treatment.
-
-### Publication status
-
-Allowed statuses are:
-
-- `draft`
-- `review`
-- `published`
-- `archived`
-
-The public page selects the newest issue with `status: published`. It also renders only articles with `status: published`.
-
-Do not mark unfinished content as published merely to preview it. Phase 1 does not include a private draft-preview system.
-
-## Safe Content Editing Workflow
-
-1. Start the app with `pnpm dev`.
-2. Edit one JSON or Markdown content file at a time.
-3. Save and review the page in the browser.
-4. Confirm navigation links still reach the correct sections.
-5. Run `pnpm check`.
-6. Run `pnpm build`.
-
-If JSON syntax is invalid or a required field is missing, the development server or type check should report the affected content file.
-
-## Images and Assets
-
-The app uses its own asset copies under:
-
-```text
-public/assets/
-  brand/
-  images/
-  people/
-```
-
-The original source assets remain in the repository-root `assets/` folder. Do not move, rename, or overwrite those originals when editing the Astro app.
-
-### Add or replace an image
-
-Recommended method:
-
-1. Add the new image to the appropriate folder under `app/public/assets/`.
-2. Give it a descriptive, stable filename.
-3. Update the matching content field in `src/content/issues/2026.json`.
-4. Update the associated alt-text field.
-5. Review the image crop at desktop and mobile widths.
-6. Run `pnpm check` and `pnpm build`.
-
-Example:
-
-```json
-{
-  "image": "/assets/people/new-faculty-name.jpg",
-  "imageAlt": "New faculty member in an EPSS laboratory."
-}
-```
-
-Paths beginning with `/assets/` resolve from `app/public/assets/`.
-
-### Image guidance
-
-- Prefer adding a new filename instead of replacing an unrelated existing file.
-- Use JPG or WebP for photographs and SVG for approved vector brand artwork.
-- Keep source images large enough for full-width display.
-- Expect hero and card images to be cropped with CSS `object-fit: cover`.
-- Check that the subject remains visible at both desktop and mobile sizes.
-- Write useful alt text that describes the image’s relevant content.
-- Preserve image credit, rights, and permission information outside the filename until dedicated media metadata is added in a later phase.
-
-## Visual Design
-
-`src/styles/newsletter.css` is the Phase 1 copy of the legacy `styles.css`. It preserves the current visual reference.
-
-Content-only updates should not require editing this stylesheet. Any future visual change should be compared against the root static backup and the checks documented in `../design-qa.md`.
-
-## Phase 1 Boundaries
-
-This version intentionally does not include:
-
-- A database.
-- Authentication.
-- An editor/admin portal.
-- Private draft previews.
-- Deployment configuration.
+The current visual and interaction results are documented in `../design-qa.md`. The final gate is `final result: passed`.
