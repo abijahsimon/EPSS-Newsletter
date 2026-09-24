@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EPSS Through Our Eyes — UCLA EPSS Newsletter 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --page: #fbfaf7; --surface: #eef4f7; --ink: #1f2933; --ink-2: #54626d;
+    --deep: #060b12; --night: #101820; --gold: #ffd100; --clay: #9a4a26; --blue: #2774ae;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--page); color: var(--ink); font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
+  h1, h2, h3, p, ul, ol, figure { margin-top: 0; }
+  a { color: var(--blue); }
+  a:hover { color: var(--clay); }
+  ::selection { background: var(--gold); color: var(--night); }
+  :focus-visible { outline: 3px solid var(--clay); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+  .skip { position: absolute; left: -9999px; top: 0; z-index: 100; padding: 12px 18px; background: var(--night); color: var(--page); font-weight: 600; text-decoration: none; }
+  .skip:focus { left: 0; }
+  .bar { position: sticky; top: 0; z-index: 40; background: rgba(251,250,247,0.93); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(16,24,32,0.14); }
+  .bar-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; padding: 14px clamp(20px,4vw,40px); }
+  .bar-nav { display: flex; align-items: center; gap: 20px; font-size: 0.82rem; font-weight: 600; color: var(--ink-2); }
+  .bar-nav a { text-decoration: none; color: inherit; }
+  .bar-nav a:hover { color: var(--clay); }
+  .give { display: inline-flex; align-items: center; height: 36px; padding: 0 16px; background: var(--night); color: var(--page) !important; }
+  .give:hover { background: var(--clay); color: #fff !important; }
+  .kicker { margin: 0 0 20px; font-family: "IBM Plex Mono", monospace; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+  .hero { position: relative; overflow: hidden; padding: clamp(32px,4.5vw,56px) clamp(20px,4vw,40px) clamp(24px,3vw,36px); background: var(--deep); color: var(--page); }
+  .stars { position: absolute; inset: 0; background-image:
+    radial-gradient(1.4px 1.4px at 12% 22%, rgba(251,250,247,0.9), transparent 60%),
+    radial-gradient(1.1px 1.1px at 27% 68%, rgba(251,250,247,0.7), transparent 60%),
+    radial-gradient(1.6px 1.6px at 41% 14%, rgba(251,250,247,0.85), transparent 60%),
+    radial-gradient(1px 1px at 55% 47%, rgba(251,250,247,0.6), transparent 60%),
+    radial-gradient(1.5px 1.5px at 63% 79%, rgba(251,250,247,0.8), transparent 60%),
+    radial-gradient(1.1px 1.1px at 74% 31%, rgba(251,250,247,0.7), transparent 60%),
+    radial-gradient(1.7px 1.7px at 86% 61%, rgba(251,250,247,0.9), transparent 60%),
+    radial-gradient(1px 1px at 93% 18%, rgba(251,250,247,0.55), transparent 60%),
+    radial-gradient(1.2px 1.2px at 19% 88%, rgba(251,250,247,0.6), transparent 60%),
+    radial-gradient(1.3px 1.3px at 48% 92%, rgba(251,250,247,0.55), transparent 60%); }
+  .hero-in { position: relative; max-width: 1200px; margin: 0 auto; }
+  .hero h1 { max-width: 20ch; margin: 0 0 26px; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(2.5rem,6.6vw,5.6rem); line-height: 0.98; letter-spacing: -0.03em; text-wrap: balance; }
+  .hero p.lede { max-width: 62ch; margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(1.14rem,1.9vw,1.6rem); line-height: 1.45; color: rgba(251,250,247,0.78); text-wrap: pretty; }
+  .tally { position: relative; display: flex; flex-wrap: wrap; gap: 10px 34px; max-width: 1200px; margin: 22px auto 0; padding-top: 16px; border-top: 1px solid rgba(251,250,247,0.2); }
+  .tally div { font-family: "IBM Plex Mono", monospace; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(251,250,247,0.6); }
+  .tally b { display: block; font-family: Newsreader, Georgia, serif; font-size: 1.9rem; font-weight: 400; letter-spacing: -0.01em; color: var(--page); }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: clamp(34px,4.5vw,64px) clamp(20px,4vw,40px); }
+  .controls { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 22px; margin: 0 0 12px; }
+  .controls button { appearance: none; padding: 4px 0; background: none; border: 0; border-bottom: 1px solid transparent; color: var(--ink-2); font: 500 0.7rem/1.2 "IBM Plex Mono", monospace; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: color 0.18s, border-color 0.18s; }
+  .controls button:hover { color: var(--ink); }
+  .controls button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+  .grid { columns: 3 300px; column-gap: 10px; margin: 0; padding: 0; list-style: none; }
+  .grid > li { break-inside: avoid; margin: 0 0 10px; }
+  .tile { position: relative; display: block; width: 100%; padding: 0; background: var(--night); border: 0; overflow: hidden; cursor: zoom-in; }
+  .tile img { width: 100%; height: auto; transition: transform 0.5s ease, opacity 0.3s; }
+  .tile:hover img, .tile:focus-visible img { transform: scale(1.03); }
+  .tile .ov { position: absolute; inset: auto 0 0 0; display: flex; flex-direction: column; gap: 3px; padding: 44px 14px 12px; background: linear-gradient(to top, rgba(6,11,18,0.78), rgba(6,11,18,0)); color: var(--page); text-align: left; opacity: 0; transform: translateY(6px); transition: opacity 0.25s, transform 0.25s; pointer-events: none; }
+  .tile:hover .ov, .tile:focus-visible .ov { opacity: 1; transform: none; }
+  @media (hover: none) { .tile .ov { opacity: 1; transform: none; } }
+  .tile .ov-c { font-family: Newsreader, Georgia, serif; font-size: 1.02rem; line-height: 1.2; text-wrap: pretty; }
+  .tile .ov-p { font: 500 0.62rem/1.4 "IBM Plex Mono", monospace; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(251,250,247,0.78); }
+  .held { margin-top: clamp(34px,4.5vw,64px); padding-top: clamp(26px,3vw,38px); border-top: 1px solid rgba(16,24,32,0.16); }
+  .held h2 { margin: 0 0 8px; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(1.7rem,3vw,2.6rem); line-height: 1.05; letter-spacing: -0.02em; }
+  .held p.sub { max-width: 64ch; margin: 0 0 24px; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: 1.05rem; line-height: 1.5; color: var(--ink-2); text-wrap: pretty; }
+  .queue { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(16,24,32,0.14); }
+  .queue li { display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.4fr); gap: 6px 20px; padding: 13px 0; border-bottom: 1px solid rgba(16,24,32,0.14); }
+  @media (max-width: 720px) { .queue li { grid-template-columns: minmax(0,1fr); } }
+  .queue .qt { font-family: Newsreader, Georgia, serif; font-size: 1.08rem; line-height: 1.25; }
+  .queue .qc { font: 500 0.68rem/1.5 "IBM Plex Mono", monospace; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
+  .queue .qb { font-size: 0.82rem; line-height: 1.45; color: var(--clay); text-wrap: pretty; }
+  .lb { position: fixed; inset: 0; z-index: 90; display: none; place-items: center; padding: clamp(16px,4vw,48px); background: rgba(6,11,18,0.94); }
+  .lb[open] { display: grid; }
+  .lb figure { margin: 0; max-width: min(1100px,100%); }
+  .lb img { max-height: 72vh; width: auto; margin: 0 auto; }
+  .lb figcaption { margin-top: 16px; max-width: 78ch; }
+  .lb .lt { margin: 0 0 8px; font-family: Newsreader, Georgia, serif; font-size: clamp(1.3rem,2.4vw,1.9rem); font-weight: 300; line-height: 1.15; letter-spacing: -0.02em; color: var(--page); }
+  .lb .lc { margin: 0 0 12px; font-size: 0.92rem; line-height: 1.55; color: rgba(251,250,247,0.8); text-wrap: pretty; }
+  .lb .lm { display: flex; flex-wrap: wrap; gap: 4px 22px; margin: 0; padding-top: 12px; border-top: 1px solid rgba(251,250,247,0.2); font: 500 0.68rem/1.6 "IBM Plex Mono", monospace; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(251,250,247,0.6); }
+  .lb .lm b { color: var(--gold); font-weight: 600; }
+  .lb .x { position: absolute; top: clamp(12px,2vw,24px); right: clamp(12px,2vw,24px); width: 42px; height: 42px; background: transparent; border: 1px solid rgba(251,250,247,0.3); color: var(--page); font-size: 1.1rem; cursor: pointer; }
+  .lb .x:hover { border-color: var(--gold); color: var(--gold); }
+  .lb .nav { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 64px; background: rgba(6,11,18,0.6); border: 1px solid rgba(251,250,247,0.24); color: var(--page); font-size: 1.2rem; cursor: pointer; }
+  .lb .nav:hover { border-color: var(--gold); color: var(--gold); }
+  .lb #lb-prev { left: clamp(6px,1.5vw,18px); }
+  .lb #lb-next { right: clamp(6px,1.5vw,18px); }
+  footer.end { padding: clamp(30px,4vw,48px) clamp(20px,4vw,40px); background: var(--night); color: rgba(251,250,247,0.66); font-size: 0.84rem; }
+  footer.end a { color: var(--page); }
+  footer.end a:hover { color: var(--gold); }
+</style>
+</head>
+<body>
+<a class="skip" href="#grid">Skip to the photographs</a>
+
+<header class="bar">
+  <div class="bar-in">
+    <a href="/" aria-label="Back to the issue" style="display:flex;align-items:center">
+      <img src="/assets/brand/newsletter-logo-black.png" alt="UCLA Earth, Planetary &amp; Space Sciences Newsletter" style="width:min(280px,44vw);height:auto">
+    </a>
+    <div class="bar-nav">
+      <a href="/">← The 2026 issue</a>
+      <a href="/epss-through-deep-time/">Archive</a>
+      <a class="give" href="https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O">Give</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="stars" aria-hidden="true"></span>
+  <div class="hero-in">
+    <p class="kicker" style="margin-bottom:14px">EPSS Photo Contest 2026</p>
+    <h1 style="font-size:clamp(2rem,4.4vw,3.4rem);margin-bottom:14px">EPSS Through Our Eyes</h1>
+    <p class="lede" style="font-size:clamp(1.02rem,1.4vw,1.2rem)">Photographs from across the EPSS community: fieldwork, research, classrooms, laboratories, and the landscapes in between.</p>
+  </div>
+</section>
+
+<main class="wrap" style="padding-top:14px">
+  <div class="controls" id="controls" role="group" aria-label="Filter photographs by collection"></div>
+  <ul class="grid" id="grid"></ul>
+
+  <section class="held">
+    <p class="kicker">Editorial queue</p>
+    <h2>Held pending credit</h2>
+    <p class="sub">These frames are in hand and permissioned, but not published — each one is missing an attribution or a usable derivative. They appear here as a working list only; nothing renders publicly until the blocker clears.</p>
+    <ul class="queue" id="queue"></ul>
+  </section>
+</main>
+
+<footer class="end">
+  <p style="margin:0;max-width:70ch">UCLA Earth, Planetary, and Space Sciences · <a href="/">2026 annual newsletter</a> · <a href="/epss-through-deep-time/">Newsletter archive</a></p>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged photograph">
+  <button type="button" class="x" id="lb-x" aria-label="Close">✕</button>
+  <button type="button" class="nav" id="lb-prev" aria-label="Previous photograph">←</button>
+  <button type="button" class="nav" id="lb-next" aria-label="Next photograph">→</button>
+  <figure>
+    <img id="lb-img" alt="">
+    <figcaption>
+      <p class="lt" id="lb-title"></p>
+      <p class="lc" id="lb-cap"></p>
+      <p class="lm" id="lb-meta"></p>
+    </figcaption>
+  </figure>
+</div>
+
+<script type="module">
+import { CATEGORIES, MEDIA_ITEMS } from "/media-archive/media-items.js";
+
+const isContest = i => String(i.sourceId).startsWith("photo-contest");
+const rank = i => (isContest(i) ? 0 : i.group ? 1 : 2);
+const pub = MEDIA_ITEMS.filter(i => i.published).sort((a, b) => rank(a) - rank(b) || a.sortOrder - b.sortOrder);
+const held = MEDIA_ITEMS.filter(i => !i.published).sort((a, b) => a.sortOrder - b.sortOrder);
+
+const uniq = (arr) => [...new Set(arr.filter(Boolean))];
+
+// Photos already published inside a story collapse into one "Articles" filter;
+// everything else (e.g. photo contest submissions) keeps its own collection.
+const groupOf = i => (isContest(i) ? i.collection : i.group || "Articles");
+const live = uniq(pub.map(groupOf)).map(c => ({ id: c, label: c }));
+const controls = document.getElementById("controls");
+const mkBtn = (id, label, on) => {
+  const b = document.createElement("button");
+  b.type = "button";
+  b.dataset.cat = id;
+  b.textContent = label;
+  b.setAttribute("aria-pressed", String(on));
+  b.onclick = () => apply(id);
+  controls.appendChild(b);
+};
+mkBtn("all", "All", true);
+live.forEach(c => mkBtn(c.id, c.label, false));
+
+const grid = document.getElementById("grid");
+let shown = pub;
+
+function label(id) {
+  const c = CATEGORIES.find(x => x.id === id);
+  return c ? c.label : id;
+}
+
+function render(items) {
+  shown = items;
+  grid.innerHTML = "";
+  items.forEach((it, idx) => {
+    const li = document.createElement("li");
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "tile";
+    const img = document.createElement("img");
+    img.src = it.thumbnailSrc || it.src;
+    img.alt = it.alt;
+    img.loading = idx < 6 ? "eager" : "lazy";
+    const ov = document.createElement("span");
+    ov.className = "ov";
+    const c = document.createElement("span");
+    c.className = "ov-c";
+    c.textContent = it.title;
+    const p = document.createElement("span");
+    p.className = "ov-p";
+    p.textContent = it.artist || it.photographer || "";
+    ov.append(c, p);
+    btn.append(img, ov);
+    btn.onclick = () => open(idx);
+    li.appendChild(btn);
+    grid.appendChild(li);
+  });
+}
+
+function apply(cat) {
+  document.querySelectorAll("#controls button").forEach(b =>
+    b.setAttribute("aria-pressed", String(b.dataset.cat === cat)));
+  render(cat === "all" ? pub : pub.filter(i => groupOf(i) === cat));
+}
+
+const queue = document.getElementById("queue");
+held.forEach(it => {
+  const li = document.createElement("li");
+  const t = document.createElement("span");
+  t.className = "qt";
+  t.textContent = it.title;
+  const c = document.createElement("span");
+  c.className = "qc";
+  c.textContent = it.collection;
+  const b = document.createElement("span");
+  b.className = "qb";
+  b.textContent = it.blocker
+    ? it.blocker
+    : it.permissionStatus.startsWith("blocked")
+      ? it.permissionStatus
+      : "Photographer credit pending";
+  li.append(t, c, b);
+  queue.appendChild(li);
+});
+
+const lb = document.getElementById("lb");
+let at = 0, lastFocus = null;
+
+function paint() {
+  const it = shown[at];
+  document.getElementById("lb-img").src = it.src;
+  document.getElementById("lb-img").alt = it.alt;
+  document.getElementById("lb-title").textContent = it.artist ? `${it.title} · ${it.artist}` : it.title;
+  document.getElementById("lb-cap").textContent = it.caption || "";
+  const meta = document.getElementById("lb-meta");
+  meta.innerHTML = "";
+  const bits = [
+    ["Collection", it.collection],
+    ["Where", it.location],
+    ["Course", it.course],
+    ["When", it.date || it.season],
+    [it.mediaType === "artwork" ? "Artist" : "Photograph by", it.photographer]
+  ];
+  bits.filter(([, v]) => v).forEach(([k, v]) => {
+    const s = document.createElement("span");
+    const b = document.createElement("b");
+    b.textContent = k + " ";
+    s.append(b, document.createTextNode(v));
+    meta.appendChild(s);
+  });
+  if (it.relatedStory) {
+    const s = document.createElement("span");
+    const a = document.createElement("a");
+    // Manifest stores DC filenames ("Article - John He.dc.html"); Vite pages are slugs ("/john-he.html").
+    a.href = "/" + it.relatedStory.replace(/^Article - /, "").replace(/\.dc\.html$/, "").trim().toLowerCase().replace(/\s+/g, "-") + ".html";
+    a.textContent = "Read the story";
+    a.style.color = "var(--gold)";
+    s.appendChild(a);
+    meta.appendChild(s);
+  }
+}
+
+function open(i) {
+  at = i;
+  lastFocus = document.activeElement;
+  paint();
+  lb.setAttribute("open", "");
+  document.getElementById("lb-x").focus();
+}
+function close() {
+  lb.removeAttribute("open");
+  if (lastFocus) lastFocus.focus();
+}
+function step(d) {
+  at = (at + d + shown.length) % shown.length;
+  paint();
+}
+document.getElementById("lb-x").onclick = close;
+document.getElementById("lb-prev").onclick = () => step(-1);
+document.getElementById("lb-next").onclick = () => step(1);
+lb.addEventListener("click", e => { if (e.target === lb) close(); });
+document.addEventListener("keydown", e => {
+  if (!lb.hasAttribute("open")) return;
+  if (e.key === "Escape") close();
+  if (e.key === "ArrowLeft") step(-1);
+  if (e.key === "ArrowRight") step(1);
+});
+
+render(pub);
+</script>
+</body>
+</html>

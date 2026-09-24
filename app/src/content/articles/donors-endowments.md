@@ -114,6 +114,7 @@ The list below recognizes those who donated to UCLA EPSS between July 1, 2025 an
 - Seamus Findler
 - Sharon Lander-Defibaugh and Steve Defibaugh '85
 - Sheila Etzkorn MFA '86 and Michael Binder '73
+- Some Anonymous Gifts
 - Space Telescope Science Institute
 - Steven R. Lipshie MS '74, PHD '84
 - Susan Bell-Warner '84 and Scott Warner '83
@@ -127,7 +128,6 @@ The list below recognizes those who donated to UCLA EPSS between July 1, 2025 an
 - Waverley Street Foundation
 - Willard E. Sharp '58, MA '60, PHD '64
 - Yona and Edward Shulaker
-- Some Anonymous Gifts
 
 ## Endowments
 

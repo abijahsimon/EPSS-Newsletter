@@ -17,7 +17,8 @@
     { "label": "Field", "href": "#field-trips" },
     { "label": "Awards", "href": "#awards" },
     { "label": "Farewells", "href": "#community" },
-    { "label": "Give", "href": "#giving" }
+    { "label": "Give", "href": "#giving" },
+    { "label": "Media Archive", "href": "/media-archive/" }
   ],
   "hero": {
     "image": "/assets/images/2026/hero/joshua-trees-sunset.jpg",
@@ -83,6 +84,7 @@
         { "label": "Steve Joy Farewell", "href": "/stories/steve-joy/" },
         { "label": "Peter Chi Farewell", "href": "/stories/peter-chi/" },
         { "label": "Gerald Schubert Memorial", "href": "/stories/gerald-schubert/" },
+        { "label": "Craig Manning Retirement", "href": "/stories/craig-manning/" },
         { "label": "RIMFAX", "href": "#rimfax" },
         { "label": "Field Highlights", "href": "/stories/field-highlights/" },
         { "label": "Past Newsletter Archive", "href": "#archive" },
@@ -252,6 +254,15 @@
           "link": { "label": "Read Peltzer", "href": "/stories/gilles-peltzer/" }
         },
         {
+          "id": "craig-manning",
+          "image": "/assets/people/craig-manning.jpg",
+          "imageAlt": "Craig Manning in the field.",
+          "category": "Retirement",
+          "title": "Craig Manning",
+          "summary": "After 36 years at UCLA, Craig Manning retires following a career of deep-Earth experiments, fieldwork, and department leadership.",
+          "link": { "label": "Read Manning", "href": "/stories/craig-manning/" }
+        },
+        {
           "id": "steve-joy",
           "image": "/assets/images/p09_02.jpg",
           "imageAlt": "Community gathering placeholder for retiree farewell.",
@@ -319,6 +330,11 @@
           "title": "Peng Ni: Exploring Planetary History",
           "body": "Peng Ni's profile moves between meteorites, lunar samples, diamonds, high-pressure experiments, and the isotope fingerprints measured by the Sapphire Lab.",
           "link": { "label": "Read Peng Ni", "href": "/stories/peng-ni/" }
+        },
+        {
+          "title": "EPSS Asteroid Family",
+          "body": "A forthcoming story about the newest additions to the EPSS Asteroid Family. Full source copy is still being recovered from the newsletter materials.",
+          "link": { "label": "Forthcoming", "href": "#research-updates" }
         },
         {
           "title": "Field / Geophysics 136C",

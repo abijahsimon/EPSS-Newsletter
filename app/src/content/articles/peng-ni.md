@@ -20,12 +20,12 @@ gallery:
     alt: "A close view of a meteorite held up during a field expedition."
     caption: "A meteorite found during the October field expedition."
   - src: "/assets/images/2026/peng-ni/meteorite-field-team.jpg"
-    alt: "A 17-person field team standing on a dry lakebed at sunset."
-    caption: "Students, faculty, and volunteers on dry lakebeds near Pahrump, Nevada."
+    alt: "Peng Ni, Amy Mainzer, and students standing with a field team on a dry lakebed at sunset."
+    caption: "Peng Ni, Professor Amy Mainzer (third from the left in the back row), and graduate students from the fall 2025 M285: Origin of the Solar System course during the meteorite-hunting expedition near Pahrump, Nevada."
   - src: "/assets/images/2026/peng-ni/sapphire-lab-team.jpg"
     alt: "Members of the Sapphire Lab standing beside the Nu Sapphire mass spectrometer."
     caption: "The Sapphire Lab at UCLA, with the Nu Sapphire mass spectrometer."
-sourceNote: "Source draft and four photos supplied by Benjamin Paul on September 8, 2026; email marked this story fully approved."
+sourceNote: "Source draft and four photos supplied by Benjamin Paul on September 8, 2026; Peng Ni confirmed that Professor Amy Mainzer is third from the left in the back row of the meteorite-hunting image and that most others pictured were EPSS graduate students from fall 2025."
 ---
 
 The first time Peng Ni had an opportunity to work with samples brought back from the Moon by the Apollo missions, he was not planning on making lunar science a major part of his career.
@@ -67,6 +67,8 @@ Ni is especially passionate about educating the next generation of geoscientists
 "One of the things that makes this department special is how dedicated it is to bringing students into the field," he said. "There is no better classroom than the natural world and I hope we can continue to grow in this area."
 
 In October, he and EPSS Professor Amy Mainzer led a 17-person group of graduate students, faculty, and volunteers onto dry lakebeds near Pahrump, Nevada, in search of meteorites. The expedition was part of a course on the origin and evolution of the solar system that combines Mainzer's background in astronomy with Ni's in geology. Students found about three meteorites apiece.
+
+In the group photograph from that expedition, Mainzer is third from the left in the back row. Most of the other people pictured were EPSS graduate students who took M285: Origin of the Solar System in fall 2025.
 
 "Thanks to California's unique geology, UCLA is perfectly positioned to offer a strong, thriving field-based teaching and research program," Ni said. "I have colleagues at East Coast universities who fly their students here for that very reason."
 
