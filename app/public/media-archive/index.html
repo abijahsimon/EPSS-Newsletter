@@ -269,8 +269,10 @@ function paint() {
   if (it.relatedStory) {
     const s = document.createElement("span");
     const a = document.createElement("a");
-    // Manifest stores DC filenames ("Article - John He.dc.html"); Vite pages are slugs ("/john-he.html").
-    a.href = "/" + it.relatedStory.replace(/^Article - /, "").replace(/\.dc\.html$/, "").trim().toLowerCase().replace(/\s+/g, "-") + ".html";
+    // Manifest stores DC filenames ("Article - John He.dc.html"); Astro serves stories at /stories/<slug>/.
+    const STORY_SLUG = { "john-he": "field-highlights" };
+    const base = it.relatedStory.replace(/^Article - /, "").replace(/\.dc\.html$/, "").trim().toLowerCase().replace(/\s+/g, "-");
+    a.href = "/stories/" + (STORY_SLUG[base] || base) + "/";
     a.textContent = "Read the story";
     a.style.color = "var(--gold)";
     s.appendChild(a);
