@@ -406,3 +406,7 @@ Before committing a content change:
 - [ ] Run `pnpm build`.
 - [ ] Confirm generated folders are not staged.
 
+
+## Building for the production subpath
+
+The Astro build now supports `NEWSLETTER_BASE=/newsletter`. Use `NEWSLETTER_BASE=/newsletter pnpm build` from `app/`; this runs the required final path rewrite for copied public files as well as Astro-generated pages. Run `NEWSLETTER_BASE=/newsletter pnpm verify:links` afterward. Default `pnpm dev` remains at `/`. See [hosting instructions](app/DEPLOYMENT.md) for mount instructions, validation, and unresolved server decisions.

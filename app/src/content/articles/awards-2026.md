@@ -58,9 +58,23 @@ The Society recognized him specifically for his contributions to short-lived rad
 
 ## Postdoctoral Fellows
 
-- Danica Adams, Chancellor's Postdoctoral Fellow. Host/advisor detail still needs confirmation if the final layout lists hosts.
-- Madeleine Kerr, Chancellor's Postdoctoral Fellow. Host/advisor detail still needs confirmation if the final layout lists hosts.
-- Samuel Yee, 51 Pegasi b Fellow. Host: Bjorn Benneke. The source packet asks whether there is a second 51 Pegasi b Fellow.
+### Danica Adams
+
+Chancellor's Postdoctoral Fellow.
+
+Studies the past habitability of planets through atmospheric chemistry, aerosol physics, climate, and surface–atmosphere interactions. She uses evidence from Mars, Venus, and exoplanets to reconstruct how planetary environments evolve. Before joining UCLA, she was a NASA Sagan Fellow at Harvard and earned her Ph.D. at Caltech.
+
+### Madeleine Kerr
+
+Chancellor's Postdoctoral Fellow.
+
+Studies how mantle convection and mineral phase transitions shape the surfaces and thermal evolution of rocky planets, particularly Earth and Venus. She earned her Ph.D. at Scripps Institution of Oceanography as a Department of Energy Computational Science Graduate Fellow and holds a B.S. in Physics and Theatre from Harvey Mudd College.
+
+### Samuel Yee
+
+51 Pegasi b Fellow. Host: Bjorn Benneke.
+
+Studies exoplanet demographics and orbital properties, particularly those of hot Jupiters. As a 51 Pegasi b Fellow, he will investigate how the statistics of planetary systems vary across the galaxy. He earned his Ph.D. at Princeton and was a postdoctoral fellow at Harvard before moving to UCLA.
 
 ## Graduate Fellowships
 
@@ -104,11 +118,15 @@ Li works in signal processing and deep learning, using convolutional neural netw
 
 ### Alana Archbold
 
-GALE Lab. Advisor: Mackenzie Day.
+GALE Lab. Advisor: Mackenzie Day. Charles F. Scott Award.
+
+Received the Charles F. Scott Award from UCLA’s Division of Graduate Education, supporting UCLA undergraduate alumni pursuing graduate degrees with the goal of a career in public service. Her research examines aeolian processes on Earth and Mars, including wind erosion and the final chapter of fluvial activity as Mars dried out.
 
 ### Jaahnavee Venkatraman
 
 Paige Group. Advisor: David Paige.
+
+Uses statistics to study the surfaces of the Moon and Mars, including what they are made of and how ice shapes them. Her dissertation focuses on lunar regolith, lunar hydrogen, and Martian araneiforms, or “spiders.”
 
 ## Undergraduate Summer Fellowships
 

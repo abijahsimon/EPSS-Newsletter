@@ -126,12 +126,7 @@
   <div class="controls" id="controls" role="group" aria-label="Filter photographs by collection"></div>
   <ul class="grid" id="grid"></ul>
 
-  <section class="held">
-    <p class="kicker">Editorial queue</p>
-    <h2>Held pending credit</h2>
-    <p class="sub">These frames are in hand and permissioned, but not published — each one is missing an attribution or a usable derivative. They appear here as a working list only; nothing renders publicly until the blocker clears.</p>
-    <ul class="queue" id="queue"></ul>
-  </section>
+
 </main>
 
 <footer class="end">
@@ -158,7 +153,6 @@ import { CATEGORIES, MEDIA_ITEMS } from "/media-archive/media-items.js";
 const isContest = i => String(i.sourceId).startsWith("photo-contest");
 const rank = i => (isContest(i) ? 0 : i.group ? 1 : 2);
 const pub = MEDIA_ITEMS.filter(i => i.published).sort((a, b) => rank(a) - rank(b) || a.sortOrder - b.sortOrder);
-const held = MEDIA_ITEMS.filter(i => !i.published).sort((a, b) => a.sortOrder - b.sortOrder);
 
 const uniq = (arr) => [...new Set(arr.filter(Boolean))];
 
@@ -221,26 +215,6 @@ function apply(cat) {
   render(cat === "all" ? pub : pub.filter(i => groupOf(i) === cat));
 }
 
-const queue = document.getElementById("queue");
-held.forEach(it => {
-  const li = document.createElement("li");
-  const t = document.createElement("span");
-  t.className = "qt";
-  t.textContent = it.title;
-  const c = document.createElement("span");
-  c.className = "qc";
-  c.textContent = it.collection;
-  const b = document.createElement("span");
-  b.className = "qb";
-  b.textContent = it.blocker
-    ? it.blocker
-    : it.permissionStatus.startsWith("blocked")
-      ? it.permissionStatus
-      : "Photographer credit pending";
-  li.append(t, c, b);
-  queue.appendChild(li);
-});
-
 const lb = document.getElementById("lb");
 let at = 0, lastFocus = null;
 
@@ -257,7 +231,7 @@ function paint() {
     ["Where", it.location],
     ["Course", it.course],
     ["When", it.date || it.season],
-    [it.mediaType === "artwork" ? "Artist" : "Photograph by", it.photographer]
+    [it.mediaType === "artwork" ? "Artist" : "Photograph by", it.mediaType === "artwork" ? it.artist : it.photographer]
   ];
   bits.filter(([, v]) => v).forEach(([k, v]) => {
     const s = document.createElement("span");
@@ -270,7 +244,7 @@ function paint() {
     const s = document.createElement("span");
     const a = document.createElement("a");
     // Manifest stores DC filenames ("Article - John He.dc.html"); Astro serves stories at /stories/<slug>/.
-    const STORY_SLUG = { "john-he": "field-highlights" };
+    const STORY_SLUG = { "john-he": "field-highlights", "art-and-science": "art-science" };
     const base = it.relatedStory.replace(/^Article - /, "").replace(/\.dc\.html$/, "").trim().toLowerCase().replace(/\s+/g, "-");
     a.href = "/stories/" + (STORY_SLUG[base] || base) + "/";
     a.textContent = "Read the story";

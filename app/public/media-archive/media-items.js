@@ -23,10 +23,10 @@ export const MEDIA_ITEMS = [
     alt: "EPSS field vehicles parked at Valley of Fire just after sunset.",
     caption: "EPSS fleet arriving at Valley of Fire just after sunset for Historical and Regional Geology, EPS 133, led by Kevin Coffey.",
     mediaType: "photograph", category: "field", collection: "EPSS 133 Historical and Regional Geology",
-    season: "", date: "", location: "Valley of Fire, Nevada", course: "EPSS 133 Historical and Regional Geology",
+    season: "Winter 2026", date: "2026-02-26", location: "Valley of Fire, Nevada", course: "EPSS 133 Historical and Regional Geology",
     relatedStory: "Article - John He.dc.html", photographer: "Juan C. Alvarado Jr.", suppliedBy: "",
     sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "confirmed",
-    seasonStatus: "conflict: source map says Winter 2026, article says Spring 2026",
+    seasonStatus: "resolved: original DOCX image EXIF is February 2026; Spring 2026 labels the newsletter collection, not this photo date",
     featuredOnHomepage: true, sortOrder: 1, published: true
   },
   {
@@ -49,10 +49,10 @@ export const MEDIA_ITEMS = [
     alt: "Students gathering at dawn near a lit field station with mountains behind them.",
     caption: "An early start at Zion National Park at dawn.",
     mediaType: "photograph", category: "field", collection: "EPSS 133 Historical and Regional Geology",
-    season: "", date: "", location: "Zion National Park, Utah", course: "EPSS 133 Historical and Regional Geology",
+    season: "Winter 2026", date: "2026-02-28", location: "Zion National Park, Utah", course: "EPSS 133 Historical and Regional Geology",
     relatedStory: "Article - John He.dc.html", photographer: "Juan C. Alvarado Jr.", suppliedBy: "",
     sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "confirmed",
-    seasonStatus: "conflict: source map says Winter 2026, article says Spring 2026",
+    seasonStatus: "resolved: original DOCX image EXIF is February 2026; Spring 2026 labels the newsletter collection, not this photo date",
     featuredOnHomepage: true, sortOrder: 3, published: true
   },
 
@@ -236,8 +236,8 @@ export const MEDIA_ITEMS = [
     caption: "Forest. Acrylic dripped from a stick, 16 × 20 inches.",
     mediaType: "artwork", category: "art", collection: "David Jewitt",
     season: "", date: "", location: "", course: "",
-    relatedStory: "", photographer: "David Jewitt", suppliedBy: "",
-    sourceId: "art-science", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
+    relatedStory: "Article - Art and Science.dc.html", photographer: "", suppliedBy: "",
+    sourceId: "art-science/Jewitt painting.pdf#page=5", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
     seasonStatus: "", featuredOnHomepage: true, sortOrder: 40, published: true
   },
   {
@@ -245,10 +245,10 @@ export const MEDIA_ITEMS = [
     src: "/assets/images/2026/art-science/jewitt-swarm-seeds.jpg",
     thumbnailSrc: "/assets/images/2026/art-science/jewitt-swarm-seeds.jpg",
     alt: "Abstract painting in the Swarm series.",
-    caption: "", mediaType: "artwork", category: "art", collection: "David Jewitt",
+    caption: "Swarm. Sun-baked tile glue, dowel, and seeds on a 16 × 20-inch wooden board.", mediaType: "artwork", category: "art", collection: "David Jewitt",
     season: "", date: "", location: "", course: "",
-    relatedStory: "", photographer: "David Jewitt", suppliedBy: "",
-    sourceId: "art-science", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
+    relatedStory: "Article - Art and Science.dc.html", photographer: "", suppliedBy: "",
+    sourceId: "art-science/Jewitt painting.pdf#page=6", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
     seasonStatus: "", featuredOnHomepage: false, sortOrder: 41, published: true
   },
   {
@@ -256,10 +256,10 @@ export const MEDIA_ITEMS = [
     src: "/assets/images/2026/art-science/jewitt-swarm-pistachios.jpg",
     thumbnailSrc: "/assets/images/2026/art-science/jewitt-swarm-pistachios.jpg",
     alt: "Abstract painting in the Swarm series.",
-    caption: "", mediaType: "artwork", category: "art", collection: "David Jewitt",
+    caption: "Swarm. Acrylic, pistachios, and epoxy, 16 × 20 inches.", mediaType: "artwork", category: "art", collection: "David Jewitt",
     season: "", date: "", location: "", course: "",
-    relatedStory: "", photographer: "David Jewitt", suppliedBy: "",
-    sourceId: "art-science", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
+    relatedStory: "Article - Art and Science.dc.html", photographer: "", suppliedBy: "",
+    sourceId: "art-science/Jewitt painting.pdf#page=4", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
     seasonStatus: "", featuredOnHomepage: false, sortOrder: 42, published: true
   },
   {
@@ -267,10 +267,10 @@ export const MEDIA_ITEMS = [
     src: "/assets/images/2026/art-science/jewitt-untitled-mosaic.jpg",
     thumbnailSrc: "/assets/images/2026/art-science/jewitt-untitled-mosaic.jpg",
     alt: "Untitled abstract mosaic painting.",
-    caption: "", mediaType: "artwork", category: "art", collection: "David Jewitt",
+    caption: "Untitled. Acrylic paints, 16 × 20 inches.", mediaType: "artwork", category: "art", collection: "David Jewitt",
     season: "", date: "", location: "", course: "",
-    relatedStory: "", photographer: "David Jewitt", suppliedBy: "",
-    sourceId: "art-science", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
+    relatedStory: "Article - Art and Science.dc.html", photographer: "", suppliedBy: "",
+    sourceId: "art-science/Jewitt painting.pdf#page=2", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
     seasonStatus: "", featuredOnHomepage: false, sortOrder: 43, published: true
   },
   {
@@ -278,10 +278,10 @@ export const MEDIA_ITEMS = [
     src: "/assets/images/2026/art-science/jewitt-untitled-orange.jpg",
     thumbnailSrc: "/assets/images/2026/art-science/jewitt-untitled-orange.jpg",
     alt: "Untitled abstract painting in oranges.",
-    caption: "", mediaType: "artwork", category: "art", collection: "David Jewitt",
+    caption: "Untitled. Tile glue, acrylic, glow-in-the-dark, squeeze tube, 48 × 60 inches.", mediaType: "artwork", category: "art", collection: "David Jewitt",
     season: "", date: "", location: "", course: "",
-    relatedStory: "", photographer: "David Jewitt", suppliedBy: "",
-    sourceId: "art-science", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
+    relatedStory: "Article - Art and Science.dc.html", photographer: "", suppliedBy: "",
+    sourceId: "art-science/Jewitt painting.pdf#page=3", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
     seasonStatus: "", featuredOnHomepage: false, sortOrder: 44, published: true
   },
   {
@@ -292,19 +292,19 @@ export const MEDIA_ITEMS = [
     caption: "Morni. Acrylics on canvas, 2007, 30 × 30 inches.",
     mediaType: "artwork", category: "art", collection: "Hilke Schlichting",
     season: "", date: "2007", location: "", course: "",
-    relatedStory: "", photographer: "Hilke Schlichting", suppliedBy: "",
-    sourceId: "art-science", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
+    relatedStory: "Article - Art and Science.dc.html", photographer: "", suppliedBy: "",
+    sourceId: "art-science/Art_and_Science_Hilke.pdf#page=4", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
     seasonStatus: "", featuredOnHomepage: false, sortOrder: 45, published: true
   },
   {
-    id: "hilke-inle", title: "High Above Inle", artist: "Hilke Schlichting",
+    id: "hilke-inle", title: "High above Inle", artist: "Hilke Schlichting",
     src: "/assets/images/2026/art-science/hilke-high-above-inle.jpg",
     thumbnailSrc: "/assets/images/2026/art-science/hilke-high-above-inle.jpg",
     alt: "Painting titled High Above Inle.",
-    caption: "", mediaType: "artwork", category: "art", collection: "Hilke Schlichting",
-    season: "", date: "", location: "", course: "",
-    relatedStory: "", photographer: "Hilke Schlichting", suppliedBy: "",
-    sourceId: "art-science", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
+    caption: "High above Inle (Myanmar). Acrylics on canvas, 2024, 16 × 12 inches.", mediaType: "artwork", category: "art", collection: "Hilke Schlichting",
+    season: "", date: "2024", location: "", course: "",
+    relatedStory: "Article - Art and Science.dc.html", photographer: "", suppliedBy: "",
+    sourceId: "art-science/Art_and_Science_Hilke.pdf#page=3", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
     seasonStatus: "", featuredOnHomepage: false, sortOrder: 46, published: true
   },
   {
@@ -312,10 +312,10 @@ export const MEDIA_ITEMS = [
     src: "/assets/images/2026/art-science/hilke-indonesia.jpg",
     thumbnailSrc: "/assets/images/2026/art-science/hilke-indonesia.jpg",
     alt: "Painting titled Indonesia.",
-    caption: "", mediaType: "artwork", category: "art", collection: "Hilke Schlichting",
-    season: "", date: "", location: "", course: "",
-    relatedStory: "", photographer: "Hilke Schlichting", suppliedBy: "",
-    sourceId: "art-science", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
+    caption: "Indonesia. Acrylics on canvas, 2025, 35 × 23.5 inches.", mediaType: "artwork", category: "art", collection: "Hilke Schlichting",
+    season: "", date: "2025", location: "", course: "",
+    relatedStory: "Article - Art and Science.dc.html", photographer: "", suppliedBy: "",
+    sourceId: "art-science/Art_and_Science_Hilke.pdf#page=2", permissionStatus: "approved", creditStatus: "artist confirmed; reproduction wording pending",
     seasonStatus: "", featuredOnHomepage: false, sortOrder: 47, published: true
   },
 
@@ -356,11 +356,11 @@ export const MEDIA_ITEMS = [
   // HELD BACK — credit unresolved, so published: false. These do not render on
   // the public page. Flip `published` to true as Codex lands each credit.
   // ============================================================================
-  { id: "peltzer-badwater", title: "Three on the salt flat", src: "/assets/images/2026/peltzer/badwater-three.jpg", thumbnailSrc: "/assets/images/2026/peltzer/badwater-three.jpg", alt: "Three people standing on the Badwater salt flat.", caption: "", mediaType: "photograph", category: "field", collection: "Gilles Peltzer field collection", season: "", date: "", location: "Badwater Basin, Death Valley, California", course: "", relatedStory: "Article - Gilles Peltzer.dc.html", photographer: "", suppliedBy: "", sourceId: "peltzer", permissionStatus: "approved", creditStatus: "pending", seasonStatus: "", featuredOnHomepage: false, sortOrder: 50, published: false },
-  { id: "peltzer-kelso", title: "Crossing the dune field", src: "/assets/images/2026/peltzer/kelso-dunes.jpg", thumbnailSrc: "/assets/images/2026/peltzer/kelso-dunes.jpg", alt: "Figures crossing the Kelso dune field.", caption: "", mediaType: "photograph", category: "field", collection: "Gilles Peltzer field collection", season: "", date: "", location: "Kelso Dunes, Mojave National Preserve, California", course: "", relatedStory: "Article - Gilles Peltzer.dc.html", photographer: "", suppliedBy: "", sourceId: "peltzer", permissionStatus: "approved", creditStatus: "pending", seasonStatus: "", featuredOnHomepage: false, sortOrder: 51, published: false },
-  { id: "balboa-poker-flat", title: "The range under winter sky", src: "/assets/images/2026/balboa/poker-flat.jpg", thumbnailSrc: "/assets/images/2026/balboa/poker-flat.jpg", alt: "Poker Flat Research Range under a winter sky.", caption: "", mediaType: "photograph", category: "research", collection: "BALBOA balloon project", season: "", date: "", location: "Poker Flat Research Range, Chatanika, Alaska", course: "", relatedStory: "Article - BALBOA.dc.html", photographer: "", suppliedBy: "", sourceId: "balboa", permissionStatus: "approved", creditStatus: "pending", seasonStatus: "", featuredOnHomepage: false, sortOrder: 60, published: false },
+  { id: "peltzer-badwater", title: "Peltzer with Mick McRivette and Ben Greenhagen", src: "/assets/images/2026/peltzer/badwater-three.jpg", thumbnailSrc: "/assets/images/2026/peltzer/badwater-three.jpg", alt: "Three people on a salt flat in Death Valley.", caption: "Gilles Peltzer with Mick McRivette (left) and Ben Greenhagen in Death Valley, 2007.", mediaType: "photograph", category: "field", collection: "Gilles Peltzer field collection", season: "", date: "", location: "Death Valley, California", course: "EPSS 262 Advanced Remote Sensing", relatedStory: "Article - Gilles Peltzer.dc.html", photographer: "", suppliedBy: "", sourceId: "peltzer_pics/IMG_1149.JPG", permissionStatus: "approved", creditStatus: "pending", seasonStatus: "", featuredOnHomepage: false, sortOrder: 50, published: false },
+  { id: "peltzer-kelso", title: "Resting on Kelso Dunes", src: "/assets/images/2026/peltzer/kelso-dunes.jpg", thumbnailSrc: "/assets/images/2026/peltzer/kelso-dunes.jpg", alt: "Three people resting on the crest of Kelso Dunes.", caption: "Resting on top of Kelso Dunes.", mediaType: "photograph", category: "field", collection: "Gilles Peltzer field collection", season: "", date: "", location: "Kelso Dunes, Mojave National Preserve, California", course: "EPSS 262 Advanced Remote Sensing", relatedStory: "Article - Gilles Peltzer.dc.html", photographer: "", suppliedBy: "", sourceId: "peltzer_pics/P3180036.JPG", permissionStatus: "approved", creditStatus: "pending", seasonStatus: "", featuredOnHomepage: false, sortOrder: 51, published: false },
+  { id: "balboa-poker-flat", title: "Auroral campaign at Poker Flat", src: "/assets/images/2026/balboa/poker-flat.jpg", thumbnailSrc: "/assets/images/2026/balboa/poker-flat.jpg", alt: "Poker Flat Research Range under a winter sky.", caption: "Auroral campaign at Poker Flat Research Range, Alaska.", mediaType: "photograph", category: "research", collection: "BALBOA balloon project", season: "", date: "", location: "Poker Flat Research Range, Chatanika, Alaska", course: "", relatedStory: "Article - BALBOA.dc.html", photographer: "", suppliedBy: "", sourceId: "The BALBOA Balloon Project_EPSS.docx:word/media/image13.jpeg", permissionStatus: "approved", creditStatus: "pending", seasonStatus: "", featuredOnHomepage: false, sortOrder: 60, published: false },
   { id: "balboa-magnetosphere", title: "Solar wind and magnetosphere", src: "/assets/images/2026/balboa/balboa-magnetosphere-diagram.png", thumbnailSrc: "/assets/images/2026/balboa/balboa-magnetosphere-diagram.png", alt: "Diagram of solar wind interacting with Earth's magnetosphere.", caption: "", mediaType: "figure", category: "research", collection: "BALBOA balloon project", season: "", date: "", location: "", course: "", relatedStory: "Article - BALBOA.dc.html", photographer: "", suppliedBy: "", sourceId: "balboa", permissionStatus: "blocked: third-party adaptation from aurorahunter.com needs clearance", creditStatus: "pending", seasonStatus: "", featuredOnHomepage: false, sortOrder: 61, published: false },
-  { id: "peng-ni-lab", title: "The sapphire-anvil lab team", src: "/assets/images/2026/peng-ni/sapphire-lab-team.jpg", thumbnailSrc: "/assets/images/2026/peng-ni/sapphire-lab-team.jpg", alt: "The sapphire-anvil lab team standing in the laboratory.", caption: "", mediaType: "photograph", category: "research", collection: "Peng Ni field and Sapphire Lab", season: "", date: "", location: "UCLA Sapphire Lab", course: "", relatedStory: "Article - Peng Ni.dc.html", photographer: "", suppliedBy: "", sourceId: "peng-ni", permissionStatus: "approved", creditStatus: "pending", seasonStatus: "", featuredOnHomepage: false, sortOrder: 70, published: false },
+  { id: "peng-ni-lab", title: "The Sapphire Lab team", src: "/assets/images/2026/peng-ni/sapphire-lab-team.jpg", thumbnailSrc: "/assets/images/2026/peng-ni/sapphire-lab-team.jpg", alt: "The Sapphire Lab team standing in the laboratory.", caption: "The Sapphire Lab at UCLA, with the Nu Sapphire mass spectrometer. From left: Hairuo Fu, Hugo Abe, Peng Ni, Aiyana Vazquez Ochoa, Lauren Tafla, and Sarina Ortiz-Stock.", mediaType: "photograph", category: "research", collection: "Peng Ni field and Sapphire Lab", season: "", date: "", location: "UCLA Sapphire Lab", course: "", relatedStory: "Article - Peng Ni.dc.html", photographer: "", suppliedBy: "Peng Ni via Benjamin Paul", sourceId: "peng-ni", permissionStatus: "approved", creditStatus: "pending", seasonStatus: "", featuredOnHomepage: false, sortOrder: 70, published: false },
   { id: "meteor-crater", title: "Meteor Crater field trip", src: "", thumbnailSrc: "", alt: "EPSS 155 students at the rim of Meteor Crater.", caption: "EPSS 155 Planetary Physics field trip to Meteor (Barringer) Crater, Arizona, 11 November 2017.", mediaType: "photograph", category: "field", collection: "Meteor Crater field trip", season: "Fall 2017", date: "2017-11-11", location: "Meteor (Barringer) Crater, Arizona", course: "EPSS 155 Planetary Physics", relatedStory: "", photographer: "Kevin McKeegan", suppliedBy: "", sourceId: "photo-contest-meteor-crater", permissionStatus: "approved", creditStatus: "confirmed", seasonStatus: "", featuredOnHomepage: false, sortOrder: 80, published: false, blocker: "no web derivative yet; supplied image is 562×309, too small for the grid" }
 ];
 

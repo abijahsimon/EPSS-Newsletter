@@ -16,10 +16,13 @@ sourceNote: "Source packet marks Emily Bisno's donor/endowment materials as avai
 
 The list below recognizes those who donated to UCLA EPSS between July 1, 2025 and June 30, 2026. Thank you for your support.
 
+Across UCLA Physical Sciences, the 2026 installation of eight endowed chairs underscored what this kind of giving makes possible: an investment in the people and ideas that drive discovery. Endowed support gives faculty the freedom to pursue ambitious research and creates opportunities for the students and researchers who work alongside them. Within EPSS, that same long-term partnership sustains field learning, undergraduate research, graduate fellowships, and the faculty who carry the department’s work forward.
+
+Read more about EPSS’s endowed-chair installations in [Building the Future of Earth Sciences](https://epss.ucla.edu/building-the-future-of-earth-sciences-epss-celebrates-the-installation-of-three-endowed-chairs/).
+
 - Alessandra and David Whitney '78
 - Alice and William Newman
 - American Chemical Society
-- Ana Vazquez
 - Andrea '72 and Joe Straus MS '69, PHD '72
 - Andrew Ungerleider
 - Arthur Mirsky Living Trust
@@ -52,6 +55,7 @@ The list below recognizes those who donated to UCLA EPSS between July 1, 2025 an
 - Eric B. Rehwoldt '85
 - Ernst W. Johnson III '70
 - Gary E. Strathearn '78, PHD '84
+- Gilles F. Peltzer
 - Gudrun and John Wasson
 - Harvard Travellers Club
 - Hedy Varga
@@ -127,6 +131,7 @@ The list below recognizes those who donated to UCLA EPSS between July 1, 2025 an
 - Wai and Li-Yu Sung MS '82, PHD '89, MS '98
 - Waverley Street Foundation
 - Willard E. Sharp '58, MA '60, PHD '64
+- Xiaoyan Zhou PhD
 - Yona and Edward Shulaker
 
 ## Endowments

@@ -57,10 +57,11 @@
 <main id="top">
   <section aria-label="Issue cover" style="position:relative;background:#101820;color:#fbfaf7;overflow:hidden">
     <div role="group" aria-roledescription="carousel" aria-label="Issue cover images" style="position:absolute;inset:0;overflow:hidden">
-      <div style="display:flex;width:300%;height:100%;transition:transform 900ms cubic-bezier(0.4,0,0.2,1);transform:translateX({{slideOffset}})">
-        <div style="width:33.3333%;height:100%"><img src="/assets/images/p10_03.jpg" alt="Joshua trees silhouetted against a pink and orange sunset in the Mojave Desert." style="width:100%;height:100%;object-fit:cover;object-position:50% 42%"></div>
-        <div style="width:33.3333%;height:100%"><img src="/assets/images/p01_01.jpg" alt="Icebergs beyond moss-covered granite outcrops on the Greenland coast." style="width:100%;height:100%;object-fit:cover;object-position:50% 38%"></div>
-        <div style="width:33.3333%;height:100%"><img src="/assets/images/p12_02.jpg" alt="A line of students walking toward red sandstone formations under a wide desert sky." style="width:100%;height:100%;object-fit:cover;object-position:50% 78%"></div>
+      <div style="display:flex;width:400%;height:100%;transition:transform 900ms cubic-bezier(0.4,0,0.2,1);transform:translateX({{slideOffset}})">
+        <div style="width:25%;height:100%"><img src="/assets/images/p10_03.jpg" alt="Joshua trees silhouetted against a pink and orange sunset in the Mojave Desert." style="width:100%;height:100%;object-fit:cover;object-position:50% 42%"></div>
+        <div style="width:25%;height:100%"><img src="/assets/images/p01_01.jpg" alt="Icebergs beyond moss-covered granite outcrops on the Greenland coast." style="width:100%;height:100%;object-fit:cover;object-position:50% 38%"></div>
+        <div style="width:25%;height:100%"><img src="/assets/images/p12_02.jpg" alt="A line of students walking toward red sandstone formations under a wide desert sky." style="width:100%;height:100%;object-fit:cover;object-position:50% 78%"></div>
+        <div style="width:25%;height:100%"><img src="/assets/images/2026/banner-candidates/tracers-spacecraft.png" alt="Artist’s concept of the two TRACERS spacecraft orbiting above Earth." style="width:100%;height:100%;object-fit:cover;object-position:65% 42%"></div>
       </div>
     </div>
     <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(16,24,32,0.82) 0%, rgba(16,24,32,0.5) 46%, rgba(16,24,32,0.12) 100%), linear-gradient(0deg, rgba(16,24,32,0.72) 0%, rgba(16,24,32,0) 58%)"></div>
@@ -72,7 +73,7 @@
           <span style="width:26px;height:1px;background:rgba(255,209,0,0.6)"></span>
           <span>2025–2026</span>
           <span style="width:26px;height:1px;background:rgba(255,209,0,0.6)"></span>
-          <span>Published September 2026</span>
+          <span>Annual issue</span>
           <span style="width:26px;height:1px;background:rgba(255,209,0,0.6)"></span>
 
         </div>
@@ -83,10 +84,10 @@
           <a href="#rimfax" style="display:inline-flex;align-items:center;height:50px;padding:0 26px;border:1px solid rgba(251,250,247,0.5);color:#fbfaf7;font-weight:600;text-decoration:none" style-hover="border-color:#fbfaf7;background:rgba(251,250,247,0.1)">Featured Stories</a>
         </div>
         <div style="display:flex;align-items:center;gap:10px;margin-top:40px">
-          <button type="button" onClick="{{togglePlay}}" aria-label="{{playLabel}}" style="width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;cursor:pointer;font-size:0.7rem" style-hover="border-color:#ffd100;color:#ffd100">{{playIcon}}</button>
-          <button type="button" onClick="{{goPrev}}" aria-label="Previous cover image" style="width:38px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;cursor:pointer" style-hover="border-color:#ffd100;color:#ffd100">‹</button>
-          <button type="button" onClick="{{goNext}}" aria-label="Next cover image" style="width:38px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;cursor:pointer" style-hover="border-color:#ffd100;color:#ffd100">›</button>
-          <span aria-live="polite" style="margin-left:8px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(251,250,247,0.66)">{{slideCaption}}</span>
+          <button type="button" onClick="{{togglePlay}}" aria-label="{{playLabel}}" style="flex-shrink:0;width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;cursor:pointer;font-size:0.7rem" style-hover="border-color:#ffd100;color:#ffd100">{{playIcon}}</button>
+          <button type="button" onClick="{{goPrev}}" aria-label="Previous cover image" style="flex-shrink:0;width:38px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;cursor:pointer" style-hover="border-color:#ffd100;color:#ffd100">‹</button>
+          <button type="button" onClick="{{goNext}}" aria-label="Next cover image" style="flex-shrink:0;width:38px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;cursor:pointer" style-hover="border-color:#ffd100;color:#ffd100">›</button>
+          <span aria-live="polite" style="min-width:0;margin-left:8px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(251,250,247,0.66)">{{slideCaption}}</span>
         </div>
       </div><aside aria-label="Note from the Chair" style="background:#fbfaf7;color:#1f2933;border-top:5px solid #ffd100;box-shadow:0 30px 70px rgba(16,24,32,0.4);flex:0 1 360px;max-width:360px;margin-left:auto">
         <figure style="margin:0;position:relative;background:#101820">
@@ -99,8 +100,8 @@
         </figure>
         <div style="padding:24px 28px 26px">
           <h2 style="margin:0 0 14px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.18rem;line-height:1.22;letter-spacing:-0.01em;color:#101820">Opening letter from the Department Chair</h2>
-          <p style="margin:0 0 14px;font-family:Newsreader,Georgia,serif;font-size:1rem;line-height:1.6;color:#3d4a55;text-wrap:pretty">The opening letter is still being finalized. Approved copy from the Department Chair will appear here once it is ready for publication.</p>
-          <p style="margin:0 0 18px;display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.14em;text-transform:uppercase;color:#54626d"><span style="width:22px;height:1px;background:#9a4a26"></span>Final copy pending</p>
+          <p style="margin:0 0 14px;font-family:Newsreader,Georgia,serif;font-size:1rem;line-height:1.6;color:#3d4a55;text-wrap:pretty">The Chair’s opening letter will appear here.</p>
+
           <p style="display:flex;align-items:center;gap:12px;margin:0;padding-top:16px;border-top:1px solid rgba(16,24,32,0.14);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#54626d">Letter forthcoming</p>
         </div>
       </aside>
@@ -162,7 +163,7 @@
         <div>
       <a href="/stories/edwin-schauble/" style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#1f2933;transition:background 140ms ease,color 140ms ease" style-hover="background:#101820;color:#fbfaf7">
         <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">09</span>
-        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">Investigating Earth's History with Isotopic Fingerprints</span>
+        <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">A Map of an Undiscovered Territory</span>
         <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Faculty</span>
       </a>
       <a href="art-and-science.html" style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);text-decoration:none;color:#1f2933;transition:background 140ms ease,color 140ms ease" style-hover="background:#101820;color:#fbfaf7">
@@ -213,13 +214,11 @@
         <p style="margin:0 0 18px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#ffd100">FEATURED RESEARCH</p>
         <h2 id="rimfax-title" style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(2.8rem,5vw,5.2rem);line-height:0.96;letter-spacing:-0.025em;text-wrap:balance">Beneath the Red Dust: radar reveals Mars' lost rivers</h2>
         <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;font-weight:300;line-height:1.5;color:rgba(251,250,247,0.86)">RIMFAX, the ground-penetrating radar riding on Perseverance, and the EPSS team reading the layers it returns from Jezero Crater.</p>
-        <p style="margin:0 0 28px;color:rgba(251,250,247,0.66)">Final article copy has not yet been supplied. This feature will explain the subsurface structures RIMFAX has revealed in Jezero Crater once the source material is received and approved.</p>
-        <div style="margin:0 0 28px;padding:0 0 0 24px;border-left:4px solid #ffd100">
-          <p style="margin:0;font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:1.7rem;line-height:1.3;color:#fbfaf7">Reported quotations will be added after the source copy is received and verified.</p>
-        </div>
+
+
         <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;padding-top:24px;border-top:1px solid rgba(251,250,247,0.2)">
           <span style="display:inline-flex;align-items:center;height:50px;padding:0 26px;border:1px dashed rgba(251,250,247,0.45);color:rgba(251,250,247,0.66);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase">Story forthcoming</span>
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(251,250,247,0.66)">Source copy pending</span>
+
         </div>
       </div>
     </div>
@@ -275,6 +274,16 @@
               </div>
             </div>
             <img src="/assets/images/2026/peng-ni/sapphire-lab-team.jpg" alt="Members of the Sapphire Lab standing beside the Nu Sapphire mass spectrometer." style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid rgba(16,24,32,0.14)">
+          </div>
+        </details>
+        <details style="background:#fbfaf7;padding:26px 28px">
+          <summary style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;cursor:pointer">
+            <span><span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26;margin-bottom:8px">EPSS Astronomy</span><span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.44rem;line-height:1.2">Meet the newest additions to the EPSS Asteroid Family</span></span>
+            <span style="color:#9a4a26;font-size:1.18rem">+</span>
+          </summary>
+          <div style="margin-top:16px;display:grid;gap:12px;color:#54626d">
+            <p style="margin:0">Four asteroids named for EPSS scientists join a larger story about UCLA's continuing contribution to astronomy.</p>
+            <a href="/stories/asteroid-family/" style="display:inline-flex;align-items:center;gap:8px;font-size:0.92rem;font-weight:600;color:#2774ae;text-decoration:none" style-hover="color:#9a4a26">Read the Asteroid Family story <span>→</span></a>
           </div>
         </details>
       </div>
@@ -339,7 +348,7 @@
       <article id="faculty-feature" style="display:flex;flex-direction:column">
         <img src="/assets/people/edwin-schauble.jpg" alt="Edwin Schauble portrait." style="width: 100%; aspect-ratio: 4/5; object-fit: cover; margin-bottom: 20px">
         <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Faculty Feature</p>
-        <h3 style="margin:0 0 12px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.7rem;line-height:1.16">Investigating Earth's History with Isotopic Fingerprints</h3>
+        <h3 style="margin:0 0 12px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.7rem;line-height:1.16">A Map of an Undiscovered Territory</h3>
         <p style="margin:0 0 16px;color:#54626d">Schauble reads Earth's history in the ratios between atoms. Here he explains how, without assuming you already know.</p>
         <a href="/stories/edwin-schauble/" style="display:flex;align-items:center;gap:12px;margin:auto 0 0;padding-top:14px;border-top:1px solid rgba(16,24,32,0.14);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#2774ae;text-decoration:none" style-hover="color:#9a4a26">Read the research feature <span>→</span></a>
       </article>
@@ -398,7 +407,7 @@
         <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#ffd100">Dispatches from the Field · Spring 2026</p>
         <h3 style="margin:0 0 14px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:2rem;line-height:1.14">Field learning in the landscape</h3>
         <p style="margin:0 0 16px;color:rgba(251,250,247,0.66)">The attached field newsletter now anchors this photo essay: EPS 133 at Valley of Fire and Zion, EPS 112 at Painted Canyon, Igneous Petrology at the Bishop Tuff and White Mountain Research Station, and field notebooks in the places where the work happens.</p>
-        <p style="margin:0 0 22px;color:rgba(251,250,247,0.66);font-size:0.92rem">The full page includes the Spring 2026 field gallery extracted from the Word source package alongside selected field highlights already staged for the issue.</p>
+        <p style="margin:0 0 22px;color:rgba(251,250,247,0.66);font-size:0.92rem">Explore the Spring 2026 field gallery and selected highlights from across the EPSS field program.</p>
         <a href="/stories/field-highlights/" style="display:inline-flex;align-items:center;height:46px;padding:0 24px;background:#ffd100;color:#101820;font-weight:600;text-decoration:none">Read the dispatch →</a>
       </div>
       <aside style="border-top:4px solid #ffd100;background:rgba(251,250,247,0.06);padding:26px 28px;align-self:start">
@@ -442,7 +451,7 @@
           <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Danica Adams</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">Chancellor’s Postdoctoral Fellow</span></li>
           <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Madeleine Kerr</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">Chancellor’s Postdoctoral Fellow</span></li>
           <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Samuel Yee</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">51 Pegasi b Fellow · Host: Bjorn Benneke</span></li>
-          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Undergraduate Summer Fellows</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">Departmental award · recipients pending</span></li>
+          <li style="padding-bottom:10px;border-bottom:1px solid rgba(16,24,32,0.1)"><strong style="display:block;font-weight:600;font-size:0.92rem;line-height:1.25">Undergraduate Summer Fellows</strong><span style="display:block;margin-top:3px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;line-height:1.4;letter-spacing:0.1em;text-transform:uppercase;color:#9a4a26">Departmental award · details forthcoming</span></li>
         </ul>
       </div>
 <div style="min-width:0">
@@ -529,9 +538,11 @@
             </a>
           </li>
           <li style="padding:18px 0;border-top:1px solid rgba(16,24,32,0.14);border-bottom:1px solid rgba(16,24,32,0.14)">
-            <span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2rem;line-height:1.08;letter-spacing:-0.015em;margin-bottom:5px">Craig Manning</span>
+            <a href="/stories/craig-manning/" style="display:block;text-decoration:none;color:inherit" style-hover="color:#9a4a26">
+              <span style="display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2rem;line-height:1.08;letter-spacing:-0.015em;margin-bottom:5px">Craig Manning</span>
               <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#9a4a26;margin-bottom:7px">Water in the deep Earth</span>
-              <span style="display:block;font-size:0.92rem;line-height:1.5;color:#54626d">A geologist and geochemist who spent his career on what water does under pressure — how minerals dissolve in the lower crust and upper mantle, and the chemistry of subduction-zone fluids. Department chair from 2008 to 2012, and elected to the National Academy of Sciences in 2026. <em style="font-style:normal;color:#9a4a26">Placeholder — statement pending.</em></span>
+              <span style="display:block;font-size:0.92rem;line-height:1.5;color:#54626d">A geologist and geochemist who spent his career on what water does under pressure — how minerals dissolve in the lower crust and upper mantle, and the chemistry of subduction-zone fluids. Department chair from 2008 to 2012, and elected to the National Academy of Sciences in 2026. Read the story →</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -574,15 +585,11 @@
             <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#ffd100">Stay in the loop</p>
             <h3 style="margin:0 0 10px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.7rem;line-height:1.2">Get next year’s issue in your inbox</h3>
             <p style="margin:0 0 20px;font-size:0.92rem;color:rgba(251,250,247,0.66)">One email a year, the day the issue goes live. Nothing else, ever.</p>
-            <sc-if value="{{subscribed}}" hint-placeholder-val="{{ false }}">
-              <p style="margin:0;padding:16px 18px;background:rgba(255,209,0,0.14);border:1px solid #ffd100;color:#ffd100;font-weight:600">You’re on the list. See you next issue.</p>
-            </sc-if>
-            <sc-if value="{{notSubscribed}}" hint-placeholder-val="{{ true }}">
-              <form onSubmit="{{subscribe}}" style="display:flex;flex-direction:column;gap:10px">
-                <input type="email" required="" placeholder="you@example.edu" aria-label="Email address" style="height:50px;padding:0 16px;background:transparent;border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;outline:none" style-focus="border-color:#ffd100" />
-                <button type="submit" style="height:50px;background:#ffd100;color:#101820;border:0;font-weight:600;cursor:pointer" style-hover="background:#fbfaf7">Subscribe</button>
-              </form>
-            </sc-if>
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdxHOapQE4PyLw1cWn21Cc1p6TkT8t3OXO5Ws8KT_5SIj7dnA/formResponse" method="post" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:10px">
+              <input type="email" name="entry.759936291" required="" autocomplete="email" maxlength="254" placeholder="you@example.edu" aria-label="Email address" aria-describedby="signup-confirmation-note" style="height:50px;padding:0 16px;background:transparent;border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;outline:none" style-focus="border-color:#ffd100" />
+              <button type="submit" style="height:50px;background:#ffd100;color:#101820;border:0;font-weight:600;cursor:pointer" style-hover="background:#fbfaf7">Subscribe</button>
+              <p id="signup-confirmation-note" style="margin:0;font-size:0.8rem;line-height:1.5;color:rgba(251,250,247,0.66)">Your signup confirmation opens in a new tab.</p>
+            </form>
           </div>
           </sc-if>
           <div style="padding-top:20px;border-top:1px solid rgba(251,250,247,0.22)">
@@ -596,7 +603,7 @@
 
   <sc-if value="{{showArchive}}" hint-placeholder-val="{{ true }}">
   <section aria-labelledby="archive-title" style="padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px);background:#fbfaf7">
-    <div style="display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:28px">
+    <div style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px 32px;margin-bottom:28px">
       <div>
         <h2 id="archive-title" style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:2rem;letter-spacing:-0.01em">Past issues</h2>
         <p style="margin:6px 0 0;font-size:0.92rem;color:#54626d">Forty-eight issues, 1967 to 2025 — the department as Geology, then Earth &amp; Space Sciences, then EPSS.</p>
@@ -644,7 +651,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;heroAutoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;showArchive&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;showSignup&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;}}">
 class Component extends DCLogic {
-  state = { slide: 0, subscribed: false, folio: null, playing: true, archiveExpanded: false };
+  state = { slide: 0, folio: null, playing: true, archiveExpanded: false };
 
   prefersReducedMotion() {
     return typeof window !== "undefined" &&
@@ -655,7 +662,7 @@ class Component extends DCLogic {
   startAutoplay() {
     clearInterval(this.timer);
     this.timer = setInterval(() => {
-      this.setState((s) => ({ slide: (s.slide + 1) % 3 }));
+      this.setState((s) => ({ slide: (s.slide + 1) % this.captions.length }));
     }, 7000);
   }
 
@@ -708,11 +715,12 @@ class Component extends DCLogic {
     this.onFolioScroll();
   }
 
-  // Must stay in step with the three hero <img> alt texts.
+  // Keep captions in the same order as the cover images above.
   captions = [
     "Joshua trees at sunset, Mojave Desert",
     "Icebergs off the Greenland coast",
     "Valley of Fire, Nevada",
+    "TRACERS above Earth (artist’s concept) · NASA SVS",
   ];
 
   componentDidMount() {
@@ -733,7 +741,7 @@ class Component extends DCLogic {
 
   step(dir) {
     clearInterval(this.timer);
-    this.setState((s) => ({ slide: (s.slide + dir + 3) % 3, playing: false }));
+    this.setState((s) => ({ slide: (s.slide + dir + this.captions.length) % this.captions.length, playing: false }));
   }
 
   togglePlay() {
@@ -749,7 +757,7 @@ class Component extends DCLogic {
   renderVals() {
     const i = this.state.slide;
     return {
-      slideOffset: `-${i * 33.3333}%`,
+      slideOffset: `-${i * (100 / this.captions.length)}%`,
       folioNum: this.state.folio ? this.state.folio.num : "",
       folioName: this.state.folio ? this.state.folio.name : "",
       folioOpacity: this.state.folio ? 1 : 0,
@@ -762,18 +770,12 @@ class Component extends DCLogic {
       toggleArchive: this.toggleArchive,
       showArchive: this.props.showArchive ?? true,
       showSignup: this.props.showSignup ?? true,
-      slideCaption: `${String(i + 1).padStart(2, "0")} / 03 · ${this.captions[i]}`,
+      slideCaption: `${String(i + 1).padStart(2, "0")} / ${String(this.captions.length).padStart(2, "0")} · ${this.captions[i]}`,
       togglePlay: () => this.togglePlay(),
       playIcon: this.state.playing ? "❙❙" : "▶",
       playLabel: this.state.playing ? "Pause cover images" : "Play cover images",
       goPrev: () => this.step(-1),
       goNext: () => this.step(1),
-      subscribed: this.state.subscribed,
-      notSubscribed: !this.state.subscribed,
-      subscribe: (e) => {
-        e.preventDefault();
-        this.setState({ subscribed: true });
-      },
       share: (e) => {
         const id = e.currentTarget.dataset.anchor;
         const url = `${location.origin}${location.pathname}#${id}`;

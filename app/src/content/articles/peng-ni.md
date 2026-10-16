@@ -24,7 +24,7 @@ gallery:
     caption: "Peng Ni, Professor Amy Mainzer (third from the left in the back row), and graduate students from the fall 2025 M285: Origin of the Solar System course during the meteorite-hunting expedition near Pahrump, Nevada."
   - src: "/assets/images/2026/peng-ni/sapphire-lab-team.jpg"
     alt: "Members of the Sapphire Lab standing beside the Nu Sapphire mass spectrometer."
-    caption: "The Sapphire Lab at UCLA, with the Nu Sapphire mass spectrometer."
+    caption: "The Sapphire Lab at UCLA, with the Nu Sapphire mass spectrometer. From left: Hairuo Fu, Hugo Abe, Peng Ni, Aiyana Vazquez Ochoa, Lauren Tafla, and Sarina Ortiz-Stock."
 sourceNote: "Source draft and four photos supplied by Benjamin Paul on September 8, 2026; Peng Ni confirmed that Professor Amy Mainzer is third from the left in the back row of the meteorite-hunting image and that most others pictured were EPSS graduate students from fall 2025."
 ---
 

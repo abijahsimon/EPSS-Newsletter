@@ -74,7 +74,7 @@
         { "label": "BALBOA: Photographing the Aurora in Daylight", "href": "/stories/balboa/" },
         { "label": "Exploring Planetary History With Peng Ni", "href": "/stories/peng-ni/" },
         { "label": "Lizzie Su on Life in EPSS", "href": "/stories/lizzie-su/" },
-        { "label": "Investigating Earth's History with Isotopic Fingerprints", "href": "/stories/edwin-schauble/" },
+        { "label": "A Map of an Undiscovered Territory", "href": "/stories/edwin-schauble/" },
         { "label": "When the Evidence Stops Fitting", "href": "/stories/allen-glazner/" },
         { "label": "Art & Science: Two Scientists Who Paint", "href": "/stories/art-science/" },
         { "label": "Honors, Fellowships, and Recognition", "href": "/stories/awards-2026/" },
@@ -333,8 +333,8 @@
         },
         {
           "title": "EPSS Asteroid Family",
-          "body": "A forthcoming story about the newest additions to the EPSS Asteroid Family. Full source copy is still being recovered from the newsletter materials.",
-          "link": { "label": "Forthcoming", "href": "#research-updates" }
+          "body": "Four asteroids named for EPSS scientists join a larger story about UCLA's continuing contribution to astronomy.",
+          "link": { "label": "Read the Asteroid Family story", "href": "/stories/asteroid-family/" }
         },
         {
           "title": "Field / Geophysics 136C",
@@ -391,7 +391,7 @@
       "title": "Still to resolve before launch.",
       "items": [
         "Media pass: Field, Peltzer, and Commencement lead selections are now confirmed. Commencement-day photo credit is confirmed; detailed Field and Peltzer credits still need review.",
-        "True source blockers: John He/iCloud, RIMFAX, Craig Manning, Suburban full copy, undergraduate summer fellowships, award host details, and Chair note location.",
+        "True source blockers: John He/iCloud, RIMFAX, Suburban full copy, undergraduate summer fellowships, award host details, and Chair note location. Craig Manning's source package is now available; final gallery review and editorial approval remain.",
         "Review pass: remove or approve any preview-only deks, unsourced pull quotes, and public-facing status language before final launch."
       ]
     },

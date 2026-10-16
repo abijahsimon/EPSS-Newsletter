@@ -4,7 +4,7 @@ issue: 2026
 slug: edwin-schauble
 status: published
 category: Faculty Feature
-title: Investigating Earth's History with Isotopic Fingerprints
+title: A Map of an Undiscovered Territory
 variant: standard
 dek: "Edwin Schauble's theoretical work helps scientists understand what newly measurable isotope variations can tell us about the natural world."
 byline: "Benjamin Paul, UCLA Division of Physical Sciences"
