@@ -43,3 +43,9 @@ The public media archive is copied from `public/media-archive/`; its directory-i
 - Publish only `dist/`, not the source repository or internal planning files.
 
 October 16 validation: root and `/newsletter` builds each passed the 260-local-URL check across 20 HTML files; path regression tests and Astro check passed. Browser tests covered navigation, article galleries, both archives, and the poster redirect at `/newsletter/`. These are local tests, not confirmation of production DNS, server configuration, security approval, or editorial release approval.
+
+## EPSS repository and build pipeline
+
+The maintained EPSS repository is `ucla-earth-planetary-and-space-sciences/newsletter`, branch `main`. GitHub Actions validates both root and `/newsletter` configurations on pushes and pull requests to `main`, with manual dispatch available. Each successful run uploads `newsletter-static-root` and `newsletter-static-subpath` artifacts, retained for seven days.
+
+Use the artifact matching the agreed hosting mount. VM deployment and production cutover require the server endpoint, access method, document root or container configuration, and an agreed freeze/release window from the hosting owner. The validation workflow does not contain server credentials or an automatic production deployment step.
