@@ -48,4 +48,4 @@ October 16 validation: root and `/newsletter` builds each passed the 260-local-U
 
 The maintained EPSS repository is `ucla-earth-planetary-and-space-sciences/newsletter`, branch `main`. GitHub Actions validates both root and `/newsletter` configurations on pushes and pull requests to `main`, with manual dispatch available. Each successful run uploads `newsletter-static-root` and `newsletter-static-subpath` artifacts, retained for seven days.
 
-Use the artifact matching the agreed hosting mount. VM deployment and production cutover require the server endpoint, access method, document root or container configuration, and an agreed freeze/release window from the hosting owner. The validation workflow does not contain server credentials or an automatic production deployment step.
+Use the artifact matching the agreed hosting mount for ad-hoc review. Production hosting is the Docker stack on `epssdocker03` (faculty WordPress host), deployed via root-owned `/opt/newsletter/bin/deploy` the same way epssapps uses `/opt/epssapps/bin/deploy`. See repository-root [`DEPLOY.md`](../DEPLOY.md).

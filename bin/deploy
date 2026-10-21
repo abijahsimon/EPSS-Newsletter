@@ -1,0 +1,177 @@
+#!/bin/bash
+# Deploy the latest main branch of the newsletter site on this host.
+#
+# Run as root (uses docker compose against /opt/newsletter/docker-prod/.env
+# which is mode 600 root-owned). Mirror of epssapps' /opt/epssapps/bin/deploy:
+# the GitHub Actions runner only has NOPASSWD for this script and never runs
+# docker compose itself.
+#
+# Typical use:
+#   sudo /opt/newsletter/bin/deploy
+#
+# What it does:
+#   1. repair dirty checkout (if any), then sync to origin/main
+#   2. docker compose build --pull
+#   3. docker compose up -d (honours COMPOSE_PROFILES / --profile from .env)
+#   4. wait for container health + local /healthz
+#   5. optional Host-header / public smoke (see SMOKE_* in .env)
+#
+# Exits non-zero on any failure so a CI runner can fail loudly.
+set -euo pipefail
+
+if [ "$(id -u)" -ne 0 ]; then
+  echo "Re-running with sudo..."
+  exec sudo "$0" "$@"
+fi
+
+REPO=/opt/newsletter
+COMPOSE_DIR="$REPO/docker-prod"
+cd "$REPO"
+
+log() { printf '[deploy %s] %s\n' "$(date +%H:%M:%S)" "$*"; }
+
+# ---------------------------------------------------------------- 1. pull
+# This checkout is a deploy mirror, not a working tree for edits.
+repair_deploy_checkout() {
+  local porcelain
+  porcelain=$(git status --porcelain 2>/dev/null || true)
+  if [ -z "$porcelain" ]; then
+    return 0
+  fi
+  log "WARN: dirty deploy checkout; resetting before sync:"
+  printf '%s\n' "$porcelain" | head -n 40 >&2
+  git reset --hard HEAD
+  git clean -fd \
+    -e 'docker-prod/.env' \
+    -e 'docker-prod/.env.*' \
+    -e '**/node_modules' \
+    >/dev/null || true
+}
+
+log "Fetching origin/main..."
+git fetch --quiet origin main
+repair_deploy_checkout
+LOCAL=$(git rev-parse HEAD)
+REMOTE=$(git rev-parse origin/main)
+
+if [ "$LOCAL" = "$REMOTE" ]; then
+  log "Already at $LOCAL — rebuilding/restarting to pick up host .env / compose state."
+else
+  log "$LOCAL -> $REMOTE"
+  if ! git merge --ff-only --quiet origin/main; then
+    log "WARN: ff-only merge failed; hard-resetting to origin/main"
+    git reset --hard origin/main
+  fi
+  # bash already has this file in memory. Re-exec so an updated bin/deploy runs.
+  log "Re-executing updated bin/deploy..."
+  exec "$REPO/bin/deploy" "$@"
+fi
+
+if [ ! -f "$COMPOSE_DIR/.env" ]; then
+  log "ERROR: $COMPOSE_DIR/.env missing. Copy .env.example and fill values (see DEPLOY.md)."
+  exit 1
+fi
+
+# Export compose .env for interpolation (COMPOSE_PROFILES, ports, image tag).
+set -a
+# shellcheck disable=SC1091
+source "$COMPOSE_DIR/.env"
+set +a
+
+cd "$COMPOSE_DIR"
+
+# Optional host hooks (sudoers install is one-time; this is idempotent).
+if [ -x host/install.sh ]; then
+  log "Running host/install.sh (idempotent)..."
+  host/install.sh >/dev/null
+fi
+
+# ---------------------------------------------------------------- 2. build + roll
+log "Building newsletter image (--pull)..."
+docker compose --env-file ./.env build --pull
+
+log "Rolling newsletter stack..."
+# COMPOSE_PROFILES in .env can include "traefik" after discovery clears :80/:443.
+docker compose --env-file ./.env up -d --remove-orphans
+
+log "docker compose ps:"
+docker compose --env-file ./.env ps || true
+
+# ---------------------------------------------------------------- 3. health
+DEPLOY_HEALTH_WAIT="${DEPLOY_HEALTH_WAIT:-90}"
+HOST_PORT="${NEWSLETTER_HOST_PORT:-8088}"
+HEALTH_URL="http://127.0.0.1:${HOST_PORT}/healthz"
+
+log "Waiting up to ${DEPLOY_HEALTH_WAIT}s for ${HEALTH_URL}..."
+deadline=$((SECONDS + DEPLOY_HEALTH_WAIT))
+ok=0
+while [ "$SECONDS" -lt "$deadline" ]; do
+  status="$(docker compose --env-file ./.env ps --format '{{.Service}} {{.Status}}' 2>/dev/null \
+    | awk '$1 == "newsletter" { $1=""; sub(/^ /,""); print; exit }')"
+  case "${status:-}" in
+    Restarting*|Exit*|Dead*|Created*|"")
+      sleep 2
+      continue
+      ;;
+  esac
+  if curl -fsS --connect-timeout 3 --max-time 8 "$HEALTH_URL" 2>/dev/null | grep -qx ok; then
+    ok=1
+    break
+  fi
+  sleep 2
+done
+
+if [ "$ok" -ne 1 ]; then
+  log "ERROR: health check failed for $HEALTH_URL"
+  docker compose --env-file ./.env logs --no-color --tail 40 newsletter || true
+  exit 1
+fi
+log "Local health OK: $HEALTH_URL"
+
+# ---------------------------------------------------------------- 4. smoke (pre-DNS by default)
+# Never hit the public Squarespace name unless explicitly opted in.
+SMOKE_HOST_HEADER="${SMOKE_HOST_HEADER:-newsletter.epss.ucla.edu}"
+SMOKE_TARGET="${SMOKE_TARGET:-http://127.0.0.1:${HOST_PORT}/}"
+SMOKE_PUBLIC="${SMOKE_PUBLIC:-0}"
+
+log "Host-header smoke: Host=${SMOKE_HOST_HEADER} → ${SMOKE_TARGET}"
+code="$(curl -fsS --connect-timeout 5 --max-time 15 \
+  -H "Host: ${SMOKE_HOST_HEADER}" \
+  -o /tmp/newsletter-smoke-body \
+  -w '%{http_code}' \
+  "${SMOKE_TARGET}" || true)"
+if [ "${code}" != "200" ]; then
+  log "ERROR: Host-header smoke returned HTTP ${code:-curl-failed}"
+  exit 1
+fi
+if grep -qi 'squarespace' /tmp/newsletter-smoke-body; then
+  log "ERROR: response looks like Squarespace — wrong upstream"
+  exit 1
+fi
+log "Host-header smoke OK"
+
+if [ "${SMOKE_PUBLIC}" = "1" ]; then
+  PUBLIC_URL="${NEWSLETTER_PUBLIC_URL:-https://newsletter.epss.ucla.edu/}"
+  log "Public smoke (opt-in): ${PUBLIC_URL}"
+  pcode="$(curl -fsS --connect-timeout 8 --max-time 30 \
+    -o /tmp/newsletter-smoke-public \
+    -w '%{http_code}' \
+    "${PUBLIC_URL}" || true)"
+  if [ "${pcode}" != "200" ]; then
+    log "ERROR: public URL returned HTTP ${pcode:-curl-failed}"
+    exit 1
+  fi
+  if grep -qi 'squarespace' /tmp/newsletter-smoke-public; then
+    log "ERROR: ${PUBLIC_URL} still looks like Squarespace — DNS not cut over yet"
+    exit 1
+  fi
+  log "Public smoke OK"
+else
+  log "Skipping public URL smoke (SMOKE_PUBLIC!=1). DNS cutover is a separate final step."
+fi
+
+# ---------------------------------------------------------------- 5. hygiene
+log "Pruning dangling docker images..."
+docker image prune -f >/dev/null || log "WARN: docker image prune failed"
+
+log "Deployed $(git -C "$REPO" rev-parse --short HEAD)"

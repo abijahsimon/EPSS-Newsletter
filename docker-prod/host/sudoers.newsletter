@@ -1,0 +1,6 @@
+# Install on epssdocker03 as /etc/sudoers.d/newsletter (mode 0440).
+# Runner user may invoke ONLY the root-owned deploy script (epssapps pattern).
+# Replace RUNNER_USER with the GitHub Actions runner OS account (often "runner"
+# or "github-runner" — confirm with `ps aux | grep Runner.Listener`).
+
+RUNNER_USER ALL=(root) NOPASSWD: /opt/newsletter/bin/deploy

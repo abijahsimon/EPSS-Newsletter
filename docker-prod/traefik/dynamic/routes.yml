@@ -1,0 +1,42 @@
+# Traefik file-provider routes for newsletter (epssapps-style).
+# Used only when the compose `traefik` profile is enabled.
+#
+# IMPORTANT: Do not replace this file with a stub that contains only `tls: {}`
+# — that breaks Traefik. Always keep real routers/services and real cert paths.
+
+http:
+  routers:
+    newsletter-http:
+      rule: "Host(`newsletter.epss.ucla.edu`)"
+      entryPoints:
+        - web
+      middlewares:
+        - newsletter-https-redirect
+      service: newsletter
+
+    newsletter-https:
+      rule: "Host(`newsletter.epss.ucla.edu`)"
+      entryPoints:
+        - websecure
+      service: newsletter
+      tls:
+        # Select the certificate declared below (SNI). Not an ACME resolver.
+        domains:
+          - main: newsletter.epss.ucla.edu
+
+  middlewares:
+    newsletter-https-redirect:
+      redirectScheme:
+        scheme: https
+        permanent: true
+
+  services:
+    newsletter:
+      loadBalancer:
+        servers:
+          - url: "http://newsletter:8080"
+
+tls:
+  certificates:
+    - certFile: /etc/letsencrypt/live/newsletter.epss.ucla.edu/fullchain.pem
+      keyFile: /etc/letsencrypt/live/newsletter.epss.ucla.edu/privkey.pem

@@ -1,0 +1,21 @@
+name: Deploy newsletter
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+concurrency:
+  # Per-workflow group (epssapps pattern): pending runs queue, do not cancel.
+  group: deploy-${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # Mirror epssapps (`[self-hosted, epssdocker]`) with a host-specific label.
+    runs-on: [self-hosted, epssdocker03]
+    timeout-minutes: 20
+    steps:
+      - name: Deploy newsletter
+        # Runner has NOPASSWD only for this root-owned script — never docker compose.
+        run: sudo /opt/newsletter/bin/deploy

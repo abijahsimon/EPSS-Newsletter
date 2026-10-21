@@ -1,0 +1,87 @@
+# Newsletter static site on epssdocker03 (faculty WordPress host, 128.97.5.81).
+#
+# Conventions mirror epssapps/docker-prod:
+#   - Traefik uses the *file* provider only (no docker.sock labels, no ACME).
+#   - TLS PEMs live under /etc/letsencrypt (synced from cert.epss by netadmin).
+#   - App container never binds host :80/:443 — WordPress keeps those unless
+#     Daniel explicitly enables the optional Traefik profile after discovery.
+#
+# Profiles:
+#   (default)     newsletter only, published on 127.0.0.1:NEWSLETTER_HOST_PORT
+#   --profile traefik   also start Traefik v3.5 on :80/:443 (greenfield / free ports)
+
+name: newsletter
+
+x-restart: &restart
+  restart: unless-stopped
+
+x-logging: &logging
+  logging:
+    driver: json-file
+    options:
+      max-size: 20m
+      max-file: "5"
+
+x-security: &security
+  security_opt:
+    - no-new-privileges:true
+
+services:
+  newsletter:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: ${NEWSLETTER_IMAGE:-newsletter:prod}
+    <<: [*restart, *logging, *security]
+    ports:
+      # Loopback only — existing Apache/nginx (or Host-header tests) forward here.
+      # Traefik (profile) reaches the service over the `web` network, not this bind.
+      - "127.0.0.1:${NEWSLETTER_HOST_PORT:-8088}:8080"
+    networks:
+      - web
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8080/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  # Optional. Enable only when discovery shows 80/443 are free (no WordPress
+  # reverse proxy already owning them). File provider + mounted CertiNext PEMs.
+  traefik:
+    profiles: ["traefik"]
+    image: traefik:v3.5
+    <<: [*restart, *logging, *security]
+    command:
+      - --providers.file.directory=/etc/traefik/dynamic
+      - --providers.file.watch=true
+      - --entrypoints.web.address=:80
+      - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      - --entrypoints.web.http.redirections.entrypoint.scheme=https
+      - --entrypoints.web.http.redirections.entrypoint.permanent=true
+      - --entrypoints.websecure.address=:443
+      - --entrypoints.websecure.http.tls=true
+      - --api.dashboard=false
+      - --log.level=INFO
+      - --accesslog=true
+      - --ping=true
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./traefik/dynamic:/etc/traefik/dynamic:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    networks:
+      - web
+    depends_on:
+      - newsletter
+    healthcheck:
+      test: ["CMD", "traefik", "healthcheck", "--ping"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+networks:
+  web:
+    driver: bridge
