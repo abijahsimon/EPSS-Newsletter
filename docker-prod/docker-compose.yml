@@ -1,14 +1,17 @@
 # Newsletter static site on epssdocker03 (faculty WordPress host, 128.97.5.81).
 #
-# Conventions mirror epssapps/docker-prod:
-#   - Traefik uses the *file* provider only (no docker.sock labels, no ACME).
-#   - TLS PEMs live under /etc/letsencrypt (synced from cert.epss by netadmin).
-#   - App container never binds host :80/:443 — WordPress keeps those unless
-#     Daniel explicitly enables the optional Traefik profile after discovery.
+# Primary edge: faculty-web Apache (container faculty-web-1) on network
+# NEWSLETTER_PROXY_NETWORK (default faculty_default), same pattern as print.
+# Newsletter joins that network with alias `newsletter` so the vhost can
+# ProxyPass to http://newsletter:8080/.
 #
-# Profiles:
-#   (default)     newsletter only, published on 127.0.0.1:NEWSLETTER_HOST_PORT
-#   --profile traefik   also start Traefik v3.5 on :80/:443 (greenfield / free ports)
+# Also published on 127.0.0.1:NEWSLETTER_HOST_PORT for local smoke tests.
+#
+# Optional profile `traefik`: Traefik v3.5 on the internal `web` network only
+# (reaches newsletter as http://newsletter:8080). Do not enable on epssdocker03
+# while faculty-web owns :80/:443. The external faculty network is still
+# required by default — create it or set NEWSLETTER_PROXY_NETWORK if testing
+# Traefik elsewhere (see DEPLOY.md).
 
 name: newsletter
 
@@ -34,11 +37,13 @@ services:
     image: ${NEWSLETTER_IMAGE:-newsletter:prod}
     <<: [*restart, *logging, *security]
     ports:
-      # Loopback only — existing Apache/nginx (or Host-header tests) forward here.
-      # Traefik (profile) reaches the service over the `web` network, not this bind.
+      # Loopback smoke / Host-header tests (faculty-web uses Docker DNS, not this).
       - "127.0.0.1:${NEWSLETTER_HOST_PORT:-8088}:8080"
     networks:
-      - web
+      web:
+      proxy:
+        aliases:
+          - newsletter
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8080/healthz"]
       interval: 30s
@@ -46,8 +51,8 @@ services:
       retries: 3
       start_period: 15s
 
-  # Optional. Enable only when discovery shows 80/443 are free (no WordPress
-  # reverse proxy already owning them). File provider + mounted CertiNext PEMs.
+  # Optional / non-default on epssdocker03. File provider + CertiNext PEMs.
+  # Talks to newsletter over `web` only; does not use the faculty proxy network.
   traefik:
     profiles: ["traefik"]
     image: traefik:v3.5
@@ -85,3 +90,7 @@ services:
 networks:
   web:
     driver: bridge
+  # Faculty compose bridge (faculty-web-1 + print, etc.). Must already exist.
+  proxy:
+    external: true
+    name: ${NEWSLETTER_PROXY_NETWORK:-faculty_default}

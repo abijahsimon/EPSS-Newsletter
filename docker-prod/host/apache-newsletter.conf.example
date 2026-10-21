@@ -1,24 +1,19 @@
-# Optional: Apache vhost on epssdocker03 when WordPress already owns :80/:443.
-# Proxy only newsletter.epss.ucla.edu → loopback newsletter container.
-# Install after CertiNext PEMs exist under /etc/letsencrypt/live/...
-#
-#   sudo cp apache-newsletter.conf.example /etc/apache2/sites-available/newsletter.conf
-#   # edit paths if needed
-#   sudo a2ensite newsletter
-#   sudo a2enmod proxy proxy_http headers ssl
-#   sudo apache2ctl configtest && sudo systemctl reload apache2
+# Legacy host-Apache example (not the epssdocker03 path).
+# On epssdocker03, use apache-faculty-web/newsletter.epss.ucla.edu.conf instead
+# (vhosts live in /opt/faculty/apache/sites-enabled inside faculty-web-1).
 
 <VirtualHost *:80>
     ServerName newsletter.epss.ucla.edu
-    Redirect permanent / https://newsletter.epss.ucla.edu/
+    RewriteEngine On
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [R=301,L]
 </VirtualHost>
 
 <VirtualHost *:443>
     ServerName newsletter.epss.ucla.edu
 
     SSLEngine on
-    SSLCertificateFile      /etc/letsencrypt/live/newsletter.epss.ucla.edu/fullchain.pem
-    SSLCertificateKeyFile   /etc/letsencrypt/live/newsletter.epss.ucla.edu/privkey.pem
+    SSLCertificateFile      /etc/letsencrypt/live/newsletter.epss.ucla.edu.cert/fullchain.pem
+    SSLCertificateKeyFile   /etc/letsencrypt/live/newsletter.epss.ucla.edu.cert/privkey.pem
 
     ProxyPreserveHost On
     ProxyPass        / http://127.0.0.1:8088/

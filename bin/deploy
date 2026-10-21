@@ -86,12 +86,24 @@ if [ -x host/install.sh ]; then
   host/install.sh >/dev/null
 fi
 
+# External faculty-web network (default faculty_default) must already exist.
+PROXY_NET="${NEWSLETTER_PROXY_NETWORK:-faculty_default}"
+if ! docker network inspect "$PROXY_NET" >/dev/null 2>&1; then
+  log "ERROR: Docker network '${PROXY_NET}' does not exist."
+  log "faculty-web Apache reaches newsletter as http://newsletter:8080/ on that network"
+  log "(same pattern as print). Start the faculty compose stack first, or create the"
+  log "network, or set NEWSLETTER_PROXY_NETWORK in docker-prod/.env to the correct name."
+  log "See DEPLOY.md § faculty-web."
+  exit 1
+fi
+log "Proxy network OK: ${PROXY_NET}"
+
 # ---------------------------------------------------------------- 2. build + roll
 log "Building newsletter image (--pull)..."
 docker compose --env-file ./.env build --pull
 
 log "Rolling newsletter stack..."
-# COMPOSE_PROFILES in .env can include "traefik" after discovery clears :80/:443.
+# COMPOSE_PROFILES in .env can include "traefik" (not used on epssdocker03).
 docker compose --env-file ./.env up -d --remove-orphans
 
 log "docker compose ps:"

@@ -38,5 +38,6 @@ http:
 
 tls:
   certificates:
-    - certFile: /etc/letsencrypt/live/newsletter.epss.ucla.edu/fullchain.pem
-      keyFile: /etc/letsencrypt/live/newsletter.epss.ucla.edu/privkey.pem
+    # CertiNext lineages on EPSS hosts use the `<fqdn>.cert` directory name.
+    - certFile: /etc/letsencrypt/live/newsletter.epss.ucla.edu.cert/fullchain.pem
+      keyFile: /etc/letsencrypt/live/newsletter.epss.ucla.edu.cert/privkey.pem
