@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { margin: 0; background: #55606b; }
+  * { box-sizing: border-box; }
+  img { display: block; max-width: 100%; }
+</style>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</helmet>
+
+<!-- ============================================================
+     EPSS NEWSLETTER REBRAND POSTCARD — SIDE A (image side)
+     Artboard 9.25 x 6.25 in  =  6 x 9 in trim + 0.125 in bleed
+       Trim edge    0.125 in inset from artboard edge
+       Safe margin  0.375 in inset  (content sits at 0.5 in)
+
+     LAYOUT: split front. Type on a solid ink field at left;
+     photograph as a full-height panel bleeding off the right.
+     WHY: the newsletter's photo library tops out near 1100 px on
+     the long edge. Full-bleed across 9.25 in would print at about
+     120 dpi. Confined to a 4.1 in panel the same file lands near
+     175 dpi — a visible improvement, and the split composition is
+     stronger than type floating over a scrim. Swap in a 300 dpi
+     original (2775 px wide) and this layout still holds.
+
+     No QR on this side by design — Side A earns the turn-over.
+     Official lockup: assets/brand/epss-lockup-white.svg
+       = UCLA_Uxd_Wht_EarthPlanetarySpaceSci_C from the EPSS bundle
+     ============================================================ -->
+
+<div style="position:relative;width:9.25in;height:6.25in;overflow:hidden;background:#101820;display:flex;font-family:'IBM Plex Sans',ui-sans-serif,system-ui,sans-serif">
+
+  <!-- ============ TYPE FIELD ============ -->
+  <div style="width:5.15in;flex:0 0 auto;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:0.5in 0.34in 0.46in 0.5in">
+
+    <!-- masthead: official reversed lockup + the newsletter wordmark -->
+    <div>
+      <img src="assets/brand/epss-lockup-white.svg"
+           alt="UCLA College Physical Sciences — Earth, Planetary &amp; Space Sciences"
+           style="width:2.75in">
+      <div style="margin-top:7pt;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:15pt;letter-spacing:0.185em;color:#fbfaf7">NEWSLETTER</div>
+    </div>
+
+    <!-- inside-this-issue: three reasons to scan -->
+    <div style="margin-top:0.42in">
+      <div style="margin-bottom:9pt;font-family:'IBM Plex Mono',monospace;font-size:6.5pt;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:rgba(251,250,247,0.5)">Inside this issue</div>
+      <div style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:12pt;line-height:1.62;color:rgba(251,250,247,0.82)">
+        <div style="display:flex;align-items:baseline;gap:9pt"><span style="flex:0 0 auto;width:13pt;height:0.6pt;background:#ffd100;transform:translateY(-3pt)"></span><span>Radar reveals Mars&rsquo; lost rivers</span></div>
+        <div style="display:flex;align-items:baseline;gap:9pt"><span style="flex:0 0 auto;width:13pt;height:0.6pt;background:#ffd100;transform:translateY(-3pt)"></span><span>Three new endowed chairs</span></div>
+        <div style="display:flex;align-items:baseline;gap:9pt"><span style="flex:0 0 auto;width:13pt;height:0.6pt;background:#ffd100;transform:translateY(-3pt)"></span><span>Celebrating the Class of 2026</span></div>
+      </div>
+    </div>
+
+    <div>
+      <!-- mono eyebrow with hairline rules — the issue's signature device -->
+      <div style="display:flex;align-items:center;gap:9pt;margin-top:4pt;margin-bottom:15pt;font-family:'IBM Plex Mono',monospace;font-size:7pt;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#ffd100">
+        <span style="width:18pt;height:0.6pt;background:rgba(255,209,0,0.6)"></span>
+        <span>2025&ndash;2026</span>
+        <span style="width:18pt;height:0.6pt;background:rgba(255,209,0,0.6)"></span>
+        <span>Published September 2026</span>
+      </div>
+
+      <h1 style="margin:0 0 14pt;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:46pt;line-height:0.98;letter-spacing:-0.022em;color:#fbfaf7">Our newsletter has a new home.</h1>
+
+      <p style="margin:0;max-width:3.5in;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:13.5pt;line-height:1.42;color:rgba(251,250,247,0.9)">A year of discovery, fieldwork, mentorship, and remembrance &mdash; from Earth and beyond.</p>
+
+      <!-- turn-over cue: quiet, gold, unmissable -->
+      <div style="display:flex;align-items:center;gap:9pt;margin-top:24pt;font-family:'IBM Plex Mono',monospace;font-size:7pt;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#ffd100">
+        <span>Please turn over</span>
+        <span style="width:30pt;height:0.6pt;background:#ffd100"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============ PHOTO PANEL — bleeds off top, right, bottom ============ -->
+  <div style="flex:1;position:relative;overflow:hidden">
+    <img src="assets/images/p10_03.jpg"
+         alt="Joshua trees silhouetted against a pink and orange sunset in the Mojave Desert."
+         style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%">
+    <!-- gradient seam: dissolves the hard edge back into the ink field -->
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(16,24,32,0.92) 0%, rgba(16,24,32,0.35) 14%, rgba(16,24,32,0) 34%)"></div>
+    <!-- gold hairline: the issue's accent, holding the seam -->
+    <div style="position:absolute;left:0;top:0;bottom:0;width:1.2pt;background:#ffd100;opacity:0.85"></div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

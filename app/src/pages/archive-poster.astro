@@ -1,0 +1,25 @@
+---
+const pdfPath = "/downloads/epss-newsletter-archive-poster.pdf";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content={`0;url=${pdfPath}`} />
+    <title>EPSS Newsletter Archive Poster</title>
+    <meta
+      name="description"
+      content="A printable poster of UCLA EPSS newsletter covers from 1967 through 2026."
+    />
+    <script is:inline define:vars={{ pdfPath }}>
+      window.location.replace(pdfPath);
+    </script>
+  </head>
+  <body>
+    <p>
+      <a href={pdfPath}>Open or download the EPSS newsletter archive poster PDF.</a>
+    </p>
+  </body>
+</html>

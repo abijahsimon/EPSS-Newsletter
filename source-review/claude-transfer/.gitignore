@@ -1,0 +1,10 @@
+*.zip
+design-assets/*.jpg
+design-assets/*.jpeg
+design-assets/*.png
+newsletter-covers/*.jpg
+newsletter-covers/*.jpeg
+newsletter-covers/*.png
+!design-assets/README.md
+!newsletter-covers/README.md
+!newsletter-covers/newsletter-covers-manifest.csv

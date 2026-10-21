@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { margin: 0; background: #55606b; }
+  * { box-sizing: border-box; }
+  img { display: block; max-width: 100%; }
+</style>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</helmet>
+
+<!-- ============================================================
+     EPSS NEWSLETTER REBRAND POSTCARD — SIDE B (address side)
+     Artboard 9.25 x 6.25 in  =  6 x 9 in trim + 0.125 in bleed
+
+     ZONES (measured from artboard edges, bleed included)
+       Trim            0.125 in inset
+       Safe margin     0.375 in inset  (content sits at 0.5 in)
+       LEFT HALF       message · scan module · paper promise · signature
+       RIGHT HALF      return address only. Left clear for the mail house:
+                         · indicia / permit imprint   top right
+                         · recipient address block    center right
+                         · USPS barcode clear zone     bottom 0.625 in
+
+     TEXT FLOOR: body copy is 11.5 pt on 16.5 pt. Never below 11 pt.
+     Gold #FFD100 is never used as text — only as a field behind ink.
+     Official lockup: assets/brand/epss-lockup-black.svg
+       = UCLA_Uxd_Blk_EarthPlanetarySpaceSci_C from the EPSS brand bundle
+     ============================================================ -->
+
+<div style="position:relative;width:9.25in;height:6.25in;overflow:hidden;background:#fbfaf7;color:#1f2933;font-family:'IBM Plex Sans',ui-sans-serif,system-ui,sans-serif">
+
+  <div style="position:absolute;inset:0;display:flex;padding:0.5in 0.5in 0.46in">
+
+    <!-- ================= LEFT HALF — the message ================= -->
+    <div style="width:4.15in;display:flex;flex-direction:column">
+
+      <div style="display:flex;align-items:center;gap:9pt;margin-bottom:12pt;font-family:'IBM Plex Mono',monospace;font-size:7pt;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">
+        <span style="width:20pt;height:0.6pt;background:rgba(154,74,38,0.5)"></span>
+        <span>What&rsquo;s changed</span>
+      </div>
+
+      <h2 style="margin:0 0 10pt;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:25pt;line-height:1.1;letter-spacing:-0.014em;color:#101820">The newsletter is now digital.</h2>
+
+      <p style="margin:0 0 8pt;max-width:3.95in;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:11.5pt;line-height:1.44">For decades this arrived as a printed booklet. Beginning with the 2025&ndash;2026 issue, it lives online &mdash; no page limit, photographs in full color, and room for far more of our students, alumni, and faculty than paper ever allowed.</p>
+
+      <p style="margin:0 0 12pt;max-width:3.95in;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:11.5pt;line-height:1.44">What hasn&rsquo;t changed: it&rsquo;s still annual, still edited here in the department, still the newsletter you&rsquo;ve read for years.</p>
+
+      <!-- ---------- scan module ---------- -->
+      <div style="display:flex;align-items:flex-start;gap:14pt;padding-top:10pt;border-top:0.6pt solid rgba(16,24,32,0.16)">
+        <img src="assets/qr-newsletter.svg"
+             alt="QR code linking to epss.ucla.edu/newsletter"
+             style="width:1.45in;height:1.45in;flex:0 0 auto">
+        <div style="padding-top:2pt">
+          <div style="margin-bottom:7pt;font-family:'IBM Plex Mono',monospace;font-size:7pt;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">Scan or visit</div>
+          <div style="margin-bottom:6pt;font-size:11.5pt;font-weight:600;letter-spacing:0.002em;color:#101820">epss.ucla.edu/newsletter</div>
+          <p style="margin:0;max-width:2.2in;font-size:8.5pt;line-height:1.36;color:#54626d">Point your phone&rsquo;s camera at the square &mdash; no app needed. Or type the address into any web browser.</p>
+        </div>
+      </div>
+
+      <!-- ---------- the paper promise ---------- -->
+      <div style="margin-top:11pt;padding:8pt 11pt;background:#efe7d6">
+        <p style="margin:0;font-size:9.5pt;line-height:1.4;color:#1f2933"><strong style="font-weight:600">Prefer paper?</strong> Call (310) 825-3880 or email info@epss.ucla.edu and we will mail you a printed copy of this issue.</p>
+      </div>
+
+      <!-- ---------- signature ---------- -->
+      <div style="margin-top:auto;padding-top:8pt">
+        <div style="font-family:Newsreader,Georgia,serif;font-size:13pt;color:#101820">Jonathan Aurnou</div>
+        <div style="margin-top:3pt;font-size:8.5pt;letter-spacing:0.01em;color:#54626d">Department Chair, Earth, Planetary &amp; Space Sciences</div>
+      </div>
+
+    </div>
+
+    <!-- ================= divider ================= -->
+    <div style="width:0.35in;display:flex;justify-content:center">
+      <div style="width:0.6pt;height:100%;background:rgba(16,24,32,0.14)"></div>
+    </div>
+
+    <!-- ============ RIGHT HALF — mail house territory ============ -->
+    <div style="flex:1;display:flex;flex-direction:column">
+
+      <img src="assets/brand/epss-lockup-black.svg"
+           alt="UCLA College Physical Sciences — Earth, Planetary &amp; Space Sciences"
+           style="width:2.6in">
+      <div style="margin-top:6pt;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:11pt;letter-spacing:0.185em;color:#101820">NEWSLETTER</div>
+
+      <div style="margin-top:11pt;font-size:8pt;line-height:1.5;color:#54626d">
+        Department of Earth, Planetary, and Space Sciences<br>
+        University of California, Los Angeles<br>
+        595 Charles Young Drive East, Box 951567<br>
+        Los Angeles, CA 90095-1567
+      </div>
+
+      <!-- recipient address block: intentionally clear -->
+      <!-- barcode clear zone: bottom 0.625 in, intentionally clear -->
+
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>
