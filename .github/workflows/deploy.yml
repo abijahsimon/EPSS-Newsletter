@@ -12,8 +12,8 @@ concurrency:
 
 jobs:
   deploy:
-    # Mirror epssapps (`[self-hosted, epssdocker]`) with a host-specific label.
-    runs-on: [self-hosted, epssdocker]
+    # Runs on the repo's self-hosted runner on epssdocker03
+    runs-on: [self-hosted]
     timeout-minutes: 20
     steps:
       - name: Deploy newsletter
