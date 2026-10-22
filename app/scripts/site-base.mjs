@@ -18,7 +18,7 @@ export function rewriteSitePaths(source, base) {
     .replace(/((?:\bsrc|"src")\s*:\s*")assets\//g, '$1/assets/')
     // Only known site-owned roots: do not touch external URLs, protocol-relative
     // URLs, fragments, or the '/' string used to join a dynamic story URL.
-    .replace(/(["'`])\/(assets\/|stories\/|media-archive(?:\/|(?=["'`]))|downloads\/|epss-through-deep-time\/|archive-poster\/|support\.js|covers-data\.js|doc-page\.js)/g,
+    .replace(/(["'`])\/(assets\/|stories\/|media-archive(?:\/|(?=["'`]))|downloads\/|epss-through-deep-time\/|archive-poster\/|support\.js|analytics\.js|covers-data\.js|doc-page\.js)/g,
       (_, quote, path) => `${quote}${base}/${path}`)
     .replace(/(\b(?:href|src|action)\s*=\s*["'])\/(?=[#"'])/g, `$1${base}/`)
     .replace(/url\(\/(assets\/)/g, `url(${base}/$1`);
