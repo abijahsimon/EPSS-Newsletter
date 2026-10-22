@@ -185,13 +185,6 @@
           "variant": "decision-card"
         },
         {
-          "id": "journal-covers",
-          "category": "Research Gallery",
-          "title": "Journal Covers",
-          "summary": "A gallery of EPSS research on journal covers is forthcoming.",
-          "variant": "decision-card"
-        },
-        {
           "id": "student-feature",
           "category": "Student Feature",
           "title": "Lizzie Su on Life in EPSS",
