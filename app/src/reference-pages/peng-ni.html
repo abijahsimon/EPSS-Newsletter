@@ -54,7 +54,7 @@
         <p style="margin:0;font-weight:600">By Benjamin Paul</p>
         <p style="margin:0;font-size:0.82rem;color:#54626d">UCLA Division of Physical Sciences · 7 min read</p>
       </div>
-      <button type="button" onClick="{{share}}" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-size:0.82rem;font-weight:600;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
+      <button type="button" onClick="{{share}}" aria-live="polite" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-size:0.82rem;font-weight:600;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
     </div>
   </div>
 
@@ -252,12 +252,16 @@ class Component extends DCLogic {
       prevPhoto: () => this.step(-1),
       nextPhoto: () => this.step(1),
       progress: `${(this.state.progress * 100).toFixed(1)}%`,
-      share: (e) => {
-        if (navigator.clipboard) navigator.clipboard.writeText(location.href);
+      share: async (e) => {
         const el = e.currentTarget;
         const original = el.textContent;
-        el.textContent = "Link copied";
-        setTimeout(() => { el.textContent = original; }, 1600);
+        try {
+          await navigator.clipboard.writeText(location.href);
+          el.textContent = "Link copied";
+        } catch {
+          el.textContent = "Copy the link from your address bar";
+        }
+        setTimeout(() => { el.textContent = original; }, 2200);
       },
     };
   }

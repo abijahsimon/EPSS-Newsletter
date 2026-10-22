@@ -6,9 +6,10 @@ interface Props {
   title: string;
   description: string;
   image?: string;
+  noindex?: boolean;
 }
 
-const { title, description, image } = Astro.props;
+const { title, description, image, noindex } = Astro.props;
 ---
 
 <!doctype html>
@@ -17,7 +18,7 @@ const { title, description, image } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <SiteMetadata title={title} description={description} image={image} />
+    <SiteMetadata title={title} description={description} image={image} noindex={noindex} />
     <link rel="icon" href="/assets/brand/epss-department-logo.svg" type="image/svg+xml" />
   </head>
   <body>

@@ -82,6 +82,20 @@ body = body.replaceAll(
   'src="{{ lightboxSrc }}"',
   `src="${transparentPixel}" data-lightbox-src="{{ lightboxSrc }}"`,
 );
+
+// Keep the first content image eager. Preserve all selected images and crops.
+let firstContentImage = true;
+body = body.replace(/<img\b[^>]*>/gi, (tag) => {
+  if (!/src="\/assets\//.test(tag) || /src="\/assets\/brand\//.test(tag)) return tag;
+  const isLead = firstContentImage;
+  firstContentImage = false;
+  const attributes = [
+    !/\bdecoding=/.test(tag) ? 'decoding="async"' : "",
+    !/\bloading=/.test(tag) ? `loading="${isLead ? "eager" : "lazy"}"` : "",
+    isLead && !/\bfetchpriority=/.test(tag) ? 'fetchpriority="high"' : "",
+  ].filter(Boolean).join(" ");
+  return tag.replace(/<img\b/, `<img ${attributes}`);
+});
 ---
 
 <!doctype html>
@@ -95,6 +109,7 @@ body = body.replaceAll(
     <script is:inline src="/support.js"></script>
   </head>
   <body>
+    <noscript><p style="padding:1rem;background:#fbfaf7;color:#101820">This newsletter uses JavaScript for its interactive layout. Please enable JavaScript, or <a href="https://epss.ucla.edu/department-newsletters/">browse the newsletter PDFs</a>.</p></noscript>
     <Fragment set:html={body} />
     <script>
       import "../scripts/dialog-focus";

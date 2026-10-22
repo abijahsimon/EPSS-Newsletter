@@ -61,7 +61,7 @@
         <p style="margin:0;font-weight:600">Dave Bercovici</p>
         <p style="margin:0;font-size:0.82rem;color:#54626d">Yale University · ESS PhD 1989 · September 2025</p>
       </div>
-      <button type="button" onClick="{{share}}" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-size:0.82rem;font-weight:600;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
+      <button type="button" onClick="{{share}}" aria-live="polite" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-size:0.82rem;font-weight:600;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
     </div>
 
     <p style="margin:0 0 26px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;font-weight:400;line-height:1.65;color:#101820">It’s with a heavy heart that I write to report on the passing of my friend and mentor, Gerald “Jerry” Schubert, on August 31, 2025, at the age of 86. He was one of the fathers of modern geodynamics and planetary physics writ large. Entering the geosciences in the 1960s — at the dawn of both space exploration and the plate tectonic revolution — he brought the tools of engineering physics to bear on a myriad of problems in geophysics, planetary physics, and astrophysics.</p>
@@ -137,12 +137,16 @@ class Component extends DCLogic {
   renderVals() {
     return {
       progress: `${(this.state.progress * 100).toFixed(1)}%`,
-      share: (e) => {
-        if (navigator.clipboard) navigator.clipboard.writeText(location.href);
+      share: async (e) => {
         const el = e.currentTarget;
         const original = el.textContent;
-        el.textContent = "Link copied";
-        setTimeout(() => { el.textContent = original; }, 1600);
+        try {
+          await navigator.clipboard.writeText(location.href);
+          el.textContent = "Link copied";
+        } catch {
+          el.textContent = "Copy the link from your address bar";
+        }
+        setTimeout(() => { el.textContent = original; }, 2200);
       },
     };
   }

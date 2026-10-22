@@ -3,15 +3,17 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  noindex?: boolean;
 }
 
-const { title, description, image = "/assets/images/2026/hero/postcard-mountain-fieldwork.jpg" } = Astro.props;
+const { title, description, image = "/assets/images/2026/hero/postcard-mountain-fieldwork.jpg", noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const shareImage = new URL(image.startsWith("/") ? `${base}${image}` : image, Astro.site);
 ---
 
 <link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex" />}
 {description && <meta name="description" content={description} />}
 <meta property="og:site_name" content="UCLA EPSS Newsletter" />
 <meta property="og:type" content={Astro.url.pathname.includes("/stories/") ? "article" : "website"} />

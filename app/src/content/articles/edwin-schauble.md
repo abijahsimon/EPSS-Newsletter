@@ -11,7 +11,7 @@ byline: "Benjamin Paul, UCLA Division of Physical Sciences"
 readTime: "5 min read"
 heroImage: "/assets/people/edwin-schauble.jpg"
 heroImageAlt: "Edwin Schauble portrait."
-sourceNote: "Source draft supplied by Benjamin Paul on September 8, 2026; email noted approval was still pending."
+sourceNote: "Source draft supplied by Benjamin Paul on September 8, 2026; profile approved per the current launch tracker. Abijah selected the title and replacement portrait."
 ---
 
 Tiny differences between atoms can preserve evidence of processes that unfolded millions or even billions of years ago. The challenge is figuring out how to read them.

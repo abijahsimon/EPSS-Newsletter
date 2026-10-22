@@ -9,14 +9,14 @@
     "alt": "UCLA Earth, Planetary & Space Sciences"
   },
   "navigation": [
-    { "label": "Contents", "href": "#contents" },
+    { "label": "Contents", "href": "#guide" },
     { "label": "Feature", "href": "#rimfax" },
-    { "label": "Research", "href": "#research-updates" },
-    { "label": "Endowed Chairs", "href": "#giving" },
+    { "label": "Research", "href": "#research" },
+    { "label": "Endowed Chairs", "href": "#endowed-chairs" },
     { "label": "Community", "href": "#community" },
-    { "label": "Field", "href": "#field-trips" },
+    { "label": "Field", "href": "#field" },
     { "label": "Awards", "href": "#awards" },
-    { "label": "Farewells", "href": "#community" },
+    { "label": "Farewells", "href": "#memoriam" },
     { "label": "Give", "href": "#giving" },
     { "label": "Media Archive", "href": "/media-archive/" }
   ],
@@ -48,19 +48,10 @@
     "dek": "Welcome to our new annual newsletter, rebuilt digitally.",
     "summary": "2025-2026 from Earth and Beyond: A year of discovery, fieldwork, mentorship, remembrance, and Bruin science.",
     "actions": [
-      {
-        "label": "Explore This Issue",
-        "href": "#contents"
-      },
-      {
-        "label": "Featured Stories",
-        "href": "#features"
-      }
+      { "label": "Explore This Issue", "href": "#guide" },
+      { "label": "Featured Stories", "href": "#rimfax" }
     ],
-    "supportCta": {
-      "label": "Give to EPSS",
-      "href": "https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O"
-    },
+    "supportCta": { "label": "Give to EPSS", "href": "https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" },
     "meta": {
       "eyebrow": "Note from the Chair",
       "title": "Jon Aurnou",
@@ -93,7 +84,7 @@
         { "label": "Craig Manning Retirement", "href": "/stories/craig-manning/" },
         { "label": "RIMFAX", "href": "#rimfax" },
         { "label": "Field Highlights", "href": "/stories/field-highlights/" },
-        { "label": "Past Newsletter Archive", "href": "#archive" },
+        { "label": "Past Newsletter Archive", "href": "#archive-title" },
         { "label": "Chair's Note", "href": "#chairs-note" }
       ]
     },
@@ -214,7 +205,7 @@
       "id": "field-trips",
       "kicker": "Dispatches from the Field",
       "title": "Learning in the landscape.",
-      "intro": "A Spring 2026 photo essay from EPSS field trips through Valley of Fire, Zion, Painted Canyon, Bishop Tuff, White Mountain Research Station, dunes, folded strata, and rocky outcrops.",
+      "intro": "A photo essay from the Spring 2026 field newsletter, including winter and spring trips, from EPSS field trips through Valley of Fire, Zion, Painted Canyon, Bishop Tuff, White Mountain Research Station, dunes, folded strata, and rocky outcrops.",
       "link": { "label": "Read the field dispatch", "href": "/stories/field-highlights/" },
       "images": [
         {
@@ -267,33 +258,6 @@
           "title": "Craig Manning",
           "summary": "After 36 years at UCLA, Craig Manning retires following a career of deep-Earth experiments, fieldwork, and department leadership.",
           "link": { "label": "Read Manning", "href": "/stories/craig-manning/" }
-        },
-        {
-          "id": "steve-joy",
-          "image": "/assets/images/p09_02.jpg",
-          "imageAlt": "Community gathering placeholder for retiree farewell.",
-          "category": "Farewell",
-          "title": "Steve Joy",
-          "summary": "From Galileo to Europa Clipper: four decades of planetary mission science at UCLA.",
-          "link": { "label": "Read Steve Joy", "href": "/stories/steve-joy/" }
-        },
-        {
-          "id": "peter-chi",
-          "image": "/assets/images/p09_02.jpg",
-          "imageAlt": "Community gathering placeholder for retiree farewell.",
-          "category": "Farewell",
-          "title": "Peter Chi",
-          "summary": "Peter Chi reflects on leaving UCLA, parenting, space science, and continued service.",
-          "link": { "label": "Read Peter Chi", "href": "/stories/peter-chi/" }
-        },
-        {
-          "id": "memorials",
-          "image": "/assets/images/p08_08.jpg",
-          "imageAlt": "Flowers used as a memorial placeholder.",
-          "category": "In Memoriam",
-          "title": "Memorials and Obituaries",
-          "summary": "Remembering Gerald Schubert and colleagues whose lives shaped the department.",
-          "link": { "label": "Read Schubert", "href": "/stories/gerald-schubert/" }
         },
         {
           "id": "faculty-feature",
@@ -358,10 +322,7 @@
           "category": "Awards",
           "title": "Honors and Recognition",
           "summary": "Faculty honors, graduate fellowships, dissertation awards, and student recognition from the year.",
-          "link": {
-            "label": "Read Awards",
-            "href": "/stories/awards-2026/"
-          }
+          "link": { "label": "Read Awards", "href": "/stories/awards-2026/" }
         },
         {
           "id": "commencement",
@@ -371,10 +332,7 @@
           "category": "Commencement",
           "title": "Celebrating the Class",
           "summary": "Graduates, families, and faculty gather at the Geology Building to celebrate the Class of 2026.",
-          "link": {
-            "label": "Read Commencement",
-            "href": "/stories/commencement-2026/"
-          }
+          "link": { "label": "Read Commencement", "href": "/stories/commencement-2026/" }
         },
         {
           "id": "giving",
@@ -383,22 +341,8 @@
           "category": "Giving",
           "title": "Donors and Endowments",
           "summary": "Celebrating the donors and endowed funds that make research, teaching, and field learning possible.",
-          "link": {
-            "label": "Read Donors",
-            "href": "/stories/donors-endowments/"
-          }
+          "link": { "label": "Read Donors", "href": "/stories/donors-endowments/" }
         }
-      ]
-    },
-    {
-      "type": "notes",
-      "id": "editorial-status",
-      "kicker": "Editorial Status",
-      "title": "Still to resolve before launch.",
-      "items": [
-        "Media pass: Field, Peltzer, and Commencement lead selections are now confirmed. Commencement-day photo credit is confirmed; detailed Field and Peltzer credits still need review.",
-        "True source blockers: John He/iCloud, RIMFAX, Suburban full copy, undergraduate summer fellowships, award host details, and Chair note location. Craig Manning's source package is now available; final gallery review and editorial approval remain.",
-        "Review pass: remove or approve any preview-only deks, unsourced pull quotes, and public-facing status language before final launch."
       ]
     },
     {

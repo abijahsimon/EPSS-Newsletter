@@ -49,16 +49,7 @@ gallery:
   - src: "/assets/images/2026/field-spring-2026/desert-ridge-class.jpg"
     alt: "Students gathered along a desert ridge beneath a blue sky."
     caption: "Students working across a desert outcrop during a field course."
-  - src: "/assets/images/2026/field-highlights/img-6960.jpg"
-    alt: "EPSS field trip participants gathering around exposed folded rock layers."
-    caption: "One of the previously selected field highlights from the 2026 EPSS photo archive."
-  - src: "/assets/images/2026/field-highlights/img-6980.jpg"
-    alt: "EPSS field trip participants walking across a broad desert dune beneath a cloudy sky."
-    caption: "One of the previously selected field highlights from the 2026 EPSS photo archive."
-  - src: "/assets/images/2026/field-highlights/img-5056.jpg"
-    alt: "Purple and yellow wildflowers spread across a rocky Death Valley landscape."
-    caption: "One of the previously selected field highlights from the 2026 EPSS photo archive."
-sourceNote: "Source text and twelve media files came from the attached Word document, Field newsletter, Spring 2026.docx. Three previously selected field highlights remain included; individual photographer credits are optional for internal casual snapshots; do not infer authorship from the supplier."
+sourceNote: "Source text and twelve media files came from the attached Word document, Field newsletter, Spring 2026.docx. The rendered article contains these twelve images; older staged image files are preserved in assets. Individual photographer credits are optional for internal casual snapshots; do not infer authorship from the supplier."
 ---
 
 Dear friends, colleagues, and the EPSS community,
@@ -73,6 +64,6 @@ This spring's field moments included Historical and Regional Geology at Valley o
 
 Keeping this tradition strong is something we do together, and we hope to continue sharing these adventures with you in future dispatches.
 
-The gallery below combines the newly extracted Spring 2026 field newsletter images with a small set of previously selected EPSS field highlights that were already staged for this issue.
+The gallery contains twelve photographs from the Spring 2026 field newsletter, including winter and spring trips.
 
 [Browse the complete field photo archive in UCLA Box](https://ucla.app.box.com/folder/400260548483). Access may require a UCLA Box sign-in.

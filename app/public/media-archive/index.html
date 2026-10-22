@@ -69,6 +69,7 @@
   .controls button:hover { color: var(--ink); }
   .controls button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
   .grid { columns: 3 300px; column-gap: 10px; margin: 0; padding: 0; list-style: none; }
+  #gallery-status:empty { display: none; }
   .grid > li { break-inside: avoid; margin: 0 0 10px; }
   .tile { position: relative; display: block; width: 100%; padding: 0; background: var(--night); border: 0; overflow: hidden; cursor: zoom-in; }
   .tile img { width: 100%; height: auto; transition: transform 0.5s ease, opacity 0.3s; }
@@ -88,7 +89,7 @@
   .queue .qc { font: 500 0.68rem/1.5 "IBM Plex Mono", monospace; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
   .queue .qb { font-size: 0.82rem; line-height: 1.45; color: var(--clay); text-wrap: pretty; }
   .lb { position: fixed; inset: 0; z-index: 90; display: none; place-items: center; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; border: 0; padding: clamp(16px,4vw,48px); background: rgba(6,11,18,0.94); }
-  .lb[open] { display: grid; }
+  .lb[open] { display: grid; overflow-y: auto; }
   .lb figure { margin: 0; max-width: min(1100px,100%); }
   .lb img { max-height: 72vh; width: auto; margin: 0 auto; }
   .lb figcaption { margin-top: 16px; max-width: 78ch; }
@@ -133,6 +134,8 @@
 </section>
 
 <main class="wrap" style="padding-top:14px">
+  <noscript><p>Enable JavaScript to browse the photographs, or <a href="/">return to the newsletter</a>.</p></noscript>
+  <p id="gallery-status" role="status">Loading photographs…</p>
   <div class="controls" id="controls" role="group" aria-label="Filter photographs by collection"></div>
   <ul class="grid" id="grid"></ul>
 
@@ -158,9 +161,15 @@
 </dialog>
 
 <script type="module">
-import { CATEGORIES, MEDIA_ITEMS } from "/media-archive/media-items.js";
+let CATEGORIES, MEDIA_ITEMS;
+try {
+  ({ CATEGORIES, MEDIA_ITEMS } = await import("/media-archive/media-items.js"));
+} catch {
+  document.getElementById("gallery-status").textContent = "The photographs couldn’t load. Please reload the page or return to the newsletter.";
+  throw new Error("Photo archive data unavailable");
+}
 
-const isContest = i => String(i.sourceId).startsWith("photo-contest");
+const isContest = i => i.contest;
 const rank = i => (isContest(i) ? 0 : i.group ? 1 : 2);
 const pub = MEDIA_ITEMS.filter(i => i.published).sort((a, b) => rank(a) - rank(b) || a.sortOrder - b.sortOrder);
 
@@ -193,6 +202,7 @@ function label(id) {
 
 function render(items) {
   shown = items;
+  document.getElementById("gallery-status").textContent = items.length ? "" : "No photographs in this collection.";
   grid.innerHTML = "";
   items.forEach((it, idx) => {
     const li = document.createElement("li");
@@ -203,6 +213,7 @@ function render(items) {
     img.src = it.thumbnailSrc || it.src;
     img.alt = it.alt;
     img.loading = idx < 6 ? "eager" : "lazy";
+    img.decoding = "async";
     const ov = document.createElement("span");
     ov.className = "ov";
     const c = document.createElement("span");

@@ -771,14 +771,18 @@ class Component extends DCLogic {
       playLabel: this.state.playing ? "Pause cover images" : "Play cover images",
       goPrev: () => this.step(-1),
       goNext: () => this.step(1),
-      share: (e) => {
+      share: async (e) => {
         const id = e.currentTarget.dataset.anchor;
         const url = `${location.origin}${location.pathname}#${id}`;
-        if (navigator.clipboard) navigator.clipboard.writeText(url);
         const el = e.currentTarget;
         const original = el.textContent;
-        el.textContent = "Link copied";
-        setTimeout(() => { el.textContent = original; }, 1600);
+        try {
+          await navigator.clipboard.writeText(url);
+          el.textContent = "Link copied";
+        } catch {
+          el.textContent = "Copy the link from your address bar";
+        }
+        setTimeout(() => { el.textContent = original; }, 2200);
       },
     };
   }

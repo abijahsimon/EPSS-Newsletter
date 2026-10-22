@@ -6,12 +6,12 @@ status: published
 category: "Commencement"
 title: "Celebrating the Class of 2026"
 variant: standard
-dek: "Sixty-five degrees conferred, thirteen summer field scholarships, and a group photograph on the steps of the Geology building."
+dek: "Celebrating the Class of 2026, with thirteen summer field scholarships and a group photograph on the steps of the Geology Building."
 byline: "Sunday, June 14, 2026"
 readTime: "8 min read"
 heroImage: "/assets/images/2026/commencement/commencement-class-2026-geology-building.jpg"
 heroImageAlt: "EPSS Class of 2026 graduates and faculty tossing caps outside the Geology Building."
-sourceNote: "DSC08208.jpg is the approved lead image. Nanette confirmed the commencement-day photo credit: Valeria Jaramillo Hernandez and Zachary Lacson; Zachary Lacson is from the orders team. The degree count, selected caption details, and one scholarship fund name conflict still need final confirmation before launch. DSC08207.jpg and DSC08147.jpg are optional backups but are not present in the local media set."
+sourceNote: "DSC08208.jpg is the approved lead image. Nanette confirmed the commencement-day photo credit: Valeria Jaramillo Hernandez and Zachary Lacson; Zachary Lacson is from the orders team. The candidate lists contain 55 degree candidates plus 10 minor candidates; the former aggregate claim of 65 degrees was removed. The 22 final photographs are grouped under their confirmed photographers; individual name captions are not required. Preserve the program’s Hardin fund wording pending confirmation against the donor fund name. DSC08207.jpg and DSC08147.jpg are optional backups but are not present in the local media set."
 ---
 
 ## The Programme
@@ -43,8 +43,6 @@ Commencement and Awards Celebration took place at 12:30 p.m. on Sunday, June 14,
 - Christian Lucas Hyde, John W. & France R. Hardin Scholarship
 - Hinata Alice Nayuki, Deane Oberste-Lehn Scholarship
 - Hazel Jean Veteto, Deane Oberste-Lehn Scholarship
-
-Note: the source review flags a fund-name conflict between the commencement program and donor/endowment spreadsheet.
 
 ## Summer Field Scholarships
 

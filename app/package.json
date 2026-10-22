@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/prefix-static-paths.mjs",
+    "build": "astro build && node scripts/omit-held-media.mjs && node scripts/prefix-static-paths.mjs",
     "check": "astro check",
     "preview": "astro preview",
     "test:paths": "node --test scripts/site-base.test.mjs",

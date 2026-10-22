@@ -28,7 +28,7 @@ gallery:
   - src: "/assets/images/2026/craig-manning/akilia-island-field-trip.jpg"
     alt: "Craig Manning leading an astrobiology field trip in Greenland."
     caption: "Leading an astrobiology field trip to the >3.8 Ga Banded Iron Formation on Akilia Island, Greenland, 2004."
-sourceNote: "Article blurb supplied by Jonathan M. Aurnou on September 25, 2026; captioned images and portrait supplied by Craig Manning via email on September 29, 2026. Final gallery review remains pending."
+sourceNote: "Article blurb supplied by Jonathan M. Aurnou on September 25, 2026; captioned images and portrait supplied by Craig Manning via email on September 29, 2026. Gallery review completed and publication authorized by Abijah October 21, 2026."
 ---
 
 Craig Manning retired this summer after 36 years at UCLA, leaving a remarkable legacy in experimental and metamorphic petrology, geochemistry, and the broader life of EPSS.
