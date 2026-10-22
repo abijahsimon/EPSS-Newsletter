@@ -4,6 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EPSS Through Our Eyes — UCLA EPSS Newsletter 2026</title>
+<meta name="description" content="Fieldwork, research, art, and community photographs from UCLA Earth, Planetary, and Space Sciences.">
+<link rel="canonical" href="https://newsletter.epss.ucla.edu/media-archive/">
+<meta property="og:site_name" content="UCLA EPSS Newsletter">
+<meta property="og:type" content="website">
+<meta property="og:title" content="EPSS Through Our Eyes — UCLA EPSS Newsletter 2026">
+<meta property="og:description" content="Fieldwork, research, art, and community photographs from UCLA Earth, Planetary, and Space Sciences.">
+<meta property="og:url" content="https://newsletter.epss.ucla.edu/media-archive/">
+<meta property="og:image" content="https://newsletter.epss.ucla.edu/assets/images/2026/hero/postcard-mountain-fieldwork.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -77,7 +86,7 @@
   .queue .qt { font-family: Newsreader, Georgia, serif; font-size: 1.08rem; line-height: 1.25; }
   .queue .qc { font: 500 0.68rem/1.5 "IBM Plex Mono", monospace; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
   .queue .qb { font-size: 0.82rem; line-height: 1.45; color: var(--clay); text-wrap: pretty; }
-  .lb { position: fixed; inset: 0; z-index: 90; display: none; place-items: center; padding: clamp(16px,4vw,48px); background: rgba(6,11,18,0.94); }
+  .lb { position: fixed; inset: 0; z-index: 90; display: none; place-items: center; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; border: 0; padding: clamp(16px,4vw,48px); background: rgba(6,11,18,0.94); }
   .lb[open] { display: grid; }
   .lb figure { margin: 0; max-width: min(1100px,100%); }
   .lb img { max-height: 72vh; width: auto; margin: 0 auto; }
@@ -133,7 +142,7 @@
   <p style="margin:0;max-width:70ch">UCLA Earth, Planetary, and Space Sciences · <a href="/">2026 annual newsletter</a> · <a href="/epss-through-deep-time/">Newsletter archive</a></p>
 </footer>
 
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged photograph">
+<dialog class="lb" id="lb" aria-label="Enlarged photograph">
   <button type="button" class="x" id="lb-x" aria-label="Close">✕</button>
   <button type="button" class="nav" id="lb-prev" aria-label="Previous photograph">←</button>
   <button type="button" class="nav" id="lb-next" aria-label="Next photograph">→</button>
@@ -145,7 +154,7 @@
       <p class="lm" id="lb-meta"></p>
     </figcaption>
   </figure>
-</div>
+</dialog>
 
 <script type="module">
 import { CATEGORIES, MEDIA_ITEMS } from "/media-archive/media-items.js";
@@ -246,7 +255,7 @@ function paint() {
     // Manifest stores DC filenames ("Article - John He.dc.html"); Astro serves stories at /stories/<slug>/.
     const STORY_SLUG = { "john-he": "field-highlights", "art-and-science": "art-science" };
     const base = it.relatedStory.replace(/^Article - /, "").replace(/\.dc\.html$/, "").trim().toLowerCase().replace(/\s+/g, "-");
-    a.href = "/stories/" + (STORY_SLUG[base] || base) + "/";
+    a.href = it.relatedStory.startsWith("/") ? it.relatedStory : "/stories/" + (STORY_SLUG[base] || base) + "/";
     a.textContent = "Read the story";
     a.style.color = "var(--gold)";
     s.appendChild(a);
@@ -258,11 +267,11 @@ function open(i) {
   at = i;
   lastFocus = document.activeElement;
   paint();
-  lb.setAttribute("open", "");
+  lb.showModal();
   document.getElementById("lb-x").focus();
 }
 function close() {
-  lb.removeAttribute("open");
+  lb.close();
   if (lastFocus) lastFocus.focus();
 }
 function step(d) {
@@ -273,8 +282,15 @@ document.getElementById("lb-x").onclick = close;
 document.getElementById("lb-prev").onclick = () => step(-1);
 document.getElementById("lb-next").onclick = () => step(1);
 lb.addEventListener("click", e => { if (e.target === lb) close(); });
+lb.addEventListener("cancel", e => { e.preventDefault(); close(); });
 document.addEventListener("keydown", e => {
   if (!lb.hasAttribute("open")) return;
+  if (e.key === "Tab") {
+    const items = [...lb.querySelectorAll("button, a[href]")];
+    const first = items[0], last = items.at(-1);
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
   if (e.key === "Escape") close();
   if (e.key === "ArrowLeft") step(-1);
   if (e.key === "ArrowRight") step(1);

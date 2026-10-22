@@ -28,9 +28,9 @@ export const MEDIA_ITEMS = [
     caption: "EPSS fleet arriving at Valley of Fire just after sunset for Historical and Regional Geology, EPS 133, led by Kevin Coffey.",
     mediaType: "photograph", category: "field", collection: "EPSS 133 Historical and Regional Geology",
     season: "Winter 2026", date: "2026-02-26", location: "Valley of Fire, Nevada", course: "EPSS 133 Historical and Regional Geology",
-    relatedStory: "Article - John He.dc.html", photographer: "Juan C. Alvarado Jr.", suppliedBy: "",
-    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "confirmed",
-    seasonStatus: "resolved: original DOCX image EXIF is February 2026; Spring 2026 labels the newsletter collection, not this photo date",
+    relatedStory: "Article - John He.dc.html", photographer: "", suppliedBy: "Field newsletter, Spring 2026",
+    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "optional-internal-snapshot",
+    seasonStatus: "confirmed by original DOCX image capture metadata",
     featuredOnHomepage: true, sortOrder: 1, published: true
   },
   {
@@ -54,9 +54,9 @@ export const MEDIA_ITEMS = [
     caption: "An early start at Zion National Park at dawn.",
     mediaType: "photograph", category: "field", collection: "EPSS 133 Historical and Regional Geology",
     season: "Winter 2026", date: "2026-02-28", location: "Zion National Park, Utah", course: "EPSS 133 Historical and Regional Geology",
-    relatedStory: "Article - John He.dc.html", photographer: "Juan C. Alvarado Jr.", suppliedBy: "",
-    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "confirmed",
-    seasonStatus: "resolved: original DOCX image EXIF is February 2026; Spring 2026 labels the newsletter collection, not this photo date",
+    relatedStory: "Article - John He.dc.html", photographer: "", suppliedBy: "Field newsletter, Spring 2026",
+    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "optional-internal-snapshot",
+    seasonStatus: "confirmed by original DOCX image capture metadata",
     featuredOnHomepage: true, sortOrder: 3, published: true
   },
 
@@ -69,8 +69,8 @@ export const MEDIA_ITEMS = [
     caption: "Structural Geology, EPS 112, led by John He at Painted Canyon.",
     mediaType: "photograph", category: "field", collection: "EPSS 112 Structural Geology",
     season: "", date: "", location: "Painted Canyon, Mecca Hills, California", course: "EPSS 112 Structural Geology",
-    relatedStory: "Article - John He.dc.html", photographer: "Juan C. Alvarado Jr.", suppliedBy: "",
-    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "confirmed",
+    relatedStory: "Article - John He.dc.html", photographer: "", suppliedBy: "Field newsletter, Spring 2026",
+    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "optional-internal-snapshot",
     seasonStatus: "conflict: source map says Winter 2026, article says Spring 2026",
     featuredOnHomepage: false, sortOrder: 4, published: true
   },
@@ -82,8 +82,8 @@ export const MEDIA_ITEMS = [
     caption: "At Painted Canyon, outcrops replace PowerPoint presentations and the vehicle becomes a portable whiteboard.",
     mediaType: "photograph", category: "field", collection: "EPSS 112 Structural Geology",
     season: "", date: "", location: "Painted Canyon, Mecca Hills, California", course: "EPSS 112 Structural Geology",
-    relatedStory: "Article - John He.dc.html", photographer: "Juan C. Alvarado Jr.", suppliedBy: "",
-    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "confirmed",
+    relatedStory: "Article - John He.dc.html", photographer: "", suppliedBy: "Field newsletter, Spring 2026",
+    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "optional-internal-snapshot",
     seasonStatus: "conflict: source map says Winter 2026, article says Spring 2026",
     featuredOnHomepage: false, sortOrder: 5, published: true
   },
@@ -96,10 +96,10 @@ export const MEDIA_ITEMS = [
     alt: "Igneous Petrology students standing in front of light-coloured Bishop Tuff outcrops.",
     caption: "Igneous Petrology, led by Peng Ni, in front of the Bishop Tuff.",
     mediaType: "photograph", category: "field", collection: "Igneous Petrology",
-    season: "", date: "", location: "Bishop Tuff, Volcanic Tableland, California", course: "Igneous Petrology",
-    relatedStory: "Article - John He.dc.html", photographer: "Juan C. Alvarado Jr.", suppliedBy: "",
-    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "confirmed",
-    seasonStatus: "not in source map; trip undocumented in field-trip-source-map.csv",
+    season: "Spring 2026", date: "2026-05-08", location: "Bishop Tuff, Volcanic Tableland, California", course: "Igneous Petrology",
+    relatedStory: "Article - John He.dc.html", photographer: "", suppliedBy: "Field newsletter, Spring 2026",
+    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "optional-internal-snapshot",
+    seasonStatus: "confirmed by original DOCX image capture metadata",
     featuredOnHomepage: false, sortOrder: 6, published: true
   },
   {
@@ -109,10 +109,10 @@ export const MEDIA_ITEMS = [
     alt: "Igneous Petrology students standing near a basketball hoop with mountains behind them.",
     caption: "Igneous Petrology class at the White Mountain Research Station.",
     mediaType: "photograph", category: "people", collection: "Igneous Petrology",
-    season: "", date: "", location: "White Mountain Research Station, Bishop, California", course: "Igneous Petrology",
-    relatedStory: "Article - John He.dc.html", photographer: "Juan C. Alvarado Jr.", suppliedBy: "",
-    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "confirmed",
-    seasonStatus: "not in source map",
+    season: "Spring 2026", date: "2026-05-10", location: "White Mountain Research Station, Bishop, California", course: "Igneous Petrology",
+    relatedStory: "Article - John He.dc.html", photographer: "", suppliedBy: "Field newsletter, Spring 2026",
+    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "optional-internal-snapshot",
+    seasonStatus: "confirmed by original DOCX image capture metadata",
     featuredOnHomepage: false, sortOrder: 7, published: true
   },
   {
@@ -122,10 +122,10 @@ export const MEDIA_ITEMS = [
     alt: "Students spelling UCLA with colourful light painting at night.",
     caption: "UCLA light painting by students of Igneous Petrology at the White Mountain Research Station.",
     mediaType: "photograph", category: "people", collection: "Igneous Petrology",
-    season: "", date: "", location: "White Mountain Research Station, Bishop, California", course: "Igneous Petrology",
-    relatedStory: "Article - John He.dc.html", photographer: "Juan C. Alvarado Jr.", suppliedBy: "",
-    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "confirmed",
-    seasonStatus: "not in source map",
+    season: "Spring 2026", date: "2026-05-08", location: "White Mountain Research Station, Bishop, California", course: "Igneous Petrology",
+    relatedStory: "Article - John He.dc.html", photographer: "", suppliedBy: "Field newsletter, Spring 2026",
+    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "optional-internal-snapshot",
+    seasonStatus: "confirmed by original DOCX image capture metadata",
     featuredOnHomepage: true, sortOrder: 8, published: true
   },
 
@@ -137,10 +137,10 @@ export const MEDIA_ITEMS = [
     alt: "Students gathered around an outcrop during field instruction.",
     caption: "A Spring 2026 field class working at an outcrop.",
     mediaType: "photograph", category: "field", collection: "Field trips 2025–2026",
-    season: "Spring 2026", date: "", location: "", course: "",
-    relatedStory: "Article - John He.dc.html", photographer: "Juan C. Alvarado Jr.", suppliedBy: "",
-    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "confirmed",
-    seasonStatus: "", featuredOnHomepage: false, sortOrder: 9, published: true
+    season: "Spring 2026", date: "2026-04-24", location: "", course: "",
+    relatedStory: "Article - John He.dc.html", photographer: "", suppliedBy: "Field newsletter, Spring 2026",
+    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "optional-internal-snapshot",
+    seasonStatus: "confirmed by original DOCX image capture metadata", featuredOnHomepage: false, sortOrder: 9, published: true
   },
   {
     id: "field-notebooks", title: "Field notes, maps, and lunch",
@@ -149,10 +149,10 @@ export const MEDIA_ITEMS = [
     alt: "Students sitting in the field with maps, notebooks, and food on a tarp.",
     caption: "Field notes, maps, and lunch in the landscape.",
     mediaType: "photograph", category: "field", collection: "Field trips 2025–2026",
-    season: "Spring 2026", date: "", location: "", course: "",
-    relatedStory: "Article - John He.dc.html", photographer: "Juan C. Alvarado Jr.", suppliedBy: "",
-    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "confirmed",
-    seasonStatus: "", featuredOnHomepage: false, sortOrder: 10, published: true
+    season: "", date: "", location: "", course: "",
+    relatedStory: "Article - John He.dc.html", photographer: "", suppliedBy: "Field newsletter, Spring 2026",
+    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "optional-internal-snapshot",
+    seasonStatus: "Spring 2026 is the newsletter collection; individual capture date unconfirmed", featuredOnHomepage: false, sortOrder: 10, published: true
   },
   {
     id: "field-sketching", title: "Recording observations",
@@ -161,22 +161,22 @@ export const MEDIA_ITEMS = [
     alt: "Students sketching and writing in field notebooks on the ground.",
     caption: "Students recording observations in field notebooks.",
     mediaType: "photograph", category: "field", collection: "Field trips 2025–2026",
-    season: "Spring 2026", date: "", location: "", course: "",
-    relatedStory: "Article - John He.dc.html", photographer: "Juan C. Alvarado Jr.", suppliedBy: "",
-    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "confirmed",
-    seasonStatus: "", featuredOnHomepage: false, sortOrder: 11, published: true
+    season: "", date: "", location: "", course: "",
+    relatedStory: "Article - John He.dc.html", photographer: "", suppliedBy: "Field newsletter, Spring 2026",
+    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "optional-internal-snapshot",
+    seasonStatus: "Spring 2026 is the newsletter collection; individual capture date unconfirmed", featuredOnHomepage: false, sortOrder: 11, published: true
   },
   {
     id: "desert-ridge", title: "Working across a desert outcrop",
     src: "/assets/images/2026/field-spring-2026/desert-ridge-class.jpg",
     thumbnailSrc: "/assets/images/2026/field-spring-2026/desert-ridge-class.jpg",
     alt: "Students gathered along a desert ridge beneath a blue sky.",
-    caption: "Students working across a desert outcrop during a Spring 2026 field course.",
+    caption: "Students working across a desert outcrop during a field course.",
     mediaType: "photograph", category: "field", collection: "Field trips 2025–2026",
-    season: "Spring 2026", date: "", location: "", course: "",
-    relatedStory: "Article - John He.dc.html", photographer: "Juan C. Alvarado Jr.", suppliedBy: "",
-    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "confirmed",
-    seasonStatus: "", featuredOnHomepage: false, sortOrder: 12, published: true
+    season: "", date: "", location: "", course: "",
+    relatedStory: "Article - John He.dc.html", photographer: "", suppliedBy: "Field newsletter, Spring 2026",
+    sourceId: "field-drive-archive", permissionStatus: "approved", creditStatus: "optional-internal-snapshot",
+    seasonStatus: "Spring 2026 is the newsletter collection; individual capture date unconfirmed", featuredOnHomepage: false, sortOrder: 12, published: true
   },
 
   // ---------- RESEARCH · RIMFAX ----------

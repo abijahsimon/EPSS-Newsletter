@@ -29,9 +29,10 @@ const showHeroImage = Boolean(article.heroImage && article.slug !== "art-science
     html={referenceHtml}
     title={`${article.title} | EPSS Newsletter 2026`}
     description={article.dek ?? article.title}
+    image={article.heroImage}
   />
 ) : (
-<BaseLayout title={`${article.title} | EPSS Newsletter 2026`} description={article.dek ?? article.title}>
+<BaseLayout title={`${article.title} | EPSS Newsletter 2026`} description={article.dek ?? article.title} image={article.heroImage}>
   <a class="skip-link" href="#story-content">Skip to the article</a>
   <header class="site-header article-header">
     <a class="article-brand" href="/" aria-label="Back to the EPSS Newsletter 2026 issue">

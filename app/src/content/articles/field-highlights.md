@@ -48,7 +48,7 @@ gallery:
     caption: "Students recording observations in field notebooks."
   - src: "/assets/images/2026/field-spring-2026/desert-ridge-class.jpg"
     alt: "Students gathered along a desert ridge beneath a blue sky."
-    caption: "Students working across a desert outcrop during a Spring 2026 field course."
+    caption: "Students working across a desert outcrop during a field course."
   - src: "/assets/images/2026/field-highlights/img-6960.jpg"
     alt: "EPSS field trip participants gathering around exposed folded rock layers."
     caption: "One of the previously selected field highlights from the 2026 EPSS photo archive."
@@ -58,7 +58,7 @@ gallery:
   - src: "/assets/images/2026/field-highlights/img-5056.jpg"
     alt: "Purple and yellow wildflowers spread across a rocky Death Valley landscape."
     caption: "One of the previously selected field highlights from the 2026 EPSS photo archive."
-sourceNote: "Source text and twelve media files came from the attached Word document, Field newsletter, Spring 2026.docx. Three previously selected field highlights remain included; detailed photographer credits still need confirmation before launch."
+sourceNote: "Source text and twelve media files came from the attached Word document, Field newsletter, Spring 2026.docx. Three previously selected field highlights remain included; individual photographer credits are optional for internal casual snapshots; do not infer authorship from the supplier."
 ---
 
 Dear friends, colleagues, and the EPSS community,

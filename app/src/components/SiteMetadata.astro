@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { title, description, image = "/assets/images/2026/hero/postcard-mountain-fieldwork.jpg" } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const shareImage = new URL(image.startsWith("/") ? `${base}${image}` : image, Astro.site);
+---
+
+<link rel="canonical" href={canonical} />
+{description && <meta name="description" content={description} />}
+<meta property="og:site_name" content="UCLA EPSS Newsletter" />
+<meta property="og:type" content={Astro.url.pathname.includes("/stories/") ? "article" : "website"} />
+<meta property="og:title" content={title} />
+{description && <meta property="og:description" content={description} />}
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={shareImage} />
+<meta name="twitter:card" content="summary_large_image" />

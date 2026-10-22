@@ -91,7 +91,7 @@
     <aside style="min-width:0">
       <div style="padding:22px 24px;background:#eef4f7;border-top:4px solid #101820">
         <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">Spring 2026 gallery</p>
-        <p style="margin:0 0 14px;font-size:0.92rem;color:#54626d">Twelve photographs from this spring’s field courses. Click any frame to enlarge it.</p>
+        <p style="margin:0 0 14px;font-size:0.92rem;color:#54626d">Twelve photographs from the Spring 2026 field newsletter, including winter and spring trips. Click any frame to enlarge it.</p>
         <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px">
           <sc-for list="{{ photos }}" as="photo" hint-placeholder-count="12">
             <button type="button" onClick="{{ photo.open }}" aria-label="Enlarge photograph" title="{{ photo.caption }}" style="display:block;padding:0;border:1px solid rgba(16,24,32,0.14);background:none;cursor:zoom-in;overflow:hidden;transition:border-color 160ms ease,opacity 160ms ease" style-hover="border-color:#9a4a26;opacity:0.82">
@@ -105,7 +105,7 @@
   </article>
 
   <div style="max-width:1200px;margin:0 auto;padding:8px clamp(20px,4vw,40px) 72px">
-    <h2 style="margin:0 0 6px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">The spring, in photographs</h2>
+    <h2 style="margin:0 0 6px;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:2.0rem;line-height:1.18;letter-spacing:-0.015em">Fieldwork in photographs</h2>
     <p style="max-width:60ch;margin:0 0 24px;font-size:0.92rem;color:#54626d">Valley of Fire and Zion, Painted Canyon, the Bishop Tuff and the White Mountain Research Station. Click any photograph to enlarge it.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px">
       <sc-for list="{{ photos }}" as="photo" hint-placeholder-count="12">
@@ -190,7 +190,7 @@ class Component extends DCLogic {
     { src: "assets/images/2026/field-spring-2026/white-mountain-research-station-class.jpg", alt: "Igneous Petrology students standing near a basketball hoop with mountains behind them.", caption: "Igneous Petrology class at the White Mountain Research Station." },
     { src: "assets/images/2026/field-spring-2026/field-notebook-lunch.jpg", alt: "Students sitting in the field with maps, notebooks, and food on a tarp.", caption: "Field notes, maps, and lunch in the landscape." },
     { src: "assets/images/2026/field-spring-2026/field-sketching.jpg", alt: "Students sketching and writing in field notebooks on the ground.", caption: "Students recording observations in field notebooks." },
-    { src: "assets/images/2026/field-spring-2026/desert-ridge-class.jpg", alt: "Students gathered along a desert ridge beneath a blue sky.", caption: "Students working across a desert outcrop during a Spring 2026 field course." },
+    { src: "assets/images/2026/field-spring-2026/desert-ridge-class.jpg", alt: "Students gathered along a desert ridge beneath a blue sky.", caption: "Students working across a desert outcrop during a field course." },
   ];
 
   openAt = (i) => this.setState({ lightbox: i });

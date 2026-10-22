@@ -1,11 +1,14 @@
 ---
+import SiteMetadata from "./SiteMetadata.astro";
+
 interface Props {
   html: string;
   title: string;
   description?: string;
+  image?: string;
 }
 
-const { html, title, description } = Astro.props;
+const { html, title, description, image } = Astro.props;
 let body = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? html;
 
 const routeRewrites = [
@@ -87,12 +90,15 @@ body = body.replaceAll(
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    {description && <meta name="description" content={description} />}
+    <SiteMetadata title={title} description={description} image={image} />
     <link rel="icon" href="/assets/brand/epss-department-logo.svg" type="image/svg+xml" />
     <script is:inline src="/support.js"></script>
   </head>
   <body>
     <Fragment set:html={body} />
+    <script>
+      import "../scripts/dialog-focus";
+    </script>
     <script is:inline define:vars={{ transparentPixel }}>
       const syncLightboxImages = () => {
         document.querySelectorAll("img[data-lightbox-src]").forEach((image) => {
