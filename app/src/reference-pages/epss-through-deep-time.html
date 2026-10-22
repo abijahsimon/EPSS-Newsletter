@@ -26,6 +26,19 @@
   a:hover { color: #9a4a26; }
   h1, h2, h3, p, ul, ol, figure { margin-top: 0; }
   ::selection { background: #ffd100; color: #101820; }
+  .history-intro { display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.3fr);gap:clamp(24px,4vw,64px);align-items:start;margin-bottom:36px; }
+  .history-reading { display:inline-flex;align-items:center;min-height:44px;margin-top:16px;padding:0 0 4px;border-bottom:1px solid #2774ae;font-size:0.92rem;font-weight:600;text-decoration:none; }
+  .history-reading:hover { border-bottom-color:#9a4a26; }
+  .history-milestones { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;list-style:none;margin:0;padding:0; }
+  .history-milestones li { border-top:2px solid #2774ae;padding-top:18px; }
+  .history-milestones h3 { margin:0 0 12px;font-family:Newsreader,Georgia,serif;font-size:1.85rem;font-weight:400;line-height:1.1; }
+  .history-milestones p { margin:0;font-size:0.95rem;line-height:1.65;color:#54626d; }
+  @media (max-width:760px) {
+    .history-intro { grid-template-columns:minmax(0,1fr);gap:18px;margin-bottom:28px; }
+    .history-milestones { grid-template-columns:minmax(0,1fr);gap:0; }
+    .history-milestones li { display:grid;grid-template-columns:100px minmax(0,1fr);gap:20px;border-top:1px solid rgba(16,24,32,0.2);padding:20px 0; }
+    .history-milestones h3 { font-size:1.5rem;margin:0; }
+  }
 </style>
 </helmet>
 
@@ -120,15 +133,19 @@
 
   <section aria-labelledby="history-title" style="max-width:1200px;margin:0 auto;padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px) 0">
     <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a4a26">From the department archives</p>
-    <h2 id="history-title" style="margin:0 0 18px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(1.7rem,3vw,2.6rem);line-height:1.1">Before the first newsletter</h2>
-    <p style="max-width:70ch;margin:0 0 24px;color:#54626d">Kathy Jackson’s “Rock of Ages: A Selective History of Geology at UCLA,” published in the 1981–83 newsletter, traces the department’s beginnings long before the earliest cover in this collection.</p>
-    <ol style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;list-style:none;margin:0;padding:0">
-      <li style="border-top:3px solid #2774ae;padding-top:16px"><h3 style="margin:0 0 10px;font-family:Newsreader,Georgia,serif;font-size:1.7rem;font-weight:400">Early 1920s</h3><p style="margin:0">Geology courses and a separate department took shape at UCLA’s original Vermont Avenue campus.</p></li>
-      <li style="border-top:3px solid #2774ae;padding-top:16px"><h3 style="margin:0 0 10px;font-family:Newsreader,Georgia,serif;font-size:1.7rem;font-weight:400">1925</h3><p style="margin:0">By spring, the course offerings had expanded enough to support a complete geology major.</p></li>
-      <li style="border-top:3px solid #2774ae;padding-top:16px"><h3 style="margin:0 0 10px;font-family:Newsreader,Georgia,serif;font-size:1.7rem;font-weight:400">1929</h3><p style="margin:0">The department moved to Westwood, into the Chemistry-Geology Building, now Haines Hall.</p></li>
-      <li style="border-top:3px solid #2774ae;padding-top:16px"><h3 style="margin:0 0 10px;font-family:Newsreader,Georgia,serif;font-size:1.7rem;font-weight:400">1967</h3><p style="margin:0">The earliest newsletter in this collection opens a record of departmental life that continues in the covers above.</p></li>
+    <div class="history-intro">
+      <h2 id="history-title" style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2rem,3.6vw,3rem);line-height:1.08;letter-spacing:-0.02em">Before the first newsletter</h2>
+      <div>
+        <p style="max-width:62ch;margin:0;color:#54626d;line-height:1.7">Kathy Jackson’s “Rock of Ages: A Selective History of Geology at UCLA,” published in the 1981–83 newsletter, traces the department’s beginnings long before the earliest cover in this collection.</p>
+        <a class="history-reading" href="https://epss.ucla.edu/wp-content/uploads/media/documents/newsletters/EPSS-Newsletter-1981-83-part-1.pdf#page=12" aria-label="Read Kathy Jackson’s history, printed pages 9–10, PDF">Read Jackson’s history <span style="margin-left:12px;font-size:0.75rem;font-weight:400;color:#54626d">PDF · pp. 9–10</span></a>
+      </div>
+    </div>
+    <ol class="history-milestones">
+      <li><h3>Early 1920s</h3><p>Geology courses and a separate department took shape at UCLA’s original Vermont Avenue campus.</p></li>
+      <li><h3>1925</h3><p>By spring, the course offerings had expanded enough to support a complete geology major.</p></li>
+      <li><h3>1929</h3><p>The department moved to Westwood, into the Chemistry-Geology Building, now Haines Hall.</p></li>
+      <li><h3>1967</h3><p>The earliest newsletter in this collection opens a record of departmental life that continues in the covers above.</p></li>
     </ol>
-    <p style="margin:24px 0 0;font-size:0.82rem;color:#54626d">Read <a href="https://epss.ucla.edu/wp-content/uploads/media/documents/newsletters/EPSS-Newsletter-1981-83-part-1.pdf#page=12">Jackson’s history, printed pages 9–10</a>. The masthead dates above mark changes visible on newsletter covers.</p>
   </section>
 
   <section style="max-width:1200px;margin:clamp(48px,6vw,80px) auto 0;padding:0 clamp(20px,4vw,40px) clamp(48px,6vw,80px)">
