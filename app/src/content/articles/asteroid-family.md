@@ -7,7 +7,7 @@ category: Research Update
 title: Meet the Newest Additions to the ‘EPSS Asteroid Family’
 variant: standard
 dek: "Four asteroids named for EPSS scientists join a larger story about UCLA’s continuing contribution to astronomy."
-byline: "Dave Milewski"
+byline: "Emmanuel Masongsong"
 readTime: "4 min read"
 sourceNote: "Source: Google Doc supplied September 25, 2026. Editorial comments in the source document were excluded; final copy and image approvals still need confirmation."
 ---

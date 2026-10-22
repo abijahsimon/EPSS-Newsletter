@@ -15,6 +15,10 @@ export const CATEGORIES = [
 ];
 
 export const MEDIA_ITEMS = [
+  // Treude Lab photos supplied for newsletter use October 19, 2026.
+  {"id": "treude-team", "title": "Treude Lab at sea", "src": "/assets/images/2026/field-trips/treude-team.jpg", "thumbnailSrc": "/assets/images/2026/field-trips/treude-team.jpg", "alt": "Members of the Treude Lab standing beside marine sampling equipment on a ship’s deck.", "caption": "Members of the Treude Lab standing beside marine sampling equipment on a ship’s deck.", "mediaType": "photograph", "category": "research", "collection": "Treude Lab", "season": "", "date": "", "location": "", "course": "", "relatedStory": "", "photographer": "", "suppliedBy": "Emmanuel Masongsong", "sourceId": "treude-october-2026", "permissionStatus": "approved", "creditStatus": "optional-internal-snapshot", "seasonStatus": "", "featuredOnHomepage": false, "sortOrder": 60, "published": true},
+  {"id": "treude-sampling", "title": "Preparing a seawater sampler", "src": "/assets/images/2026/field-trips/treude-sampling.jpg", "thumbnailSrc": "/assets/images/2026/field-trips/treude-sampling.jpg", "alt": "Treude Lab researchers preparing a carousel of sampling bottles aboard a research vessel.", "caption": "Treude Lab researchers preparing a carousel of sampling bottles aboard a research vessel.", "mediaType": "photograph", "category": "research", "collection": "Treude Lab", "season": "", "date": "", "location": "", "course": "", "relatedStory": "", "photographer": "", "suppliedBy": "Emmanuel Masongsong", "sourceId": "treude-october-2026", "permissionStatus": "approved", "creditStatus": "optional-internal-snapshot", "seasonStatus": "", "featuredOnHomepage": false, "sortOrder": 61, "published": true},
+  {"id": "treude-instrument", "title": "Working with marine instruments", "src": "/assets/images/2026/field-trips/treude-instrument.jpg", "thumbnailSrc": "/assets/images/2026/field-trips/treude-instrument.jpg", "alt": "A Treude Lab researcher working beside an instrument assembly aboard a research vessel.", "caption": "A Treude Lab researcher working beside an instrument assembly aboard a research vessel.", "mediaType": "photograph", "category": "research", "collection": "Treude Lab", "season": "", "date": "", "location": "", "course": "", "relatedStory": "", "photographer": "", "suppliedBy": "Emmanuel Masongsong", "sourceId": "treude-october-2026", "permissionStatus": "approved", "creditStatus": "optional-internal-snapshot", "seasonStatus": "", "featuredOnHomepage": false, "sortOrder": 62, "published": true},
   // ---------- FIELD · EPSS 133 Historical and Regional Geology ----------
   {
     id: "vof-fleet", title: "The EPSS fleet at Valley of Fire",
@@ -210,7 +214,7 @@ export const MEDIA_ITEMS = [
     caption: "The class of 2026 on the steps of the Geology Building.",
     mediaType: "photograph", category: "people", collection: "EPSS Commencement 2026",
     season: "Spring 2026", date: "", location: "UCLA Geology Building", course: "",
-    relatedStory: "", photographer: "Valeria Jaramillo Hernandez and Zachary Lacson", suppliedBy: "",
+    relatedStory: "/stories/commencement-2026/", photographer: "Zachary Lacson", suppliedBy: "",
     sourceId: "commencement", permissionStatus: "approved", creditStatus: "confirmed",
     seasonStatus: "", featuredOnHomepage: true, sortOrder: 30, published: true
   },

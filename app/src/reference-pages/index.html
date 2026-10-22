@@ -57,11 +57,10 @@
 <main id="top">
   <section aria-label="Issue cover" style="position:relative;background:#101820;color:#fbfaf7;overflow:hidden">
     <div role="group" aria-roledescription="carousel" aria-label="Issue cover images" style="position:absolute;inset:0;overflow:hidden">
-      <div style="display:flex;width:400%;height:100%;transition:transform 900ms cubic-bezier(0.4,0,0.2,1);transform:translateX({{slideOffset}})">
-        <div style="width:25%;height:100%"><img src="/assets/images/p10_03.jpg" alt="Joshua trees silhouetted against a pink and orange sunset in the Mojave Desert." style="width:100%;height:100%;object-fit:cover;object-position:50% 42%"></div>
-        <div style="width:25%;height:100%"><img src="/assets/images/p01_01.jpg" alt="Icebergs beyond moss-covered granite outcrops on the Greenland coast." style="width:100%;height:100%;object-fit:cover;object-position:50% 38%"></div>
-        <div style="width:25%;height:100%"><img src="/assets/images/p12_02.jpg" alt="A line of students walking toward red sandstone formations under a wide desert sky." style="width:100%;height:100%;object-fit:cover;object-position:50% 78%"></div>
-        <div style="width:25%;height:100%"><img src="/assets/images/2026/banner-candidates/tracers-spacecraft.png" alt="Artist’s concept of the two TRACERS spacecraft orbiting above Earth." style="width:100%;height:100%;object-fit:cover;object-position:65% 42%"></div>
+      <div style="display:flex;width:300%;height:100%;transition:transform 900ms cubic-bezier(0.4,0,0.2,1);transform:translateX({{slideOffset}})">
+        <div style="width:33.333333%;height:100%"><img src="/assets/images/2026/hero/postcard-mountain-fieldwork.jpg" alt="Students walking along a mountain trail beneath the Sierra Nevada skyline." style="width:100%;height:100%;object-fit:cover;object-position:50% 55%"></div>
+        <div style="width:33.333333%;height:100%"><img src="/assets/images/2026/hero/postcard-field-class.jpg" alt="Students gathered beside pale rock outcrops during a desert field class." style="width:100%;height:100%;object-fit:cover;object-position:50% 50%"></div>
+        <div style="width:33.333333%;height:100%"><img src="/assets/images/2026/hero/postcard-commencement.jpg" alt="EPSS graduates celebrating on the steps of the Geology Building." style="width:100%;height:100%;object-fit:cover;object-position:50% 46%"></div>
       </div>
     </div>
     <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(16,24,32,0.82) 0%, rgba(16,24,32,0.5) 46%, rgba(16,24,32,0.12) 100%), linear-gradient(0deg, rgba(16,24,32,0.72) 0%, rgba(16,24,32,0) 58%)"></div>
@@ -89,7 +88,7 @@
           <button type="button" onClick="{{goNext}}" aria-label="Next cover image" style="flex-shrink:0;width:38px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;cursor:pointer" style-hover="border-color:#ffd100;color:#ffd100">›</button>
           <span aria-live="polite" style="min-width:0;margin-left:8px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(251,250,247,0.66)">{{slideCaption}}</span>
         </div>
-      </div><aside aria-label="Note from the Chair" style="background:#fbfaf7;color:#1f2933;border-top:5px solid #ffd100;box-shadow:0 30px 70px rgba(16,24,32,0.4);flex:0 1 360px;max-width:360px;margin-left:auto">
+      </div><aside id="chairs-note" aria-label="Note from the Chair" style="background:#fbfaf7;color:#1f2933;border-top:5px solid #ffd100;box-shadow:0 30px 70px rgba(16,24,32,0.4);flex:0 1 360px;max-width:360px;margin-left:auto">
         <figure style="margin:0;position:relative;background:#101820">
           <img src="/assets/people/jon-aurnou.jpg" alt="Jon Aurnou, Professor and Chair of Earth, Planetary, and Space Sciences." style="width:100%;aspect-ratio:16/10;object-fit:cover;object-position:10% 30%;display:block">
           <figcaption style="position:absolute;left:0;right:0;bottom:0;padding:34px 20px 14px;background:linear-gradient(0deg,rgba(16,24,32,0.95) 0%,rgba(16,24,32,0.9) 42%,rgba(16,24,32,0.74) 68%,rgba(16,24,32,0) 100%)">
@@ -100,9 +99,9 @@
         </figure>
         <div style="padding:24px 28px 26px">
           <h2 style="margin:0 0 14px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.18rem;line-height:1.22;letter-spacing:-0.01em;color:#101820">Opening letter from the Department Chair</h2>
-          <p style="margin:0 0 14px;font-family:Newsreader,Georgia,serif;font-size:1rem;line-height:1.6;color:#3d4a55;text-wrap:pretty">The Chair’s opening letter will appear here.</p>
+          <p style="margin:0 0 14px;font-family:Newsreader,Georgia,serif;font-size:1rem;line-height:1.6;color:#3d4a55;text-wrap:pretty">It is a pleasure to introduce myself as the incoming Chair of EPSS. I am delighted to serve this exciting and vibrant community.</p>
 
-          <p style="display:flex;align-items:center;gap:12px;margin:0;padding-top:16px;border-top:1px solid rgba(16,24,32,0.14);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#54626d">Letter forthcoming</p>
+          <p style="display:flex;align-items:center;gap:12px;margin:0;padding-top:16px;border-top:1px solid rgba(16,24,32,0.14);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#54626d"><a href="/stories/chairs-note/" style="color:#2774ae;text-decoration:none">Read the full note →</a></p>
         </div>
       </aside>
 
@@ -119,11 +118,11 @@
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:0 clamp(32px,5vw,56px)">
         <div>
-      <div style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);color:#1f2933;cursor:default">
+      <a href="/stories/chairs-note/" style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);color:#1f2933;text-decoration:none">
         <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">01</span>
         <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">Opening letter from the Chair</span>
-        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Forthcoming</span>
-      </div>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.12em;text-transform:uppercase;color:#54626d;white-space:nowrap">Chair</span>
+      </a>
       <div style="display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:14px 14px;margin:0 -14px;border-top:1px solid rgba(16,24,32,0.16);color:#1f2933;cursor:default">
         <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;color:#9a4a26">02</span>
         <span style="font-family:Newsreader,Georgia,serif;font-size:1.18rem;line-height:1.25">Beneath the Red Dust: Mars' lost rivers</span>
@@ -409,6 +408,7 @@
         <p style="margin:0 0 16px;color:rgba(251,250,247,0.66)">The attached field newsletter now anchors this photo essay: EPS 133 at Valley of Fire and Zion, EPS 112 at Painted Canyon, Igneous Petrology at the Bishop Tuff and White Mountain Research Station, and field notebooks in the places where the work happens.</p>
         <p style="margin:0 0 22px;color:rgba(251,250,247,0.66);font-size:0.92rem">Explore the Spring 2026 field gallery and selected highlights from across the EPSS field program.</p>
         <a href="/stories/field-highlights/" style="display:inline-flex;align-items:center;height:46px;padding:0 24px;background:#ffd100;color:#101820;font-weight:600;text-decoration:none">Read the dispatch →</a>
+        <a href="/media-archive/" style="display:inline-flex;align-items:center;margin:16px 0 0 20px;color:#fbfaf7;font-weight:600;text-decoration:underline;text-underline-offset:4px">Browse field and lab photographs →</a>
       </div>
       <aside style="border-top:4px solid #ffd100;background:rgba(251,250,247,0.06);padding:26px 28px;align-self:start">
         <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#ffd100">Bruin Geological Society</p>
@@ -505,8 +505,8 @@
         <p style="margin:16px 0 0;color:rgba(251,250,247,0.66)">Every PhD, MS, and BS recipient, the departmental award winners, and the speaker’s remarks.</p>
       </details>
       <a href="commencement-2026.html" style="display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 24px;margin:24px 0 18px;background:#ffd100;color:#101820;font-weight:600;text-decoration:none" style-hover="background:#fbfaf7">See the full programme &amp; degree list →</a>
-      <p style="margin:0 0 8px;font-size:0.92rem"><a href="https://ucla.box.com/s/r6ahi1vyf8ecnftdpboen1p2mq2gwlq6" style="font-weight:600;text-decoration:none;color:#ffd100" style-hover="color:#fbfaf7">Ceremony photographs →</a></p>
-      <p style="margin:0;font-size:0.82rem;line-height:1.45;color:rgba(251,250,247,0.66)">Commencement-day photographs by Valeria Jaramillo Hernandez and Zachary Lacson.</p>
+      <p style="margin:0 0 8px;font-size:0.92rem"><a href="/stories/commencement-2026/#commencement-gallery" style="font-weight:600;text-decoration:none;color:#ffd100" style-hover="color:#fbfaf7">Ceremony photographs →</a></p>
+      <p style="margin:0;font-size:0.82rem;line-height:1.45;color:rgba(251,250,247,0.66)">Photograph by Zachary Lacson. More photographs by Valeria Jaramillo Hernandez and Zachary Lacson in the gallery.</p>
     </div>
   </section>
 
@@ -578,7 +578,7 @@
           <a href="donors-and-endowments.html" style="display:block;padding:26px 28px;background:rgba(251,250,247,0.07);border-top:3px solid #ffd100;text-decoration:none;color:#fbfaf7" style-hover="background:rgba(251,250,247,0.13)">
             <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;letter-spacing:0.14em;text-transform:uppercase;color:#ffd100">2025–26 Donors</p>
             <p style="margin:0 0 8px;font-family:Newsreader,Georgia,serif;font-size:1.7rem;line-height:1.15">With gratitude to our donors</p>
-            <p style="margin:0;font-size:0.92rem;line-height:1.5;color:rgba(251,250,247,0.66)">Alongside 20 endowed funds supporting fellowships, field scholarships, and undergraduate research. See the full honour roll →</p>
+            <p style="margin:0;font-size:0.92rem;line-height:1.5;color:rgba(251,250,247,0.66)">Supporting fellowships, field scholarships, and undergraduate research. See the full honour roll →</p>
           </a>
           <sc-if value="{{showSignup}}" hint-placeholder-val="{{ true }}">
           <div style="background:rgba(251,250,247,0.07);padding:26px 28px">
@@ -716,12 +716,7 @@ class Component extends DCLogic {
   }
 
   // Keep captions in the same order as the cover images above.
-  captions = [
-    "Joshua trees at sunset, Mojave Desert",
-    "Icebergs off the Greenland coast",
-    "Valley of Fire, Nevada",
-    "TRACERS above Earth (artist’s concept) · NASA SVS",
-  ];
+  captions = ["Mountain fieldwork", "Learning in the field", "Celebrating our graduates"];
 
   componentDidMount() {
     const wantsPlay = (this.props.heroAutoplay ?? true) && !this.prefersReducedMotion();

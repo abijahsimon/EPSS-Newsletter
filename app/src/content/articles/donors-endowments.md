@@ -20,119 +20,119 @@ Across UCLA Physical Sciences, the 2026 installation of eight endowed chairs und
 
 Read more about EPSS’s endowed-chair installations in [Building the Future of Earth Sciences](https://epss.ucla.edu/building-the-future-of-earth-sciences-epss-celebrates-the-installation-of-three-endowed-chairs/).
 
-- Alessandra and David Whitney '78
-- Alice and William Newman
-- American Chemical Society
-- Andrea '72 and Joe Straus MS '69, PHD '72
-- Andrew Ungerleider
-- Arthur Mirsky Living Trust
-- Ashwin Vasavada '92
-- Barbara Church
-- Beth PHD '85 and Timothy Lincoln PHD '78
-- Betsy and Viktor Decyk MS '72, PHD '77
-- Bryan L. Horning PHD '75
-- Burroughs Wellcome Fund
-- Carina '69 and Kenneth Lister '67, MS '70
-- Carol Heinricy and Joseph Polovina MS '80
-- Caroline and James C Dawson '65, MS '67
-- Carrie Menkel-Meadow and Robert Meadow
-- Cathy and Glen Wyatt '77
-- Channie Varga
-- Charlotte and W. Gary Ernst
-- Chevron Corporation
-- Chris Mattinson
 - Christopher Adibe
-- Christopher P. Wong '93
-- Claire and Parke Snavely III '75
-- Deborah Wechsler and Bruce Bilodeau MS '81
-- Denise and Michael Vrabel '74
-- Diane V. Hunter
-- Doniphan and Mark Howland '74
-- Dorothy '55 and Roy Sakaida '53
-- Elizabeth Evans and Dean Runyan '66
-- Elizabeth Simons and Mark Heising
-- Emily Bisno
-- Eric B. Rehwoldt '85
-- Ernst W. Johnson III '70
-- Gary E. Strathearn '78, PHD '84
-- Gilles F. Peltzer
-- Gudrun and John Wasson
-- Harvard Travellers Club
-- Hedy Varga
-- Howard Frost '69
-- Howard J. Singer MS '75, PHD '80
-- Hsiu-Yin and Juhn Liou PHD '70
-- Jane and Alexander Robinson PHD '05
-- Janet E. Marott '66
-- Jeannie Giordano and James Greene
-- Jennifer McLean-Madera and Edward Madera
-- Jennifer Newbury MS '96, PHD '00 and Steven Persh MS '98, PHD '02
-- Johns Hopkins University
-- Joy Perry-Redfern and Richard Redfern MS '77
-- Julie and David Grover '75
-- Julie De Lilly and Stevan Dumas '76, DDS '80
-- Karen Robinson '73 and Richard Bild PHD '76
-- Kathryn '68 and Roderick Leonard '66
-- Kathryn and Robert Crippen '74
-- Kathy R. Bailey '82
-- Kimberly Davis and Graham Emonson
-- Larry Kawano
-- Larry Lesyna
-- Laszlo Varga
-- Laurence R. Greene '82, MBA '02
-- Li-Fang Hsu and William Tully Jr. JD '82
-- Linda Chu '82, MD '86 and Jeffrey Zukin '82
-- Lisa and Brian Rohrback PHD '79
-- Lorraine '77 and Jim Shiraishi '76
-- Luis Antonio Dominguez MS '09, PHD '12
-- Marcelle '76 and Brian Dicker '76
-- Margaret and Daniel Kivelson
-- Maria and Bruce Runnegar
-- Maria Varga
-- Mark Gittler
-- Marni Fecher and David McComas MS '85, PHD '86
-- Mary and M. Charles Gilbert PHD '65
+- American Chemical Society
 - Mary Christianakis '91, EDM '93 and Vassilis Angelopoulos MS '88, PHD '93
+- Arthur Mirsky Living Trust
 - Mary Jo and Philip Baedecker
-- Michael A. Hunziker '85
-- Milada Oberding-Colton and Eugene Colton '62, MS '64, PHD '68
-- Monica and Toby Moore '84, PHD '93
-- Nancy '67 and Gary Beverage
-- Nancy Shepard and William Hirt '78, MS '79
+- Kathy R. Bailey '82
 - Nasrin '75, MAR '78 and Ralph Barbee '73, MBA '75
-- Nicole A. Carter '90
-- Patricia A. Colville MA '66
-- Patricia Hogan and Mark Moldwin
-- Patrick S. Lam '00, MS '02
-- Paul Hastings LLP
-- Penelope Borax and John Donald
-- Rattray Kimura Foundation
-- Rhonda '78 and Keith Lee '75
-- Rhonda Rundle MA '74, MBA '83 and Michael Thacher MBA '83
-- Richie Varga
-- Rita and Raymond Ergas PHD '81
-- Sabina Jacobs Margot and Jean-Luc Margot
-- Sami Yanikian
-- Sandra '64 and Alexander Tary '63
-- Sarah Kremen and Jonathan Aurnou
-- Seamus Findler
-- Sharon Lander-Defibaugh and Steve Defibaugh '85
+- Nancy '67 and Gary Beverage
+- Deborah Wechsler and Bruce Bilodeau MS '81
 - Sheila Etzkorn MFA '86 and Michael Binder '73
-- Some Anonymous Gifts
-- Space Telescope Science Institute
-- Steven R. Lipshie MS '74, PHD '84
-- Susan Bell-Warner '84 and Scott Warner '83
-- Suzanne '80 and David Michels '64, PHD '76
+- Emily Bisno
+- Penelope Borax and John Donald
+- Burroughs Wellcome Fund
+- Nicole A. Carter '90
+- Chevron Corporation
+- Linda Chu '82, MD '86 and Jeffrey Zukin '82
+- Barbara Church
+- Milada Oberding-Colton and Eugene Colton '62, MS '64, PHD '68
+- Patricia A. Colville MA '66
+- Kathryn and Robert Crippen '74
+- Caroline and James C Dawson '65, MS '67
+- Betsy and Viktor Decyk MS '72, PHD '77
+- Sharon Lander-Defibaugh and Steve Defibaugh '85
+- Marcelle '76 and Brian Dicker '76
+- Luis Antonio Dominguez MS '09, PHD '12
+- Julie De Lilly and Stevan Dumas '76, DDS '80
+- Kimberly Davis and Graham Emonson
+- Rita and Raymond Ergas PHD '81
+- Charlotte and W. Gary Ernst
+- Seamus Findler
+- Howard Frost '69
+- Mary and M. Charles Gilbert PHD '65
+- Jeannie Giordano and James Greene
+- Mark Gittler
 - Terry A. Grant '68
+- Laurence R. Greene '82, MBA '02
+- Julie and David Grover '75
+- Harvard Travellers Club
+- Elizabeth Simons and Mark Heising
+- Nancy Shepard and William Hirt '78, MS '79
+- Bryan L. Horning PHD '75
+- Doniphan and Mark Howland '74
+- Diane V. Hunter
+- Michael A. Hunziker '85
+- Johns Hopkins University
+- Ernst W. Johnson III '70
+- Larry Kawano
+- Margaret and Daniel Kivelson
+- Sarah Kremen and Jonathan Aurnou
+- Patrick S. Lam '00, MS '02
+- Rhonda '78 and Keith Lee '75
+- Kathryn '68 and Roderick Leonard '66
+- Larry Lesyna
+- Beth PHD '85 and Timothy Lincoln PHD '78
+- Hsiu-Yin and Juhn Liou PHD '70
+- Steven R. Lipshie MS '74, PHD '84
+- Carina '69 and Kenneth Lister '67, MS '70
+- Sabina Jacobs Margot and Jean-Luc Margot
+- Janet E. Marott '66
+- Chris Mattinson
+- Marni Fecher and David McComas MS '85, PHD '86
+- Jennifer McLean-Madera and Edward Madera
+- Carrie Menkel-Meadow and Robert Meadow
+- Suzanne '80 and David Michels '64, PHD '76
+- Patricia Hogan and Mark Moldwin
+- Monica and Toby Moore '84, PHD '93
+- Alice and William Newman
+- Paul Hastings LLP
+- Gilles F. Peltzer
+- Jennifer Newbury MS '96, PHD '00 and Steven Persh MS '98, PHD '02
+- Carol Heinricy and Joseph Polovina MS '80
+- Rattray Kimura Foundation
+- Joy Perry-Redfern and Richard Redfern MS '77
+- Eric B. Rehwoldt '85
+- Jane and Alexander Robinson PHD '05
+- Karen Robinson '73 and Richard Bild PHD '76
+- Lisa and Brian Rohrback PHD '79
+- Maria and Bruce Runnegar
+- Elizabeth Evans and Dean Runyan '66
+- Dorothy '55 and Roy Sakaida '53
+- Willard E. Sharp '58, MA '60, PHD '64
+- Lorraine '77 and Jim Shiraishi '76
+- Yona and Edward Shulaker
+- Howard J. Singer MS '75, PHD '80
+- Claire and Parke Snavely III '75
+- Space Telescope Science Institute
+- Gary E. Strathearn '78, PHD '84
+- Andrea '72 and Joe Straus MS '69, PHD '72
+- Wai and Li-Yu Sung MS '82, PHD '89, MS '98
+- Sandra '64 and Alexander Tary '63
+- Rhonda Rundle MA '74, MBA '83 and Michael Thacher MBA '83
 - The Boeing Company
 - The Meteoritical Society
-- Theodore A. Vierra Jr. '54
+- Li-Fang Hsu and William Tully Jr. JD '82
+- Andrew Ungerleider
 - Vanguard Charitable The David J. McComas Philanthropic Fund
-- Wai and Li-Yu Sung MS '82, PHD '89, MS '98
+- Channie Varga
+- Hedy Varga
+- Laszlo Varga
+- Maria Varga
+- Richie Varga
+- Ashwin Vasavada '92
+- Theodore A. Vierra Jr. '54
+- Denise and Michael Vrabel '74
+- Susan Bell-Warner '84 and Scott Warner '83
+- Gudrun and John Wasson
 - Waverley Street Foundation
-- Willard E. Sharp '58, MA '60, PHD '64
+- Alessandra and David Whitney '78
+- Christopher P. Wong '93
+- Cathy and Glen Wyatt '77
+- Sami Yanikian
 - Xiaoyan Zhou PhD
-- Yona and Edward Shulaker
+- Anonymous Gifts
 
 ## Endowments
 

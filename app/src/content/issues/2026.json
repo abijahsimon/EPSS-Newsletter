@@ -21,35 +21,41 @@
     { "label": "Media Archive", "href": "/media-archive/" }
   ],
   "hero": {
-    "image": "/assets/images/2026/hero/joshua-trees-sunset.jpg",
-    "imageAlt": "Joshua trees silhouetted against a pink and orange sunset in the Mojave Desert.",
+    "image": "/assets/images/2026/hero/postcard-mountain-fieldwork.jpg",
+    "imageAlt": "Students walking along a mountain trail beneath the Sierra Nevada skyline.",
     "slides": [
       {
-        "image": "/assets/images/2026/hero/joshua-trees-sunset.jpg",
-        "imageAlt": "Joshua trees silhouetted against a pink and orange sunset in the Mojave Desert.",
-        "label": "Joshua trees at sunset, Mojave Desert",
-        "objectPosition": "50% 42%"
+        "image": "/assets/images/2026/hero/postcard-mountain-fieldwork.jpg",
+        "imageAlt": "Students walking along a mountain trail beneath the Sierra Nevada skyline.",
+        "label": "Mountain fieldwork",
+        "objectPosition": "50% 55%"
       },
       {
-        "image": "/assets/images/2026/hero/greenland-icebergs.jpg",
-        "imageAlt": "Icebergs beyond moss-covered granite outcrops on the Greenland coast.",
-        "label": "Icebergs off the Greenland coast",
-        "objectPosition": "50% 38%"
+        "image": "/assets/images/2026/hero/postcard-field-class.jpg",
+        "imageAlt": "Students gathered beside pale rock outcrops during a desert field class.",
+        "label": "Learning in the field",
+        "objectPosition": "50% 50%"
       },
       {
-        "image": "/assets/images/2026/hero/valley-of-fire-students.jpg",
-        "imageAlt": "A line of students walking toward red sandstone formations under a wide desert sky.",
-        "label": "Valley of Fire, Nevada",
-        "objectPosition": "50% 78%"
+        "image": "/assets/images/2026/hero/postcard-commencement.jpg",
+        "imageAlt": "EPSS graduates celebrating on the steps of the Geology Building.",
+        "label": "Celebrating our graduates",
+        "objectPosition": "50% 46%"
       }
     ],
-    "kicker": "2025-2026 · Published September 2026",
+    "kicker": "2025–2026 · Annual issue",
     "title": "EPSS Annual Newsletter",
     "dek": "Welcome to our new annual newsletter, rebuilt digitally.",
     "summary": "2025-2026 from Earth and Beyond: A year of discovery, fieldwork, mentorship, remembrance, and Bruin science.",
     "actions": [
-      { "label": "Explore This Issue", "href": "#contents" },
-      { "label": "Featured Stories", "href": "#features" }
+      {
+        "label": "Explore This Issue",
+        "href": "#contents"
+      },
+      {
+        "label": "Featured Stories",
+        "href": "#features"
+      }
     ],
     "supportCta": {
       "label": "Give to EPSS",
@@ -58,8 +64,8 @@
     "meta": {
       "eyebrow": "Note from the Chair",
       "title": "Jon Aurnou",
-      "body": "Opening letter from the Department Chair",
-      "status": "Letter forthcoming",
+      "body": "It is a pleasure to introduce myself as the incoming Chair of EPSS. I am delighted to serve this exciting and vibrant community.",
+      "status": "",
       "image": "/assets/images/2026/chair/jon-aurnou.jpg",
       "imageAlt": "Jon Aurnou, Professor and Chair of Earth, Planetary, and Space Sciences."
     }
@@ -129,12 +135,12 @@
         {
           "id": "chairs-note",
           "variant": "lead-story",
-          "image": "/assets/images/p02_04.jpg",
-          "imageAlt": "EPSS faculty portrait placeholder.",
+          "image": "/assets/people/jon-aurnou.jpg",
+          "imageAlt": "Jonathan Aurnou, EPSS Department Chair.",
           "category": "Chair's Note",
-          "title": "Opening Letter from the Department Chair",
-          "summary": "The planning sheet and meeting notes conflict on whether final chair copy exists. This remains a confirmation item.",
-          "link": { "label": "Awaiting final copy", "href": "#contents" }
+          "title": "Greetings from the Chair",
+          "summary": "It is a pleasure to introduce myself as the incoming Chair of EPSS. I am delighted to serve this exciting and vibrant community.",
+          "link": { "label": "Read the full note", "href": "/stories/chairs-note/" }
         }
       ]
     },

@@ -11,7 +11,7 @@ byline: "Benjamin Paul, UCLA Division of Physical Sciences"
 readTime: "6 min read"
 heroImage: "/assets/people/allen-glazner.webp"
 heroImageAlt: "Allen F. Glazner in the field."
-sourceNote: "Source draft supplied by Benjamin Paul on September 8, 2026; Allen approved the story as is without edits, confirmed by Ben on September 22 and Abijah on October 16. Torres del Paine photo permission remains unconfirmed."
+sourceNote: "Source draft supplied by Benjamin Paul on September 8, 2026; Allen approved the story as is without edits, confirmed by Ben on September 22 and Abijah on October 16. Photograph by Ignacio Carrasco; Abijah confirmed publication permission October 21, 2026."
 ---
 
 When Allen Glazner returned to UCLA in February to deliver the 2026 Earth, Planetary, and Space Sciences Distinguished Alumni Lecture, he began with a statement that could double as a summary of his scientific career.
