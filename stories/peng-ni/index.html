@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exploring Planetary History With Peng Ni | EPSS Newsletter 2026</title><meta name="description" content="The UCLA planetary scientist combines laboratory experiments, isotope measurements, and fieldwork to study Earth, the Moon, and beyond."><link rel="icon" href="/EPSS-Newsletter/assets/brand/epss-department-logo.svg" type="image/svg+xml"><script src="/EPSS-Newsletter/support.js"></script><link rel="stylesheet" href="/EPSS-Newsletter/_astro/_slug_.1E3jSrrT.css"></head><body>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exploring Planetary History With Peng Ni | EPSS Newsletter 2026</title><link rel="canonical" href="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/peng-ni/"><meta name="description" content="The UCLA planetary scientist combines laboratory experiments, isotope measurements, and fieldwork to study Earth, the Moon, and beyond."><meta property="og:site_name" content="UCLA EPSS Newsletter"><meta property="og:type" content="article"><meta property="og:title" content="Exploring Planetary History With Peng Ni | EPSS Newsletter 2026"><meta property="og:description" content="The UCLA planetary scientist combines laboratory experiments, isotope measurements, and fieldwork to study Earth, the Moon, and beyond."><meta property="og:url" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/peng-ni/"><meta property="og:image" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/assets/images/2026/peng-ni/meteorite-field-team.jpg"><meta name="twitter:card" content="summary_large_image"><script src="/EPSS-Newsletter/analytics.js"></script><link rel="icon" href="/EPSS-Newsletter/assets/brand/epss-department-logo.svg" type="image/svg+xml"><script src="/EPSS-Newsletter/support.js"></script><link rel="stylesheet" href="/EPSS-Newsletter/_astro/BaseLayout.1E3jSrrT.css"></head><body><noscript><p style="padding:1rem;background:#fbfaf7;color:#101820">This newsletter uses JavaScript for its interactive layout. Please enable JavaScript, or <a href="https://epss.ucla.edu/department-newsletters/">browse the newsletter PDFs</a>.</p></noscript>
 <x-dc>
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,12 +47,12 @@
         <p style="margin:0;font-weight:600">By Benjamin Paul</p>
         <p style="margin:0;font-size:0.82rem;color:#54626d">UCLA Division of Physical Sciences · 7 min read</p>
       </div>
-      <button type="button" onClick="{{share}}" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-size:0.82rem;font-weight:600;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
+      <button type="button" onClick="{{share}}" aria-live="polite" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-size:0.82rem;font-weight:600;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
     </div>
   </div>
 
   <figure style="margin:0 0 56px">
-    <img src="/EPSS-Newsletter/assets/images/2026/peng-ni/meteorite-field-team.jpg" alt="Peng Ni, Amy Mainzer, students, faculty, and volunteers on a meteorite-hunting field expedition near Pahrump, Nevada." style="width:100%;height:clamp(320px,46svh,540px);object-fit:cover;object-position:50% 60%;border-top:1px solid rgba(16,24,32,0.12);border-bottom:1px solid rgba(16,24,32,0.12)" />
+    <img decoding="async" loading="eager" fetchpriority="high" src="/EPSS-Newsletter/assets/images/2026/peng-ni/meteorite-field-team.jpg" alt="Peng Ni, Amy Mainzer, students, faculty, and volunteers on a meteorite-hunting field expedition near Pahrump, Nevada." style="width:100%;height:clamp(320px,46svh,540px);object-fit:cover;object-position:50% 60%;border-top:1px solid rgba(16,24,32,0.12);border-bottom:1px solid rgba(16,24,32,0.12)" />
     <figcaption style="max-width:1200px;margin:0 auto;padding:14px clamp(20px,4vw,40px) 0;font-size:0.82rem;color:#54626d">Students, faculty, and volunteers on dry lakebeds near Pahrump, Nevada.</figcaption>
   </figure>
 
@@ -66,7 +66,7 @@
 
       <figure style="margin:38px 0">
         <button type="button" onClick="{{openSapphire}}" aria-label="Enlarge photograph" style="display:block;width:100%;padding:0;border:1px solid rgba(16,24,32,0.14);background:#dfe8ee;cursor:zoom-in;overflow:hidden" style-hover="border-color:#9a4a26">
-          <img src="/EPSS-Newsletter/assets/images/2026/peng-ni/sapphire-lab-team.jpg" alt="Members of the Sapphire Lab standing beside the Nu Sapphire mass spectrometer." loading="lazy" style="display:block;width:100%;transition:transform 320ms cubic-bezier(0.34,1.1,0.64,1)" style-hover="transform:scale(1.02)" />
+          <img decoding="async" src="/EPSS-Newsletter/assets/images/2026/peng-ni/sapphire-lab-team.jpg" alt="Members of the Sapphire Lab standing beside the Nu Sapphire mass spectrometer." loading="lazy" style="display:block;width:100%;transition:transform 320ms cubic-bezier(0.34,1.1,0.64,1)" style-hover="transform:scale(1.02)" />
         </button>
         <figcaption style="margin-top:12px;font-size:0.82rem;line-height:1.5;color:#54626d">The Sapphire Lab at UCLA, with the Nu Sapphire mass spectrometer. From left: Hairuo Fu, Hugo Abe, Peng Ni, Aiyana Vazquez Ochoa, Lauren Tafla, and Sarina Ortiz-Stock.</figcaption>
       </figure>
@@ -245,18 +245,22 @@ class Component extends DCLogic {
       prevPhoto: () => this.step(-1),
       nextPhoto: () => this.step(1),
       progress: `${(this.state.progress * 100).toFixed(1)}%`,
-      share: (e) => {
-        if (navigator.clipboard) navigator.clipboard.writeText(location.href);
+      share: async (e) => {
         const el = e.currentTarget;
         const original = el.textContent;
-        el.textContent = "Link copied";
-        setTimeout(() => { el.textContent = original; }, 1600);
+        try {
+          await navigator.clipboard.writeText(location.href);
+          el.textContent = "Link copied";
+        } catch {
+          el.textContent = "Copy the link from your address bar";
+        }
+        setTimeout(() => { el.textContent = original; }, 2200);
       },
     };
   }
 }
 </script>
-<script>(function(){const transparentPixel = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+<script type="module">var e=null,t=null,n=e=>Array.from(e.querySelectorAll(`button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])`)).filter(e=>e.getClientRects().length>0),r=e=>n(e).find(e=>/^close\b/i.test(e.getAttribute(`aria-label`)??e.textContent?.trim()??``)),i=()=>{let i=Array.from(document.querySelectorAll(`[role="dialog"][aria-modal="true"]`)).find(e=>e.getClientRects().length>0)??null;if(i!==e){if(!i){e=null,t?.isConnected&&t.focus({preventScroll:!0}),t=null;return}e||(t=document.activeElement instanceof HTMLElement?document.activeElement:null),e=i,(r(i)??n(i)[0])?.focus({preventScroll:!0})}};new MutationObserver(i).observe(document.body,{childList:!0,subtree:!0}),i(),document.addEventListener(`keydown`,t=>{if(!e)return;if(t.key===`Escape`){let n=r(e);n&&(t.preventDefault(),t.stopPropagation(),n.click())}if(t.key!==`Tab`)return;let i=n(e),a=i[0],o=i.at(-1);!a||!o||(!e.contains(document.activeElement)||t.shiftKey&&document.activeElement===a?(t.preventDefault(),(t.shiftKey?o:a).focus()):!t.shiftKey&&document.activeElement===o&&(t.preventDefault(),a.focus()))});</script><script>(function(){const transparentPixel = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 
       const syncLightboxImages = () => {
         document.querySelectorAll("img[data-lightbox-src]").forEach((image) => {

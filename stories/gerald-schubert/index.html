@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gerald &quot;Jerry&quot; Schubert | EPSS Newsletter 2026</title><meta name="description" content="One of the fathers of modern geodynamics and planetary physics. UCLA faculty from 1966, and department chair in 2000."><link rel="icon" href="/EPSS-Newsletter/assets/brand/epss-department-logo.svg" type="image/svg+xml"><script src="/EPSS-Newsletter/support.js"></script><link rel="stylesheet" href="/EPSS-Newsletter/_astro/_slug_.1E3jSrrT.css"></head><body>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gerald &quot;Jerry&quot; Schubert | EPSS Newsletter 2026</title><link rel="canonical" href="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/gerald-schubert/"><meta name="description" content="One of the fathers of modern geodynamics and planetary physics. UCLA faculty from 1966, and department chair in 2000."><meta property="og:site_name" content="UCLA EPSS Newsletter"><meta property="og:type" content="article"><meta property="og:title" content="Gerald &quot;Jerry&quot; Schubert | EPSS Newsletter 2026"><meta property="og:description" content="One of the fathers of modern geodynamics and planetary physics. UCLA faculty from 1966, and department chair in 2000."><meta property="og:url" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/gerald-schubert/"><meta property="og:image" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/assets/images/2026/hero/postcard-mountain-fieldwork.jpg"><meta name="twitter:card" content="summary_large_image"><script src="/EPSS-Newsletter/analytics.js"></script><link rel="icon" href="/EPSS-Newsletter/assets/brand/epss-department-logo.svg" type="image/svg+xml"><script src="/EPSS-Newsletter/support.js"></script><link rel="stylesheet" href="/EPSS-Newsletter/_astro/BaseLayout.1E3jSrrT.css"></head><body><noscript><p style="padding:1rem;background:#fbfaf7;color:#101820">This newsletter uses JavaScript for its interactive layout. Please enable JavaScript, or <a href="https://epss.ucla.edu/department-newsletters/">browse the newsletter PDFs</a>.</p></noscript>
 <x-dc>
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,7 +54,7 @@
         <p style="margin:0;font-weight:600">Dave Bercovici</p>
         <p style="margin:0;font-size:0.82rem;color:#54626d">Yale University · ESS PhD 1989 · September 2025</p>
       </div>
-      <button type="button" onClick="{{share}}" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-size:0.82rem;font-weight:600;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
+      <button type="button" onClick="{{share}}" aria-live="polite" style="display:inline-flex;align-items:center;height:34px;padding:0 14px;background:transparent;border:1px solid rgba(16,24,32,0.28);color:#1f2933;font-size:0.82rem;font-weight:600;cursor:pointer" style-hover="border-color:#9a4a26;color:#9a4a26">Share</button>
     </div>
 
     <p style="margin:0 0 26px;font-family:Newsreader,Georgia,serif;font-size:1.18rem;font-weight:400;line-height:1.65;color:#101820">It’s with a heavy heart that I write to report on the passing of my friend and mentor, Gerald “Jerry” Schubert, on August 31, 2025, at the age of 86. He was one of the fathers of modern geodynamics and planetary physics writ large. Entering the geosciences in the 1960s — at the dawn of both space exploration and the plate tectonic revolution — he brought the tools of engineering physics to bear on a myriad of problems in geophysics, planetary physics, and astrophysics.</p>
@@ -130,18 +130,22 @@ class Component extends DCLogic {
   renderVals() {
     return {
       progress: `${(this.state.progress * 100).toFixed(1)}%`,
-      share: (e) => {
-        if (navigator.clipboard) navigator.clipboard.writeText(location.href);
+      share: async (e) => {
         const el = e.currentTarget;
         const original = el.textContent;
-        el.textContent = "Link copied";
-        setTimeout(() => { el.textContent = original; }, 1600);
+        try {
+          await navigator.clipboard.writeText(location.href);
+          el.textContent = "Link copied";
+        } catch {
+          el.textContent = "Copy the link from your address bar";
+        }
+        setTimeout(() => { el.textContent = original; }, 2200);
       },
     };
   }
 }
 </script>
-<script>(function(){const transparentPixel = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+<script type="module">var e=null,t=null,n=e=>Array.from(e.querySelectorAll(`button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])`)).filter(e=>e.getClientRects().length>0),r=e=>n(e).find(e=>/^close\b/i.test(e.getAttribute(`aria-label`)??e.textContent?.trim()??``)),i=()=>{let i=Array.from(document.querySelectorAll(`[role="dialog"][aria-modal="true"]`)).find(e=>e.getClientRects().length>0)??null;if(i!==e){if(!i){e=null,t?.isConnected&&t.focus({preventScroll:!0}),t=null;return}e||(t=document.activeElement instanceof HTMLElement?document.activeElement:null),e=i,(r(i)??n(i)[0])?.focus({preventScroll:!0})}};new MutationObserver(i).observe(document.body,{childList:!0,subtree:!0}),i(),document.addEventListener(`keydown`,t=>{if(!e)return;if(t.key===`Escape`){let n=r(e);n&&(t.preventDefault(),t.stopPropagation(),n.click())}if(t.key!==`Tab`)return;let i=n(e),a=i[0],o=i.at(-1);!a||!o||(!e.contains(document.activeElement)||t.shiftKey&&document.activeElement===a?(t.preventDefault(),(t.shiftKey?o:a).focus()):!t.shiftKey&&document.activeElement===o&&(t.preventDefault(),a.focus()))});</script><script>(function(){const transparentPixel = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 
       const syncLightboxImages = () => {
         document.querySelectorAll("img[data-lightbox-src]").forEach((image) => {

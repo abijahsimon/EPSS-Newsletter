@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://newsletter.epss.ucla.edu/EPSS-Newsletter/sitemap.xml
