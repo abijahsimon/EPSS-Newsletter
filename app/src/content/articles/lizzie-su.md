@@ -9,9 +9,9 @@ variant: standard
 dek: "Through mentorship, fieldwork, and a close-knit EPSS community, undergraduate Lizzie Su found a path in geophysics and is helping other students find their own."
 byline: "Benjamin Paul, UCLA Division of Physical Sciences"
 readTime: "6 min read"
-heroImage: "/assets/people/lizzie-su.jpeg"
+heroImage: "/assets/images/2026/lizzie-su/lizzie-su-headshot-2026.webp"
 heroImageAlt: "Lizzie Su, EPSS student."
-sourceNote: "Source draft supplied by Benjamin Paul on September 8, 2026; email noted approval was still pending."
+sourceNote: "Source draft supplied by Benjamin Paul on September 8, 2026; email noted approval was still pending. New headshot supplied by Lizzie and forwarded by Jon November 6, 2026, from the Penny Jennings session; photographer credit retained. Story-copy approval remains separate."
 ---
 
 Lizzie Su had already learned how to program a data-acquisition system when one of her UCLA professors suggested they take the next step: hike up Mount Whitney and put it to the test.

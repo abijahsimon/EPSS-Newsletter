@@ -1,0 +1,268 @@
+/* Front-page editorial system. Imported only by pages/index.astro: the DC
+   reference pages do not inherit BaseLayout's newsletter.css. */
+.issue-header,
+.issue-frontpage,
+.issue-footer {
+  --issue-paper: #fbfaf7;
+  --issue-ink: #101820;
+  --issue-body: #1f2933;
+  --issue-muted: #54626d;
+  --issue-blue: #2774ae;
+  --issue-gold: #ffd100;
+  --issue-line: rgba(16, 24, 32, 0.18);
+  --issue-gutter: clamp(20px, 4vw, 56px);
+  --issue-serif: "Newsreader", Georgia, serif;
+  --issue-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --issue-mono: "IBM Plex Mono", monospace;
+}
+
+.issue-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid var(--issue-line);
+  background: var(--issue-paper);
+}
+
+.issue-header-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1440px;
+  min-height: 82px;
+  margin: auto;
+  padding: 14px var(--issue-gutter);
+}
+
+.issue-brand { flex: 0 1 320px; min-width: 192px; }
+.issue-brand img { width: 100%; height: auto; }
+.issue-menu-toggle { display: none; }
+.issue-menu-close { display: none; }
+.issue-menu-toggle[aria-expanded="true"] > svg { display: none; }
+.issue-menu-toggle[aria-expanded="true"] .issue-menu-close { display: inline-flex; }
+.issue-nav { display: flex; align-items: center; gap: clamp(12px, 1.4vw, 22px); }
+.issue-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--issue-muted);
+  font: 600 0.8125rem/1.3 var(--issue-sans);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.issue-nav a:hover { color: var(--issue-ink); text-decoration: underline; text-underline-offset: 6px; }
+.issue-nav .issue-give { padding: 0 17px; background: var(--issue-ink); color: var(--issue-paper); }
+.issue-nav .issue-give:hover { color: var(--issue-paper); }
+
+.issue-frontpage { margin: auto; }
+.issue-frontpage > section:not(.issue-cover) { max-width: 1440px; margin-inline: auto; }
+.issue-frontpage section[id], .issue-frontpage [id="chairs-note"] { scroll-margin-top: 104px; }
+.issue-frontpage p { text-wrap: pretty; }
+.issue-frontpage :where(a, button, summary):focus-visible,
+.issue-header :where(a, button):focus-visible,
+.issue-footer a:focus-visible { outline: 3px solid var(--issue-blue); outline-offset: 5px; }
+.issue-frontpage :where(section[style*="background:#101820"], section[style*="background-color:#101820"]) :where(a, button, summary):focus-visible { outline-color: var(--issue-gold); }
+
+/* Full-bleed photographic cover; body copy and buttons remain above the scrim. */
+.issue-cover { position: relative; isolation: isolate; min-height: min(850px, calc(100svh - 83px)); background: var(--issue-ink); color: var(--issue-paper); }
+.issue-cover::after { content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(16,24,32,0.66) 0%, rgba(16,24,32,0.46) 42%, rgba(16,24,32,0.06) 78%, rgba(16,24,32,0.12)), linear-gradient(0deg, rgba(16,24,32,0.36), transparent 58%); }
+.cover-carousel { position: absolute; z-index: -2; inset: 0; overflow: hidden; background: var(--issue-ink); }
+.cover-track { position: absolute; inset: 0 auto 0 0; display: flex; width: 300%; height: 100%; transition: transform 900ms cubic-bezier(0.4, 0, 0.2, 1); }
+.cover-slide { flex: 0 0 33.333333%; min-width: 0; height: 100%; }
+.cover-slide img { width: 100%; height: 100%; object-fit: cover; }
+.cover-slide:nth-child(1) img { object-position: 50% 58%; }
+.cover-slide:nth-child(2) img { object-position: 50% 55%; }
+.cover-slide:nth-child(3) img { object-position: 50% 46%; }
+.cover-content { display: grid; grid-template-columns: minmax(0, 1fr) clamp(280px, 24vw, 320px); align-items: center; gap: clamp(40px, 6vw, 96px); max-width: 1440px; min-height: inherit; margin-inline: auto; padding: 64px var(--issue-gutter) 100px; }
+.cover-intro { min-width: 0; }
+.cover-edition,
+.issue-eyebrow { margin: 0 0 16px; color: var(--issue-blue); font: 500 0.75rem/1.5 var(--issue-mono); letter-spacing: 0.1em; text-transform: uppercase; }
+.cover-edition { display: flex; gap: 18px; align-items: center; margin-bottom: 24px; color: var(--issue-gold); }
+.cover-edition span + span { border-left: 1px solid rgba(251,250,247,0.35); padding-left: 18px; }
+.cover-title { max-width: 12ch; margin: 0; color: var(--issue-paper); font: 400 clamp(4.5rem, 8.2vw, 7.75rem)/0.96 var(--issue-serif); letter-spacing: -0.035em; text-wrap: balance; }
+.cover-welcome { max-width: 30ch; margin: 28px 0 18px; color: var(--issue-gold); font: 400 clamp(1.6rem, 2.4vw, 2.15rem)/1.2 var(--issue-serif); letter-spacing: -0.01em; }
+.cover-summary { max-width: 52ch; margin: 0 0 26px; color: rgba(251,250,247,0.9); font: 400 1.125rem/1.65 var(--issue-sans); }
+.cover-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.cover-action { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 12px 22px; border: 1px solid rgba(251,250,247,0.5); color: var(--issue-paper); background: rgba(16,24,32,0.35); font: 600 0.9375rem/1.35 var(--issue-sans); text-decoration: none; transition: background 160ms ease, border-color 160ms ease; }
+.cover-action-primary { background: var(--issue-gold); border-color: var(--issue-gold); color: var(--issue-ink); }
+.cover-action:hover { color: var(--issue-paper); background: rgba(251,250,247,0.12); border-color: var(--issue-paper); }
+.cover-action-primary:hover { color: var(--issue-ink); background: #ffe15a; border-color: #ffe15a; }
+/* shadcn ghost/icon-button pattern adapted to the existing DC renderer. */
+.cover-controls { position: absolute; bottom: 24px; left: max(var(--issue-gutter), calc((100% - 1440px) / 2 + var(--issue-gutter))); display: flex; align-items: center; gap: 2px; min-height: 44px; max-width: calc(100% - 2 * var(--issue-gutter)); color: rgba(251,250,247,0.82); }
+.cover-controls button { display: inline-flex; flex-shrink: 0; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: inherit; cursor: pointer; transition: color 160ms ease, background 160ms ease; }
+.cover-controls button:hover { background: rgba(251,250,247,0.12); color: var(--issue-paper); }
+.cover-controls svg { width: 18px; height: 18px; }
+.cover-play { font-size: 11px; }
+.cover-caption { margin-left: 14px; font: 400 0.6875rem/1.5 var(--issue-mono); letter-spacing: 0.055em; text-transform: uppercase; }
+.issue-cover :where(a, button):focus-visible { outline-color: var(--issue-gold); }
+.chair-card { display: flex; flex-direction: column; margin: 0; border-top: 1px solid rgba(255,209,0,0.55); background: rgba(16,24,32,0.72); color: var(--issue-paper); animation: chair-card-enter 720ms cubic-bezier(0.2, 0.7, 0.25, 1) 120ms both; }
+@keyframes chair-card-enter { from { opacity: 0; transform: translate3d(22px, 0, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+.chair-card figure { position: relative; margin: 0; background: var(--issue-ink); }
+.chair-card img { opacity: 0.82; width: 100%; aspect-ratio: 16/10; object-fit: cover; object-position: 10% 30%; }
+.chair-card figcaption { position: absolute; inset: auto 0 0; padding: 36px 20px 16px; color: var(--issue-paper); background: linear-gradient(0deg, rgba(16,24,32,0.98), rgba(16,24,32,0.76) 65%, rgba(16,24,32,0)); }
+.chair-label { margin: 0 0 5px; color: var(--issue-gold); font: 500 0.6875rem/1.5 var(--issue-mono); letter-spacing: 0.08em; text-transform: uppercase; }
+.chair-name { margin: 0 0 4px; font: 400 1.7rem/1.1 var(--issue-serif); }
+.chair-role { margin: 0; font: 400 0.8125rem/1.5 var(--issue-sans); }
+.chair-copy { flex: 1; display: flex; flex-direction: column; padding: 22px 24px; }
+.chair-copy h2 { margin: 0 0 12px; font: 400 1.25rem/1.2 var(--issue-serif); }
+.chair-copy > p { margin: 0 0 18px; font: 400 1rem/1.6 var(--issue-sans); color: rgba(251,250,247,0.92); }
+.chair-copy a { display: inline-flex; align-items: center; min-height: 44px; margin-top: auto; padding-top: 12px; border-top: 1px solid rgba(251,250,247,0.25); color: var(--issue-paper); font: 600 0.8125rem/1.5 var(--issue-sans); text-decoration: none; }
+.chair-copy a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+.issue-featured { padding: 38px var(--issue-gutter) 44px; background: var(--issue-paper); border-top: 1px solid var(--issue-line); }
+.issue-featured-heading { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 26px; }
+.issue-featured h2 { margin: 0; font: 400 clamp(2rem, 3.2vw, 2.8rem)/1.1 var(--issue-serif); letter-spacing: -0.02em; }
+.issue-featured-heading > a { display: inline-flex; align-items: center; min-height: 44px; color: var(--issue-blue); font-weight: 600; text-underline-offset: 4px; }
+.story-picks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.story-pick { display: flex; flex-direction: column; min-width: 0; border-top: 2px solid var(--issue-blue); padding-top: 18px; }
+.story-pick .issue-eyebrow { margin-bottom: 10px; }
+.story-pick h3 { margin: 0 0 12px; font: 400 clamp(1.5rem, 2.2vw, 1.9rem)/1.14 var(--issue-serif); letter-spacing: -0.015em; }
+.story-pick h3 a { color: var(--issue-ink); text-decoration: none; }
+.story-pick h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.story-pick > p:not(.issue-eyebrow) { margin: 0 0 18px; color: var(--issue-muted); font: 400 1rem/1.6 var(--issue-sans); }
+.story-pick > a { align-self: start; display: inline-flex; align-items: center; min-height: 44px; margin-top: auto; color: var(--issue-blue); font: 600 0.875rem/1.5 var(--issue-sans); text-underline-offset: 4px; }
+
+/* Retained reference-page sections: normalize the existing inline rhythm without
+   changing their approved copy, priorities, image selections or focal points. */
+.issue-frontpage > section:not(.issue-cover):not(.issue-featured):not(#rimfax):not(#field):not(#commencement) { padding-inline: var(--issue-gutter) !important; }
+.issue-frontpage #guide { padding-block: 44px 48px !important; }
+.contents-heading { padding: 22px 0 28px; }
+.contents-heading > p { margin: 0 0 10px; color: var(--issue-blue); font: 500 0.75rem/1.5 var(--issue-mono); letter-spacing: 0.1em; text-transform: uppercase; }
+.contents-heading h2 { margin: 0; font: 400 clamp(2rem, 3.2vw, 2.8rem)/1.1 var(--issue-serif); letter-spacing: -0.02em; }
+.contents-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
+.contents-row { grid-template-columns: 26px minmax(0, 1fr) auto !important; gap: 12px !important; margin-inline: 0 !important; padding: 16px 8px !important; }
+.contents-row > span:first-child { font-size: 0.6875rem !important; }
+.contents-row > span:nth-child(2) { font-size: 1.125rem !important; line-height: 1.35 !important; }
+.contents-row > span:last-child { font-size: 0.6875rem !important; }
+a.contents-row:hover, a.contents-row:focus-visible { background: var(--issue-ink) !important; color: var(--issue-paper) !important; }
+a.contents-row:hover > span:nth-child(2), a.contents-row:focus-visible > span:nth-child(2) { color: var(--issue-paper) !important; text-decoration: none; }
+a.contents-row:hover > span:first-child, a.contents-row:focus-visible > span:first-child { color: var(--issue-gold) !important; }
+a.contents-row:hover > span:last-child, a.contents-row:focus-visible > span:last-child { color: rgba(251,250,247,0.64) !important; }
+.issue-frontpage #community > div:first-child { flex-wrap: wrap; gap: 18px !important; }
+.issue-frontpage #community > div:first-child > p { max-width: 48ch !important; }
+.issue-frontpage #rimfax > div > div:first-child { min-height: 540px !important; }
+.issue-frontpage #rimfax h2 { font-weight: 400 !important; }
+.issue-footer { max-width: 1440px; margin-inline: auto; }
+
+@media (max-width: 1120px) {
+  .issue-header-inner { min-height: 76px; }
+  .issue-brand { flex: 0 1 290px; width: calc(100% - 88px); }
+  .issue-menu-toggle { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 44px; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 6px; background: transparent; color: var(--issue-ink); cursor: pointer; }
+  .issue-nav { display: none; position: absolute; inset: 100% 0 auto; padding: 12px var(--issue-gutter) 18px; border-bottom: 1px solid var(--issue-line); background: var(--issue-paper); }
+  .issue-nav.is-open { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 20px; }
+  .issue-nav a { min-height: 44px; white-space: normal; }
+  .issue-nav .issue-give { justify-self: start; }
+  .issue-menu-toggle:hover { background: #eef4f7; }
+  .chair-copy { padding: 20px; }
+}
+
+@media (max-width: 900px) {
+  .issue-cover { --cover-stage-height: max(720px, calc(100svh - 77px)); }
+  .issue-cover::after { background: linear-gradient(90deg, rgba(16,24,32,0.66), rgba(16,24,32,0.28)), linear-gradient(0deg, rgba(16,24,32,0.82) 4%, rgba(16,24,32,0.16) 56%, transparent 78%); }
+  .cover-carousel { bottom: auto; height: var(--cover-stage-height); }
+  .cover-content { display: block; padding: 0; }
+  .cover-intro { display: flex; align-items: center; min-height: var(--cover-stage-height); padding: 56px var(--issue-gutter) 108px; }
+  .cover-title { max-width: 12ch; font-size: clamp(3.5rem, 10.5vw, 5.5rem); }
+  .cover-welcome { max-width: 28ch; font-size: clamp(1.5rem, 3.5vw, 2rem); }
+  .cover-summary { max-width: 46ch; font-size: 1.0625rem; }
+  .cover-controls { top: calc(var(--cover-stage-height) - 76px); bottom: auto; left: var(--issue-gutter); }
+  .cover-slide:nth-child(1) img { object-position: 38% 55%; }
+  .cover-slide:nth-child(2) img { object-position: 70% 50%; }
+  .cover-slide:nth-child(3) img { object-position: 50% 46%; }
+  .chair-card { display: grid; grid-template-columns: minmax(120px, 0.4fr) minmax(0, 1fr); margin: 0 var(--issue-gutter) 36px; }
+  .chair-card figure { background: transparent; }
+  .chair-card figcaption { position: static; background: none; color: var(--issue-paper); padding: 12px; }
+  .chair-label { color: var(--issue-gold); font-size: 0.6875rem; letter-spacing: 0; }
+  .chair-name { font-size: 1.5rem; }
+  .chair-role { font-size: 0.75rem; }
+  .chair-copy { padding: 20px; }
+}
+
+@media (max-width: 760px) {
+  .issue-header-inner { min-height: 74px; gap: 16px; padding-block: 12px; }
+  .issue-brand { max-width: 258px; }
+  .issue-nav.is-open { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .issue-frontpage section[id], .issue-frontpage [id="chairs-note"] { scroll-margin-top: 92px; }
+  .issue-cover { --cover-stage-height: max(720px, calc(100svh - 75px)); }
+  .cover-edition { margin-bottom: 22px; font-size: 0.6875rem; }
+  .cover-welcome { margin-top: 24px; }
+  .cover-summary { font-size: 1rem; line-height: 1.65; margin-bottom: 24px; }
+  .cover-action { padding-inline: 16px; font-size: 0.875rem; }
+  .cover-caption { margin-left: 8px; font-size: 0.625rem; letter-spacing: 0.035em; }
+  .chair-card { grid-template-columns: 116px minmax(0, 1fr); }
+  .chair-name { font-size: 1.3rem; }
+  .chair-copy { padding: 14px; }
+  .chair-copy h2 { font-size: 1.125rem; }
+  .chair-copy > p { font-size: 1rem; line-height: 1.6; margin-bottom: 10px; }
+  .chair-copy a { font-size: 0.8125rem; }
+  .issue-featured { padding-block: 32px 36px; }
+  .issue-featured-heading { gap: 8px; margin-bottom: 20px; }
+  .issue-featured-heading > a { font-size: 0.875rem; }
+  .story-picks { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .story-pick { padding-top: 16px; }
+  .story-pick h3 { font-size: 1.65rem; }
+  .story-pick > p:not(.issue-eyebrow) { margin-bottom: 8px; }
+  .contents-grid { grid-template-columns: minmax(0, 1fr); }
+  .contents-row { grid-template-columns: 24px minmax(0, 1fr) !important; gap: 4px 10px !important; padding-block: 14px !important; }
+  .contents-row > span:first-child { grid-row: 1 / span 2; }
+  .contents-row > span:last-child { grid-column: 2; }
+  .issue-frontpage #guide { padding-block: 24px 32px !important; }
+  .issue-frontpage #community { padding-block: 44px !important; }
+  .issue-frontpage #community > div:first-child { margin-bottom: 28px !important; }
+  .issue-frontpage #rimfax > div > div:first-child { min-height: 0 !important; aspect-ratio: 4/3; }
+  .issue-frontpage #rimfax > div > div:last-child { padding-block: 32px !important; }
+  .issue-frontpage #rimfax h2 { font-size: 2.5rem !important; line-height: 1.05 !important; }
+}
+
+@media (max-width: 359px) {
+  .cover-actions { align-items: stretch; }
+  .cover-action { flex: 1 1 100%; }
+  .chair-card { grid-template-columns: 96px minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover-track { transition: none; }
+  .chair-card { animation: none; }
+}
+
+/* Field journal: two clear routes, to the article or its photograph collection. */
+.field-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.field-action { display: inline-flex; align-items: center; min-height: 48px; max-width: 100%; padding: 12px 18px; border: 1px solid rgba(251,250,247,0.5); color: var(--issue-paper); font: 600 0.9375rem/1.4 var(--issue-sans); text-decoration: none; }
+.field-action-story { background: var(--issue-gold); border-color: var(--issue-gold); color: var(--issue-ink); }
+.field-action:hover { color: var(--issue-paper); border-color: var(--issue-paper); background: rgba(251,250,247,0.1); text-decoration: underline; text-underline-offset: 4px; }
+.field-action-story:hover { color: var(--issue-ink); background: #ffe15a; border-color: #ffe15a; }
+@media (max-width: 760px) {
+  .issue-frontpage #field > div:first-child { padding-bottom: 28px !important; }
+  .field-actions { gap: 10px; }
+  .field-action { font-size: 0.875rem; }
+}
+
+/* A distinct reading/photo entry among the awards lists. */
+.undergraduate-feature { display: block; min-width: 0; overflow: hidden; border: 1px solid var(--issue-line); border-top: 3px solid var(--issue-gold); background: #eef4f7; color: var(--issue-ink); text-decoration: none; }
+.undergraduate-feature > img { width: 100%; aspect-ratio: 3/2; height: auto; object-fit: cover; object-position: 50% 25%; }
+.undergraduate-feature-copy { padding: 20px; }
+.undergraduate-feature-kicker { margin: 0 0 12px; color: var(--issue-blue); font: 500 0.6875rem/1.6 var(--issue-mono); letter-spacing: 0.04em; text-transform: uppercase; }
+.undergraduate-feature h3 { margin: 0 0 12px; font: 400 1.5rem/1.16 var(--issue-serif); letter-spacing: -0.015em; }
+#undergraduate-feature-copy { margin: 0 0 18px; color: var(--issue-muted); font: 400 1rem/1.6 var(--issue-sans); }
+#undergraduate-feature-action { display: inline-block; color: var(--issue-blue); font: 600 0.9375rem/1.5 var(--issue-sans); text-decoration: underline; text-underline-offset: 4px; }
+.undergraduate-feature-action-end { display: inline-block; white-space: nowrap; }
+.undergraduate-feature-credit { margin: 16px 0 0; color: var(--issue-muted); font: 400 0.75rem/1.5 var(--issue-sans); }
+.undergraduate-feature:hover { color: var(--issue-ink); border-color: var(--issue-blue); }
+.undergraduate-feature:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Memorials have a quiet rhythm and discrete reading links. */
+.memorial-panel { min-width: 0; align-self: start; padding-left: clamp(24px, 3vw, 40px); border-left: 1px solid var(--issue-line); }
+.memorial-kicker { margin: 0 0 14px; color: var(--issue-muted); font: 500 0.6875rem/1.5 var(--issue-mono); letter-spacing: 0.12em; text-transform: uppercase; }
+.memorial-panel > h2 { margin: 0 0 28px; color: var(--issue-ink); font: 400 clamp(1.9rem, 2.8vw, 2.6rem)/1.14 var(--issue-serif); letter-spacing: -0.02em; }
+.memorial-list { margin: 0; padding: 0; list-style: none; }
+.memorial-list li { padding: 24px 0 20px; border-top: 1px solid var(--issue-line); }
+.memorial-list h3 { margin: 0 0 8px; color: var(--issue-ink); font: 400 1.5rem/1.25 var(--issue-serif); }
+.memorial-date { margin: 0 0 8px; color: var(--issue-muted); font: 400 0.875rem/1.6 var(--issue-sans); }
+.memorial-note { margin: 0 0 8px; color: var(--issue-muted); font: 400 1rem/1.6 var(--issue-sans); }
+.memorial-list a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--issue-muted); font: 400 0.9375rem/1.5 var(--issue-sans); text-decoration: underline; text-underline-offset: 4px; }
+.memorial-list a:hover { color: var(--issue-ink); }
+@media (max-width: 760px) {
+  .memorial-panel { padding: 32px 0 0; border-left: 0; border-top: 1px solid var(--issue-line); }
+}

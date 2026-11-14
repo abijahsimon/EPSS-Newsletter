@@ -23,6 +23,10 @@ source-review/media-working/
 source-review/Claude outputs/
 source-review/claude-transfer/*.zip
 
+# Claude design kit: private working material, never published
+source-review/media-gallery-brief/claude-design-kit/
+source-review/media-gallery-brief/*.zip
+
 # Local office/editor noise
 ~$*
 *.tmp

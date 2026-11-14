@@ -48,14 +48,13 @@
     "dek": "Welcome to our new annual newsletter, rebuilt digitally.",
     "summary": "2025-2026 from Earth and Beyond: A year of discovery, fieldwork, mentorship, remembrance, and Bruin science.",
     "actions": [
-      { "label": "Explore This Issue", "href": "#guide" },
-      { "label": "Featured Stories", "href": "#rimfax" }
+      { "label": "Explore This Issue", "href": "#guide" }
     ],
     "supportCta": { "label": "Give to EPSS", "href": "https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" },
     "meta": {
       "eyebrow": "Note from the Chair",
       "title": "Jon Aurnou",
-      "body": "It is a pleasure to introduce myself as the incoming Chair of EPSS. I am delighted to serve this exciting and vibrant community.",
+      "body": "Welcome to the Department of Earth, Planetary, and Space Sciences (EPSS) at UCLA.",
       "status": "",
       "image": "/assets/images/2026/chair/jon-aurnou.jpg",
       "imageAlt": "Jon Aurnou, Professor and Chair of Earth, Planetary, and Space Sciences."
@@ -68,22 +67,22 @@
       "kicker": "Table of Contents",
       "title": "Explore the issue.",
       "links": [
-        { "label": "BALBOA: Photographing the Aurora in Daylight", "href": "/stories/balboa/" },
-        { "label": "Exploring Planetary History With Peng Ni", "href": "/stories/peng-ni/" },
-        { "label": "Lizzie Su on Life in EPSS", "href": "/stories/lizzie-su/" },
+        { "label": "Photographing the aurora in daylight", "href": "/stories/balboa/" },
+        { "label": "Exploring planetary history with Peng Ni", "href": "/stories/peng-ni/" },
+        { "label": "Lizzie Su on life in EPSS", "href": "/stories/lizzie-su/" },
         { "label": "A Map of an Undiscovered Territory", "href": "/stories/edwin-schauble/" },
-        { "label": "When the Evidence Stops Fitting", "href": "/stories/allen-glazner/" },
-        { "label": "Art & Science: Two Scientists Who Paint", "href": "/stories/art-science/" },
-        { "label": "Honors, Fellowships, and Recognition", "href": "/stories/awards-2026/" },
+        { "label": "When the evidence stops fitting", "href": "/stories/allen-glazner/" },
+        { "label": "Two scientists who paint", "href": "/stories/art-science/" },
+        { "label": "Honors, fellowships, and recognition", "href": "/stories/awards-2026/" },
         { "label": "Celebrating the Class of 2026", "href": "/stories/commencement-2026/" },
-        { "label": "Donors and Endowments", "href": "/stories/donors-endowments/" },
-        { "label": "Gilles Peltzer Retirement", "href": "/stories/gilles-peltzer/" },
-        { "label": "Steve Joy Farewell", "href": "/stories/steve-joy/" },
-        { "label": "Peter Chi Farewell", "href": "/stories/peter-chi/" },
-        { "label": "Gerald Schubert Memorial", "href": "/stories/gerald-schubert/" },
-        { "label": "Craig Manning Retirement", "href": "/stories/craig-manning/" },
+        { "label": "Donors and endowments", "href": "/stories/donors-endowments/" },
+        { "label": "Understanding Earth's deforming continents", "href": "/stories/gilles-peltzer/" },
+        { "label": "From Galileo to Europa Clipper", "href": "/stories/steve-joy/" },
+        { "label": "On leaving, and on raising a member of Generation Alpha", "href": "/stories/peter-chi/" },
+        { "label": "Gerald \"Jerry\" Schubert", "href": "/stories/gerald-schubert/" },
+        { "label": "Craig Manning retires after 36 years at UCLA", "href": "/stories/craig-manning/" },
         { "label": "RIMFAX", "href": "#rimfax" },
-        { "label": "Field Highlights", "href": "/stories/field-highlights/" },
+        { "label": "Dispatches from the Field", "href": "/stories/field-highlights/" },
         { "label": "Past Newsletter Archive", "href": "#archive-title" },
         { "label": "Chair's Note", "href": "#chairs-note" }
       ]
@@ -130,7 +129,7 @@
           "imageAlt": "Jonathan Aurnou, EPSS Department Chair.",
           "category": "Chair's Note",
           "title": "Greetings from the Chair",
-          "summary": "It is a pleasure to introduce myself as the incoming Chair of EPSS. I am delighted to serve this exciting and vibrant community.",
+          "summary": "Welcome to the Department of Earth, Planetary, and Space Sciences (EPSS) at UCLA.",
           "link": { "label": "Read the full note", "href": "/stories/chairs-note/" }
         }
       ]
@@ -146,7 +145,7 @@
           "id": "awards-card",
           "category": "Awards",
           "title": "Honors, Fellowships, and Recognition",
-          "summary": "Faculty honors, graduate fellowships, dissertation awards, and student recognition from the year.",
+          "summary": "Faculty honors, graduate research and citizenship awards, fellowships, and 18 recipients of the 2025 Undergraduate Research Awards.",
           "link": { "label": "Read awards", "href": "/stories/awards-2026/" }
         },
         {
@@ -175,14 +174,17 @@
           "category": "Course Photo Essay",
           "title": "Dispatches from the Field",
           "summary": "Spring 2026 field dispatches from Valley of Fire, Zion, Painted Canyon, Bishop Tuff, White Mountain Research Station, and other field classrooms.",
-          "link": { "label": "Read the field dispatch", "href": "/stories/field-highlights/" }
+          "link": { "label": "Read Dispatches from the Field", "href": "/stories/field-highlights/" }
         },
         {
           "id": "undergrad-fellowships",
-          "category": "Student Recognition",
-          "title": "Undergraduate Summer Fellowships",
-          "summary": "Recipient profiles and summer research stories are forthcoming.",
-          "variant": "decision-card"
+          "category": "Undergraduate Research · Article & photographs",
+          "image": "/assets/images/2026/undergraduate-awards/poster-discussion-800.webp",
+          "imageAlt": "A presenter gestures beside a research poster while an attendee listens.",
+          "imageCredit": "Photograph by Zachary Lacson.",
+          "title": "2025 Undergraduate Research Awards",
+          "summary": "18 recipients, their projects and mentors, with photographs from the May 26, 2026 poster session.",
+          "link": { "label": "Read article & view photos", "href": "/stories/awards-2026/#undergrad-h" }
         },
         {
           "id": "student-feature",
@@ -199,7 +201,7 @@
       "kicker": "Dispatches from the Field",
       "title": "Learning in the landscape.",
       "intro": "A photo essay from the Spring 2026 field newsletter, including winter and spring trips, from EPSS field trips through Valley of Fire, Zion, Painted Canyon, Bishop Tuff, White Mountain Research Station, dunes, folded strata, and rocky outcrops.",
-      "link": { "label": "Read the field dispatch", "href": "/stories/field-highlights/" },
+      "link": { "label": "Read Dispatches from the Field", "href": "/stories/field-highlights/" },
       "images": [
         {
           "src": "/assets/images/2026/field-spring-2026/valley-of-fire-fleet.jpg",
@@ -227,7 +229,7 @@
       "cards": [
         {
           "id": "lizzie-su",
-          "image": "/assets/people/lizzie-su.jpeg",
+          "image": "/assets/images/2026/lizzie-su/lizzie-su-headshot-2026.webp",
           "imageAlt": "Lizzie Su, EPSS student.",
           "category": "Student Feature",
           "title": "Lizzie Su on Life in EPSS",
@@ -296,13 +298,13 @@
         },
         {
           "title": "EPSS Asteroid Family",
-          "body": "Four asteroids named for EPSS scientists join a larger story about UCLA's continuing contribution to astronomy.",
+          "body": "Meet Christopher Snead, Jing Li, Ariel Graykowski and Dave Milewski, the four scientists behind the newest EPSS asteroid names. Story by Dave Milewski.",
           "link": { "label": "Read the Asteroid Family story", "href": "/stories/asteroid-family/" }
         },
         {
           "title": "Field / Geophysics 136C",
           "body": "A Spring 2026 photo essay from EPSS field courses across Valley of Fire, Zion, Painted Canyon, Bishop Tuff, White Mountain Research Station, and other field classrooms.",
-          "link": { "label": "Read the field dispatch", "href": "/stories/field-highlights/" }
+          "link": { "label": "Read Dispatches from the Field", "href": "/stories/field-highlights/" }
         }
       ]
     },
@@ -314,7 +316,7 @@
           "id": "awards",
           "category": "Awards",
           "title": "Honors and Recognition",
-          "summary": "Faculty honors, graduate fellowships, dissertation awards, and student recognition from the year.",
+          "summary": "Faculty honors, graduate research and citizenship awards, fellowships, and 18 recipients of the 2025 Undergraduate Research Awards.",
           "link": { "label": "Read Awards", "href": "/stories/awards-2026/" }
         },
         {

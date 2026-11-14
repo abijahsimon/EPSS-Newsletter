@@ -7,24 +7,23 @@ category: "Note from the Chair"
 title: "Greetings from the Chair"
 variant: standard
 byline: "Jonathan Aurnou"
-readTime: "3 min read"
+readTime: "2 min read"
 heroImage: "/assets/people/jon-aurnou.jpg"
 heroImageAlt: "Jonathan Aurnou, EPSS Department Chair."
-sourceNote: "2025 newsletter, page 2. Reused temporarily at Abijah’s explicit request October 21, 2026. Replace when Jon supplies the new letter."
+sourceNote: "Current EPSS Greetings from the Chair page supplied by Abijah October 29, 2026, replacing temporary 2025 letter. Main greeting only; recruitment/program blocks excluded. Signature extracted directly from the 2025 newsletter, printed page 2 (PDF page 2, left half), preserving embedded alpha. Existing approved portrait retained. Source links and checksums in source-review/LAUNCH-REVIEW.md."
 ---
 
-It is a pleasure to introduce myself as the incoming Chair of EPSS. I am delighted to serve this exciting and vibrant community.
+Welcome to the Department of Earth, Planetary, and Space Sciences (EPSS) at UCLA. Our mission is to understand Earth and our surrounding solar system, as well as extrasolar planets and the star systems that host them. EPSS continues to provide new insights about the processes that formed our universe and that continue to shape its evolution. Our department is committed to advancing rigorous scientific discovery, multimodal education, and impactful STEAM outreach. We are proud to have a department culture based on respect, collaboration, and openness to new ideas and methodologies.
 
-First and foremost, I would like to thank Carolina Lithgow-Bertelloni for her exceptional service as Chair over the past three years. In a period marked by significant challenges, Carolina led with commitment, clarity, and great success as she advanced departmental growth, cohesion, and excellence.
+Among the exciting topics we study are: how planetary bodies form and evolve; how life developed here on Earth; whether life has existed elsewhere; how the sun works; what processes shape planetary interiors, surfaces and atmospheres; and how to protect humanity from hazards like earthquakes, tsunamis, landslides, and nearby asteroids. Researchers in EPSS are leaders in geology, geobiology, geo- and cosmochemistry, geophysics, planetary sciences, atmospheric sciences and space physics.
 
-As we look ahead, EPSS—like much of the scientific community—faces a complex and evolving landscape with massive fluctuations in funding access and grant availability. Members of our international community, who contribute so deeply to the intellectual and cultural life of the department, are encountering new hurdles. Moreover, the value of science and academic research continue to be questioned on the national stage. These are undoubtedly stressful times.
+Education is of paramount importance to us. We provide our students opportunities to conduct investigations in state-of-the-art research laboratories and at field sites around the world. Our students are involved in building instrumentation used in space missions and space-based telescopes. We are committed to training the next generation of scientific thinkers who have the skills to tackle important questions about Earth, the Solar System, and beyond.
 
-And yet, the scientific and educational engagement of EPSS remains as inspiring as ever. To name a few:
+Please explore our [web site](https://epss.ucla.edu/) to learn more about the research conducted by our students, researchers, and faculty. You can also read about our activities in our [newsletters](https://epss.ucla.edu/department-newsletters/).
 
-- Professor Meng’s group recently illuminated the physics underlying the “supersonic” rupture of the magnitude 7.8 Myanmar earthquake.
-- Postdoc Pierre-Alexis Roy, working with Professor Benneke and co-authors, revealed a striking “tale of two exoplanets” using James Webb Space Telescope observations.
-- Professors Mainzer and Ni’s class ventured into the field for a three-day expedition, collecting and studying extraterrestrial meteoritic samples from the Stewart Valley and Silurian Dry Lakes. The experience, like others our department offers, empowered students as primary gatherers of planetary science data.
+<div class="chair-signoff">
+  <img src="/assets/images/2026/chair/jon-aurnou-signature.png" width="320" height="138" alt="Jonathan Aurnou’s signature" loading="lazy" />
+  <p>Jonathan Aurnou<br />EPSS Chair</p>
+</div>
 
-As a community, we need to stay engaged in all that shapes science—and stay connected to each other. Congress’ support for scientific research remains strong, and EPSS members are actively engaging with policymakers to keep it that way. For those who want to act locally, making a gift to EPSS is a powerful way to help. These contributions keep our unique labs running, sustain student activities, and maintain our field-based learning efforts in California—the most extraordinary of classrooms for geoscience and planetary-analog studies. It’s our connection as a community that will continue to propel EPSS forward, supporting students, research, and discovery alike.
-
-— Jon
+<p class="source-note">From <a href="https://epss.ucla.edu/greetings-from-the-chair/">Greetings from the Chair on the EPSS website</a>.</p>

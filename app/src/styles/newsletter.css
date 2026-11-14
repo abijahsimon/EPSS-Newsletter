@@ -1841,6 +1841,181 @@ h3 {
   margin: 32px 0 10px;
 }
 
+.article-asteroid-family .story-body {
+  max-width: 1120px;
+}
+
+.article-asteroid-family .story-body-copy {
+  max-width: none;
+}
+
+.article-asteroid-family .story-body-copy > p,
+.article-asteroid-family .story-body-copy > h2,
+.article-asteroid-family .asteroid-orbit-figure {
+  max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.article-asteroid-family .asteroid-honorees {
+  margin-top: 36px;
+}
+
+.article-asteroid-family .asteroid-honoree {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr) 200px;
+  gap: 40px;
+  align-items: start;
+  margin: 0;
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+}
+
+.article-asteroid-family .asteroid-honoree figure,
+.article-asteroid-family .asteroid-honoree h2,
+.article-asteroid-family .asteroid-honoree p {
+  margin: 0;
+}
+
+.article-asteroid-family .asteroid-honoree h2 {
+  margin-bottom: 16px;
+  font-size: clamp(1.8rem, 2.8vw, 2.25rem);
+  scroll-margin-top: 24px;
+}
+
+.article-asteroid-family .asteroid-honoree p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.article-asteroid-family .asteroid-honoree img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.article-asteroid-family .asteroid-honoree figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.article-asteroid-family .asteroid-honoree-text {
+  border-bottom: 1px solid var(--line);
+}
+
+.article-asteroid-family .asteroid-honoree-text .asteroid-honoree-copy {
+  grid-column: 1 / 3;
+}
+
+.article-asteroid-family .asteroid-namesake img {
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.article-asteroid-family .asteroid-namesake figcaption strong {
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.article-asteroid-family .story-body-copy > .asteroid-image-note {
+  max-width: none;
+  margin: 16px 0 44px;
+  color: var(--muted);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.article-asteroid-family .asteroid-orbit-figure {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.article-asteroid-family .asteroid-orbit-figure img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.article-asteroid-family .asteroid-orbit-figure figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.article-asteroid-family .asteroid-orbit-player {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.article-asteroid-family .asteroid-orbit-player summary {
+  width: fit-content;
+  min-height: 44px;
+  margin-bottom: 12px;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.article-asteroid-family .asteroid-orbit-player:not([open]) .orbit-stop-label,
+.article-asteroid-family .asteroid-orbit-player[open] .orbit-play-label,
+.article-asteroid-family .asteroid-orbit-player[open] + .asteroid-orbit-still {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .article-asteroid-family .asteroid-honoree {
+    grid-template-columns: 140px minmax(0, 1fr) 160px;
+    gap: 24px;
+  }
+
+  .article-asteroid-family .asteroid-honoree p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .article-asteroid-family .asteroid-honoree {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .article-asteroid-family .asteroid-honoree-copy {
+    display: contents;
+  }
+
+  .article-asteroid-family .asteroid-honoree h2 {
+    grid-area: 1 / 1 / 2 / -1;
+    margin: 0;
+    font-size: 1.8rem;
+  }
+
+  .article-asteroid-family .asteroid-portrait {
+    grid-area: 2 / 1;
+  }
+
+  .article-asteroid-family .asteroid-namesake {
+    grid-area: 2 / 2;
+  }
+
+  .article-asteroid-family .asteroid-honoree p {
+    grid-area: 3 / 1 / 4 / -1;
+  }
+
+  .article-asteroid-family .asteroid-honoree-text .asteroid-namesake {
+    grid-column: 1;
+  }
+}
+
 .story-gallery {
   margin-top: 64px;
   padding-top: 28px;
@@ -2224,4 +2399,25 @@ h3 {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Chair note: the original signature is a transparent extraction from the 2025 PDF. */
+.article-chairs-note .chair-signoff {
+  margin: 32px 0;
+}
+.article-chairs-note .chair-signoff img {
+  display: block;
+  width: 210px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 8px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.article-chairs-note .chair-signoff p {
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
 }

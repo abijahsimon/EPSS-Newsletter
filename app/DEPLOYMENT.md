@@ -24,7 +24,7 @@ NEWSLETTER_BASE=/newsletter pnpm verify:links
 NEWSLETTER_BASE=/newsletter pnpm preview
 ```
 
-The same commands work with another mount, such as `NEWSLETTER_BASE=/EPSS-Newsletter` for a GitHub Pages project. Use the same base when building, checking links, and previewing. Rebuild when the mount changes.
+The same commands work with another mount, such as `NEWSLETTER_BASE=/EPSS-Newsletter` for a GitHub Pages project. Use the same base when building, checking links, and previewing. `pnpm preview` rebuilds with the selected base before starting the server; without `NEWSLETTER_BASE`, it rebuilds for `/`. This prevents missing images and runtime scripts when switching from a subpath build back to a local root preview. Restart preview servers when changing the mount, and run only one preview configuration against the shared `dist/` directory at a time. Use `pnpm dev` for local editing independent of `dist/`.
 
 Deploy the **contents of `dist/`** at the selected web root/mount. The build does not create an additional directory named after the mount. Use `pnpm build`, which runs both Astro and the required final static-path pass; `astro build` alone does not rewrite the copied public files.
 

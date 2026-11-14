@@ -31,6 +31,10 @@ pnpm preview
 
 `pnpm build` writes the static site to `dist/`.
 
+`pnpm dev` serves the editable site at the local root. `pnpm preview` rebuilds
+before serving, so its asset paths always match the current `NEWSLETTER_BASE`
+(default `/`), even after a GitHub Pages build used `/EPSS-Newsletter`.
+
 ## Rendering Architecture
 
 - `src/pages/index.astro` renders Claude's issue page.
@@ -72,3 +76,37 @@ Claude's pages load Newsreader, IBM Plex Sans, and IBM Plex Mono from Google Fon
 ## QA
 
 The current visual and interaction results are documented in `../design-qa.md`. The final gate is `final result: passed`.
+
+
+## Restore the archived Featured Stories section
+
+Featured Stories is archived by default under the October 28 direction. Its
+editable markup remains in `src/archived/featured-stories.html`; matching styles
+remain in `src/styles/frontpage.css`. `src/pages/index.astro` controls both the
+section and its cover button together, so an archived section leaves no dead CTA.
+
+From `app/`, restore it for a local review with:
+
+```sh
+NEWSLETTER_FEATURED_STORIES=true pnpm dev
+```
+
+For a static preview, use `NEWSLETTER_FEATURED_STORIES=true pnpm build` and then
+`pnpm exec astro preview`. Return to the current archived version with
+`NEWSLETTER_FEATURED_STORIES=false pnpm build`. A new build is required to change
+this static output; the preview server reads `dist/`. Enabling the switch is a
+review action, not publication authorization. Both states were build-verified.
+
+Homepage contents links to articles use the actual rendered headlines; the link
+checker now enforces that relationship. Field has two reader routes: the article
+`/stories/field-highlights/` (Dispatches from the Field), and the photo collection
+`/media-archive/`. Under the later October 28 gallery direction, that page opens
+all 31 published standalone contest/field/Treude photos directly, without top
+filters or article imagery. Titles and known photographer names stay below each
+image; the lightbox uses icons with screen-reader labels for its metadata and
+omits collection/story categorization. Field returns to `/#field`. Old
+`?filter=field` links remain compatible and normalize to the gallery URL.
+The sanitized endpoint still contains the 55 approved public records; the viewer
+selects the standalone gallery subset. Seven held records and all publication
+flags stay unchanged. Juan's ten selected photographs carry the photographer
+credit explicitly confirmed by Abijah; Treude photographer names remain unknown.

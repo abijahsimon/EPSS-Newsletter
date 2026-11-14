@@ -16,6 +16,31 @@ async function collect(directory) {
 await collect(root);
 let checked = 0;
 const errors = [];
+const plainText = (html) => html.replace(/<[^>]*>/g, " ")
+  .replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#(?:39|x27);/gi, "'")
+  .replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim().toLowerCase();
+
+// A story's contents label must identify the article the reader actually opens.
+// Section/overview anchors and forthcoming entries intentionally remain separate.
+let checkedTitles = 0;
+const homepage = await readFile(join(root, "index.html"), "utf8");
+for (const row of homepage.matchAll(/<a\b[^>]*class="contents-row"[^>]*>([\s\S]*?)<\/a>/g)) {
+  const href = row[0].match(/\bhref="([^"]+)"/)?.[1];
+  if (!href?.includes("/stories/")) continue;
+  checkedTitles++;
+  const spans = [...row[1].matchAll(/<span\b[^>]*>([\s\S]*?)<\/span>/g)];
+  const label = spans[1]?.[1];
+  try {
+    const url = new URL(href, "https://local.invalid");
+    const article = await readFile(join(root, url.pathname.slice(prefix.length), "index.html"), "utf8");
+    const headline = article.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)?.[1];
+    if (!label || !headline || plainText(label) !== plainText(headline)) {
+      errors.push(`Contents title mismatch: ${href}: "${plainText(label || "")}" / "${plainText(headline || "")}"`);
+    }
+  } catch {
+    errors.push(`Contents article unavailable: ${href}`);
+  }
+}
 const directories = new Map();
 async function checkCase(path) {
   const relative = path.slice(root.length);
@@ -86,5 +111,5 @@ if (errors.length) {
   console.error(errors.join("\n"));
   process.exitCode = 1;
 } else {
-  console.log(`Static links: ${pages.length} HTML files, ${checked} local URLs; ${MEDIA_ITEMS.length} public gallery records; case-sensitive paths and publication boundary pass for ${prefix}`);
+  console.log(`Contents: ${checkedTitles} article headlines match. Static links: ${pages.length} HTML files, ${checked} local URLs; ${MEDIA_ITEMS.length} public gallery records; case-sensitive paths and publication boundary pass for ${prefix}`);
 }

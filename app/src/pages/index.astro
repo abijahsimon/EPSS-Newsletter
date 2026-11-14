@@ -1,10 +1,21 @@
 ---
 import ReferencePage from "../components/ReferencePage.astro";
 import { homeReferencePage } from "../lib/reference-pages";
+import archivedFeaturedStories from "../archived/featured-stories.html?raw";
+import "../styles/frontpage.css";
+
+// Archived by default. Restore the section AND cover action together with:
+// NEWSLETTER_FEATURED_STORIES=true pnpm dev (or pnpm build).
+const showFeaturedStories = import.meta.env.NEWSLETTER_FEATURED_STORIES === "true";
+const homepage = homeReferencePage
+  .replace("<!-- FRONT_PAGE_FEATURED_STORIES -->", showFeaturedStories ? archivedFeaturedStories : "")
+  .replace("<!-- FRONT_PAGE_FEATURED_ACTION -->", showFeaturedStories
+    ? '<a class="cover-action" href="#featured-stories">Featured Stories</a>'
+    : "");
 ---
 
 <ReferencePage
-  html={homeReferencePage}
+  html={homepage}
   title="EPSS Newsletter 2026"
   description="The 2026 UCLA Earth, Planetary, and Space Sciences annual newsletter."
 />
