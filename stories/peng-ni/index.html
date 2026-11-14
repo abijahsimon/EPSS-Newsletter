@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exploring Planetary History With Peng Ni | EPSS Newsletter 2026</title><link rel="canonical" href="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/peng-ni/"><meta name="description" content="The UCLA planetary scientist combines laboratory experiments, isotope measurements, and fieldwork to study Earth, the Moon, and beyond."><meta property="og:site_name" content="UCLA EPSS Newsletter"><meta property="og:type" content="article"><meta property="og:title" content="Exploring Planetary History With Peng Ni | EPSS Newsletter 2026"><meta property="og:description" content="The UCLA planetary scientist combines laboratory experiments, isotope measurements, and fieldwork to study Earth, the Moon, and beyond."><meta property="og:url" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/peng-ni/"><meta property="og:image" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/assets/images/2026/peng-ni/meteorite-field-team.jpg"><meta name="twitter:card" content="summary_large_image"><script src="/EPSS-Newsletter/analytics.js"></script><link rel="icon" href="/EPSS-Newsletter/assets/brand/epss-department-logo.svg" type="image/svg+xml"><script src="/EPSS-Newsletter/support.js"></script><link rel="stylesheet" href="/EPSS-Newsletter/_astro/BaseLayout.1E3jSrrT.css"></head><body><noscript><p style="padding:1rem;background:#fbfaf7;color:#101820">This newsletter uses JavaScript for its interactive layout. Please enable JavaScript, or <a href="https://epss.ucla.edu/department-newsletters/">browse the newsletter PDFs</a>.</p></noscript>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exploring Planetary History With Peng Ni | EPSS Newsletter 2026</title><link rel="canonical" href="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/peng-ni/"><meta name="description" content="The UCLA planetary scientist combines laboratory experiments, isotope measurements, and fieldwork to study Earth, the Moon, and beyond."><meta property="og:site_name" content="UCLA EPSS Newsletter"><meta property="og:type" content="article"><meta property="og:title" content="Exploring Planetary History With Peng Ni | EPSS Newsletter 2026"><meta property="og:description" content="The UCLA planetary scientist combines laboratory experiments, isotope measurements, and fieldwork to study Earth, the Moon, and beyond."><meta property="og:url" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/peng-ni/"><meta property="og:image" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/assets/images/2026/peng-ni/meteorite-field-team.jpg"><meta name="twitter:card" content="summary_large_image"><script src="/EPSS-Newsletter/analytics.js"></script><link rel="icon" href="/EPSS-Newsletter/assets/brand/epss-department-logo.svg" type="image/svg+xml"><script src="/EPSS-Newsletter/support.js"></script><link rel="stylesheet" href="/EPSS-Newsletter/_astro/BaseLayout.4byn4kME.css"></head><body><noscript><p style="padding:1rem;background:#fbfaf7;color:#101820">This newsletter uses JavaScript for its interactive layout. Please enable JavaScript, or <a href="https://epss.ucla.edu/department-newsletters/">browse the newsletter PDFs</a>.</p></noscript>
 <x-dc>
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -277,4 +277,22 @@ class Component extends DCLogic {
         subtree: true,
       });
       syncLightboxImages();
+
+      // The new awards deep link must wait for the hidden reference template
+      // to mount before the browser can position its undergraduate heading.
+      if (window.location.hash === "#undergrad-h") {
+        let alignmentPending = false;
+        const alignUndergraduateHeading = () => {
+          const heading = document.getElementById("undergrad-h");
+          if (!heading?.getClientRects().length || alignmentPending) return;
+          alignmentPending = true;
+          document.fonts.ready.then(() => requestAnimationFrame(() => requestAnimationFrame(() => {
+            document.getElementById("undergrad-h")?.scrollIntoView({ block: "start", behavior: "instant" });
+            fragmentObserver.disconnect();
+          })));
+        };
+        const fragmentObserver = new MutationObserver(alignUndergraduateHeading);
+        fragmentObserver.observe(document.body, { childList: true, subtree: true });
+        alignUndergraduateHeading();
+      }
     })();</script></body></html>

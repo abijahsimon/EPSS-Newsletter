@@ -227,4 +227,22 @@ class Component extends DCLogic {
         subtree: true,
       });
       syncLightboxImages();
+
+      // The new awards deep link must wait for the hidden reference template
+      // to mount before the browser can position its undergraduate heading.
+      if (window.location.hash === "#undergrad-h") {
+        let alignmentPending = false;
+        const alignUndergraduateHeading = () => {
+          const heading = document.getElementById("undergrad-h");
+          if (!heading?.getClientRects().length || alignmentPending) return;
+          alignmentPending = true;
+          document.fonts.ready.then(() => requestAnimationFrame(() => requestAnimationFrame(() => {
+            document.getElementById("undergrad-h")?.scrollIntoView({ block: "start", behavior: "instant" });
+            fragmentObserver.disconnect();
+          })));
+        };
+        const fragmentObserver = new MutationObserver(alignUndergraduateHeading);
+        fragmentObserver.observe(document.body, { childList: true, subtree: true });
+        alignUndergraduateHeading();
+      }
     })();</script></body></html>

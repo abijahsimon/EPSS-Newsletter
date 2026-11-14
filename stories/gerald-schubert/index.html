@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gerald &quot;Jerry&quot; Schubert | EPSS Newsletter 2026</title><link rel="canonical" href="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/gerald-schubert/"><meta name="description" content="One of the fathers of modern geodynamics and planetary physics. UCLA faculty from 1966, and department chair in 2000."><meta property="og:site_name" content="UCLA EPSS Newsletter"><meta property="og:type" content="article"><meta property="og:title" content="Gerald &quot;Jerry&quot; Schubert | EPSS Newsletter 2026"><meta property="og:description" content="One of the fathers of modern geodynamics and planetary physics. UCLA faculty from 1966, and department chair in 2000."><meta property="og:url" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/gerald-schubert/"><meta property="og:image" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/assets/images/2026/hero/postcard-mountain-fieldwork.jpg"><meta name="twitter:card" content="summary_large_image"><script src="/EPSS-Newsletter/analytics.js"></script><link rel="icon" href="/EPSS-Newsletter/assets/brand/epss-department-logo.svg" type="image/svg+xml"><script src="/EPSS-Newsletter/support.js"></script><link rel="stylesheet" href="/EPSS-Newsletter/_astro/BaseLayout.1E3jSrrT.css"></head><body><noscript><p style="padding:1rem;background:#fbfaf7;color:#101820">This newsletter uses JavaScript for its interactive layout. Please enable JavaScript, or <a href="https://epss.ucla.edu/department-newsletters/">browse the newsletter PDFs</a>.</p></noscript>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gerald &quot;Jerry&quot; Schubert | EPSS Newsletter 2026</title><link rel="canonical" href="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/gerald-schubert/"><meta name="description" content="One of the fathers of modern geodynamics and planetary physics. UCLA faculty from 1966, and department chair in 2000."><meta property="og:site_name" content="UCLA EPSS Newsletter"><meta property="og:type" content="article"><meta property="og:title" content="Gerald &quot;Jerry&quot; Schubert | EPSS Newsletter 2026"><meta property="og:description" content="One of the fathers of modern geodynamics and planetary physics. UCLA faculty from 1966, and department chair in 2000."><meta property="og:url" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/gerald-schubert/"><meta property="og:image" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/assets/images/2026/hero/postcard-mountain-fieldwork.jpg"><meta name="twitter:card" content="summary_large_image"><script src="/EPSS-Newsletter/analytics.js"></script><link rel="icon" href="/EPSS-Newsletter/assets/brand/epss-department-logo.svg" type="image/svg+xml"><script src="/EPSS-Newsletter/support.js"></script><link rel="stylesheet" href="/EPSS-Newsletter/_astro/BaseLayout.4byn4kME.css"></head><body><noscript><p style="padding:1rem;background:#fbfaf7;color:#101820">This newsletter uses JavaScript for its interactive layout. Please enable JavaScript, or <a href="https://epss.ucla.edu/department-newsletters/">browse the newsletter PDFs</a>.</p></noscript>
 <x-dc>
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,7 +43,7 @@
       <p style="margin:0 0 20px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:#ffd100">In Memoriam</p>
       <h1 style="margin:0 0 18px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(2.4rem,5.6vw,4.6rem);line-height:1;letter-spacing:-0.025em">Gerald “Jerry” Schubert</h1>
       <p style="margin:0 0 22px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.18rem,2vw,1.6rem);line-height:1.4;color:rgba(251,250,247,0.86)">One of the fathers of modern geodynamics and planetary physics. UCLA faculty from 1966, and department chair in 2000.</p>
-      <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(251,250,247,0.66)">Died 31 August 2025 · aged 86</p>
+      <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(251,250,247,0.66)">31 August 2025 · aged 86</p>
     </div>
   </div>
 
@@ -162,4 +162,22 @@ class Component extends DCLogic {
         subtree: true,
       });
       syncLightboxImages();
+
+      // The new awards deep link must wait for the hidden reference template
+      // to mount before the browser can position its undergraduate heading.
+      if (window.location.hash === "#undergrad-h") {
+        let alignmentPending = false;
+        const alignUndergraduateHeading = () => {
+          const heading = document.getElementById("undergrad-h");
+          if (!heading?.getClientRects().length || alignmentPending) return;
+          alignmentPending = true;
+          document.fonts.ready.then(() => requestAnimationFrame(() => requestAnimationFrame(() => {
+            document.getElementById("undergrad-h")?.scrollIntoView({ block: "start", behavior: "instant" });
+            fragmentObserver.disconnect();
+          })));
+        };
+        const fragmentObserver = new MutationObserver(alignUndergraduateHeading);
+        fragmentObserver.observe(document.body, { childList: true, subtree: true });
+        alignUndergraduateHeading();
+      }
     })();</script></body></html>
