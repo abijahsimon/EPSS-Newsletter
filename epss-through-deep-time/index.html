@@ -20,7 +20,8 @@
   h1, h2, h3, p, ul, ol, figure { margin-top: 0; }
   ::selection { background: #ffd100; color: #101820; }
   .history-intro { display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.3fr);gap:clamp(24px,4vw,64px);align-items:start;margin-bottom:36px; }
-  .history-reading { display:inline-flex;align-items:center;min-height:44px;margin-top:16px;padding:0 0 4px;border-bottom:1px solid #2774ae;font-size:0.92rem;font-weight:600;text-decoration:none; }
+  .history-reading { display:inline-flex;align-items:center;min-height:44px;margin-top:16px;padding:0 0 4px;border-bottom:1px solid #2774ae;font-size:0.92rem;font-weight:600;text-decoration:underline;text-underline-offset:0.16em; }
+  .history-reading:focus-visible { outline:3px solid #9a4a26;outline-offset:3px; }
   .history-reading:hover { border-bottom-color:#9a4a26; }
   .history-milestones { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;list-style:none;margin:0;padding:0; }
   .history-milestones li { border-top:2px solid #2774ae;padding-top:18px; }
@@ -31,6 +32,18 @@
     .history-milestones { grid-template-columns:minmax(0,1fr);gap:0; }
     .history-milestones li { display:grid;grid-template-columns:100px minmax(0,1fr);gap:20px;border-top:1px solid rgba(16,24,32,0.2);padding:20px 0; }
     .history-milestones h3 { font-size:1.5rem;margin:0; }
+  }
+
+  main :where(h1,h2,h3,p,li,a) { overflow-wrap:anywhere; }
+  header > div:first-child, header > div:first-child > div { flex-wrap:wrap; }
+  .archive-poster-action { max-width:100%; }
+  .masthead-legend { display:none; margin:18px 0 0; padding:0; list-style:none; }
+  .masthead-legend li { padding:12px 0; border-top:1px solid rgba(251,250,247,0.25); }
+  .masthead-legend span { display:block; color:#ffd100; font:500 0.75rem/1.6 'IBM Plex Mono',monospace; }
+  .masthead-legend strong { display:block; font-size:1rem; font-weight:400; line-height:1.5; }
+  @media (max-width:48rem) {
+    .masthead-legend { display:block; }
+    .masthead-bands > span > span:not([aria-hidden]), .masthead-dates { display:none; }
   }
 </style>
 </helmet>
@@ -65,7 +78,7 @@
 
       <p style="margin:0 0 14px;font-size:0.82rem;line-height:1.5;color:rgba(251,250,247,0.66);text-wrap:pretty">The department’s changing newsletter mastheads</p>
 
-      <div style="position:relative;height:26px">
+      <div class="masthead-bands" style="position:relative;height:26px">
         <span title="Department of Geology" style="position:absolute;left:0;width:15.25%;top:0;bottom:0;display:flex;align-items:center;justify-content:center;gap:6px;padding:0 4px;background:rgba(251,250,247,0.07);border-left:1px solid rgba(251,250,247,0.28)">
           <span aria-hidden="true" style="flex:0 0 auto;width:0;height:0;border-top:3.5px solid transparent;border-bottom:3.5px solid transparent;border-right:7px solid rgba(251,250,247,0.55)"></span>
           <span style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(251,250,247,0.86);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Geology</span>
@@ -91,13 +104,19 @@
         <span title="2014 — the masthead becomes Earth, Planetary, and Space Sciences" style="position:absolute;left:79.66%;top:4px;width:11px;height:11px;margin-left:-5.5px;border-radius:999px;background:#ffd100;box-shadow:0 0 0 3px rgba(6,11,18,0.9),0 0 14px 2px rgba(255,209,0,0.5)"></span>
       </div>
 
-      <div style="position:relative;height:18px;font-family:'IBM Plex Mono',monospace;font-size:0.62rem;letter-spacing:0.1em">
+      <div class="masthead-dates" style="position:relative;height:18px;font-family:'IBM Plex Mono',monospace;font-size:0.62rem;letter-spacing:0.1em">
         <span style="position:absolute;left:0;color:rgba(251,250,247,0.5)">1967</span>
         <span style="position:absolute;left:15.25%;transform:translateX(-50%);font-weight:600;color:#ffd100">1976</span>
         <span style="position:absolute;left:38.98%;transform:translateX(-50%);color:rgba(251,250,247,0.5)">1990</span>
         <span style="position:absolute;left:79.66%;transform:translateX(-50%);font-weight:600;color:#ffd100">2014</span>
         <span style="position:absolute;right:0;color:rgba(251,250,247,0.5)">2026</span>
       </div>
+
+      <ol class="masthead-legend" aria-label="Masthead chronology">
+        <li><span>1967–1976</span><strong>Department of Geology</strong></li>
+        <li><span>1976–2014</span><strong>Department of Earth and Space Sciences</strong></li>
+        <li><span>2014–2026</span><strong>Department of Earth, Planetary, and Space Sciences</strong></li>
+      </ol>
 
     </div>
   </section>
@@ -107,7 +126,7 @@
   <section aria-label="All issues, 1967 to 2025" style="max-width:1200px;margin:0 auto;padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px) 0">
     <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;padding-bottom:22px;margin-bottom:clamp(28px,3.5vw,44px);border-bottom:3px solid #101820">
       <h2 style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(1.7rem,3vw,2.6rem);line-height:1.06;letter-spacing:-0.025em">Every cover from 1967 to 2025</h2>
-      <a href="/EPSS-Newsletter/archive-poster/" style="display:inline-flex;align-items:center;height:44px;padding:0 20px;background:#101820;color:#fbfaf7;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap" style-hover="background:#ffd100;color:#101820">Open poster PDF →</a>
+      <a href="/EPSS-Newsletter/archive-poster/" class="archive-poster-action" style="display:inline-flex;align-items:center;min-height:44px;padding:12px 20px;background:#101820;color:#fbfaf7;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;white-space:normal" style-hover="background:#ffd100;color:#101820">Open poster PDF →</a>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:36px 26px">
       <sc-if value="{{ hasCovers }}" hint-placeholder-val="{{ false }}">
@@ -130,7 +149,7 @@
       <h2 id="history-title" style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2rem,3.6vw,3rem);line-height:1.08;letter-spacing:-0.02em">Before the first newsletter</h2>
       <div>
         <p style="max-width:62ch;margin:0;color:#54626d;line-height:1.7">Kathy Jackson’s “Rock of Ages: A Selective History of Geology at UCLA,” published in the 1981–83 newsletter, traces the department’s beginnings long before the earliest cover in this collection.</p>
-        <a class="history-reading" href="https://epss.ucla.edu/wp-content/uploads/media/documents/newsletters/EPSS-Newsletter-1981-83-part-1.pdf#page=12" aria-label="Read Kathy Jackson’s history, printed pages 9–10, PDF">Read Jackson’s history <span style="margin-left:12px;font-size:0.75rem;font-weight:400;color:#54626d">PDF · pp. 9–10</span></a>
+        <a class="history-reading" href="https://epss.ucla.edu/wp-content/uploads/media/documents/newsletters/EPSS-Newsletter-1981-83-part-1.pdf#page=12">Read Jackson’s history <span style="margin-left:12px;font-size:0.75rem;font-weight:400;color:#54626d">PDF · pp. 9–10</span></a>
       </div>
     </div>
     <ol class="history-milestones">
@@ -210,9 +229,110 @@ class Component extends DCLogic {
   }
 }
 </script>
-<script type="module">var e=null,t=null,n=e=>Array.from(e.querySelectorAll(`button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])`)).filter(e=>e.getClientRects().length>0),r=e=>n(e).find(e=>/^close\b/i.test(e.getAttribute(`aria-label`)??e.textContent?.trim()??``)),i=()=>{let i=Array.from(document.querySelectorAll(`[role="dialog"][aria-modal="true"]`)).find(e=>e.getClientRects().length>0)??null;if(i!==e){if(!i){e=null,t?.isConnected&&t.focus({preventScroll:!0}),t=null;return}e||(t=document.activeElement instanceof HTMLElement?document.activeElement:null),e=i,(r(i)??n(i)[0])?.focus({preventScroll:!0})}};new MutationObserver(i).observe(document.body,{childList:!0,subtree:!0}),i(),document.addEventListener(`keydown`,t=>{if(!e)return;if(t.key===`Escape`){let n=r(e);n&&(t.preventDefault(),t.stopPropagation(),n.click())}if(t.key!==`Tab`)return;let i=n(e),a=i[0],o=i.at(-1);!a||!o||(!e.contains(document.activeElement)||t.shiftKey&&document.activeElement===a?(t.preventDefault(),(t.shiftKey?o:a).focus()):!t.shiftKey&&document.activeElement===o&&(t.preventDefault(),a.focus()))});</script><script>(function(){const transparentPixel = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+<script type="module" src="/EPSS-Newsletter/_astro/ReferencePage.astro_astro_type_script_index_0_lang.C2detpne.js"></script><script>(function(){const transparentPixel = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 
-      const syncLightboxImages = () => {
+      // DC replaces the source tree when it mounts. Bind to each connected
+      // cover track rather than retaining a reference to the detached template.
+      const initializedCoverTracks = new WeakSet();
+      const setupCovers = () => {
+        const coverTrack = document.querySelector(".cover-track");
+        if (!coverTrack?.isConnected || initializedCoverTracks.has(coverTrack)) return;
+        initializedCoverTracks.add(coverTrack);
+        const coverImages = [...coverTrack.querySelectorAll(".cover-slide img[data-cover-src]")];
+        let pendingCoverIntent = null;
+        let coverIntentSerial = 0;
+        const ensureCoverLoaded = (img, priority = "low") => {
+          if (img.dataset.coverLoaded === "true" && img.complete && img.naturalWidth > 1) return Promise.resolve(true);
+          if (img._coverLoadPromise) return img._coverLoadPromise;
+          img.loading = "eager";
+          img.fetchPriority = priority;
+          const source = img.parentElement.querySelector("source[data-cover-srcset]");
+          if (source) {
+            source.sizes = source.dataset.coverSizes || "100vw";
+            source.srcset = source.dataset.coverSrcset;
+            source.removeAttribute("data-cover-srcset");
+          }
+          img.sizes = img.dataset.coverSizes || "100vw";
+          img.srcset = img.dataset.coverSrcset;
+          img.src = img.dataset.coverSrc;
+          const decodeImage = () => {
+            if (img.complete && img.naturalWidth > 1) return Promise.resolve();
+            return img.decode ? img.decode() : new Promise((resolve, reject) => {
+              img.addEventListener("load", resolve, { once: true });
+              img.addEventListener("error", reject, { once: true });
+            });
+          };
+          img._coverLoadPromise = decodeImage().catch(() => {
+            // A failed WebP still needs a decoded JPEG before it can be shown.
+            img.parentElement.querySelector("source[type='image/webp']")?.removeAttribute("srcset");
+            img.removeAttribute("srcset");
+            img.src = img.dataset.coverSrc;
+            return decodeImage();
+          }).then(() => {
+            if (img.naturalWidth <= 1) throw new Error("Cover image unavailable");
+            img.dataset.coverLoaded = "true";
+            return true;
+          }).catch(() => {
+            img.dataset.coverLoaded = "false";
+            img._coverLoadPromise = undefined;
+            return false;
+          });
+          return img._coverLoadPromise;
+        };
+        if (coverTrack && coverImages.length) {
+          const controls = document.querySelector(".cover-controls");
+          controls?.addEventListener("click", (event) => {
+            const button = event.target.closest("button[aria-label='Next cover image'], button[aria-label='Previous cover image']");
+            if (!button) return;
+            // Inline transform is the intended slide. Computed transform is an
+            // interpolated position during animation and can select the wrong
+            // image when a reader advances again before the transition ends.
+            const offset = /translateX\((-?[\d.]+)%\)/.exec(coverTrack.style.transform);
+            const slideCount = coverTrack.querySelectorAll(".cover-slide").length;
+            const current = Math.round(Math.abs(Number(offset?.[1] || 0)) / (100 / slideCount));
+            const direction = button.getAttribute("aria-label").startsWith("Next") ? 1 : -1;
+            const target = (current + direction + slideCount) % slideCount;
+            const targetImage = coverTrack.querySelectorAll(".cover-slide img")[target];
+            if (pendingCoverIntent?.button === button && pendingCoverIntent.targetImage === targetImage) {
+              event.preventDefault();
+              event.stopImmediatePropagation();
+              return;
+            }
+            const intent = ++coverIntentSerial;
+            pendingCoverIntent = null;
+            if (!targetImage?.hasAttribute("data-cover-src") || (targetImage.dataset.coverLoaded === "true" && targetImage.complete && targetImage.naturalWidth > 1)) return;
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            // Manual navigation pauses autoplay immediately, including while
+            // loading. A later request supersedes an earlier pending request.
+            const play = controls.querySelector(".cover-play");
+            if (play?.getAttribute("aria-label") === "Pause cover images") play.click();
+            pendingCoverIntent = { button, targetImage, intent };
+            ensureCoverLoaded(targetImage, "high").then((ready) => {
+              if (intent !== coverIntentSerial) return;
+              pendingCoverIntent = null;
+              if (ready && coverTrack.isConnected) button.click();
+            });
+          }, true);
+          const loadRemainingCovers = () => {
+            const runIdle = (callback, timeout = 2500) => window.requestIdleCallback
+              ? window.requestIdleCallback(callback, { timeout })
+              : window.setTimeout(callback, 500);
+            const loadNext = (index) => {
+              if (index >= coverImages.length) return;
+              runIdle(() => ensureCoverLoaded(coverImages[index], "low").then(() => {
+                window.setTimeout(() => loadNext(index + 1), 1800);
+              }));
+            };
+            loadNext(0);
+          };
+          if (document.readyState === "complete") loadRemainingCovers();
+          else window.addEventListener("load", loadRemainingCovers, { once: true });
+        }
+      };
+
+      const syncDynamicImages = () => {
+        setupCovers();
         document.querySelectorAll("img[data-lightbox-src]").forEach((image) => {
           const source = image.getAttribute("data-lightbox-src");
           if (source && !source.includes("{{") && image.getAttribute("src") !== source) {
@@ -221,28 +341,11 @@ class Component extends DCLogic {
         });
       };
 
-      new MutationObserver(syncLightboxImages).observe(document.body, {
+      new MutationObserver(syncDynamicImages).observe(document.body, {
         attributes: true,
         childList: true,
         subtree: true,
       });
-      syncLightboxImages();
+      syncDynamicImages();
 
-      // The new awards deep link must wait for the hidden reference template
-      // to mount before the browser can position its undergraduate heading.
-      if (window.location.hash === "#undergrad-h") {
-        let alignmentPending = false;
-        const alignUndergraduateHeading = () => {
-          const heading = document.getElementById("undergrad-h");
-          if (!heading?.getClientRects().length || alignmentPending) return;
-          alignmentPending = true;
-          document.fonts.ready.then(() => requestAnimationFrame(() => requestAnimationFrame(() => {
-            document.getElementById("undergrad-h")?.scrollIntoView({ block: "start", behavior: "instant" });
-            fragmentObserver.disconnect();
-          })));
-        };
-        const fragmentObserver = new MutationObserver(alignUndergraduateHeading);
-        fragmentObserver.observe(document.body, { childList: true, subtree: true });
-        alignUndergraduateHeading();
-      }
     })();</script></body></html>

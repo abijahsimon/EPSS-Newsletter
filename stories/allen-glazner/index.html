@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>When The Evidence Stops Fitting | EPSS Newsletter 2026</title><link rel="canonical" href="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/allen-glazner/"><meta name="description" content="Allen F. Glazner returned to UCLA for the 2026 EPSS Distinguished Alumni Lecture with a career-long argument for questioning what geology thinks it knows."><meta property="og:site_name" content="UCLA EPSS Newsletter"><meta property="og:type" content="article"><meta property="og:title" content="When The Evidence Stops Fitting | EPSS Newsletter 2026"><meta property="og:description" content="Allen F. Glazner returned to UCLA for the 2026 EPSS Distinguished Alumni Lecture with a career-long argument for questioning what geology thinks it knows."><meta property="og:url" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/allen-glazner/"><meta property="og:image" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/assets/people/allen-glazner.webp"><meta name="twitter:card" content="summary_large_image"><script src="/EPSS-Newsletter/analytics.js"></script><link rel="icon" href="/EPSS-Newsletter/assets/brand/epss-department-logo.svg" type="image/svg+xml"><script src="/EPSS-Newsletter/support.js"></script><link rel="stylesheet" href="/EPSS-Newsletter/_astro/BaseLayout.4byn4kME.css"></head><body><noscript><p style="padding:1rem;background:#fbfaf7;color:#101820">This newsletter uses JavaScript for its interactive layout. Please enable JavaScript, or <a href="https://epss.ucla.edu/department-newsletters/">browse the newsletter PDFs</a>.</p></noscript>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>When The Evidence Stops Fitting | EPSS Newsletter 2026</title><link rel="canonical" href="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/allen-glazner/"><meta name="description" content="Allen F. Glazner returned to UCLA for the 2026 EPSS Distinguished Alumni Lecture with a career-long argument for questioning what geology thinks it knows."><meta property="og:site_name" content="UCLA EPSS Newsletter"><meta property="og:type" content="article"><meta property="og:title" content="When The Evidence Stops Fitting | EPSS Newsletter 2026"><meta property="og:description" content="Allen F. Glazner returned to UCLA for the 2026 EPSS Distinguished Alumni Lecture with a career-long argument for questioning what geology thinks it knows."><meta property="og:url" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/stories/allen-glazner/"><meta property="og:image" content="https://newsletter.epss.ucla.edu/EPSS-Newsletter/assets/people/allen-glazner.webp"><meta name="twitter:card" content="summary_large_image"><script src="/EPSS-Newsletter/analytics.js"></script><link rel="icon" href="/EPSS-Newsletter/assets/brand/epss-department-logo.svg" type="image/svg+xml"><script src="/EPSS-Newsletter/support.js"></script><link rel="stylesheet" href="/EPSS-Newsletter/_astro/BaseLayout.Cw8mnmG5.css"><link rel="stylesheet" href="/EPSS-Newsletter/_astro/_slug_.ZEUxyONn.css"></head><body><noscript><p style="padding:1rem;background:#fbfaf7;color:#101820">This newsletter uses JavaScript for its interactive layout. Please enable JavaScript, or <a href="https://epss.ucla.edu/department-newsletters/">browse the newsletter PDFs</a>.</p></noscript>
 <x-dc>
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -98,6 +98,39 @@
     </div>
   </article>
 
+  <section id="lecture-gallery" aria-labelledby="lecture-gallery-title" style="padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px);background:#eef4f7;color:#1f2933">
+    <div style="max-width:1200px;margin:0 auto">
+      <h2 id="lecture-gallery-title" style="margin:0 0 8px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(1.9rem,3.4vw,2.9rem);line-height:1.08;letter-spacing:-0.02em">The Distinguished Alumni Lecture in photographs</h2>
+      <p style="max-width:62ch;margin:0 0 28px;font-size:0.92rem;color:#54626d">Scenes from Allen Glazner’s 2026 lecture and the reception that followed. Select a photograph to enlarge it.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:22px">
+        <sc-for list="{{ photos }}" as="photo" hint-placeholder-count="9">
+          <figure style="margin:0;min-width:0">
+            <button type="button" onClick="{{ photo.open }}" aria-label="Enlarge photograph: {{ photo.alt }}" style="display:block;width:100%;padding:0;border:1px solid rgba(16,24,32,0.14);background:#dfe8ee;cursor:zoom-in;overflow:hidden" style-hover="border-color:#9a4a26">
+              <img src="{{ photo.src }}" alt="{{ photo.alt }}" loading="lazy" style="display:block;width:100%;height:auto;transition:transform 320ms cubic-bezier(0.34,1.1,0.64,1)" style-hover="transform:scale(1.02)" />
+            </button>
+            <figcaption style="margin-top:9px;font-size:0.78rem;line-height:1.5;color:#54626d">{{ photo.caption }}</figcaption>
+          </figure>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-modal="true" aria-label="Lecture photograph" style="position:fixed;inset:0;z-index:90;background:rgba(16,24,32,0.94)">
+      <div style="position:absolute;inset:0;cursor:zoom-out" onClick="{{ closeLightbox }}"></div>
+      <div style="position:absolute;inset:0 0 132px;display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,48px) clamp(76px,9vw,120px) 0;pointer-events:none">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lightbox-src="{{ lightboxSrc }}" alt="{{ lightboxAlt }}" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border:1px solid rgba(251,250,247,0.25)" />
+      </div>
+      <button type="button" onClick="{{ prevPhoto }}" aria-label="Previous photograph" style="position:absolute;left:clamp(12px,2.5vw,32px);top:calc(50% - 66px);display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;background:rgba(16,24,32,0.55);border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;font-size:1.15rem;cursor:pointer" style-hover="background:#ffd100;border-color:#ffd100;color:#101820">←</button>
+      <button type="button" onClick="{{ nextPhoto }}" aria-label="Next photograph" style="position:absolute;right:clamp(12px,2.5vw,32px);top:calc(50% - 66px);display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;background:rgba(16,24,32,0.55);border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;font-size:1.15rem;cursor:pointer" style-hover="background:#ffd100;border-color:#ffd100;color:#101820">→</button>
+      <button type="button" onClick="{{ closeLightbox }}" style="position:absolute;top:clamp(12px,2.5vw,32px);right:clamp(12px,2.5vw,32px);display:inline-flex;align-items:center;height:44px;padding:0 18px;background:rgba(16,24,32,0.55);border:1px solid rgba(251,250,247,0.4);color:#fbfaf7;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer" style-hover="background:#fbfaf7;color:#101820">Close</button>
+      <div style="position:absolute;left:0;right:0;bottom:0;height:132px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:0 clamp(16px,4vw,48px);pointer-events:none">
+        <p style="margin:0;max-width:74ch;font-size:0.88rem;line-height:1.5;text-align:center;color:rgba(251,250,247,0.86)">{{ lightboxCaption }}</p>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;color:rgba(251,250,247,0.66)">{{ lightboxCounter }}</span>
+      </div>
+    </div>
+  </sc-if>
+
   <section aria-labelledby="more-title" style="padding:clamp(44px,6vw,72px) clamp(20px,4vw,40px);background:#101820;color:#fbfaf7">
     <div style="max-width:1200px;margin:0 auto">
       <div style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid rgba(251,250,247,0.2)">
@@ -139,7 +172,25 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1100}}">
 class Component extends DCLogic {
-  state = { progress: 0 };
+  state = { progress: 0, lightbox: null };
+
+  photoData = [
+    { src: "/EPSS-Newsletter/assets/images/2026/glazner/p2120060-w1800.webp", alt: "Undergraduate students Ryan Landayan, Jason Ge, and Anna Peterson take a selfie with EPSS Department Chair Jonathan Aurnou.", caption: "Undergraduate students Ryan Landayan, Jason Ge, and Anna Peterson take a selfie with EPSS Department Chair Jonathan Aurnou." },
+    { src: "/EPSS-Newsletter/assets/images/2026/glazner/p2120256-w1800.webp", alt: "Allen Glazner giving the EPSS Distinguished Alumni Lecture 2026 at UCLA.", caption: "Allen Glazner giving the EPSS Distinguished Alumni Lecture 2026 at UCLA." },
+    { src: "/EPSS-Newsletter/assets/images/2026/glazner/q-p2120006-2-w1800.webp", alt: "Allen Glazner giving the EPSS Distinguished Alumni Lecture 2026 at UCLA.", caption: "Allen Glazner giving the EPSS Distinguished Alumni Lecture 2026 at UCLA." },
+    { src: "/EPSS-Newsletter/assets/images/2026/glazner/p2120259-w1800.webp", alt: "Allen Glazner giving the EPSS Distinguished Alumni Lecture 2026 at UCLA.", caption: "Allen Glazner giving the EPSS Distinguished Alumni Lecture 2026 at UCLA." },
+    { src: "/EPSS-Newsletter/assets/images/2026/glazner/p2120285-w1800.webp", alt: "Allen Glazner giving the EPSS Distinguished Alumni Lecture 2026 at UCLA.", caption: "Allen Glazner giving the EPSS Distinguished Alumni Lecture 2026 at UCLA." },
+    { src: "/EPSS-Newsletter/assets/images/2026/glazner/p2120090-w1800.webp", alt: "UCLA EPSS 2026 Distinguished Alumni Lecturer Allen Glazner and his wife Dr. Mary Olney.", caption: "UCLA EPSS 2026 Distinguished Alumni Lecturer Allen Glazner and his wife Dr. Mary Olney." },
+    { src: "/EPSS-Newsletter/assets/images/2026/glazner/p2120044-w1800.webp", alt: "UCLA EPSS 2026 Distinguished Alumni Lecturer signing copies of his books at our reception with alum, Patrick Lam.", caption: "UCLA EPSS 2026 Distinguished Alumni Lecturer signing copies of his books at our reception with alum, Patrick Lam." },
+    { src: "/EPSS-Newsletter/assets/images/2026/glazner/p2120101-w1800.webp", alt: "(In Order) UCLA Physical Sciences Dean Miguel Garcia-Garibay, UCLA EPSS 2026 Distinguished Alumni Lecturer Allen Glazner, Dr. Mary Olney, EPSS Department Chair Jonathan Aurnou.", caption: "(In Order) UCLA Physical Sciences Dean Miguel Garcia-Garibay, UCLA EPSS 2026 Distinguished Alumni Lecturer Allen Glazner, Dr. Mary Olney, EPSS Department Chair Jonathan Aurnou." },
+    { src: "/EPSS-Newsletter/assets/images/2026/glazner/p2120031-w1800.webp", alt: "UCLA EPSS 2026 Distinguished Alumni Lecturer Allen Glazner signing a copy of his book for alum Patrick Lam at the reception.", caption: "UCLA EPSS 2026 Distinguished Alumni Lecturer Allen Glazner signing a copy of his book for alum Patrick Lam at the reception." },
+  ];
+
+  openAt = (i) => this.setState({ lightbox: i });
+  closeLightbox = () => this.setState({ lightbox: null });
+  step = (d) => this.setState((s) => ({
+    lightbox: s.lightbox === null ? null : (s.lightbox + d + this.photoData.length) % this.photoData.length,
+  }));
 
   componentDidMount() {
     this.onScroll = () => {
@@ -149,14 +200,35 @@ class Component extends DCLogic {
     };
     window.addEventListener("scroll", this.onScroll, { passive: true });
     this.onScroll();
+
+    this.onKey = (e) => {
+      if (this.state.lightbox === null) return;
+      if (e.key === "Escape") this.closeLightbox();
+      else if (e.key === "ArrowRight") this.step(1);
+      else if (e.key === "ArrowLeft") this.step(-1);
+    };
+    window.addEventListener("keydown", this.onKey);
   }
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.onScroll);
+    window.removeEventListener("keydown", this.onKey);
   }
 
   renderVals() {
+    const i = this.state.lightbox;
+    const current = i === null ? null : this.photoData[i];
+    const BLANK = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
     return {
+      photos: this.photoData.map((p, n) => ({ ...p, open: () => this.openAt(n) })),
+      lightboxOpen: current !== null,
+      lightboxSrc: current ? current.src : BLANK,
+      lightboxAlt: current ? current.alt : "",
+      lightboxCaption: current ? current.caption : "",
+      lightboxCounter: current ? `${i + 1} / ${this.photoData.length}` : "",
+      closeLightbox: this.closeLightbox,
+      prevPhoto: () => this.step(-1),
+      nextPhoto: () => this.step(1),
       progress: `${(this.state.progress * 100).toFixed(1)}%`,
       share: async (e) => {
         const el = e.currentTarget;
@@ -173,9 +245,110 @@ class Component extends DCLogic {
   }
 }
 </script>
-<script type="module">var e=null,t=null,n=e=>Array.from(e.querySelectorAll(`button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])`)).filter(e=>e.getClientRects().length>0),r=e=>n(e).find(e=>/^close\b/i.test(e.getAttribute(`aria-label`)??e.textContent?.trim()??``)),i=()=>{let i=Array.from(document.querySelectorAll(`[role="dialog"][aria-modal="true"]`)).find(e=>e.getClientRects().length>0)??null;if(i!==e){if(!i){e=null,t?.isConnected&&t.focus({preventScroll:!0}),t=null;return}e||(t=document.activeElement instanceof HTMLElement?document.activeElement:null),e=i,(r(i)??n(i)[0])?.focus({preventScroll:!0})}};new MutationObserver(i).observe(document.body,{childList:!0,subtree:!0}),i(),document.addEventListener(`keydown`,t=>{if(!e)return;if(t.key===`Escape`){let n=r(e);n&&(t.preventDefault(),t.stopPropagation(),n.click())}if(t.key!==`Tab`)return;let i=n(e),a=i[0],o=i.at(-1);!a||!o||(!e.contains(document.activeElement)||t.shiftKey&&document.activeElement===a?(t.preventDefault(),(t.shiftKey?o:a).focus()):!t.shiftKey&&document.activeElement===o&&(t.preventDefault(),a.focus()))});</script><script>(function(){const transparentPixel = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+<script type="module" src="/EPSS-Newsletter/_astro/ReferencePage.astro_astro_type_script_index_0_lang.C2detpne.js"></script><script>(function(){const transparentPixel = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 
-      const syncLightboxImages = () => {
+      // DC replaces the source tree when it mounts. Bind to each connected
+      // cover track rather than retaining a reference to the detached template.
+      const initializedCoverTracks = new WeakSet();
+      const setupCovers = () => {
+        const coverTrack = document.querySelector(".cover-track");
+        if (!coverTrack?.isConnected || initializedCoverTracks.has(coverTrack)) return;
+        initializedCoverTracks.add(coverTrack);
+        const coverImages = [...coverTrack.querySelectorAll(".cover-slide img[data-cover-src]")];
+        let pendingCoverIntent = null;
+        let coverIntentSerial = 0;
+        const ensureCoverLoaded = (img, priority = "low") => {
+          if (img.dataset.coverLoaded === "true" && img.complete && img.naturalWidth > 1) return Promise.resolve(true);
+          if (img._coverLoadPromise) return img._coverLoadPromise;
+          img.loading = "eager";
+          img.fetchPriority = priority;
+          const source = img.parentElement.querySelector("source[data-cover-srcset]");
+          if (source) {
+            source.sizes = source.dataset.coverSizes || "100vw";
+            source.srcset = source.dataset.coverSrcset;
+            source.removeAttribute("data-cover-srcset");
+          }
+          img.sizes = img.dataset.coverSizes || "100vw";
+          img.srcset = img.dataset.coverSrcset;
+          img.src = img.dataset.coverSrc;
+          const decodeImage = () => {
+            if (img.complete && img.naturalWidth > 1) return Promise.resolve();
+            return img.decode ? img.decode() : new Promise((resolve, reject) => {
+              img.addEventListener("load", resolve, { once: true });
+              img.addEventListener("error", reject, { once: true });
+            });
+          };
+          img._coverLoadPromise = decodeImage().catch(() => {
+            // A failed WebP still needs a decoded JPEG before it can be shown.
+            img.parentElement.querySelector("source[type='image/webp']")?.removeAttribute("srcset");
+            img.removeAttribute("srcset");
+            img.src = img.dataset.coverSrc;
+            return decodeImage();
+          }).then(() => {
+            if (img.naturalWidth <= 1) throw new Error("Cover image unavailable");
+            img.dataset.coverLoaded = "true";
+            return true;
+          }).catch(() => {
+            img.dataset.coverLoaded = "false";
+            img._coverLoadPromise = undefined;
+            return false;
+          });
+          return img._coverLoadPromise;
+        };
+        if (coverTrack && coverImages.length) {
+          const controls = document.querySelector(".cover-controls");
+          controls?.addEventListener("click", (event) => {
+            const button = event.target.closest("button[aria-label='Next cover image'], button[aria-label='Previous cover image']");
+            if (!button) return;
+            // Inline transform is the intended slide. Computed transform is an
+            // interpolated position during animation and can select the wrong
+            // image when a reader advances again before the transition ends.
+            const offset = /translateX\((-?[\d.]+)%\)/.exec(coverTrack.style.transform);
+            const slideCount = coverTrack.querySelectorAll(".cover-slide").length;
+            const current = Math.round(Math.abs(Number(offset?.[1] || 0)) / (100 / slideCount));
+            const direction = button.getAttribute("aria-label").startsWith("Next") ? 1 : -1;
+            const target = (current + direction + slideCount) % slideCount;
+            const targetImage = coverTrack.querySelectorAll(".cover-slide img")[target];
+            if (pendingCoverIntent?.button === button && pendingCoverIntent.targetImage === targetImage) {
+              event.preventDefault();
+              event.stopImmediatePropagation();
+              return;
+            }
+            const intent = ++coverIntentSerial;
+            pendingCoverIntent = null;
+            if (!targetImage?.hasAttribute("data-cover-src") || (targetImage.dataset.coverLoaded === "true" && targetImage.complete && targetImage.naturalWidth > 1)) return;
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            // Manual navigation pauses autoplay immediately, including while
+            // loading. A later request supersedes an earlier pending request.
+            const play = controls.querySelector(".cover-play");
+            if (play?.getAttribute("aria-label") === "Pause cover images") play.click();
+            pendingCoverIntent = { button, targetImage, intent };
+            ensureCoverLoaded(targetImage, "high").then((ready) => {
+              if (intent !== coverIntentSerial) return;
+              pendingCoverIntent = null;
+              if (ready && coverTrack.isConnected) button.click();
+            });
+          }, true);
+          const loadRemainingCovers = () => {
+            const runIdle = (callback, timeout = 2500) => window.requestIdleCallback
+              ? window.requestIdleCallback(callback, { timeout })
+              : window.setTimeout(callback, 500);
+            const loadNext = (index) => {
+              if (index >= coverImages.length) return;
+              runIdle(() => ensureCoverLoaded(coverImages[index], "low").then(() => {
+                window.setTimeout(() => loadNext(index + 1), 1800);
+              }));
+            };
+            loadNext(0);
+          };
+          if (document.readyState === "complete") loadRemainingCovers();
+          else window.addEventListener("load", loadRemainingCovers, { once: true });
+        }
+      };
+
+      const syncDynamicImages = () => {
+        setupCovers();
         document.querySelectorAll("img[data-lightbox-src]").forEach((image) => {
           const source = image.getAttribute("data-lightbox-src");
           if (source && !source.includes("{{") && image.getAttribute("src") !== source) {
@@ -184,28 +357,11 @@ class Component extends DCLogic {
         });
       };
 
-      new MutationObserver(syncLightboxImages).observe(document.body, {
+      new MutationObserver(syncDynamicImages).observe(document.body, {
         attributes: true,
         childList: true,
         subtree: true,
       });
-      syncLightboxImages();
+      syncDynamicImages();
 
-      // The new awards deep link must wait for the hidden reference template
-      // to mount before the browser can position its undergraduate heading.
-      if (window.location.hash === "#undergrad-h") {
-        let alignmentPending = false;
-        const alignUndergraduateHeading = () => {
-          const heading = document.getElementById("undergrad-h");
-          if (!heading?.getClientRects().length || alignmentPending) return;
-          alignmentPending = true;
-          document.fonts.ready.then(() => requestAnimationFrame(() => requestAnimationFrame(() => {
-            document.getElementById("undergrad-h")?.scrollIntoView({ block: "start", behavior: "instant" });
-            fragmentObserver.disconnect();
-          })));
-        };
-        const fragmentObserver = new MutationObserver(alignUndergraduateHeading);
-        fragmentObserver.observe(document.body, { childList: true, subtree: true });
-        alignUndergraduateHeading();
-      }
     })();</script></body></html>
