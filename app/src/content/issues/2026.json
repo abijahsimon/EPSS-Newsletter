@@ -9,38 +9,74 @@
     "alt": "UCLA Earth, Planetary & Space Sciences"
   },
   "navigation": [
-    { "label": "Contents", "href": "#guide" },
-    { "label": "Feature", "href": "#rimfax" },
-    { "label": "Research", "href": "#research" },
-    { "label": "Endowed Chairs", "href": "#endowed-chairs" },
-    { "label": "Community", "href": "#community" },
-    { "label": "Field", "href": "#field" },
-    { "label": "Awards", "href": "#awards" },
-    { "label": "Farewells", "href": "#memoriam" },
-    { "label": "Give", "href": "#giving" },
-    { "label": "Media Archive", "href": "/media-archive/" }
+    {
+      "label": "Contents",
+      "href": "#guide"
+    },
+    {
+      "label": "Feature",
+      "href": "#rimfax"
+    },
+    {
+      "label": "Research",
+      "href": "#research"
+    },
+    {
+      "label": "Endowed Chairs",
+      "href": "#endowed-chairs"
+    },
+    {
+      "label": "Community",
+      "href": "#community"
+    },
+    {
+      "label": "Field",
+      "href": "#field"
+    },
+    {
+      "label": "Awards",
+      "href": "#awards"
+    },
+    {
+      "label": "Farewells",
+      "href": "#memoriam"
+    },
+    {
+      "label": "Give",
+      "href": "#giving"
+    },
+    {
+      "label": "Media Archive",
+      "href": "/media-archive/"
+    }
   ],
   "hero": {
-    "image": "/assets/images/2026/hero/postcard-mountain-fieldwork.jpg",
-    "imageAlt": "Students walking along a mountain trail beneath the Sierra Nevada skyline.",
+    "image": "/assets/images/2026/hero/postcard-trail-group.jpg",
+    "imageAlt": "Students following a rocky trail between scrub-covered hills.",
     "slides": [
       {
-        "image": "/assets/images/2026/hero/postcard-mountain-fieldwork.jpg",
-        "imageAlt": "Students walking along a mountain trail beneath the Sierra Nevada skyline.",
-        "label": "Mountain fieldwork",
-        "objectPosition": "50% 55%"
+        "image": "/assets/images/2026/hero/postcard-trail-group.jpg",
+        "imageAlt": "Students following a rocky trail between scrub-covered hills.",
+        "label": "Learning in the field",
+        "objectPosition": "50% 100%"
       },
       {
-        "image": "/assets/images/2026/hero/postcard-field-class.jpg",
-        "imageAlt": "Students gathered beside pale rock outcrops during a desert field class.",
-        "label": "Learning in the field",
-        "objectPosition": "50% 50%"
+        "image": "/assets/images/2026/hero/postcard-dusk-fieldwork.jpg",
+        "imageAlt": "Field vehicles and a group below red rock formations at dusk.",
+        "label": "Fieldwork at dusk",
+        "objectPosition": "50% 100%"
       },
       {
         "image": "/assets/images/2026/hero/postcard-commencement.jpg",
         "imageAlt": "EPSS graduates celebrating on the steps of the Geology Building.",
         "label": "Celebrating our graduates",
         "objectPosition": "50% 46%"
+      },
+      {
+        "image": "/assets/images/2026/hero/eyu-fluid-dynamics.jpg",
+        "imageAlt": "Children gather around a fluid dynamics demonstration at Exploring Your Universe.",
+        "label": "Fluid dynamics at Exploring Your Universe",
+        "objectPosition": "50% 62%"
       }
     ],
     "kicker": "2025–2026 · Annual issue",
@@ -48,13 +84,19 @@
     "dek": "Welcome to our new annual newsletter, rebuilt digitally.",
     "summary": "2025-2026 from Earth and Beyond: A year of discovery, fieldwork, mentorship, remembrance, and Bruin science.",
     "actions": [
-      { "label": "Explore This Issue", "href": "#guide" }
+      {
+        "label": "Explore This Issue",
+        "href": "#guide"
+      }
     ],
-    "supportCta": { "label": "Give to EPSS", "href": "https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O" },
+    "supportCta": {
+      "label": "Give to EPSS",
+      "href": "https://giving.ucla.edu/campaign/donate.aspx?Fund=50025O"
+    },
     "meta": {
       "eyebrow": "Note from the Chair",
       "title": "Jon Aurnou",
-      "body": "Welcome to the Department of Earth, Planetary, and Space Sciences (EPSS) at UCLA.",
+      "body": "It is my pleasure to welcome you to the first digital edition of the EPSS Newsletter!",
       "status": "",
       "image": "/assets/images/2026/chair/jon-aurnou.jpg",
       "imageAlt": "Jon Aurnou, Professor and Chair of Earth, Planetary, and Space Sciences."
@@ -67,24 +109,78 @@
       "kicker": "Table of Contents",
       "title": "Explore the issue.",
       "links": [
-        { "label": "Photographing the aurora in daylight", "href": "/stories/balboa/" },
-        { "label": "Exploring planetary history with Peng Ni", "href": "/stories/peng-ni/" },
-        { "label": "Lizzie Su on life in EPSS", "href": "/stories/lizzie-su/" },
-        { "label": "A Map of an Undiscovered Territory", "href": "/stories/edwin-schauble/" },
-        { "label": "When the evidence stops fitting", "href": "/stories/allen-glazner/" },
-        { "label": "Two scientists who paint", "href": "/stories/art-science/" },
-        { "label": "Honors, fellowships, and recognition", "href": "/stories/awards-2026/" },
-        { "label": "Celebrating the Class of 2026", "href": "/stories/commencement-2026/" },
-        { "label": "Donors and endowments", "href": "/stories/donors-endowments/" },
-        { "label": "Understanding Earth's deforming continents", "href": "/stories/gilles-peltzer/" },
-        { "label": "From Galileo to Europa Clipper", "href": "/stories/steve-joy/" },
-        { "label": "On leaving, and on raising a member of Generation Alpha", "href": "/stories/peter-chi/" },
-        { "label": "Gerald \"Jerry\" Schubert", "href": "/stories/gerald-schubert/" },
-        { "label": "Craig Manning retires after 36 years at UCLA", "href": "/stories/craig-manning/" },
-        { "label": "RIMFAX", "href": "#rimfax" },
-        { "label": "Dispatches from the Field", "href": "/stories/field-highlights/" },
-        { "label": "Past Newsletter Archive", "href": "#archive-title" },
-        { "label": "Chair's Note", "href": "#chairs-note" }
+        {
+          "label": "Photographing the aurora in daylight",
+          "href": "/stories/balboa/"
+        },
+        {
+          "label": "Exploring planetary history with Peng Ni",
+          "href": "/stories/peng-ni/"
+        },
+        {
+          "label": "Lizzie Su on life in EPSS",
+          "href": "/stories/lizzie-su/"
+        },
+        {
+          "label": "A Map of an Undiscovered Territory",
+          "href": "/stories/edwin-schauble/"
+        },
+        {
+          "label": "When the evidence stops fitting",
+          "href": "/stories/allen-glazner/"
+        },
+        {
+          "label": "Two scientists who paint",
+          "href": "/stories/art-science/"
+        },
+        {
+          "label": "Honors, fellowships, and recognition",
+          "href": "/stories/awards-2026/"
+        },
+        {
+          "label": "Celebrating the Class of 2026",
+          "href": "/stories/commencement-2026/"
+        },
+        {
+          "label": "Donors and endowments",
+          "href": "/stories/donors-endowments/"
+        },
+        {
+          "label": "Understanding Earth's deforming continents",
+          "href": "/stories/gilles-peltzer/"
+        },
+        {
+          "label": "From Galileo to Europa Clipper",
+          "href": "/stories/steve-joy/"
+        },
+        {
+          "label": "On leaving, and on raising a member of Generation Alpha",
+          "href": "/stories/peter-chi/"
+        },
+        {
+          "label": "Gerald \"Jerry\" Schubert",
+          "href": "/stories/gerald-schubert/"
+        },
+        {
+          "label": "Craig Manning retires after 36 years at UCLA",
+          "href": "/stories/craig-manning/"
+        },
+        {
+          "label": "Beneath the Surface of Mars",
+          "href": "/stories/rimfax/"
+        },
+        {
+          "label": "Dispatches from the Field",
+          "href": "/stories/field-highlights/"
+        },
+        {
+          "label": "Past Newsletter Archive",
+          "href": "#archive-title"
+        },
+        {
+          "label": "Chair's Note",
+          "href": "#chairs-note"
+        }
       ]
     },
     {
@@ -100,7 +196,10 @@
           "category": "Lab & Research",
           "title": "Photographing the Aurora in Daylight",
           "summary": "BALBOA is a balloon-borne attempt to see the half of the aurora that sunlight has always hidden.",
-          "link": { "label": "Read BALBOA", "href": "/stories/balboa/" }
+          "link": {
+            "label": "Read BALBOA",
+            "href": "/stories/balboa/"
+          }
         },
         {
           "id": "art-science",
@@ -110,7 +209,10 @@
           "category": "Art & Science",
           "title": "Two Scientists Who Paint",
           "summary": "David Jewitt and Hilke Schlichting describe how painting and research meet in material, intuition, and curiosity.",
-          "link": { "label": "Read Art & Science", "href": "/stories/art-science/" }
+          "link": {
+            "label": "Read Art & Science",
+            "href": "/stories/art-science/"
+          }
         },
         {
           "id": "rimfax",
@@ -118,9 +220,12 @@
           "image": "/assets/images/2026/rimfax/perseverance-ingenuity-mars-nasa-jpl.jpg",
           "imageAlt": "Artist concept of NASA's Perseverance rover and Ingenuity helicopter on the Martian surface.",
           "category": "Research Feature",
-          "title": "RIMFAX: Seeing Beneath the Martian Surface",
-          "summary": "A forthcoming feature on RIMFAX, the ground-penetrating radar carried by NASA's Perseverance rover.",
-          "link": { "label": "Forthcoming", "href": "#rimfax" }
+          "title": "Beneath the Surface of Mars",
+          "summary": "Meet the UCLA team using Perseverance’s ground-penetrating radar to reconstruct the buried history of Mars.",
+          "link": {
+            "label": "Read the feature",
+            "href": "/stories/rimfax/"
+          }
         },
         {
           "id": "chairs-note",
@@ -129,8 +234,11 @@
           "imageAlt": "Jonathan Aurnou, EPSS Department Chair.",
           "category": "Chair's Note",
           "title": "Greetings from the Chair",
-          "summary": "Welcome to the Department of Earth, Planetary, and Space Sciences (EPSS) at UCLA.",
-          "link": { "label": "Read the full note", "href": "/stories/chairs-note/" }
+          "summary": "It is my pleasure to welcome you to the first digital edition of the EPSS Newsletter!",
+          "link": {
+            "label": "Read the full note",
+            "href": "/stories/chairs-note/"
+          }
         }
       ]
     },
@@ -146,52 +254,72 @@
           "category": "Awards",
           "title": "Honors, Fellowships, and Recognition",
           "summary": "Faculty honors, graduate research and citizenship awards, fellowships, and 18 recipients of the 2025 Undergraduate Research Awards.",
-          "link": { "label": "Read awards", "href": "/stories/awards-2026/" }
+          "link": {
+            "label": "Read awards",
+            "href": "/stories/awards-2026/"
+          }
         },
         {
           "id": "commencement-card",
           "category": "Commencement",
           "title": "Celebrating the Class of 2026",
           "summary": "Graduates, families, faculty, and the stories of the Class of 2026.",
-          "link": { "label": "Read commencement", "href": "/stories/commencement-2026/" }
+          "link": {
+            "label": "Read commencement",
+            "href": "/stories/commencement-2026/"
+          }
         },
         {
           "id": "giving-card",
           "category": "Giving",
           "title": "Donors and Endowments",
           "summary": "Recognizing the households, foundations, and companies whose generosity supports EPSS.",
-          "link": { "label": "Read donors", "href": "/stories/donors-endowments/" }
+          "link": {
+            "label": "Read donors",
+            "href": "/stories/donors-endowments/"
+          }
         },
         {
           "id": "schubert-card",
           "category": "In Memoriam",
           "title": "Gerald Schubert",
           "summary": "Remembering a foundational figure in modern geodynamics and planetary physics.",
-          "link": { "label": "Read memorial", "href": "/stories/gerald-schubert/" }
+          "link": {
+            "label": "Read memorial",
+            "href": "/stories/gerald-schubert/"
+          }
         },
         {
           "id": "geophysics-136c",
           "category": "Course Photo Essay",
           "title": "Dispatches from the Field",
           "summary": "Spring 2026 field dispatches from Valley of Fire, Zion, Painted Canyon, Bishop Tuff, White Mountain Research Station, and other field classrooms.",
-          "link": { "label": "Read Dispatches from the Field", "href": "/stories/field-highlights/" }
+          "link": {
+            "label": "Read Dispatches from the Field",
+            "href": "/stories/field-highlights/"
+          }
         },
         {
           "id": "undergrad-fellowships",
           "category": "Undergraduate Research · Article & photographs",
           "image": "/assets/images/2026/undergraduate-awards/poster-discussion-800.webp",
-          "imageAlt": "A presenter gestures beside a research poster while an attendee listens.",
-          "imageCredit": "Photograph by Zachary Lacson.",
+          "imageAlt": "Sofie Sundberg explains her research poster to Professor Peng Ni.",
           "title": "2025 Undergraduate Research Awards",
           "summary": "18 recipients, their projects and mentors, with photographs from the May 26, 2026 poster session.",
-          "link": { "label": "Read article & view photos", "href": "/stories/awards-2026/#undergrad-h" }
+          "link": {
+            "label": "Read article & view photos",
+            "href": "/stories/awards-2026/#undergrad-h"
+          }
         },
         {
           "id": "student-feature",
           "category": "Student Feature",
           "title": "Lizzie Su on Life in EPSS",
           "summary": "A student profile on field learning, finding Earth science, and finishing an EPSS thesis.",
-          "link": { "label": "Read Lizzie Su", "href": "/stories/lizzie-su/" }
+          "link": {
+            "label": "Read Lizzie Su",
+            "href": "/stories/lizzie-su/"
+          }
         }
       ]
     },
@@ -201,7 +329,10 @@
       "kicker": "Dispatches from the Field",
       "title": "Learning in the landscape.",
       "intro": "A photo essay from the Spring 2026 field newsletter, including winter and spring trips, from EPSS field trips through Valley of Fire, Zion, Painted Canyon, Bishop Tuff, White Mountain Research Station, dunes, folded strata, and rocky outcrops.",
-      "link": { "label": "Read Dispatches from the Field", "href": "/stories/field-highlights/" },
+      "link": {
+        "label": "Read Dispatches from the Field",
+        "href": "/stories/field-highlights/"
+      },
       "images": [
         {
           "src": "/assets/images/2026/field-spring-2026/valley-of-fire-fleet.jpg",
@@ -234,7 +365,10 @@
           "category": "Student Feature",
           "title": "Lizzie Su on Life in EPSS",
           "summary": "A last year of coursework, a thesis in progress, and the path that pulled her into Earth science.",
-          "link": { "label": "Read Lizzie Su", "href": "/stories/lizzie-su/" }
+          "link": {
+            "label": "Read Lizzie Su",
+            "href": "/stories/lizzie-su/"
+          }
         },
         {
           "id": "gilles-peltzer",
@@ -243,7 +377,10 @@
           "category": "Retirement",
           "title": "Gilles Peltzer",
           "summary": "After more than thirty years at UCLA, Gilles Peltzer reflects on research, teaching, and fieldwork.",
-          "link": { "label": "Read Peltzer", "href": "/stories/gilles-peltzer/" }
+          "link": {
+            "label": "Read Peltzer",
+            "href": "/stories/gilles-peltzer/"
+          }
         },
         {
           "id": "craig-manning",
@@ -252,7 +389,10 @@
           "category": "Retirement",
           "title": "Craig Manning",
           "summary": "After 36 years at UCLA, Craig Manning retires following a career of deep-Earth experiments, fieldwork, and department leadership.",
-          "link": { "label": "Read Manning", "href": "/stories/craig-manning/" }
+          "link": {
+            "label": "Read Manning",
+            "href": "/stories/craig-manning/"
+          }
         },
         {
           "id": "faculty-feature",
@@ -261,7 +401,10 @@
           "category": "Faculty Feature",
           "title": "A Map of an Undiscovered Territory",
           "summary": "Schauble explains how isotope ratios can become a map through Earth's history.",
-          "link": { "label": "Read Edwin Schauble", "href": "/stories/edwin-schauble/" }
+          "link": {
+            "label": "Read Edwin Schauble",
+            "href": "/stories/edwin-schauble/"
+          }
         },
         {
           "id": "alumni-profile",
@@ -270,7 +413,10 @@
           "category": "Alumni Profile",
           "title": "When the Evidence Stops Fitting",
           "summary": "Glazner reflects on granite, field evidence, and the discipline of changing your mind.",
-          "link": { "label": "Read Allen Glazner", "href": "/stories/allen-glazner/" }
+          "link": {
+            "label": "Read Allen Glazner",
+            "href": "/stories/allen-glazner/"
+          }
         }
       ]
     },
@@ -285,26 +431,34 @@
           "title": "Xiaoyan Zhou: BALBOA aurora balloon project update",
           "body": "BALBOA is a balloon-borne attempt to photograph the dayside aurora, the half sunlight has always hidden.",
           "open": true,
-          "link": { "label": "Read BALBOA", "href": "/stories/balboa/" }
-        },
-        {
-          "title": "Jonathan Mitchell: Eos features and research findings",
-          "body": "Research update forthcoming."
+          "link": {
+            "label": "Read BALBOA",
+            "href": "/stories/balboa/"
+          }
         },
         {
           "title": "Peng Ni: Exploring Planetary History",
           "body": "Peng Ni's profile moves between meteorites, lunar samples, diamonds, high-pressure experiments, and the isotope fingerprints measured by the Sapphire Lab.",
-          "link": { "label": "Read Peng Ni", "href": "/stories/peng-ni/" }
+          "link": {
+            "label": "Read Peng Ni",
+            "href": "/stories/peng-ni/"
+          }
         },
         {
           "title": "EPSS Asteroid Family",
           "body": "Meet Christopher Snead, Jing Li, Ariel Graykowski and Dave Milewski, the four scientists behind the newest EPSS asteroid names. Story by Dave Milewski.",
-          "link": { "label": "Read the Asteroid Family story", "href": "/stories/asteroid-family/" }
+          "link": {
+            "label": "Read the Asteroid Family story",
+            "href": "/stories/asteroid-family/"
+          }
         },
         {
           "title": "Field / Geophysics 136C",
           "body": "A Spring 2026 photo essay from EPSS field courses across Valley of Fire, Zion, Painted Canyon, Bishop Tuff, White Mountain Research Station, and other field classrooms.",
-          "link": { "label": "Read Dispatches from the Field", "href": "/stories/field-highlights/" }
+          "link": {
+            "label": "Read Dispatches from the Field",
+            "href": "/stories/field-highlights/"
+          }
         }
       ]
     },
@@ -317,7 +471,10 @@
           "category": "Awards",
           "title": "Honors and Recognition",
           "summary": "Faculty honors, graduate research and citizenship awards, fellowships, and 18 recipients of the 2025 Undergraduate Research Awards.",
-          "link": { "label": "Read Awards", "href": "/stories/awards-2026/" }
+          "link": {
+            "label": "Read Awards",
+            "href": "/stories/awards-2026/"
+          }
         },
         {
           "id": "commencement",
@@ -327,7 +484,10 @@
           "category": "Commencement",
           "title": "Celebrating the Class",
           "summary": "Graduates, families, and faculty gather at the Geology Building to celebrate the Class of 2026.",
-          "link": { "label": "Read Commencement", "href": "/stories/commencement-2026/" }
+          "link": {
+            "label": "Read Commencement",
+            "href": "/stories/commencement-2026/"
+          }
         },
         {
           "id": "giving",
@@ -336,7 +496,10 @@
           "category": "Giving",
           "title": "Donors and Endowments",
           "summary": "Celebrating the donors and endowed funds that make research, teaching, and field learning possible.",
-          "link": { "label": "Read Donors", "href": "/stories/donors-endowments/" }
+          "link": {
+            "label": "Read Donors",
+            "href": "/stories/donors-endowments/"
+          }
         }
       ]
     },

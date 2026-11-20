@@ -24,6 +24,8 @@ const { title, description, image, noindex } = Astro.props;
   <body>
     <slot />
     <script>
+      import "../scripts/fragment-navigation";
+
       const menuButton = document.querySelector(".menu-button");
       const mobileNav = document.querySelector("#mobile-nav");
 
@@ -40,6 +42,12 @@ const { title, description, image, noindex } = Astro.props;
       });
 
       const progress = document.querySelector<HTMLElement>(".reading-progress span");
+      const articleHeader = document.querySelector<HTMLElement>(".article-header");
+      if (articleHeader) {
+        const syncHeaderHeight = () => document.documentElement.style.setProperty("--article-header-height", `${articleHeader.getBoundingClientRect().height}px`);
+        new ResizeObserver(syncHeaderHeight).observe(articleHeader);
+        syncHeaderHeight();
+      }
       const updateProgress = () => {
         if (!progress) return;
         const root = document.documentElement;

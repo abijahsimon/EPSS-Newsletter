@@ -16,9 +16,7 @@ sourceNote: "Source packet marks Emily Bisno's donor/endowment materials as avai
 
 The list below recognizes those who donated to UCLA EPSS between July 1, 2025 and June 30, 2026. Thank you for your support.
 
-Across UCLA Physical Sciences, the 2026 installation of eight endowed chairs underscored what this kind of giving makes possible: an investment in the people and ideas that drive discovery. Endowed support gives faculty the freedom to pursue ambitious research and creates opportunities for the students and researchers who work alongside them. Within EPSS, that same long-term partnership sustains field learning, undergraduate research, graduate fellowships, and the faculty who carry the department’s work forward.
 
-Read more about EPSS’s endowed-chair installations in [Building the Future of Earth Sciences](https://epss.ucla.edu/building-the-future-of-earth-sciences-epss-celebrates-the-installation-of-three-endowed-chairs/).
 
 - Christopher Adibe
 - American Chemical Society

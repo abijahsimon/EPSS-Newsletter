@@ -1,0 +1,271 @@
+/* A feature treatment for RIMFAX only; other story layouts retain their typography. */
+.article-rimfax .rimfax-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 740px;
+  color: var(--paper);
+  background: var(--deep);
+}
+
+.article-rimfax .rimfax-hero-art {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  margin: 0;
+}
+
+.article-rimfax .rimfax-hero-art img {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 85%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 52% 50%;
+}
+
+.article-rimfax .rimfax-hero-art::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(90deg, #101820 0%, rgba(16, 24, 32, 0.96) 22%, rgba(16, 24, 32, 0.8) 43%, rgba(16, 24, 32, 0.22) 72%, rgba(16, 24, 32, 0.08)), linear-gradient(0deg, #101820 0%, transparent 28%);
+}
+
+.article-rimfax .rimfax-hero-art figcaption {
+  position: absolute;
+  z-index: 1;
+  right: clamp(24px, 4vw, 64px);
+  bottom: 20px;
+  left: 58%;
+  margin: 0;
+  color: var(--paper);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.article-rimfax .rimfax-hero-content {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: clamp(56px, 6vw, 88px) clamp(24px, 5vw, 80px) 56px;
+}
+
+.article-rimfax .rimfax-eyebrow {
+  margin: 0 0 26px;
+  color: var(--ucla-gold);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.article-rimfax .rimfax-hero h1 {
+  max-width: 11ch;
+  margin: 0 0 26px;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(3.5rem, 7.4vw, 6.75rem);
+  font-weight: 300;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.article-rimfax .rimfax-dek {
+  max-width: 38ch;
+  margin: 0 0 32px;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(1.25rem, 1.8vw, 1.6rem);
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.article-rimfax .rimfax-meta {
+  max-width: 460px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(251, 250, 247, 0.35);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.article-rimfax .rimfax-meta p { margin: 0 0 12px; }
+
+.article-rimfax .rimfax-meta-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.article-rimfax .rimfax-meta-actions > span {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.article-rimfax .rimfax-meta button {
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid rgba(251, 250, 247, 0.5);
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.article-rimfax .rimfax-meta button:hover {
+  border-color: var(--ucla-gold);
+  color: var(--ucla-gold);
+}
+
+.article-rimfax .rimfax-meta button:focus-visible {
+  outline: 2px solid var(--ucla-gold);
+  outline-offset: 5px;
+}
+
+.article-rimfax .story-body {
+  padding-top: clamp(48px, 6vw, 80px);
+}
+
+.article-rimfax .story-body-copy { max-width: 40rem; }
+
+.article-rimfax .story-body-copy > p {
+  margin-bottom: 24px;
+  font-size: 1.1875rem;
+  line-height: 1.7;
+}
+
+.article-rimfax .story-body-copy > p:first-child {
+  margin-bottom: 30px;
+  font-size: clamp(1.375rem, 2.2vw, 1.6rem);
+  line-height: 1.55;
+}
+
+.article-rimfax .story-body-copy > h2 {
+  margin: 72px 0 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: clamp(2rem, 3.6vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.article-rimfax .rimfax-instrument {
+  margin: 44px -120px;
+  border-bottom: 1px solid var(--line);
+}
+
+.article-rimfax .rimfax-instrument img {
+  width: 100%;
+  height: auto;
+}
+
+.article-rimfax .rimfax-instrument figcaption {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px 32px;
+  padding: 16px 0 20px;
+  color: var(--muted);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.article-rimfax .rimfax-instrument figcaption strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.article-rimfax .rimfax-instrument figcaption a {
+  align-self: start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ink);
+  text-underline-offset: 4px;
+}
+
+.article-rimfax .rimfax-instrument a:focus-visible {
+  outline: 2px solid var(--ucla-blue);
+  outline-offset: 4px;
+}
+
+.article-rimfax .rimfax-pullquote {
+  margin: 48px 0;
+  padding: 32px 0;
+  border-top: 3px solid var(--ucla-gold);
+  border-bottom: 1px solid var(--line);
+}
+
+.article-rimfax .rimfax-pullquote blockquote {
+  margin: 0 0 18px;
+  padding: 0;
+  border: 0;
+  font-size: clamp(2rem, 3.6vw, 2.75rem);
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+}
+
+.article-rimfax .rimfax-pullquote p { margin: 0; }
+
+.article-rimfax .rimfax-pullquote figcaption {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+  .article-rimfax .rimfax-instrument { margin-inline: 0; }
+  .article-rimfax .rimfax-hero-art img { width: 100%; }
+  .article-rimfax .rimfax-hero-art figcaption { left: 64%; }
+}
+
+@media (max-width: 700px) {
+  .article-rimfax .rimfax-hero { min-height: 0; }
+  .article-rimfax .rimfax-hero-art img {
+    height: 360px;
+    object-position: 50% 42%;
+  }
+  .article-rimfax .rimfax-hero-art::after {
+    background: linear-gradient(180deg, transparent 0, rgba(16, 24, 32, 0.08) 140px, rgba(16, 24, 32, 0.8) 245px, #101820 350px);
+  }
+  .article-rimfax .rimfax-hero-art figcaption {
+    right: 24px;
+    bottom: 20px;
+    left: 24px;
+    font-size: 0.75rem;
+    text-align: left;
+  }
+  .article-rimfax .rimfax-hero-content { padding: 260px 24px 84px; }
+  .article-rimfax .rimfax-eyebrow { margin-bottom: 20px; }
+  .article-rimfax .rimfax-hero h1 {
+    max-width: 12ch;
+    margin-bottom: 20px;
+    font-size: clamp(2.75rem, 12.5vw, 4.75rem);
+  }
+  .article-rimfax .rimfax-dek { margin-bottom: 24px; font-size: 1.25rem; }
+  .article-rimfax .rimfax-meta { max-width: none; padding-top: 16px; }
+  .article-rimfax .rimfax-meta-actions { justify-content: space-between; }
+  .article-rimfax .story-body-copy > p { font-size: 1.125rem; }
+  .article-rimfax .story-body-copy > h2 { margin-top: 56px; }
+  .article-rimfax .rimfax-instrument { margin-block: 32px; }
+  .article-rimfax .rimfax-instrument figcaption { grid-template-columns: 1fr; gap: 4px; }
+}
+
+/* Jump links preserve the article's linear reading order. */
+.article-rimfax .rimfax-sections { background:var(--paper); color:var(--ink); padding:clamp(24px,4vw,48px) clamp(24px,5vw,80px) 0; }
+.article-rimfax .rimfax-sections-inner { max-width:1280px; margin:auto; border-bottom:1px solid rgba(16,24,32,.18); padding-bottom:28px; }
+.article-rimfax .rimfax-sections-label { margin:0 0 14px; font:500 .6875rem/1.5 "IBM Plex Mono",monospace; letter-spacing:.13em; text-transform:uppercase; color:var(--muted); }
+.article-rimfax .rimfax-sections ol { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr)); gap:12px 24px; list-style:none; padding:0; margin:0; }
+.article-rimfax .rimfax-sections a { display:block; min-height:44px; color:inherit; text-decoration:none; border-left:2px solid #d5e1e7; padding:3px 0 3px 12px; }
+.article-rimfax .rimfax-sections a span { display:block; font:500 .68rem/1.4 "IBM Plex Mono",monospace; color:var(--muted); }
+.article-rimfax .rimfax-sections a strong { display:block; margin-top:4px; font:500 .9rem/1.35 "IBM Plex Sans",sans-serif; text-decoration:underline; text-underline-offset:3px; }
+.article-rimfax .rimfax-sections a:hover { color:#2774ae; border-color:#2774ae; }
+.article-rimfax .rimfax-sections a:focus-visible { outline:2px solid #2774ae; outline-offset:4px; }
+.article-rimfax .story-body-copy > h2 { scroll-margin-top:calc(var(--article-header-height,81px) + 16px); }

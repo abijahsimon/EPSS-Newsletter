@@ -3,6 +3,7 @@ import { getCollection, render } from "astro:content";
 import ReferencePage from "../../components/ReferencePage.astro";
 import { articleReferencePages } from "../../lib/reference-pages";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import RimfaxFeature from "../../components/RimfaxFeature.astro";
 
 export async function getStaticPaths() {
   const articles = (await getCollection("articles"))
@@ -20,6 +21,7 @@ const { Content } = await render(entry);
 const article = entry.data;
 const referenceHtml = articleReferencePages[article.slug];
 const isMemorial = article.slug === "gerald-schubert";
+const isRimfax = article.slug === "rimfax";
 const showStoryMeta = !isMemorial && !["awards-2026", "commencement-2026", "donors-endowments"].includes(article.slug);
 const showHeroImage = Boolean(article.heroImage && article.slug !== "art-science");
 ---
@@ -46,6 +48,7 @@ const showHeroImage = Boolean(article.heroImage && article.slug !== "art-science
   <div class="reading-progress" aria-hidden="true"><span></span></div>
 
   <main id="top" class:list={["story-page", `article-${article.slug}`]}>
+    {isRimfax ? <RimfaxFeature article={article} /> : (
     <section class:list={["story-hero-page", isMemorial && "memorial"]} aria-labelledby="story-title">
       <div class="story-hero-inner">
         <p class="category">{article.category}</p>
@@ -65,6 +68,7 @@ const showHeroImage = Boolean(article.heroImage && article.slug !== "art-science
         )}
       </div>
     </section>
+    )}
 
     {isMemorial && (
       <div class="story-meta memorial-meta">
@@ -76,9 +80,10 @@ const showHeroImage = Boolean(article.heroImage && article.slug !== "art-science
       </div>
     )}
 
-    {showHeroImage && (
+    {showHeroImage && !isRimfax && (
       <figure class="story-hero-media">
         <img src={article.heroImage} alt={article.heroImageAlt ?? ""} />
+        {article.heroImageCaption && <figcaption>{article.heroImageCaption}</figcaption>}
       </figure>
     )}
 
@@ -101,6 +106,14 @@ const showHeroImage = Boolean(article.heroImage && article.slug !== "art-science
       )}
     </article>
   </main>
+  {article.slug === "asteroid-family" && <script is:inline>
+    (() => {
+      const player = document.querySelector(".asteroid-orbit-player");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      if (player && reducedMotion.matches) player.open = false;
+      reducedMotion.addEventListener("change", event => { if (player && event.matches) player.open = false; });
+    })();
+  </script>}
 
   <footer class="site-footer">
     <div>

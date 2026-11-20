@@ -31,3 +31,14 @@ test("preserves third-party signup, remote PDFs, fragments and protocol-relative
   assert.equal(rewriteSitePaths(source, "/newsletter"), source);
   assert.equal(rewriteSitePaths(source, "/"), source);
 });
+
+test("prefixes every responsive and deferred image candidate exactly once", () => {
+  const source = '<link imagesrcset="/assets/a.webp 480w, /assets/b.webp 960w">' +
+    '<source srcset="/assets/a.webp 480w, https://cdn.example/a.webp 960w">' +
+    '<img data-cover-srcset="/assets/a.jpg 480w, /assets/b.jpg 960w">';
+  const result = rewriteSitePaths(source, "/newsletter");
+  assert.equal(result, '<link imagesrcset="/newsletter/assets/a.webp 480w, /newsletter/assets/b.webp 960w">' +
+    '<source srcset="/newsletter/assets/a.webp 480w, https://cdn.example/a.webp 960w">' +
+    '<img data-cover-srcset="/newsletter/assets/a.jpg 480w, /newsletter/assets/b.jpg 960w">');
+  assert.equal(rewriteSitePaths(result, "/newsletter"), result);
+});

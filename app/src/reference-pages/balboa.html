@@ -25,6 +25,11 @@
   a:hover { color: #9a4a26; }
   h1, h2, h3, p, ul, ol, figure { margin-top: 0; }
   ::selection { background: #ffd100; color: #101820; }
+
+  /* Preserve the authored composition while allowing enlarged text to reflow. */
+  main :where(h1,h2,h3,p,li,figcaption) { overflow-wrap:anywhere; }
+  header > div:first-child, header > div:first-child > div { flex-wrap:wrap; }
+  header a { overflow-wrap:anywhere; }
 </style>
 </helmet>
 

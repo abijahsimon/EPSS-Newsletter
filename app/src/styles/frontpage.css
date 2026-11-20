@@ -59,6 +59,7 @@
 .issue-frontpage { margin: auto; }
 .issue-frontpage > section:not(.issue-cover) { max-width: 1440px; margin-inline: auto; }
 .issue-frontpage section[id], .issue-frontpage [id="chairs-note"] { scroll-margin-top: 104px; }
+.issue-frontpage section[data-anchor-lead] { scroll-margin-top: 168px; }
 .issue-frontpage p { text-wrap: pretty; }
 .issue-frontpage :where(a, button, summary):focus-visible,
 .issue-header :where(a, button):focus-visible,
@@ -67,14 +68,15 @@
 
 /* Full-bleed photographic cover; body copy and buttons remain above the scrim. */
 .issue-cover { position: relative; isolation: isolate; min-height: min(850px, calc(100svh - 83px)); background: var(--issue-ink); color: var(--issue-paper); }
-.issue-cover::after { content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(16,24,32,0.66) 0%, rgba(16,24,32,0.46) 42%, rgba(16,24,32,0.06) 78%, rgba(16,24,32,0.12)), linear-gradient(0deg, rgba(16,24,32,0.36), transparent 58%); }
+.issue-cover::after { content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(16,24,32,0.78) 0%, rgba(16,24,32,0.72) 60%, rgba(16,24,32,0.12) 90%), linear-gradient(0deg, rgba(16,24,32,0.36), transparent 58%); }
 .cover-carousel { position: absolute; z-index: -2; inset: 0; overflow: hidden; background: var(--issue-ink); }
-.cover-track { position: absolute; inset: 0 auto 0 0; display: flex; width: 300%; height: 100%; transition: transform 900ms cubic-bezier(0.4, 0, 0.2, 1); }
-.cover-slide { flex: 0 0 33.333333%; min-width: 0; height: 100%; }
+.cover-track { position: absolute; inset: 0 auto 0 0; display: flex; width: 400%; height: 100%; transition: transform 900ms cubic-bezier(0.4, 0, 0.2, 1); }
+.cover-slide { flex: 0 0 25%; min-width: 0; height: 100%; }
 .cover-slide img { width: 100%; height: 100%; object-fit: cover; }
-.cover-slide:nth-child(1) img { object-position: 50% 58%; }
-.cover-slide:nth-child(2) img { object-position: 50% 55%; }
+.cover-slide:nth-child(1) img { object-position: 50% 100%; }
+.cover-slide:nth-child(2) img { object-position: 50% 100%; }
 .cover-slide:nth-child(3) img { object-position: 50% 46%; }
+.cover-slide:nth-child(4) img { object-position: 50% 62%; }
 .cover-content { display: grid; grid-template-columns: minmax(0, 1fr) clamp(280px, 24vw, 320px); align-items: center; gap: clamp(40px, 6vw, 96px); max-width: 1440px; min-height: inherit; margin-inline: auto; padding: 64px var(--issue-gutter) 100px; }
 .cover-intro { min-width: 0; }
 .cover-edition,
@@ -160,7 +162,7 @@ a.contents-row:hover > span:last-child, a.contents-row:focus-visible > span:last
 
 @media (max-width: 900px) {
   .issue-cover { --cover-stage-height: max(720px, calc(100svh - 77px)); }
-  .issue-cover::after { background: linear-gradient(90deg, rgba(16,24,32,0.66), rgba(16,24,32,0.28)), linear-gradient(0deg, rgba(16,24,32,0.82) 4%, rgba(16,24,32,0.16) 56%, transparent 78%); }
+  .issue-cover::after { background: linear-gradient(90deg, rgba(16,24,32,0.76), rgba(16,24,32,0.72)), linear-gradient(0deg, rgba(16,24,32,0.82) 4%, rgba(16,24,32,0.16) 56%, transparent 78%); }
   .cover-carousel { bottom: auto; height: var(--cover-stage-height); }
   .cover-content { display: block; padding: 0; }
   .cover-intro { display: flex; align-items: center; min-height: var(--cover-stage-height); padding: 56px var(--issue-gutter) 108px; }
@@ -168,8 +170,8 @@ a.contents-row:hover > span:last-child, a.contents-row:focus-visible > span:last
   .cover-welcome { max-width: 28ch; font-size: clamp(1.5rem, 3.5vw, 2rem); }
   .cover-summary { max-width: 46ch; font-size: 1.0625rem; }
   .cover-controls { top: calc(var(--cover-stage-height) - 76px); bottom: auto; left: var(--issue-gutter); }
-  .cover-slide:nth-child(1) img { object-position: 38% 55%; }
-  .cover-slide:nth-child(2) img { object-position: 70% 50%; }
+  .cover-slide:nth-child(1) img { object-position: 35% 100%; }
+  .cover-slide:nth-child(2) img { object-position: 42% 100%; }
   .cover-slide:nth-child(3) img { object-position: 50% 46%; }
   .chair-card { display: grid; grid-template-columns: minmax(120px, 0.4fr) minmax(0, 1fr); margin: 0 var(--issue-gutter) 36px; }
   .chair-card figure { background: transparent; }
@@ -185,6 +187,7 @@ a.contents-row:hover > span:last-child, a.contents-row:focus-visible > span:last
   .issue-brand { max-width: 258px; }
   .issue-nav.is-open { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .issue-frontpage section[id], .issue-frontpage [id="chairs-note"] { scroll-margin-top: 92px; }
+  .issue-frontpage section[data-anchor-lead] { scroll-margin-top: 156px; }
   .issue-cover { --cover-stage-height: max(720px, calc(100svh - 75px)); }
   .cover-edition { margin-bottom: 22px; font-size: 0.6875rem; }
   .cover-welcome { margin-top: 24px; }
@@ -246,7 +249,8 @@ a.contents-row:hover > span:last-child, a.contents-row:focus-visible > span:last
 .undergraduate-feature-kicker { margin: 0 0 12px; color: var(--issue-blue); font: 500 0.6875rem/1.6 var(--issue-mono); letter-spacing: 0.04em; text-transform: uppercase; }
 .undergraduate-feature h3 { margin: 0 0 12px; font: 400 1.5rem/1.16 var(--issue-serif); letter-spacing: -0.015em; }
 #undergraduate-feature-copy { margin: 0 0 18px; color: var(--issue-muted); font: 400 1rem/1.6 var(--issue-sans); }
-#undergraduate-feature-action { display: inline-block; color: var(--issue-blue); font: 600 0.9375rem/1.5 var(--issue-sans); text-decoration: underline; text-underline-offset: 4px; }
+#undergraduate-feature-action { color: var(--issue-blue); font: 600 0.8125rem/1.5 var(--issue-sans); }
+.undergraduate-feature-action-text { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 .undergraduate-feature-action-end { display: inline-block; white-space: nowrap; }
 .undergraduate-feature-credit { margin: 16px 0 0; color: var(--issue-muted); font: 400 0.75rem/1.5 var(--issue-sans); }
 .undergraduate-feature:hover { color: var(--issue-ink); border-color: var(--issue-blue); }
@@ -265,4 +269,103 @@ a.contents-row:hover > span:last-child, a.contents-row:focus-visible > span:last
 .memorial-list a:hover { color: var(--issue-ink); }
 @media (max-width: 760px) {
   .memorial-panel { padding: 32px 0 0; border-left: 0; border-top: 1px solid var(--issue-line); }
+}
+
+/* Long editorial words and utility rows remain readable with enlarged text. */
+.issue-frontpage :where(h1,h2,h3,p,li), .issue-footer { overflow-wrap:anywhere; }
+.cover-edition { flex-wrap:wrap; }
+.cover-content > *, .chair-card > *, .contents-row > * { min-width:0; }
+.undergraduate-feature-action-end { white-space:normal; }
+@media (max-width: 900px) {
+  /* The first two grid rows form the photographic stage. Controls take their
+     own row, so enlarged text can never run behind them. */
+  .issue-cover { display:grid; grid-template-columns:minmax(0,1fr); }
+  .cover-content { display:contents; }
+  .cover-intro { grid-area:1 / 1; min-height:calc(var(--cover-stage-height) - 76px); padding-bottom:32px; }
+  .cover-carousel { grid-area:1 / 1 / 3 / 2; inset:0; height:auto; }
+  .cover-controls { grid-area:2 / 1; position:relative; inset:auto; min-height:76px; margin-inline:var(--issue-gutter); padding-bottom:28px; flex-wrap:wrap; }
+  .cover-controls .cover-caption { flex:1 1 100px; min-width:0; }
+  .chair-card { grid-area:3 / 1; }
+}
+.issue-frontpage :where(details, summary, summary > span) { min-width:0; overflow-wrap:anywhere; }
+.issue-frontpage #research > div > div { min-width:0; }
+.issue-frontpage #giving :where(div, a, form, input, button) { min-width:0; overflow-wrap:anywhere; }
+.issue-frontpage #giving input { width:100%; max-width:100%; height:auto !important; min-height:50px; padding-block:12px !important; }
+.issue-frontpage #giving button[type="submit"] { height:auto !important; min-height:50px; padding-block:12px; }
+.issue-frontpage a[href="/epss-through-deep-time/"] { max-width:100%; white-space:normal !important; height:auto !important; min-height:46px; padding-block:12px; }
+
+/* A clear stagger keeps the paired portraits related at every width. */
+.art-science-portraits { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; align-items:start; }
+.art-science-portrait-offset { margin-top:clamp(48px,6vw,88px); }
+@media (max-width:420px) { .art-science-portrait-offset { margin-top:40px; } }
+
+.award-highlights { position: relative; }
+.award-highlight-anchor { position:absolute; top:0; scroll-margin-top:88px; }
+#award-amy-mainzer:target ~ .award-highlights-grid .award-highlight-amy,
+#award-jean-luc-margot:target ~ .award-highlights-grid .award-highlight-jean-luc { background:#eef4f7 !important; }
+
+/* Field photo journal: documentary mosaic and three clear destinations. */
+.field-journal { background:#0a1720; color:#fbfaf7; }
+.field-journal-heading { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.8fr); align-items:end; gap:clamp(28px,4vw,56px); padding:clamp(48px,6vw,84px) clamp(20px,4vw,54px) clamp(32px,4vw,52px); }
+.field-journal-eyebrow, .field-card-label { margin:0 0 12px; color:#ffd100; font:500 .75rem/1.45 var(--issue-mono); letter-spacing:.13em; text-transform:uppercase; }
+.field-journal-heading h2 { margin:0; color:#fbfaf7; font:300 clamp(3rem,6vw,5.5rem)/.98 var(--issue-serif); letter-spacing:-.025em; }
+.field-intro-actions { display:flex; align-items:center; gap:clamp(20px,2.5vw,38px); min-width:0; }
+.field-journal-intro { max-width:48ch; margin:0; padding-left:clamp(24px,4vw,52px); border-left:1px solid rgba(251,250,247,.45); color:rgba(251,250,247,.86); font:400 clamp(1rem,1.3vw,1.15rem)/1.5 var(--issue-sans); }
+.field-mosaic { padding-inline:5px; }
+.field-mosaic-lead { display:grid; grid-template-columns:1.35fr 1fr 1.35fr 1fr .9fr; gap:5px; align-items:stretch; }
+.field-mosaic-lead figure, .field-mosaic-strip figure { margin:0; min-width:0; overflow:hidden; }
+.field-mosaic-lead figure { min-height:clamp(185px,18vw,265px); }
+.field-mosaic img { display:block; width:100%; height:100%; object-fit:cover; }
+.field-quote { margin:0; background:#ffd100; color:#101820; padding:clamp(20px,2.2vw,34px); display:flex; flex-direction:column; justify-content:center; }
+.field-quote p { margin:0; font:italic 400 clamp(1rem,1.15vw,1.08rem)/1.45 var(--issue-serif); }
+.field-quote cite { display:block; margin-top:18px; font:600 .65rem/1.4 var(--issue-mono); letter-spacing:.1em; text-transform:uppercase; font-style:normal; }
+.field-mosaic-strip { display:grid; grid-template-columns:1fr .85fr 1.1fr 1.1fr .9fr 1fr 1.05fr; gap:5px; margin-top:5px; }
+.field-mosaic-strip figure { height:clamp(125px,14vw,200px); }
+.field-mosaic-credits { margin:0; padding:9px clamp(15px,3.5vw,49px) 0; color:rgba(251,250,247,.7); font:400 .7rem/1.5 var(--issue-sans); }
+ .field-gallery-link { flex:none; min-height:50px; display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:12px 18px; border:1px solid #ffd100; color:#fbfaf7; text-decoration:none; font:600 .9rem/1.4 var(--issue-sans); }
+.field-gallery-link img, .field-contest-label img { width:23px; height:23px; filter:brightness(0) saturate(100%) invert(79%) sepia(93%) saturate(1909%) hue-rotate(359deg) brightness(103%); }
+.field-mosaic figure a { display:block; width:100%; height:100%; overflow:hidden; }
+.field-mosaic figure img { transition:filter 180ms ease, transform 180ms ease; }
+.field-mosaic figure a:hover img, .field-mosaic figure a:focus-visible img { filter:brightness(1.18); transform:scale(1.025); }
+.field-mosaic figure a:hover, .field-mosaic figure a:focus-visible { outline:3px solid #ffd100; outline-offset:-3px; }
+@media (prefers-reduced-motion:reduce) { .field-mosaic figure img { transition:none; } .field-mosaic figure a:hover img, .field-mosaic figure a:focus-visible img { transform:none; } }
+.field-feature-cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(12px,2vw,24px); padding:0 clamp(20px,4vw,54px) clamp(48px,6vw,84px); }
+.field-feature-card { display:flex; flex-direction:column; align-items:flex-start; min-width:0; padding:clamp(22px,2.5vw,34px); background:#15232e; }
+.field-feature-card h3 { margin:0 0 16px; color:#fbfaf7; font:400 clamp(1.7rem,2.6vw,2.5rem)/1.08 var(--issue-serif); letter-spacing:-.015em; }
+.field-feature-card > p:not(.field-card-label) { margin:0 0 24px; color:rgba(251,250,247,.83); font:400 1rem/1.6 var(--issue-sans); }
+.field-card-link { display:inline-flex; align-items:center; gap:10px; min-height:44px; margin-top:auto; color:#ffd100; font:600 .9rem/1.45 var(--issue-sans); text-decoration:underline; text-underline-offset:4px; }
+.field-instagram { color:#fbfaf7; }
+.field-instagram img { width:20px; height:20px; flex:none; filter:invert(1); }
+.field-contest-card { border:2px solid #ffd100; }
+.field-contest-label { display:flex; align-items:center; gap:12px; }
+.field-contest-action { display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:48px; margin-top:auto; padding:12px 18px; background:#ffd100; color:#101820; text-decoration:none; font:600 .9rem/1.4 var(--issue-sans); }
+.field-gallery-link:hover, .field-card-link:hover { color:#ffd100; }
+.field-contest-action:hover { background:#ffe15a; color:#101820; }
+.field-journal a:focus-visible { outline:3px solid #ffd100; outline-offset:4px; }
+@media (max-width:900px) {
+  .field-intro-actions { flex-wrap:wrap; }
+  .field-journal-intro { flex-basis:100%; }
+  .field-mosaic-lead { grid-template-columns:repeat(4,minmax(0,1fr)); }
+  .field-mosaic-lead figure { min-height:180px; }
+  .field-quote { grid-column:span 2; grid-row:span 2; }
+  .field-mosaic-strip { grid-template-columns:repeat(4,minmax(0,1fr)); }
+  .field-mosaic-strip figure { height:150px; }
+  .field-mosaic-strip figure:last-child { grid-column:span 2; }
+  .field-feature-cards { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .field-contest-card { grid-column:1 / -1; }
+}
+@media (max-width:600px) {
+  .field-journal-heading { grid-template-columns:1fr; gap:22px; }
+  .field-intro-actions { flex-wrap:wrap; }
+  .field-gallery-link { width:100%; }
+  .field-journal-intro { padding-left:18px; }
+  .field-mosaic-lead { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .field-mosaic-lead figure { min-height:150px; }
+  .field-quote { grid-row:auto; min-height:0; padding:26px 22px; }
+  .field-quote p { font-size:1rem; }
+  .field-mosaic-strip { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .field-mosaic-strip figure { height:150px; }
+  .field-mosaic-strip figure:last-child { grid-column:span 2; height:170px; }
+  .field-feature-cards { grid-template-columns:1fr; gap:12px; }
+  .field-contest-card { grid-column:auto; }
 }

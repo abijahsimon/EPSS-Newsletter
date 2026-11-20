@@ -110,3 +110,32 @@ The sanitized endpoint still contains the 55 approved public records; the viewer
 selects the standalone gallery subset. Seven held records and all publication
 flags stay unchanged. Juan's ten selected photographs carry the photographer
 credit explicitly confirmed by Abijah; Treude photographer names remain unknown.
+
+## Responsive newsletter media (November 2026 refinement)
+
+`src/data/media-derivatives.json` records verified natural dimensions and responsive
+preview candidates for the approved gallery records, plus cover/BALBOA variants.
+The endpoint merges only reader-facing geometry into published records; the
+editorial manifest and held records stay in `src/data/`. Lightboxes retain original
+full-size photographs. Existing originals, captions, credits and focal positions
+must remain unchanged when regenerating.
+
+After an approved media or cover-source update, regenerate from `app/`:
+
+```sh
+node scripts/generate-media-derivatives.mjs
+```
+
+This maintenance command uses Python 3 with Pillow available locally; ordinary
+Astro builds use the checked-in derivatives and need no Python runtime. It reads
+only published gallery sources and derives the three current cover sources from
+`src/reference-pages/index.html`. Review generated assets/geometry, then run the
+normal checks and browser verification. Do not change publication flags to make a
+source enter generation. The static checker verifies every responsive gallery
+candidate, dimensions, approved IDs and held-only omissions. Responsive/deferred
+srcsets are included in the root/subpath rewrite tests.
+
+The first cover is discoverable and high priority. Remaining covers load after
+initial load/idle; manual and automatic transitions wait for their destination
+image. The gallery reserves its natural media proportions and an initial loading
+viewport so the following section does not flash above the incoming collection.

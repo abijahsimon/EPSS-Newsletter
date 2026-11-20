@@ -66,4 +66,4 @@ Keeping this tradition strong is something we do together, and we hope to contin
 
 The gallery contains twelve photographs from the Spring 2026 field newsletter, including winter and spring trips.
 
-[Browse the complete field photo archive in UCLA Box](https://ucla.app.box.com/folder/400260548483). Access may require a UCLA Box sign-in.
+Your support helps make field trips like these possible. From vehicle support to access remote locations, camping equipment, and more. If you are interested in supporting our field program, please contact Emily Bisno at [ebisno@support.ucla.edu](mailto:ebisno@support.ucla.edu) or [click here to donate online](https://giving.ucla.edu/campaign/donate.aspx?Fund=64140C&code=m-55195).

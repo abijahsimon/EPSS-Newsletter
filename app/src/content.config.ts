@@ -72,6 +72,7 @@ const articles = defineCollection({
     sourceNote: z.string().optional(),
     heroImage: z.string().optional(),
     heroImageAlt: z.string().optional(),
+    heroImageCaption: z.string().optional(),
     galleryTitle: z.string().optional(),
     gallery: z.array(z.object({
       src: z.string(),

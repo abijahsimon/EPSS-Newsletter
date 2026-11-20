@@ -25,6 +25,12 @@
   a:hover { color: #9a4a26; }
   h1, h2, h3, p, ul, ol, figure { margin-top: 0; }
   ::selection { background: #ffd100; color: #101820; }
+
+  /* Preserve the authored composition while allowing enlarged text to reflow. */
+  main :where(h1,h2,h3,p,li,figcaption) { overflow-wrap:anywhere; }
+  header > div:first-child, header > div:first-child > div { flex-wrap:wrap; }
+  header a { overflow-wrap:anywhere; }
+  .peter-prose > p, .peter-prose > h1, .peter-prose > blockquote, .peter-prose > div { max-width:34rem; margin-inline:auto !important; }
 </style>
 </helmet>
 
@@ -45,7 +51,7 @@
 </header>
 
 <main id="top">
-  <article style="max-width:760px;margin:0 auto;padding:clamp(44px,6vw,80px) clamp(20px,5vw,40px) clamp(44px,6vw,72px)">
+  <article class="peter-prose" style="max-width:760px;margin:0 auto;padding:clamp(44px,6vw,80px) clamp(20px,5vw,40px) clamp(44px,6vw,72px)">
     <p style="margin:0 0 22px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#9a4a26">Farewell · In his own words</p>
     <h1 style="margin:0 0 28px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:clamp(2.2rem,5vw,4rem);line-height:1.02;letter-spacing:-0.025em;text-wrap:balance">On leaving, and on raising a member of Generation Alpha</h1>
 

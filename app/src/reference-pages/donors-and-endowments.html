@@ -14,6 +14,8 @@
 <style>
   html { scroll-behavior: smooth; }
   :focus-visible { outline: 3px solid #9a4a26; outline-offset: 3px; }
+  main a[href^="mailto:"], main a[href^="tel:"] { text-decoration:underline !important; text-underline-offset:0.16em; }
+  main a[href^="mailto:"]:focus-visible, main a[href^="tel:"]:focus-visible { outline-color:#101820; }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
@@ -55,8 +57,6 @@
     <div style="padding-top:32px;border-top:3px solid #101820;margin-bottom:22px">
       <h2 id="donors-h" style="margin:0 0 8px;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:2rem;line-height:1.15;letter-spacing:-0.015em">2025–26 Donors</h2>
       <p style="margin:0;max-width:70ch;font-size:0.92rem;color:#54626d">The list below recognizes those who donated to UCLA EPSS between July 1, 2025 and June 30, 2026. Thank you for your support!</p>
-      <p style="margin:16px 0 0;max-width:70ch;font-size:0.92rem;color:#54626d">Across UCLA Physical Sciences, the 2026 installation of eight endowed chairs underscored what this kind of giving makes possible: an investment in the people and ideas that drive discovery. Within EPSS, that same long-term partnership sustains field learning, undergraduate research, graduate fellowships, and the faculty who carry the department’s work forward.</p>
-      <p style="margin:12px 0 0;max-width:70ch;font-size:0.92rem;color:#54626d">Read more about EPSS’s endowed-chair installations in <a href="https://epss.ucla.edu/building-the-future-of-earth-sciences-epss-celebrates-the-installation-of-three-endowed-chairs/">Building the Future of Earth Sciences</a>.</p>
     </div>
     <ul style="columns:4 210px;column-gap:34px;margin:0;padding:0;list-style:none;font-size:0.92rem;line-height:1.45">
         <li style="padding:6px 0;border-bottom:1px solid rgba(16,24,32,0.08);break-inside:avoid">Christopher Adibe</li>

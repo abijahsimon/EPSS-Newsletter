@@ -9,8 +9,9 @@ variant: standard
 dek: "Craig Manning leaves UCLA after a career that reshaped how we understand fluids, melts, and chemical change in the deep Earth."
 byline: "Jonathan M. Aurnou"
 readTime: "3 min read"
-heroImage: "/assets/people/craig-manning.jpg"
-heroImageAlt: "Craig Manning in the field."
+heroImage: "/assets/images/2026/craig-manning/altyn-tagh-spring-water-chemistry.jpg"
+heroImageAlt: "Craig Manning conducting field analysis of spring water chemistry near the Altyn Tagh fault in Tibet."
+heroImageCaption: "Field analysis of spring water chemistry, Altyn Tagh fault, Tibet, 2005."
 galleryTitle: "Craig Manning in the field"
 gallery:
   - src: "/assets/images/2026/craig-manning/altyn-tagh-spring-water-chemistry.jpg"
@@ -28,7 +29,10 @@ gallery:
   - src: "/assets/images/2026/craig-manning/akilia-island-field-trip.jpg"
     alt: "Craig Manning leading an astrobiology field trip in Greenland."
     caption: "Leading an astrobiology field trip to the >3.8 Ga Banded Iron Formation on Akilia Island, Greenland, 2004."
-sourceNote: "Article blurb supplied by Jonathan M. Aurnou on September 25, 2026; captioned images and portrait supplied by Craig Manning via email on September 29, 2026. Gallery review completed and publication authorized by Abijah October 21, 2026."
+  - src: "/assets/images/2026/craig-manning/craig-manning-alice-cooper-halloween.jpg"
+    alt: "Craig Manning dressed as Alice Cooper for Halloween."
+    caption: "Craig Manning dressed as Alice Cooper for Halloween."
+sourceNote: "Article blurb supplied by Jonathan M. Aurnou on September 25, 2026; captioned images and portrait supplied by Craig Manning via email on September 29, 2026. Gallery review completed and publication authorized by Abijah October 21, 2026. Alice Cooper Halloween image sourced from the September 24 materials forwarded by Emmanuel Masongsong on November 16, 2026; image photographer not identified."
 ---
 
 Craig Manning retired this summer after 36 years at UCLA, leaving a remarkable legacy in experimental and metamorphic petrology, geochemistry, and the broader life of EPSS.

@@ -1,5 +1,6 @@
 ---
 import SiteMetadata from "./SiteMetadata.astro";
+import mediaDerivatives from "../data/media-derivatives.json";
 
 interface Props {
   html: string;
@@ -10,6 +11,22 @@ interface Props {
 
 const { html, title, description, image } = Astro.props;
 let body = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? html;
+const coverSources = mediaDerivatives.coverOrder;
+const responsiveImageSources = [...coverSources, "/assets/images/2026/balboa/launch-vehicle.jpg"];
+const coverVariants = mediaDerivatives.covers as Record<string, {
+  width: number;
+  height: number;
+  webp: Array<{ src: string; width: number }>;
+  jpeg: Array<{ src: string; width: number }>;
+  fallback: string;
+}>;
+const initialCover = coverVariants[coverSources[0]];
+const isHome = title === "EPSS Newsletter 2026";
+const sizesForCover = (width: number, height: number) =>
+  `(max-width: 900px) max(100vw, ${Math.ceil(720 * width / height)}px, ${Math.ceil(100 * width / height)}vh), 100vw`;
+const coverSizes = sizesForCover(initialCover.width, initialCover.height);
+const srcset = (variants: Array<{ src: string; width: number }>) =>
+  variants.map((variant) => `${variant.src} ${variant.width}w`).join(", ");
 
 const routeRewrites = [
   ["/EPSS Annual Newsletter 2026.dc.html#", "/#"],
@@ -96,6 +113,54 @@ body = body.replace(/<img\b[^>]*>/gi, (tag) => {
   ].filter(Boolean).join(" ");
   return tag.replace(/<img\b/, `<img ${attributes}`);
 });
+
+const setAttribute = (tag: string, name: string, value: string) => {
+  const attribute = new RegExp(`\\s${name}=(['"])[^'"]*\\1`, "i");
+  return attribute.test(tag)
+    ? tag.replace(attribute, ` ${name}="${value}"`)
+    : tag.replace(/<img\b/i, `<img ${name}="${value}"`);
+};
+
+// Give the initial photographic cover responsive sources immediately. The other
+// two are source-free until the reader requests them or the page reaches idle.
+body = body.replace(/<img\b[^>]*>/gi, (originalTag) => {
+  const originalSrc = originalTag.match(/\bsrc="([^"]+)"/i)?.[1];
+  const index = responsiveImageSources.indexOf(originalSrc ?? "");
+  if (index < 0) return originalTag;
+  const variants = coverVariants[responsiveImageSources[index]];
+  if (!variants) return originalTag;
+  const isInitial = index === 0;
+  const imageSizes = sizesForCover(variants.width, variants.height);
+  let imageTag = originalTag;
+  let sourceTag = "";
+  imageTag = setAttribute(imageTag, "width", String(variants.width));
+  imageTag = setAttribute(imageTag, "height", String(variants.height));
+  if (!coverSources.includes(originalSrc ?? "")) {
+    sourceTag = `<source type="image/webp" srcset="${srcset(variants.webp)}" sizes="100vw">`;
+    imageTag = setAttribute(imageTag, "src", variants.fallback);
+    imageTag = setAttribute(imageTag, "srcset", srcset(variants.jpeg));
+    imageTag = setAttribute(imageTag, "sizes", "100vw");
+    return `<picture style="display:block;width:100%">${sourceTag}${imageTag}</picture>`;
+  }
+  sourceTag = `<source type="image/webp" ${isInitial
+    ? `srcset="${srcset(variants.webp)}" sizes="${imageSizes}"`
+    : `data-cover-srcset="${srcset(variants.webp)}" data-cover-sizes="${imageSizes}"`}>`;
+  if (isInitial) {
+    imageTag = setAttribute(imageTag, "src", variants.fallback);
+    imageTag = setAttribute(imageTag, "srcset", srcset(variants.jpeg));
+    imageTag = setAttribute(imageTag, "sizes", imageSizes);
+    imageTag = setAttribute(imageTag, "loading", "eager");
+    imageTag = setAttribute(imageTag, "fetchpriority", "high");
+    return `<picture style="display:block;width:100%;height:100%">${sourceTag}${imageTag}</picture>`;
+  }
+  imageTag = setAttribute(imageTag, "data-cover-src", variants.fallback);
+  imageTag = setAttribute(imageTag, "data-cover-srcset", srcset(variants.jpeg));
+  imageTag = setAttribute(imageTag, "data-cover-sizes", imageSizes);
+  imageTag = setAttribute(imageTag, "src", transparentPixel);
+  imageTag = setAttribute(imageTag, "loading", "lazy");
+  imageTag = setAttribute(imageTag, "fetchpriority", "low");
+  return `<picture style="display:block;width:100%;height:100%">${sourceTag}${imageTag}</picture>`;
+});
 ---
 
 <!doctype html>
@@ -106,6 +171,7 @@ body = body.replace(/<img\b[^>]*>/gi, (tag) => {
     <title>{title}</title>
     <SiteMetadata title={title} description={description} image={image} />
     <link rel="icon" href="/assets/brand/epss-department-logo.svg" type="image/svg+xml" />
+    {isHome && <link rel="preload" as="image" type="image/webp" href={initialCover.webp.find((variant) => variant.width >= 1200)?.src ?? initialCover.webp.at(-1)?.src} imagesrcset={srcset(initialCover.webp)} imagesizes={coverSizes} fetchpriority="high" />}
     <script is:inline src="/support.js"></script>
   </head>
   <body>
@@ -113,9 +179,111 @@ body = body.replace(/<img\b[^>]*>/gi, (tag) => {
     <Fragment set:html={body} />
     <script>
       import "../scripts/dialog-focus";
+      import "../scripts/fragment-navigation";
     </script>
     <script is:inline define:vars={{ transparentPixel }}>
-      const syncLightboxImages = () => {
+      // DC replaces the source tree when it mounts. Bind to each connected
+      // cover track rather than retaining a reference to the detached template.
+      const initializedCoverTracks = new WeakSet();
+      const setupCovers = () => {
+        const coverTrack = document.querySelector(".cover-track");
+        if (!coverTrack?.isConnected || initializedCoverTracks.has(coverTrack)) return;
+        initializedCoverTracks.add(coverTrack);
+        const coverImages = [...coverTrack.querySelectorAll(".cover-slide img[data-cover-src]")];
+        let pendingCoverIntent = null;
+        let coverIntentSerial = 0;
+        const ensureCoverLoaded = (img, priority = "low") => {
+          if (img.dataset.coverLoaded === "true" && img.complete && img.naturalWidth > 1) return Promise.resolve(true);
+          if (img._coverLoadPromise) return img._coverLoadPromise;
+          img.loading = "eager";
+          img.fetchPriority = priority;
+          const source = img.parentElement.querySelector("source[data-cover-srcset]");
+          if (source) {
+            source.sizes = source.dataset.coverSizes || "100vw";
+            source.srcset = source.dataset.coverSrcset;
+            source.removeAttribute("data-cover-srcset");
+          }
+          img.sizes = img.dataset.coverSizes || "100vw";
+          img.srcset = img.dataset.coverSrcset;
+          img.src = img.dataset.coverSrc;
+          const decodeImage = () => {
+            if (img.complete && img.naturalWidth > 1) return Promise.resolve();
+            return img.decode ? img.decode() : new Promise((resolve, reject) => {
+              img.addEventListener("load", resolve, { once: true });
+              img.addEventListener("error", reject, { once: true });
+            });
+          };
+          img._coverLoadPromise = decodeImage().catch(() => {
+            // A failed WebP still needs a decoded JPEG before it can be shown.
+            img.parentElement.querySelector("source[type='image/webp']")?.removeAttribute("srcset");
+            img.removeAttribute("srcset");
+            img.src = img.dataset.coverSrc;
+            return decodeImage();
+          }).then(() => {
+            if (img.naturalWidth <= 1) throw new Error("Cover image unavailable");
+            img.dataset.coverLoaded = "true";
+            return true;
+          }).catch(() => {
+            img.dataset.coverLoaded = "false";
+            img._coverLoadPromise = undefined;
+            return false;
+          });
+          return img._coverLoadPromise;
+        };
+        if (coverTrack && coverImages.length) {
+          const controls = document.querySelector(".cover-controls");
+          controls?.addEventListener("click", (event) => {
+            const button = event.target.closest("button[aria-label='Next cover image'], button[aria-label='Previous cover image']");
+            if (!button) return;
+            // Inline transform is the intended slide. Computed transform is an
+            // interpolated position during animation and can select the wrong
+            // image when a reader advances again before the transition ends.
+            const offset = /translateX\((-?[\d.]+)%\)/.exec(coverTrack.style.transform);
+            const slideCount = coverTrack.querySelectorAll(".cover-slide").length;
+            const current = Math.round(Math.abs(Number(offset?.[1] || 0)) / (100 / slideCount));
+            const direction = button.getAttribute("aria-label").startsWith("Next") ? 1 : -1;
+            const target = (current + direction + slideCount) % slideCount;
+            const targetImage = coverTrack.querySelectorAll(".cover-slide img")[target];
+            if (pendingCoverIntent?.button === button && pendingCoverIntent.targetImage === targetImage) {
+              event.preventDefault();
+              event.stopImmediatePropagation();
+              return;
+            }
+            const intent = ++coverIntentSerial;
+            pendingCoverIntent = null;
+            if (!targetImage?.hasAttribute("data-cover-src") || (targetImage.dataset.coverLoaded === "true" && targetImage.complete && targetImage.naturalWidth > 1)) return;
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            // Manual navigation pauses autoplay immediately, including while
+            // loading. A later request supersedes an earlier pending request.
+            const play = controls.querySelector(".cover-play");
+            if (play?.getAttribute("aria-label") === "Pause cover images") play.click();
+            pendingCoverIntent = { button, targetImage, intent };
+            ensureCoverLoaded(targetImage, "high").then((ready) => {
+              if (intent !== coverIntentSerial) return;
+              pendingCoverIntent = null;
+              if (ready && coverTrack.isConnected) button.click();
+            });
+          }, true);
+          const loadRemainingCovers = () => {
+            const runIdle = (callback, timeout = 2500) => window.requestIdleCallback
+              ? window.requestIdleCallback(callback, { timeout })
+              : window.setTimeout(callback, 500);
+            const loadNext = (index) => {
+              if (index >= coverImages.length) return;
+              runIdle(() => ensureCoverLoaded(coverImages[index], "low").then(() => {
+                window.setTimeout(() => loadNext(index + 1), 1800);
+              }));
+            };
+            loadNext(0);
+          };
+          if (document.readyState === "complete") loadRemainingCovers();
+          else window.addEventListener("load", loadRemainingCovers, { once: true });
+        }
+      };
+
+      const syncDynamicImages = () => {
+        setupCovers();
         document.querySelectorAll("img[data-lightbox-src]").forEach((image) => {
           const source = image.getAttribute("data-lightbox-src");
           if (source && !source.includes("{{") && image.getAttribute("src") !== source) {
@@ -124,30 +292,13 @@ body = body.replace(/<img\b[^>]*>/gi, (tag) => {
         });
       };
 
-      new MutationObserver(syncLightboxImages).observe(document.body, {
+      new MutationObserver(syncDynamicImages).observe(document.body, {
         attributes: true,
         childList: true,
         subtree: true,
       });
-      syncLightboxImages();
+      syncDynamicImages();
 
-      // The new awards deep link must wait for the hidden reference template
-      // to mount before the browser can position its undergraduate heading.
-      if (window.location.hash === "#undergrad-h") {
-        let alignmentPending = false;
-        const alignUndergraduateHeading = () => {
-          const heading = document.getElementById("undergrad-h");
-          if (!heading?.getClientRects().length || alignmentPending) return;
-          alignmentPending = true;
-          document.fonts.ready.then(() => requestAnimationFrame(() => requestAnimationFrame(() => {
-            document.getElementById("undergrad-h")?.scrollIntoView({ block: "start", behavior: "instant" });
-            fragmentObserver.disconnect();
-          })));
-        };
-        const fragmentObserver = new MutationObserver(alignUndergraduateHeading);
-        fragmentObserver.observe(document.body, { childList: true, subtree: true });
-        alignUndergraduateHeading();
-      }
     </script>
   </body>
 </html>

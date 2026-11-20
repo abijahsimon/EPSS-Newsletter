@@ -21,5 +21,9 @@ export function rewriteSitePaths(source, base) {
     .replace(/(["'`])\/(assets\/|stories\/|media-archive(?:\/|(?=["'`]))|downloads\/|epss-through-deep-time\/|archive-poster\/|support\.js|analytics\.js|covers-data\.js|doc-page\.js)/g,
       (_, quote, path) => `${quote}${base}/${path}`)
     .replace(/(\b(?:href|src|action)\s*=\s*["'])\/(?=[#"'])/g, `$1${base}/`)
+    // Responsive candidates after a comma have no opening quote. Prefix each
+    // site-owned URL while preserving descriptors and third-party candidates.
+    .replace(/(\b(?:srcset|imagesrcset|data-cover-srcset)\s*=\s*)(["'])(.*?)\2/g,
+      (_, attribute, quote, candidates) => `${attribute}${quote}${candidates.replace(/(^|,\s*)(\/assets\/)/g, `$1${base}/assets/`)}${quote}`)
     .replace(/url\(\/(assets\/)/g, `url(${base}/$1`);
 }

@@ -80,7 +80,3 @@ An unexpected finding from this research is the vertical velocity field of the T
 Beyond research, Peltzer is a dedicated teacher. He developed and taught courses on tectonics, earthquakes, remote sensing, and radar interferometry, always emphasizing hands-on learning. In the geologic playground of Southern California's deserts, his classes often included field trips where students could see firsthand how the landscape tells the story of Earth's restless surface.
 
 His most cherished memories are the endless conversations with students around a campfire after a long day of studying earthquake faults, volcanoes, sand dunes, and the many wonders of geology in the hot California desert.
-
-## Giving Note
-
-The source still needs exact field matching dates and cap before any final giving sentence is published.

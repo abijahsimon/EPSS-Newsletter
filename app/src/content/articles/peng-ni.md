@@ -68,7 +68,6 @@ Ni is especially passionate about educating the next generation of geoscientists
 
 In October, he and EPSS Professor Amy Mainzer led a 17-person group of graduate students, faculty, and volunteers onto dry lakebeds near Pahrump, Nevada, in search of meteorites. The expedition was part of a course on the origin and evolution of the solar system that combines Mainzer's background in astronomy with Ni's in geology. Students found about three meteorites apiece.
 
-In the group photograph from that expedition, Mainzer is third from the left in the back row. Most of the other people pictured were EPSS graduate students who took M285: Origin of the Solar System in fall 2025.
 
 "Thanks to California's unique geology, UCLA is perfectly positioned to offer a strong, thriving field-based teaching and research program," Ni said. "I have colleagues at East Coast universities who fly their students here for that very reason."
 

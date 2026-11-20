@@ -19,7 +19,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: calc(var(--article-header-height, 74px) + 16px);
 }
 
 body {
@@ -1625,7 +1625,7 @@ h3 {
 
 .reading-progress {
   position: sticky;
-  top: 81px;
+  top: var(--article-header-height, 81px);
   z-index: 39;
   height: 3px;
   background: rgba(16, 24, 32, 0.1);
@@ -1655,7 +1655,7 @@ h3 {
 .story-hero-page h1 {
   max-width: 22ch;
   margin-bottom: 24px;
-  font-size: clamp(2.6rem, 5.6vw, 5rem);
+  font-size: clamp(2.4rem, 1.45rem + 3.5vw, 5rem);
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0;
@@ -1691,6 +1691,7 @@ h3 {
 
 .story-meta-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 14px;
   color: var(--muted);
@@ -1775,7 +1776,7 @@ h3 {
 }
 
 .story-body-copy {
-  max-width: 760px;
+  max-width: 34rem;
   margin: 0 auto;
 }
 
@@ -1850,9 +1851,8 @@ h3 {
 }
 
 .article-asteroid-family .story-body-copy > p,
-.article-asteroid-family .story-body-copy > h2,
-.article-asteroid-family .asteroid-orbit-figure {
-  max-width: 760px;
+.article-asteroid-family .story-body-copy > h2 {
+  max-width: 34rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1931,6 +1931,8 @@ h3 {
 }
 
 .article-asteroid-family .asteroid-orbit-figure {
+  max-width: 760px;
+  margin-inline: auto;
   margin-top: 32px;
   margin-bottom: 32px;
 }
@@ -2243,15 +2245,16 @@ h3 {
   }
 
   .article-header {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
-  .article-header-actions > a:first-child {
-    display: none;
+  .article-header-actions {
+    flex-wrap: wrap;
+    gap: 12px 20px;
   }
 
   .reading-progress {
-    top: 76px;
+    top: var(--article-header-height, 76px);
   }
 
   .story-body {
@@ -2323,7 +2326,9 @@ h3 {
   }
 
   .article-header-actions {
-    gap: 0;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
   }
 
   .article-header-actions .article-give {
@@ -2335,18 +2340,17 @@ h3 {
     padding: 42px 20px 30px;
   }
 
-  .story-hero-page h1 {
-    font-size: clamp(2.55rem, 13vw, 4rem);
-  }
-
   .story-dek {
     margin-bottom: 28px;
     font-size: 1.22rem;
   }
 
-  .story-meta,
-  .memorial-meta {
+  .story-meta {
     align-items: flex-start;
+    margin-inline: 0;
+  }
+
+  .memorial-meta {
     margin-right: 20px;
     margin-left: 20px;
   }
@@ -2420,4 +2424,57 @@ h3 {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
+}
+
+/* Content must retain its measure and reflow when readers enlarge text. */
+.story-page :where(h1, h2, h3, p, li, figcaption),
+.article-header-actions,
+.story-byline,
+.footer-links { overflow-wrap: anywhere; }
+.story-hero-inner > *, .story-meta > *, .asteroid-honoree > * { min-width: 0; }
+.article-header-actions { flex-wrap: wrap; }
+.article-header-actions .article-give, .story-meta button { height: auto; min-height: 36px; padding-block: 6px; }
+.story-page .story-meta { scroll-margin-top: calc(var(--article-header-height, 81px) + 16px); }
+.article-craig-manning .story-hero-media {
+  width: 100vw;
+  max-width: none;
+  margin: 0 calc(50% - 50vw) 48px;
+  background: var(--deep);
+}
+.article-craig-manning .story-hero-media img {
+  width: 100%;
+  height: clamp(360px, 50vw, 640px);
+  max-height: none;
+  object-fit: cover;
+  object-position: 50% 52%;
+  border: 0;
+}
+.article-craig-manning .story-hero-media figcaption {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 12px 0 16px;
+  color: var(--paper);
+  font-size: 0.82rem;
+}
+@media (max-width: 600px) {
+  .article-craig-manning .story-hero-media img { height: clamp(360px, 105vw, 480px); object-position: 50% 50%; }
+  .article-craig-manning .story-hero-media figcaption { width: calc(100% - 40px); }
+}
+
+/* Source credit for the RIMFAX lead illustration. */
+.article-rimfax .story-hero-media figcaption {
+  width: min(76rem, calc(100% - 40px));
+  margin: 12px auto 0;
+  color: var(--muted);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Preserve the complete costume and face in Craig’s portrait-format photograph. */
+.article-craig-manning .story-gallery img[src*="alice-cooper-halloween"] {
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
+  background: var(--mist);
 }

@@ -96,8 +96,9 @@ for (const item of MEDIA_ITEMS) {
   if (["sourceId", "suppliedBy", "permissionStatus", "creditStatus", "seasonStatus", "blocker"].some((key) => key in item)) {
     errors.push(`Internal media fields published: ${item.id}`);
   }
-  for (const key of ["src", "thumbnailSrc"]) {
-    const value = item[key];
+  if (!(item.width > 0 && item.height > 0)) errors.push(`Missing intrinsic gallery dimensions: ${item.id}`);
+  const imagePaths = [item.src, item.thumbnailSrc, ...(item.thumbnailSrcset ?? []).map((candidate) => candidate.src)];
+  for (const value of imagePaths) {
     if (!value?.startsWith(prefix)) { errors.push(`Gallery path outside ${prefix}: ${item.id}`); continue; }
     try { await checkCase(join(root, value.slice(prefix.length))); }
     catch { errors.push(`Missing/case-mismatched gallery asset: ${value}`); }

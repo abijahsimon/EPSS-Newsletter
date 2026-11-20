@@ -1,0 +1,2023 @@
+{
+  "gallery": {
+    "treude-team": {
+      "width": 1600,
+      "height": 1200,
+      "thumbnailSrc": "/assets/images/2026/field-trips/treude-team-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/treude-team-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/treude-team-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/treude-team-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/treude-team-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/treude-team-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "treude-sampling": {
+      "width": 1600,
+      "height": 1200,
+      "thumbnailSrc": "/assets/images/2026/field-trips/treude-sampling-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/treude-sampling-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/treude-sampling-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/treude-sampling-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/treude-sampling-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/treude-sampling-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "treude-instrument": {
+      "width": 1122,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/field-trips/treude-instrument-thumb-w1122.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/treude-instrument-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/treude-instrument-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/treude-instrument-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/treude-instrument-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/treude-instrument-thumb-w1122.webp",
+          "width": 1122
+        }
+      ]
+    },
+    "vof-fleet": {
+      "width": 2200,
+      "height": 1652,
+      "thumbnailSrc": "/assets/images/2026/field-spring-2026/valley-of-fire-fleet-thumb-w2200.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-spring-2026/valley-of-fire-fleet-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/valley-of-fire-fleet-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/valley-of-fire-fleet-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/valley-of-fire-fleet-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/valley-of-fire-fleet-thumb-w2200.webp",
+          "width": 2200
+        }
+      ]
+    },
+    "vof-class": {
+      "width": 2200,
+      "height": 1467,
+      "thumbnailSrc": "/assets/images/2026/field-spring-2026/valley-of-fire-class-thumb-w2200.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-spring-2026/valley-of-fire-class-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/valley-of-fire-class-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/valley-of-fire-class-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/valley-of-fire-class-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/valley-of-fire-class-thumb-w2200.webp",
+          "width": 2200
+        }
+      ]
+    },
+    "zion-dawn": {
+      "width": 2200,
+      "height": 1652,
+      "thumbnailSrc": "/assets/images/2026/field-spring-2026/zion-dawn-thumb-w2200.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-spring-2026/zion-dawn-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/zion-dawn-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/zion-dawn-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/zion-dawn-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/zion-dawn-thumb-w2200.webp",
+          "width": 2200
+        }
+      ]
+    },
+    "painted-structural": {
+      "width": 1572,
+      "height": 1042,
+      "thumbnailSrc": "/assets/images/2026/field-spring-2026/painted-canyon-structural-thumb-w1572.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-spring-2026/painted-canyon-structural-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/painted-canyon-structural-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/painted-canyon-structural-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/painted-canyon-structural-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/painted-canyon-structural-thumb-w1572.webp",
+          "width": 1572
+        }
+      ]
+    },
+    "painted-whiteboard": {
+      "width": 1814,
+      "height": 1312,
+      "thumbnailSrc": "/assets/images/2026/field-spring-2026/painted-canyon-whiteboard-thumb-w1814.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-spring-2026/painted-canyon-whiteboard-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/painted-canyon-whiteboard-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/painted-canyon-whiteboard-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/painted-canyon-whiteboard-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/painted-canyon-whiteboard-thumb-w1814.webp",
+          "width": 1814
+        }
+      ]
+    },
+    "bishop-tuff": {
+      "width": 1616,
+      "height": 1080,
+      "thumbnailSrc": "/assets/images/2026/field-spring-2026/bishop-tuff-igneous-petrology-thumb-w1616.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-spring-2026/bishop-tuff-igneous-petrology-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/bishop-tuff-igneous-petrology-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/bishop-tuff-igneous-petrology-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/bishop-tuff-igneous-petrology-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/bishop-tuff-igneous-petrology-thumb-w1616.webp",
+          "width": 1616
+        }
+      ]
+    },
+    "wmrs-class": {
+      "width": 1616,
+      "height": 1080,
+      "thumbnailSrc": "/assets/images/2026/field-spring-2026/white-mountain-research-station-class-thumb-w1616.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-spring-2026/white-mountain-research-station-class-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/white-mountain-research-station-class-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/white-mountain-research-station-class-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/white-mountain-research-station-class-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/white-mountain-research-station-class-thumb-w1616.webp",
+          "width": 1616
+        }
+      ]
+    },
+    "ucla-light": {
+      "width": 1616,
+      "height": 1080,
+      "thumbnailSrc": "/assets/images/2026/field-spring-2026/ucla-light-painting-thumb-w1616.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-spring-2026/ucla-light-painting-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/ucla-light-painting-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/ucla-light-painting-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/ucla-light-painting-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/ucla-light-painting-thumb-w1616.webp",
+          "width": 1616
+        }
+      ]
+    },
+    "field-outcrop": {
+      "width": 2200,
+      "height": 1650,
+      "thumbnailSrc": "/assets/images/2026/field-spring-2026/field-class-outcrop-thumb-w2200.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-class-outcrop-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-class-outcrop-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-class-outcrop-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-class-outcrop-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-class-outcrop-thumb-w2200.webp",
+          "width": 2200
+        }
+      ]
+    },
+    "field-notebooks": {
+      "width": 2200,
+      "height": 1667,
+      "thumbnailSrc": "/assets/images/2026/field-spring-2026/field-notebook-lunch-thumb-w2200.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-notebook-lunch-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-notebook-lunch-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-notebook-lunch-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-notebook-lunch-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-notebook-lunch-thumb-w2200.webp",
+          "width": 2200
+        }
+      ]
+    },
+    "field-sketching": {
+      "width": 1280,
+      "height": 1707,
+      "thumbnailSrc": "/assets/images/2026/field-spring-2026/field-sketching-thumb-w1280.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-sketching-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-sketching-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-sketching-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-sketching-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/field-sketching-thumb-w1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    "desert-ridge": {
+      "width": 2200,
+      "height": 1650,
+      "thumbnailSrc": "/assets/images/2026/field-spring-2026/desert-ridge-class-thumb-w2200.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-spring-2026/desert-ridge-class-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/desert-ridge-class-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/desert-ridge-class-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/desert-ridge-class-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-spring-2026/desert-ridge-class-thumb-w2200.webp",
+          "width": 2200
+        }
+      ]
+    },
+    "perseverance": {
+      "width": 1800,
+      "height": 1056,
+      "thumbnailSrc": "/assets/images/2026/rimfax/perseverance-ingenuity-thumb-w1800.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/rimfax/perseverance-ingenuity-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/rimfax/perseverance-ingenuity-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/rimfax/perseverance-ingenuity-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/rimfax/perseverance-ingenuity-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/rimfax/perseverance-ingenuity-thumb-w1800.webp",
+          "width": 1800
+        }
+      ]
+    },
+    "rimfax-location": {
+      "width": 1600,
+      "height": 900,
+      "thumbnailSrc": "/assets/images/2026/rimfax/rimfax-location-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/rimfax/rimfax-location-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/rimfax/rimfax-location-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/rimfax/rimfax-location-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/rimfax/rimfax-location-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/rimfax/rimfax-location-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "commencement": {
+      "width": 2400,
+      "height": 1350,
+      "thumbnailSrc": "/assets/images/2026/commencement/class-2026-geology-building-thumb-w2400.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/commencement/class-2026-geology-building-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/commencement/class-2026-geology-building-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/commencement/class-2026-geology-building-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/commencement/class-2026-geology-building-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/commencement/class-2026-geology-building-thumb-w2400.webp",
+          "width": 2400
+        }
+      ]
+    },
+    "chairs-installation": {
+      "width": 1600,
+      "height": 900,
+      "thumbnailSrc": "/assets/images/2026/giving/chairs-installation-2026-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/giving/chairs-installation-2026-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/giving/chairs-installation-2026-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/giving/chairs-installation-2026-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/giving/chairs-installation-2026-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/giving/chairs-installation-2026-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "jewitt-forest": {
+      "width": 847,
+      "height": 1152,
+      "thumbnailSrc": "/assets/images/2026/art-science/jewitt-forest-thumb-w847.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/art-science/jewitt-forest-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-forest-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-forest-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-forest-thumb-w847.webp",
+          "width": 847
+        }
+      ]
+    },
+    "jewitt-swarm-seeds": {
+      "width": 906,
+      "height": 1184,
+      "thumbnailSrc": "/assets/images/2026/art-science/jewitt-swarm-seeds-thumb-w906.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/art-science/jewitt-swarm-seeds-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-swarm-seeds-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-swarm-seeds-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-swarm-seeds-thumb-w906.webp",
+          "width": 906
+        }
+      ]
+    },
+    "jewitt-swarm-pistachios": {
+      "width": 900,
+      "height": 745,
+      "thumbnailSrc": "/assets/images/2026/art-science/jewitt-swarm-pistachios-thumb-w900.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/art-science/jewitt-swarm-pistachios-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-swarm-pistachios-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-swarm-pistachios-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-swarm-pistachios-thumb-w900.webp",
+          "width": 900
+        }
+      ]
+    },
+    "jewitt-mosaic": {
+      "width": 902,
+      "height": 736,
+      "thumbnailSrc": "/assets/images/2026/art-science/jewitt-untitled-mosaic-thumb-w902.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/art-science/jewitt-untitled-mosaic-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-untitled-mosaic-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-untitled-mosaic-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-untitled-mosaic-thumb-w902.webp",
+          "width": 902
+        }
+      ]
+    },
+    "jewitt-orange": {
+      "width": 906,
+      "height": 778,
+      "thumbnailSrc": "/assets/images/2026/art-science/jewitt-untitled-orange-thumb-w906.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/art-science/jewitt-untitled-orange-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-untitled-orange-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-untitled-orange-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/art-science/jewitt-untitled-orange-thumb-w906.webp",
+          "width": 906
+        }
+      ]
+    },
+    "hilke-morni": {
+      "width": 912,
+      "height": 896,
+      "thumbnailSrc": "/assets/images/2026/art-science/hilke-morni-thumb-w912.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/art-science/hilke-morni-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/art-science/hilke-morni-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/art-science/hilke-morni-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/art-science/hilke-morni-thumb-w912.webp",
+          "width": 912
+        }
+      ]
+    },
+    "hilke-inle": {
+      "width": 901,
+      "height": 679,
+      "thumbnailSrc": "/assets/images/2026/art-science/hilke-high-above-inle-thumb-w901.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/art-science/hilke-high-above-inle-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/art-science/hilke-high-above-inle-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/art-science/hilke-high-above-inle-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/art-science/hilke-high-above-inle-thumb-w901.webp",
+          "width": 901
+        }
+      ]
+    },
+    "hilke-indonesia": {
+      "width": 938,
+      "height": 608,
+      "thumbnailSrc": "/assets/images/2026/art-science/hilke-indonesia-thumb-w938.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/art-science/hilke-indonesia-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/art-science/hilke-indonesia-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/art-science/hilke-indonesia-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/art-science/hilke-indonesia-thumb-w938.webp",
+          "width": 938
+        }
+      ]
+    },
+    "dj-blood-moon": {
+      "width": 1280,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/blood-moon-thumb-w1280.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/blood-moon-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/blood-moon-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/blood-moon-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/blood-moon-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/blood-moon-thumb-w1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    "dj-new-hampshire-sunset": {
+      "width": 1280,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/new-hampshire-sunset-thumb-w1280.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/new-hampshire-sunset-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/new-hampshire-sunset-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/new-hampshire-sunset-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/new-hampshire-sunset-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/new-hampshire-sunset-thumb-w1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    "dj-westwood-empty": {
+      "width": 1278,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/westwood-empty-thumb-w1278.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-empty-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-empty-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-empty-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-empty-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-empty-thumb-w1278.webp",
+          "width": 1278
+        }
+      ]
+    },
+    "dj-westwood-theater": {
+      "width": 1279,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/westwood-theater-thumb-w1279.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-theater-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-theater-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-theater-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-theater-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-theater-thumb-w1279.webp",
+          "width": 1279
+        }
+      ]
+    },
+    "dj-westwood-jacaranda": {
+      "width": 1280,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/westwood-jacaranda-thumb-w1280.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-jacaranda-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-jacaranda-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-jacaranda-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-jacaranda-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/westwood-jacaranda-thumb-w1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    "dj-cherry-blossom": {
+      "width": 1280,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/cherry-blossom-thumb-w1280.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/cherry-blossom-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/cherry-blossom-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/cherry-blossom-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/cherry-blossom-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/cherry-blossom-thumb-w1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    "dj-pond-lily": {
+      "width": 1280,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/pond-lily-thumb-w1280.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/pond-lily-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/pond-lily-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/pond-lily-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/pond-lily-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/pond-lily-thumb-w1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    "dj-devils-punchbowl": {
+      "width": 1280,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/devils-punchbowl-thumb-w1280.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/devils-punchbowl-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/devils-punchbowl-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/devils-punchbowl-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/devils-punchbowl-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/devils-punchbowl-thumb-w1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    "dj-milky-way-landscape": {
+      "width": 1600,
+      "height": 984,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/milky-way-landscape-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/milky-way-landscape-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/milky-way-landscape-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/milky-way-landscape-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/milky-way-landscape-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/milky-way-landscape-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "dj-duster-mine": {
+      "width": 1279,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/duster-mine-thumb-w1279.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/duster-mine-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/duster-mine-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/duster-mine-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/duster-mine-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/duster-mine-thumb-w1279.webp",
+          "width": 1279
+        }
+      ]
+    },
+    "dj-milky-way-portrait": {
+      "width": 1280,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/milky-way-portrait-thumb-w1280.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/milky-way-portrait-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/milky-way-portrait-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/milky-way-portrait-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/milky-way-portrait-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/milky-way-portrait-thumb-w1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    "dj-california-poppy": {
+      "width": 1280,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/california-poppy-thumb-w1280.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/california-poppy-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/california-poppy-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/california-poppy-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/california-poppy-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/california-poppy-thumb-w1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    "dj-poppy-with-bee": {
+      "width": 1279,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/poppy-with-bee-thumb-w1279.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/poppy-with-bee-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/poppy-with-bee-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/poppy-with-bee-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/poppy-with-bee-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/poppy-with-bee-thumb-w1279.webp",
+          "width": 1279
+        }
+      ]
+    },
+    "dj-california-pier": {
+      "width": 1280,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/california-pier-thumb-w1280.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/california-pier-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/california-pier-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/california-pier-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/california-pier-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/california-pier-thumb-w1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    "dj-washington-monument": {
+      "width": 1600,
+      "height": 1066,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/washington-monument-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/washington-monument-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/washington-monument-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/washington-monument-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/washington-monument-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/washington-monument-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "dj-botanical-river": {
+      "width": 1279,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/botanical-river-thumb-w1279.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/botanical-river-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/botanical-river-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/botanical-river-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/botanical-river-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/botanical-river-thumb-w1279.webp",
+          "width": 1279
+        }
+      ]
+    },
+    "dj-joshua-tree-sunset": {
+      "width": 1280,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/joshua-tree-sunset-thumb-w1280.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/joshua-tree-sunset-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/joshua-tree-sunset-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/joshua-tree-sunset-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/joshua-tree-sunset-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/joshua-tree-sunset-thumb-w1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    "dj-golden-gate": {
+      "width": 1600,
+      "height": 800,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/golden-gate-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/golden-gate-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/golden-gate-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/golden-gate-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/golden-gate-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/golden-gate-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "ft-rainbow-ridge": {
+      "width": 1600,
+      "height": 1067,
+      "thumbnailSrc": "/assets/images/2026/field-trips/rainbow-basin-ridge-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/rainbow-basin-ridge-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/rainbow-basin-ridge-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/rainbow-basin-ridge-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/rainbow-basin-ridge-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/rainbow-basin-ridge-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "ft-rainbow-camp": {
+      "width": 1600,
+      "height": 1067,
+      "thumbnailSrc": "/assets/images/2026/field-trips/rainbow-basin-camp-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/rainbow-basin-camp-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/rainbow-basin-camp-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/rainbow-basin-camp-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/rainbow-basin-camp-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/rainbow-basin-camp-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "ft-painted-descent": {
+      "width": 1600,
+      "height": 1067,
+      "thumbnailSrc": "/assets/images/2026/field-trips/painted-canyon-descent-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-descent-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-descent-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-descent-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-descent-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-descent-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "ft-painted-slot": {
+      "width": 1067,
+      "height": 1600,
+      "thumbnailSrc": "/assets/images/2026/field-trips/painted-canyon-slot-thumb-w1067.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-slot-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-slot-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-slot-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-slot-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-slot-thumb-w1067.webp",
+          "width": 1067
+        }
+      ]
+    },
+    "ft-painted-wall": {
+      "width": 1600,
+      "height": 1067,
+      "thumbnailSrc": "/assets/images/2026/field-trips/painted-canyon-wall-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-wall-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-wall-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-wall-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-wall-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-wall-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "ft-painted-crest": {
+      "width": 1600,
+      "height": 1067,
+      "thumbnailSrc": "/assets/images/2026/field-trips/painted-canyon-summit-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-summit-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-summit-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-summit-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-summit-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/painted-canyon-summit-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "ft-strat-ridge": {
+      "width": 1600,
+      "height": 1067,
+      "thumbnailSrc": "/assets/images/2026/field-trips/stratigraphic-mapping-ridge-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-ridge-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-ridge-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-ridge-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-ridge-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-ridge-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "ft-strat-outcrop": {
+      "width": 1600,
+      "height": 1067,
+      "thumbnailSrc": "/assets/images/2026/field-trips/stratigraphic-mapping-outcrop-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-outcrop-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-outcrop-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-outcrop-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-outcrop-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-outcrop-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "ft-strat-snack": {
+      "width": 1600,
+      "height": 1067,
+      "thumbnailSrc": "/assets/images/2026/field-trips/stratigraphic-mapping-snack-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-snack-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-snack-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-snack-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-snack-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/stratigraphic-mapping-snack-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "ft-paige-dunes": {
+      "width": 1600,
+      "height": 1287,
+      "thumbnailSrc": "/assets/images/2026/field-trips/paige-group-dunes-thumb-w1600.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/paige-group-dunes-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/paige-group-dunes-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/paige-group-dunes-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/paige-group-dunes-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/paige-group-dunes-thumb-w1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "ft-sierra-crest-map": {
+      "width": 2200,
+      "height": 1468,
+      "thumbnailSrc": "/assets/images/2026/field-trips/sierra-crest-map-thumb-w2200.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/sierra-crest-map-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/sierra-crest-map-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/sierra-crest-map-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/sierra-crest-map-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/sierra-crest-map-thumb-w2200.webp",
+          "width": 2200
+        }
+      ]
+    },
+    "ft-john-muir-jump": {
+      "width": 2200,
+      "height": 1468,
+      "thumbnailSrc": "/assets/images/2026/field-trips/john-muir-trail-jump-thumb-w2200.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/john-muir-trail-jump-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/john-muir-trail-jump-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/john-muir-trail-jump-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/john-muir-trail-jump-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/john-muir-trail-jump-thumb-w2200.webp",
+          "width": 2200
+        }
+      ]
+    },
+    "ft-bristlecone-hike": {
+      "width": 2200,
+      "height": 1468,
+      "thumbnailSrc": "/assets/images/2026/field-trips/bristlecone-pine-hike-thumb-w2200.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/bristlecone-pine-hike-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/bristlecone-pine-hike-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/bristlecone-pine-hike-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/bristlecone-pine-hike-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/bristlecone-pine-hike-thumb-w2200.webp",
+          "width": 2200
+        }
+      ]
+    },
+    "ac-rock-glacier-summit": {
+      "width": 1650,
+      "height": 2200,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/rock-glacier-summit-thumb-w1650.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/rock-glacier-summit-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/rock-glacier-summit-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/rock-glacier-summit-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/rock-glacier-summit-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/rock-glacier-summit-thumb-w1650.webp",
+          "width": 1650
+        }
+      ]
+    },
+    "ac-badwater-reflections": {
+      "width": 1650,
+      "height": 2200,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/badwater-reflections-thumb-w1650.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/badwater-reflections-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/badwater-reflections-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/badwater-reflections-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/badwater-reflections-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/badwater-reflections-thumb-w1650.webp",
+          "width": 1650
+        }
+      ]
+    },
+    "ac-water-death-valley": {
+      "width": 2200,
+      "height": 1650,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/water-in-death-valley-thumb-w2200.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/water-in-death-valley-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/water-in-death-valley-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/water-in-death-valley-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/water-in-death-valley-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/water-in-death-valley-thumb-w2200.webp",
+          "width": 2200
+        }
+      ]
+    },
+    "ac-tracing-ancient-dunes": {
+      "width": 2200,
+      "height": 1650,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/tracing-ancient-dunes-thumb-w2200.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/tracing-ancient-dunes-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/tracing-ancient-dunes-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/tracing-ancient-dunes-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/tracing-ancient-dunes-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/tracing-ancient-dunes-thumb-w2200.webp",
+          "width": 2200
+        }
+      ]
+    },
+    "ac-snow-in-death-valley": {
+      "width": 1650,
+      "height": 2200,
+      "thumbnailSrc": "/assets/images/2026/photo-contest/snow-in-death-valley-thumb-w1650.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/photo-contest/snow-in-death-valley-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/snow-in-death-valley-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/snow-in-death-valley-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/snow-in-death-valley-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/photo-contest/snow-in-death-valley-thumb-w1650.webp",
+          "width": 1650
+        }
+      ]
+    },
+    "faculty-kilauea-2026": {
+      "width": 2200,
+      "height": 1650,
+      "thumbnailSrc": "/assets/images/2026/field-trips/kilauea-halemaaumau-2026-thumb-w2200.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/kilauea-halemaaumau-2026-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/kilauea-halemaaumau-2026-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/kilauea-halemaaumau-2026-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/kilauea-halemaaumau-2026-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/kilauea-halemaaumau-2026-thumb-w2200.webp",
+          "width": 2200
+        }
+      ]
+    },
+    "peng-light-painting-2025": {
+      "width": 2200,
+      "height": 1467,
+      "thumbnailSrc": "/assets/images/2026/field-trips/igneous-light-painting-2025-thumb-w2200.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/field-trips/igneous-light-painting-2025-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/field-trips/igneous-light-painting-2025-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/field-trips/igneous-light-painting-2025-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/field-trips/igneous-light-painting-2025-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/field-trips/igneous-light-painting-2025-thumb-w2200.webp",
+          "width": 2200
+        }
+      ]
+    },
+    "sang-andromeda-hydrogen-alpha": {
+      "width": 2200,
+      "height": 1493,
+      "thumbnailSrc": "/assets/images/2026/astronomy/andromeda-hydrogen-alpha-thumb-w2200.webp",
+      "thumbnailSrcset": [
+        {
+          "src": "/assets/images/2026/astronomy/andromeda-hydrogen-alpha-thumb-w320.webp",
+          "width": 320
+        },
+        {
+          "src": "/assets/images/2026/astronomy/andromeda-hydrogen-alpha-thumb-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/astronomy/andromeda-hydrogen-alpha-thumb-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/astronomy/andromeda-hydrogen-alpha-thumb-w960.webp",
+          "width": 960
+        },
+        {
+          "src": "/assets/images/2026/astronomy/andromeda-hydrogen-alpha-thumb-w2200.webp",
+          "width": 2200
+        }
+      ]
+    }
+  },
+  "covers": {
+    "/assets/images/2026/hero/postcard-trail-group.jpg": {
+      "width": 1616,
+      "height": 1080,
+      "webp": [
+        {
+          "src": "/assets/images/2026/hero/postcard-trail-group-responsive-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-trail-group-responsive-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-trail-group-responsive-w1200.webp",
+          "width": 1200
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-trail-group-responsive-w1600.webp",
+          "width": 1600
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-trail-group-responsive-w1616.webp",
+          "width": 1616
+        }
+      ],
+      "jpeg": [
+        {
+          "src": "/assets/images/2026/hero/postcard-trail-group-responsive-w480.jpg",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-trail-group-responsive-w768.jpg",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-trail-group-responsive-w1200.jpg",
+          "width": 1200
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-trail-group-responsive-w1600.jpg",
+          "width": 1600
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-trail-group-responsive-w1616.jpg",
+          "width": 1616
+        }
+      ],
+      "fallback": "/assets/images/2026/hero/postcard-trail-group-responsive-w1200.jpg"
+    },
+    "/assets/images/2026/hero/postcard-dusk-fieldwork.jpg": {
+      "width": 2400,
+      "height": 1802,
+      "webp": [
+        {
+          "src": "/assets/images/2026/hero/postcard-dusk-fieldwork-responsive-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-dusk-fieldwork-responsive-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-dusk-fieldwork-responsive-w1200.webp",
+          "width": 1200
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-dusk-fieldwork-responsive-w1600.webp",
+          "width": 1600
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-dusk-fieldwork-responsive-w1920.webp",
+          "width": 1920
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-dusk-fieldwork-responsive-w2400.webp",
+          "width": 2400
+        }
+      ],
+      "jpeg": [
+        {
+          "src": "/assets/images/2026/hero/postcard-dusk-fieldwork-responsive-w480.jpg",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-dusk-fieldwork-responsive-w768.jpg",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-dusk-fieldwork-responsive-w1200.jpg",
+          "width": 1200
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-dusk-fieldwork-responsive-w1600.jpg",
+          "width": 1600
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-dusk-fieldwork-responsive-w1920.jpg",
+          "width": 1920
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-dusk-fieldwork-responsive-w2400.jpg",
+          "width": 2400
+        }
+      ],
+      "fallback": "/assets/images/2026/hero/postcard-dusk-fieldwork-responsive-w1200.jpg"
+    },
+    "/assets/images/2026/hero/postcard-commencement.jpg": {
+      "width": 2400,
+      "height": 1350,
+      "webp": [
+        {
+          "src": "/assets/images/2026/hero/postcard-commencement-responsive-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-commencement-responsive-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-commencement-responsive-w1200.webp",
+          "width": 1200
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-commencement-responsive-w1600.webp",
+          "width": 1600
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-commencement-responsive-w1920.webp",
+          "width": 1920
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-commencement-responsive-w2400.webp",
+          "width": 2400
+        }
+      ],
+      "jpeg": [
+        {
+          "src": "/assets/images/2026/hero/postcard-commencement-responsive-w480.jpg",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-commencement-responsive-w768.jpg",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-commencement-responsive-w1200.jpg",
+          "width": 1200
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-commencement-responsive-w1600.jpg",
+          "width": 1600
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-commencement-responsive-w1920.jpg",
+          "width": 1920
+        },
+        {
+          "src": "/assets/images/2026/hero/postcard-commencement-responsive-w2400.jpg",
+          "width": 2400
+        }
+      ],
+      "fallback": "/assets/images/2026/hero/postcard-commencement-responsive-w1200.jpg"
+    },
+    "/assets/images/2026/hero/eyu-fluid-dynamics.jpg": {
+      "width": 2400,
+      "height": 1800,
+      "webp": [
+        {
+          "src": "/assets/images/2026/hero/eyu-fluid-dynamics-responsive-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/hero/eyu-fluid-dynamics-responsive-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/hero/eyu-fluid-dynamics-responsive-w1200.webp",
+          "width": 1200
+        },
+        {
+          "src": "/assets/images/2026/hero/eyu-fluid-dynamics-responsive-w1600.webp",
+          "width": 1600
+        },
+        {
+          "src": "/assets/images/2026/hero/eyu-fluid-dynamics-responsive-w1920.webp",
+          "width": 1920
+        },
+        {
+          "src": "/assets/images/2026/hero/eyu-fluid-dynamics-responsive-w2400.webp",
+          "width": 2400
+        }
+      ],
+      "jpeg": [
+        {
+          "src": "/assets/images/2026/hero/eyu-fluid-dynamics-responsive-w480.jpg",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/hero/eyu-fluid-dynamics-responsive-w768.jpg",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/hero/eyu-fluid-dynamics-responsive-w1200.jpg",
+          "width": 1200
+        },
+        {
+          "src": "/assets/images/2026/hero/eyu-fluid-dynamics-responsive-w1600.jpg",
+          "width": 1600
+        },
+        {
+          "src": "/assets/images/2026/hero/eyu-fluid-dynamics-responsive-w1920.jpg",
+          "width": 1920
+        },
+        {
+          "src": "/assets/images/2026/hero/eyu-fluid-dynamics-responsive-w2400.jpg",
+          "width": 2400
+        }
+      ],
+      "fallback": "/assets/images/2026/hero/eyu-fluid-dynamics-responsive-w1200.jpg"
+    },
+    "/assets/images/2026/balboa/launch-vehicle.jpg": {
+      "width": 1329,
+      "height": 752,
+      "webp": [
+        {
+          "src": "/assets/images/2026/balboa/launch-vehicle-responsive-w480.webp",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/balboa/launch-vehicle-responsive-w768.webp",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/balboa/launch-vehicle-responsive-w1200.webp",
+          "width": 1200
+        },
+        {
+          "src": "/assets/images/2026/balboa/launch-vehicle-responsive-w1329.webp",
+          "width": 1329
+        }
+      ],
+      "jpeg": [
+        {
+          "src": "/assets/images/2026/balboa/launch-vehicle-responsive-w480.jpg",
+          "width": 480
+        },
+        {
+          "src": "/assets/images/2026/balboa/launch-vehicle-responsive-w768.jpg",
+          "width": 768
+        },
+        {
+          "src": "/assets/images/2026/balboa/launch-vehicle-responsive-w1200.jpg",
+          "width": 1200
+        },
+        {
+          "src": "/assets/images/2026/balboa/launch-vehicle-responsive-w1329.jpg",
+          "width": 1329
+        }
+      ],
+      "fallback": "/assets/images/2026/balboa/launch-vehicle-responsive-w1200.jpg"
+    }
+  },
+  "coverOrder": [
+    "/assets/images/2026/hero/postcard-trail-group.jpg",
+    "/assets/images/2026/hero/postcard-dusk-fieldwork.jpg",
+    "/assets/images/2026/hero/postcard-commencement.jpg",
+    "/assets/images/2026/hero/eyu-fluid-dynamics.jpg"
+  ]
+}

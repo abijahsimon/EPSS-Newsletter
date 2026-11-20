@@ -1,0 +1,50 @@
+---
+import type { CollectionEntry } from "astro:content";
+import "../styles/rimfax.css";
+
+interface Props {
+  article: CollectionEntry<"articles">["data"];
+}
+
+const { article } = Astro.props;
+---
+
+<section class="rimfax-hero" aria-labelledby="story-title">
+  <figure class="rimfax-hero-art">
+    <img
+      src="/assets/images/2026/rimfax/perseverance-feature-w1696.webp"
+      srcset="/assets/images/2026/rimfax/perseverance-feature-w480.webp 480w, /assets/images/2026/rimfax/perseverance-feature-w768.webp 768w, /assets/images/2026/rimfax/perseverance-feature-w1200.webp 1200w, /assets/images/2026/rimfax/perseverance-feature-w1696.webp 1696w"
+      sizes="(max-width: 700px) 100vw, 85vw"
+      width="1696"
+      height="952"
+      alt={article.heroImageAlt}
+      fetchpriority="high"
+    />
+    <figcaption>{article.heroImageCaption}</figcaption>
+  </figure>
+  <div class="rimfax-hero-content">
+    <p class="rimfax-eyebrow">Featured Research</p>
+    <h1 id="story-title">{article.title}</h1>
+    <p class="rimfax-dek">{article.dek}</p>
+    <div class="rimfax-meta">
+      <p>{article.byline}</p>
+      <div class="rimfax-meta-actions">
+        <span>{article.readTime}</span>
+        <button type="button" data-share-button aria-label="Share this story">Share</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="rimfax-sections" aria-label="In this feature">
+  <div class="rimfax-sections-inner">
+    <p class="rimfax-sections-label">In this feature</p>
+    <ol>
+      <li><a href="#a-road-cut-through-another-planet"><span>Patrick Russell</span><strong>A road cut through another planet</strong></a></li>
+      <li><a href="#reading-a-buried-history"><span>Emily Cardarelli</span><strong>Reading a buried history</strong></a></li>
+      <li><a href="#mars-by-way-of-owens-valley"><span>Elisha Jhoti</span><strong>Mars, by way of Owens Valley</strong></a></li>
+      <li><a href="#keeping-rimfax-working-on-mars"><span>Valeria Lopez-Robles</span><strong>Keeping RIMFAX working on Mars</strong></a></li>
+      <li><a href="#one-planet-many-ways-of-seeing-it"><span>Conclusion</span><strong>One planet, many ways of seeing it</strong></a></li>
+    </ol>
+  </div>
+</nav>

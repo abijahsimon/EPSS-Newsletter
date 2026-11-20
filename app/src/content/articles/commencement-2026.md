@@ -6,7 +6,6 @@ status: published
 category: "Commencement"
 title: "Celebrating the Class of 2026"
 variant: standard
-dek: "Celebrating the Class of 2026, with thirteen summer field scholarships and a group photograph on the steps of the Geology Building."
 byline: "Sunday, June 14, 2026"
 readTime: "8 min read"
 heroImage: "/assets/images/2026/commencement/commencement-class-2026-geology-building.jpg"
@@ -122,6 +121,8 @@ Fourteen candidates:
 
 `*` indicates major degree.
 
+This year we awarded 13 field awards from Clem Nelson, Walter S. Harris, Clarence A. Hall Jr., and Deane Oberste-Lehn. Support from our community helps to make these opportunities possible. To learn more about ways to support, please reach out to Associate Director of Development Emily Bisno at [ebisno@support.ucla.edu](mailto:ebisno@support.ucla.edu) or (310) 963-8319.
+
 ## Bachelor Of Arts
 
 Fourteen candidates:
@@ -161,6 +162,6 @@ Ten candidates:
 ## Source Links
 
 - Photo credit: commencement-day photographs by Valeria Jaramillo Hernandez and Zachary Lacson.
-- Box ceremony photographs: https://ucla.box.com/s/r6ahi1vyf8ecnftdpboen1p2mq2gwlq6
+- Additional photograph supplied by the user on November 17, 2026; photographer not identified, shown outside the confirmed photographer groups.
 - Drive additional photographs: https://drive.google.com/drive/folders/1AX2AdLKBZiX3gbkD9buHQ31DnH5_9P37
 - Printed program PDF: https://drive.google.com/file/d/1A4vRGV-_17-wjN_fMO0au790KYa_LZtb/view
